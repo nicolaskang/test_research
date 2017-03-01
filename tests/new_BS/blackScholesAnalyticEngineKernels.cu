@@ -1,4 +1,4 @@
-#include "test.cu"
+//#include "test.cu"
 //blackScholesAnalyticEngineKernels.cu
 //Scott Grauer-Gray
 //Kernels for running black scholes using the analytic engine
