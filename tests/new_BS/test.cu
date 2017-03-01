@@ -1,13 +1,4 @@
 #include "blackScholesAnalyticEngineStructs.cuh"
-typedef unsigned long size_t;
-typedef struct payoffStruct payoffStruct;
-typedef struct yieldTermStruct yieldTermStruct;
-typedef struct blackVolStruct blackVolStruct;
-typedef struct blackScholesMertStruct blackScholesMertStruct;
-typedef struct optionStruct optionStruct;
-typedef struct blackCalcStruct blackCalcStruct;
-typedef struct normalDistStruct normalDistStruct;
-typedef struct optionInputStruct optionInputStruct;
 //!@$^
 typedef struct {
 	float vol;
