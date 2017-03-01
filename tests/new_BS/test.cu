@@ -42,4 +42,4 @@ struct vals {
 	float forwardPrice;
 	blackCalcStruct blackCalc;
 	float resultVal;
-};
+}vals;
