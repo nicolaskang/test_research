@@ -11,7 +11,7 @@
 
 //needed for the constants in the error function
 #include "errorFunctConsts.cuh"
-
+#include "blackScholesAnalyticEngineStructs.cuh"
 
 //device kernel to retrieve the compound factor in interestRate
 __device__ float interestRateCompoundFactor(float t, yieldTermStruct currYieldTermStruct, vals* vals )
