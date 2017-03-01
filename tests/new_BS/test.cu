@@ -1,4 +1,3 @@
-
 //!@$^
 struct vals {
 	float vol;
