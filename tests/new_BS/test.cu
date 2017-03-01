@@ -1,3 +1,4 @@
+#include "blackScholesAnalyticEngineStructs.cuh"
 //!@$^
 struct vals {
 	float vol;
@@ -33,4 +34,3 @@ struct vals {
 	blackCalcStruct blackCalc;
 	float resultVal;
 };
-typedef struct vals vals;
