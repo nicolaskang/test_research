@@ -1,4 +1,4 @@
-#include "test.cu";
+#include "test.cu"
 //blackScholesAnalyticEngine.cu
 //Scott Grauer-Gray
 //Functions for running black scholes using the analytic engine (from Quantlib) on the GPU
