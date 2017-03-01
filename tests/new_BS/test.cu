@@ -9,7 +9,7 @@ typedef struct blackCalcStruct blackCalcStruct;
 typedef struct normalDistStruct normalDistStruct;
 typedef struct optionInputStruct optionInputStruct;
 //!@$^
-struct vals {
+typedef struct {
 	float vol;
 	float intDiscountFactor;
 	float R;
