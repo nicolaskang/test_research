@@ -21,54 +21,54 @@
 
 
 //device kernel to retrieve the compound factor in interestRate
-__device__ float interestRateCompoundFactor(float t, yieldTermStruct currYieldTermStruct);
+__device__ float interestRateCompoundFactor(float t, yieldTermStruct currYieldTermStruct, vals* vals);
 
 //device kernel to retrieve the discount factor in interestRate
-__device__ float interestRateDiscountFactor(float t, yieldTermStruct currYieldTermStruct);
+__device__ float interestRateDiscountFactor(float t, yieldTermStruct currYieldTermStruct, vals* vals);
 
 
 //device function to get the variance of the black volatility function
-__device__ float getBlackVolBlackVar(blackVolStruct volTS);
+__device__ float getBlackVolBlackVar(blackVolStruct volTS, vals* vals);
 
 
 //device function to get the discount on a dividend yield
-__device__ float getDiscountOnDividendYield(float yearFraction, yieldTermStruct dividendYieldTermStruct);
+__device__ float getDiscountOnDividendYield(float yearFraction, yieldTermStruct dividendYieldTermStruct, vals* vals);
 
 
 //device function to get the discount on the risk free rate
-__device__ float getDiscountOnRiskFreeRate(float yearFraction, yieldTermStruct riskFreeRateYieldTermStruct);
+__device__ float getDiscountOnRiskFreeRate(float yearFraction, yieldTermStruct riskFreeRateYieldTermStruct, vals* vals);
 
 //device kernel to run the error function
-__device__ float errorFunct(normalDistStruct normDist, float x);
+__device__ float errorFunct(normalDistStruct normDist, float x, vals* vals);
 
 
 //device kernel to run the operator function in cumulative normal distribution
-__device__ float cumNormDistOp(normalDistStruct normDist, float z);
+__device__ float cumNormDistOp(normalDistStruct normDist, float z, vals* vals);
 
 
 //device kernel to run the gaussian function in the normal distribution
-__device__ float gaussianFunctNormDist(normalDistStruct normDist, float x);
+__device__ float gaussianFunctNormDist(normalDistStruct normDist, float x, vals* vals);
 
 //device kernel to retrieve the derivative in a cumulative normal distribution
-__device__ float cumNormDistDeriv(normalDistStruct normDist, float x);
+__device__ float cumNormDistDeriv(normalDistStruct normDist, float x, vals* vals);
 
 //device function to initialize the cumulative normal distribution structure
-__device__ void initCumNormDist(normalDistStruct* currCumNormDist);
+__device__ void initCumNormDist(normalDistStruct* currCumNormDist, vals* vals);
 
 
 //device function to initialize variable in the black calculator
-__device__ void initBlackCalcVars(blackCalcStruct* blackCalculator,  payoffStruct payoff);
+__device__ void initBlackCalcVars(blackCalcStruct* blackCalculator,  payoffStruct payoff, vals* vals);
 
 
 //device function to initialize the black calculator
-__device__ void initBlackCalculator(blackCalcStruct* blackCalc, payoffStruct payoff, float forwardPrice, float stdDev, float riskFreeDiscount);
+__device__ void initBlackCalculator(blackCalcStruct* blackCalc, payoffStruct payoff, float forwardPrice, float stdDev, float riskFreeDiscount, vals* vals);
 
 
 //device function to retrieve the output resulting value
-__device__ float getResultVal(blackCalcStruct* blackCalculator);
+__device__ float getResultVal(blackCalcStruct* blackCalculator, vals* vals);
 
 
 //global function to retrieve the output value for an option
-__global__ void getOutValOption(optionInputStruct* options, float* outputVals, int numVals);
+__global__ void getOutValOption(optionInputStruct* options, float* outputVals, int numVals, vals* vals);
 
 #endif //BLACK_SCHOLES_ANALYTIC_ENGINE_KERNELS_CUH
