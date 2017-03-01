@@ -249,7 +249,7 @@ void runBlackScholesAnalyticEngine()
 	struct timeval start;
 	gettimeofday(&start, NULL);
 	vals* localvars0;
-	cudaMalloc((void**)&localvars0, grid.x*grid.y*grid.z*threads.x*threads.y*threads.z*sizeof(localvars));
+	cudaMalloc((void**)&localvars0, grid.x*grid.y*grid.z*threads.x*threads.y*threads.z*sizeof(vals*));
 
 	getOutValOption <<<grid ,threads >>> (optionsGpu,outputValsGpu,numVals,localvars0);
 	cudaFree(localvars0);
