@@ -9,6 +9,7 @@ void delAny(string &str, char remove)
 }
 void trimString(string &str){
 	delAny(str,'\t');
+	delAny(str,'\r');
 	string tmp="";
 	string tmp1 = str.substr(0,1);
 	for (int i=1;i<str.size();i++)
@@ -61,7 +62,7 @@ int main(int argc,char* argv[]){
 				continue;
 			}
 			else{
-				concat = concat+LineFromFile;
+				concat = concat+LineFromFile+" ";
 				continue;
 			}
 			trimString(LineFromFile);
