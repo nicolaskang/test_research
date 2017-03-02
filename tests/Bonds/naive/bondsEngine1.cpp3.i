@@ -1777,95 +1777,95 @@ __nv_bool upperBoundEnforced_;
 char __nv_no_debug_dummy_end_padding_0[6];};
 # 139 "bondsStructs.cuh"
 typedef struct solverStruct solverStruct;
-# 8 "bondsKernelsGpu.cu"
+# 2 "bondsKernelsGpu1.cu"
 extern int _Z20monthLengthKernelGpuib(int, __nv_bool);
-# 42 "bondsKernelsGpu.cu"
+# 32 "bondsKernelsGpu1.cu"
 extern int _Z20monthOffsetKernelGpuib(int, __nv_bool);
-# 78 "bondsKernelsGpu.cu"
+# 64 "bondsKernelsGpu1.cu"
 extern int _Z19yearOffsetKernelGpui(int);
-# 218 "bondsKernelsGpu.cu"
+# 190 "bondsKernelsGpu1.cu"
 extern __nv_bool _Z15isLeapKernelGpui(int);
-# 358 "bondsKernelsGpu.cu"
+# 316 "bondsKernelsGpu1.cu"
 extern bondsDateStruct _Z22intializeDateKernelGpuiii(int, int, int);
-# 375 "bondsKernelsGpu.cu"
+# 327 "bondsKernelsGpu1.cu"
 extern dataType _Z15yearFractionGpu15bondsDateStructS_i(bondsDateStruct, bondsDateStruct, int);
-# 382 "bondsKernelsGpu.cu"
+# 331 "bondsKernelsGpu1.cu"
 extern int _Z11dayCountGpu15bondsDateStructS_i(bondsDateStruct, bondsDateStruct, int);
-# 405 "bondsKernelsGpu.cu"
+# 349 "bondsKernelsGpu1.cu"
 extern dataType _Z17couponNotionalGpuv(void);
-# 410 "bondsKernelsGpu.cu"
+# 353 "bondsKernelsGpu1.cu"
 extern dataType _Z15bondNotionalGpuv(void);
-# 416 "bondsKernelsGpu.cu"
+# 357 "bondsKernelsGpu1.cu"
 extern dataType _Z25fixedRateCouponNominalGpuv(void);
-# 421 "bondsKernelsGpu.cu"
+# 361 "bondsKernelsGpu1.cu"
 extern __nv_bool _Z19eventHasOccurredGpu15bondsDateStructS_(bondsDateStruct, bondsDateStruct);
-# 427 "bondsKernelsGpu.cu"
+# 365 "bondsKernelsGpu1.cu"
 extern __nv_bool _Z22cashFlowHasOccurredGpu15bondsDateStructS_(bondsDateStruct, bondsDateStruct);
-# 434 "bondsKernelsGpu.cu"
+# 369 "bondsKernelsGpu1.cu"
 extern bondsDateStruct _Z14advanceDateGpu15bondsDateStructi(bondsDateStruct, int);
-# 461 "bondsKernelsGpu.cu"
+# 390 "bondsKernelsGpu1.cu"
 extern int _Z18getNumCashFlowsGpu12inArgsStructi(inArgsStruct, int);
-# 481 "bondsKernelsGpu.cu"
+# 401 "bondsKernelsGpu1.cu"
 extern dataType _Z16getDirtyPriceGpu12inArgsStructi15cashFlowsStructi(inArgsStruct, int, cashFlowsStruct, int);
-# 488 "bondsKernelsGpu.cu"
+# 406 "bondsKernelsGpu1.cu"
 extern dataType _Z19getAccruedAmountGpu12inArgsStruct15bondsDateStructi15cashFlowsStructi(inArgsStruct, bondsDateStruct, int, cashFlowsStruct, int);
-# 494 "bondsKernelsGpu.cu"
+# 410 "bondsKernelsGpu1.cu"
 extern dataType _Z48discountingBondEngineCalculateSettlementValueGpu12inArgsStructi15cashFlowsStructi(inArgsStruct, int, cashFlowsStruct, int);
-# 515 "bondsKernelsGpu.cu"
+# 419 "bondsKernelsGpu1.cu"
 extern dataType _Z20bondAccruedAmountGpu12inArgsStruct15bondsDateStructi15cashFlowsStructi(inArgsStruct, bondsDateStruct, int, cashFlowsStruct, int);
-# 525 "bondsKernelsGpu.cu"
+# 426 "bondsKernelsGpu1.cu"
 extern dataType _Z29bondFunctionsAccruedAmountGpu12inArgsStruct15bondsDateStructi15cashFlowsStructi(inArgsStruct, bondsDateStruct, int, cashFlowsStruct, int);
-# 538 "bondsKernelsGpu.cu"
+# 431 "bondsKernelsGpu1.cu"
 extern dataType _Z25cashFlowsAccruedAmountGpu15cashFlowsStructb15bondsDateStructi12inArgsStructi(cashFlowsStruct, __nv_bool, bondsDateStruct, int, inArgsStruct, int);
-# 559 "bondsKernelsGpu.cu"
+# 442 "bondsKernelsGpu1.cu"
 extern dataType _Z31fixedRateCouponAccruedAmountGpu15cashFlowsStructi15bondsDateStruct12inArgsStructi(cashFlowsStruct, int, bondsDateStruct, inArgsStruct, int);
-# 581 "bondsKernelsGpu.cu"
+# 458 "bondsKernelsGpu1.cu"
 extern dataType _Z15cashFlowsNpvGpu15cashFlowsStruct20bondsYieldTermStructb15bondsDateStructS1_i(cashFlowsStruct, bondsYieldTermStruct, __nv_bool, bondsDateStruct, bondsDateStruct, int);
-# 609 "bondsKernelsGpu.cu"
+# 470 "bondsKernelsGpu1.cu"
 extern dataType _Z34bondsYieldTermStructureDiscountGpu20bondsYieldTermStruct15bondsDateStruct(bondsYieldTermStruct, bondsDateStruct);
-# 618 "bondsKernelsGpu.cu"
+# 477 "bondsKernelsGpu1.cu"
 extern dataType _Z26flatForwardDiscountImplGpu13intRateStructd(intRateStruct, dataType);
-# 627 "bondsKernelsGpu.cu"
+# 481 "bondsKernelsGpu1.cu"
 extern dataType _Z29interestRateDiscountFactorGpu13intRateStructd(intRateStruct, dataType);
-# 633 "bondsKernelsGpu.cu"
+# 485 "bondsKernelsGpu1.cu"
 extern dataType _Z36interestRateCompoundFactorGpuTwoArgs13intRateStructd(intRateStruct, dataType);
-# 649 "bondsKernelsGpu.cu"
+# 497 "bondsKernelsGpu1.cu"
 extern dataType _Z24fixedRateCouponAmountGpu15cashFlowsStructi(cashFlowsStruct, int);
-# 662 "bondsKernelsGpu.cu"
+# 509 "bondsKernelsGpu1.cu"
 extern dataType _Z29interestRateCompoundFactorGpu13intRateStruct15bondsDateStructS0_i(intRateStruct, bondsDateStruct, bondsDateStruct, int);
-# 671 "bondsKernelsGpu.cu"
+# 514 "bondsKernelsGpu1.cu"
 extern dataType _Z26interestRateImpliedRateGpudidd(dataType, int, dataType, dataType);
-# 699 "bondsKernelsGpu.cu"
+# 532 "bondsKernelsGpu1.cu"
 extern dataType _Z20getMarketRepoRateGpu15bondsDateStructidS_12inArgsStructi(bondsDateStruct, int, dataType, bondsDateStruct, inArgsStruct, int);
-# 712 "bondsKernelsGpu.cu"
+# 537 "bondsKernelsGpu1.cu"
 extern couponStruct _Z24cashFlowsNextCashFlowGpu15cashFlowsStruct15bondsDateStructi(cashFlowsStruct, bondsDateStruct, int);
-# 728 "bondsKernelsGpu.cu"
+# 547 "bondsKernelsGpu1.cu"
 extern int _Z27cashFlowsNextCashFlowNumGpu15cashFlowsStruct15bondsDateStructi(cashFlowsStruct, bondsDateStruct, int);
-# 745 "bondsKernelsGpu.cu"
+# 557 "bondsKernelsGpu1.cu"
 extern dataType _Z15getBondYieldGpudiid15bondsDateStructdi12inArgsStructi15cashFlowsStructi(dataType, int, int, dataType, bondsDateStruct, dataType, int, inArgsStruct, int, cashFlowsStruct, int);
-# 770 "bondsKernelsGpu.cu"
+# 568 "bondsKernelsGpu1.cu"
 extern dataType _Z24getBondFunctionsYieldGpudiid15bondsDateStructdi12inArgsStructi15cashFlowsStructi(dataType, int, int, dataType, bondsDateStruct, dataType, int, inArgsStruct, int, cashFlowsStruct, int);
-# 789 "bondsKernelsGpu.cu"
+# 574 "bondsKernelsGpu1.cu"
 extern dataType _Z20getCashFlowsYieldGpu15cashFlowsStructdiidb15bondsDateStructS0_idid(cashFlowsStruct, dataType, int, int, dataType, __nv_bool, bondsDateStruct, bondsDateStruct, int, dataType, int, dataType);
-# 819 "bondsKernelsGpu.cu"
+# 588 "bondsKernelsGpu1.cu"
 extern dataType _Z14solverSolveGpu12solverStruct15irrFinderStructddd15cashFlowsStructi(solverStruct, irrFinderStruct, dataType, dataType, dataType, cashFlowsStruct, int);
-# 897 "bondsKernelsGpu.cu"
+# 650 "bondsKernelsGpu1.cu"
 extern dataType _Z20cashFlowsNpvYieldGpu15cashFlowsStruct13intRateStructb15bondsDateStructS1_i(cashFlowsStruct, intRateStruct, __nv_bool, bondsDateStruct, bondsDateStruct, int);
-# 942 "bondsKernelsGpu.cu"
+# 681 "bondsKernelsGpu1.cu"
 extern dataType _Z6fOpGpu15irrFinderStructd15cashFlowsStructi(irrFinderStruct, dataType, cashFlowsStruct, int);
-# 963 "bondsKernelsGpu.cu"
+# 691 "bondsKernelsGpu1.cu"
 extern dataType _Z14fDerivativeGpu15irrFinderStructd15cashFlowsStructi(irrFinderStruct, dataType, cashFlowsStruct, int);
-# 978 "bondsKernelsGpu.cu"
+# 700 "bondsKernelsGpu1.cu"
 extern __nv_bool _Z8closeGpudd(dataType, dataType);
-# 984 "bondsKernelsGpu.cu"
+# 704 "bondsKernelsGpu1.cu"
 extern __nv_bool _Z17closeGpuThreeArgsddi(dataType, dataType, int);
-# 994 "bondsKernelsGpu.cu"
+# 711 "bondsKernelsGpu1.cu"
 extern dataType _Z16enforceBoundsGpud(dataType);
-# 1004 "bondsKernelsGpu.cu"
+# 719 "bondsKernelsGpu1.cu"
 extern dataType _Z12solveImplGpu12solverStruct15irrFinderStructd15cashFlowsStructi(solverStruct, irrFinderStruct, dataType, cashFlowsStruct, int);
-# 1071 "bondsKernelsGpu.cu"
+# 764 "bondsKernelsGpu1.cu"
 extern dataType _Z19modifiedDurationGpu15cashFlowsStruct13intRateStructb15bondsDateStructS1_i(cashFlowsStruct, intRateStruct, __nv_bool, bondsDateStruct, bondsDateStruct, int);
-# 1124 "bondsKernelsGpu.cu"
+# 803 "bondsKernelsGpu1.cu"
 __attribute__((global)) __attribute__((__used__)) extern void _Z18getBondsResultsGpu12inArgsStruct13resultsStructi(inArgsStruct, resultsStruct, int);
 # 1 "/usr/local/cuda/bin/../targets/x86_64-linux/include/common_functions.h" 1
 # 224 "/usr/local/cuda/bin/../targets/x86_64-linux/include/common_functions.h"
@@ -8202,2470 +8202,2470 @@ static __inline__ __attribute__((always_inline)) double fma(double a, double b, 
 # 271 "/usr/local/cuda-7.5/targets/x86_64-linux/include/math_functions_dbl_ptx3.h" 2 3
 # 10215 "/usr/local/cuda-7.5/targets/x86_64-linux/include/math_functions.h" 2 3
 # 225 "/usr/local/cuda/bin/../targets/x86_64-linux/include/common_functions.h" 2
-# 1126 "bondsKernelsGpu.cu" 2
-# 8 "bondsKernelsGpu.cu"
+# 805 "bondsKernelsGpu1.cu" 2
+# 2 "bondsKernelsGpu1.cu"
  int _Z20monthLengthKernelGpuib(
-# 8 "bondsKernelsGpu.cu"
+# 2 "bondsKernelsGpu1.cu"
 int month,
-# 8 "bondsKernelsGpu.cu"
+# 2 "bondsKernelsGpu1.cu"
 __nv_bool leapYear){
-# 8 "bondsKernelsGpu.cu"
+# 2 "bondsKernelsGpu1.cu"
 {
-# 9 "bondsKernelsGpu.cu"
+# 3 "bondsKernelsGpu1.cu"
 {
-# 10 "bondsKernelsGpu.cu"
- int __cuda_local_var_42419_6_non_const_MonthLength[12];
-# 24 "bondsKernelsGpu.cu"
- int __cuda_local_var_42433_6_non_const_MonthLeapLength[12];
-# 11 "bondsKernelsGpu.cu"
-((__cuda_local_var_42419_6_non_const_MonthLength)[0]) = 31;
-# 12 "bondsKernelsGpu.cu"
-((__cuda_local_var_42419_6_non_const_MonthLength)[1]) = 28;
-# 13 "bondsKernelsGpu.cu"
-((__cuda_local_var_42419_6_non_const_MonthLength)[2]) = 31;
-# 14 "bondsKernelsGpu.cu"
-((__cuda_local_var_42419_6_non_const_MonthLength)[3]) = 30;
-# 15 "bondsKernelsGpu.cu"
-((__cuda_local_var_42419_6_non_const_MonthLength)[4]) = 31;
-# 16 "bondsKernelsGpu.cu"
-((__cuda_local_var_42419_6_non_const_MonthLength)[5]) = 30;
-# 17 "bondsKernelsGpu.cu"
-((__cuda_local_var_42419_6_non_const_MonthLength)[6]) = 31;
-# 18 "bondsKernelsGpu.cu"
-((__cuda_local_var_42419_6_non_const_MonthLength)[7]) = 31;
-# 19 "bondsKernelsGpu.cu"
-((__cuda_local_var_42419_6_non_const_MonthLength)[8]) = 30;
-# 20 "bondsKernelsGpu.cu"
-((__cuda_local_var_42419_6_non_const_MonthLength)[9]) = 31;
-# 21 "bondsKernelsGpu.cu"
-((__cuda_local_var_42419_6_non_const_MonthLength)[10]) = 30;
-# 22 "bondsKernelsGpu.cu"
-((__cuda_local_var_42419_6_non_const_MonthLength)[11]) = 31;
-# 25 "bondsKernelsGpu.cu"
-((__cuda_local_var_42433_6_non_const_MonthLeapLength)[0]) = 31;
-# 26 "bondsKernelsGpu.cu"
-((__cuda_local_var_42433_6_non_const_MonthLeapLength)[1]) = 29;
-# 27 "bondsKernelsGpu.cu"
-((__cuda_local_var_42433_6_non_const_MonthLeapLength)[2]) = 31;
-# 28 "bondsKernelsGpu.cu"
-((__cuda_local_var_42433_6_non_const_MonthLeapLength)[3]) = 30;
-# 29 "bondsKernelsGpu.cu"
-((__cuda_local_var_42433_6_non_const_MonthLeapLength)[4]) = 31;
-# 30 "bondsKernelsGpu.cu"
-((__cuda_local_var_42433_6_non_const_MonthLeapLength)[5]) = 30;
-# 31 "bondsKernelsGpu.cu"
-((__cuda_local_var_42433_6_non_const_MonthLeapLength)[6]) = 31;
-# 32 "bondsKernelsGpu.cu"
-((__cuda_local_var_42433_6_non_const_MonthLeapLength)[7]) = 31;
-# 33 "bondsKernelsGpu.cu"
-((__cuda_local_var_42433_6_non_const_MonthLeapLength)[8]) = 30;
-# 34 "bondsKernelsGpu.cu"
-((__cuda_local_var_42433_6_non_const_MonthLeapLength)[9]) = 31;
-# 35 "bondsKernelsGpu.cu"
-((__cuda_local_var_42433_6_non_const_MonthLeapLength)[10]) = 30;
-# 36 "bondsKernelsGpu.cu"
-((__cuda_local_var_42433_6_non_const_MonthLeapLength)[11]) = 31;
-# 38 "bondsKernelsGpu.cu"
-return (leapYear) ? ((__cuda_local_var_42433_6_non_const_MonthLeapLength)[(month - 1)]) : ((__cuda_local_var_42419_6_non_const_MonthLength)[(month - 1)]);
-# 39 "bondsKernelsGpu.cu"
+# 4 "bondsKernelsGpu1.cu"
+ int __cuda_local_var_42412_5_non_const_MonthLength[12];
+# 17 "bondsKernelsGpu1.cu"
+ int __cuda_local_var_42425_6_non_const_MonthLeapLength[12];
+# 5 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42412_5_non_const_MonthLength)[0]) = 31;
+# 6 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42412_5_non_const_MonthLength)[1]) = 28;
+# 7 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42412_5_non_const_MonthLength)[2]) = 31;
+# 8 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42412_5_non_const_MonthLength)[3]) = 30;
+# 9 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42412_5_non_const_MonthLength)[4]) = 31;
+# 10 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42412_5_non_const_MonthLength)[5]) = 30;
+# 11 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42412_5_non_const_MonthLength)[6]) = 31;
+# 12 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42412_5_non_const_MonthLength)[7]) = 31;
+# 13 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42412_5_non_const_MonthLength)[8]) = 30;
+# 14 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42412_5_non_const_MonthLength)[9]) = 31;
+# 15 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42412_5_non_const_MonthLength)[10]) = 30;
+# 16 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42412_5_non_const_MonthLength)[11]) = 31;
+# 18 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42425_6_non_const_MonthLeapLength)[0]) = 31;
+# 19 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42425_6_non_const_MonthLeapLength)[1]) = 29;
+# 20 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42425_6_non_const_MonthLeapLength)[2]) = 31;
+# 21 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42425_6_non_const_MonthLeapLength)[3]) = 30;
+# 22 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42425_6_non_const_MonthLeapLength)[4]) = 31;
+# 23 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42425_6_non_const_MonthLeapLength)[5]) = 30;
+# 24 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42425_6_non_const_MonthLeapLength)[6]) = 31;
+# 25 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42425_6_non_const_MonthLeapLength)[7]) = 31;
+# 26 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42425_6_non_const_MonthLeapLength)[8]) = 30;
+# 27 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42425_6_non_const_MonthLeapLength)[9]) = 31;
+# 28 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42425_6_non_const_MonthLeapLength)[10]) = 30;
+# 29 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42425_6_non_const_MonthLeapLength)[11]) = 31;
+# 30 "bondsKernelsGpu1.cu"
+return (leapYear) ? ((__cuda_local_var_42425_6_non_const_MonthLeapLength)[(month - 1)]) : ((__cuda_local_var_42412_5_non_const_MonthLength)[(month - 1)]);
+# 31 "bondsKernelsGpu1.cu"
 }
-# 39 "bondsKernelsGpu.cu"
+# 31 "bondsKernelsGpu1.cu"
 }}
-# 42 "bondsKernelsGpu.cu"
+# 32 "bondsKernelsGpu1.cu"
  int _Z20monthOffsetKernelGpuib(
-# 42 "bondsKernelsGpu.cu"
+# 32 "bondsKernelsGpu1.cu"
 int m,
-# 42 "bondsKernelsGpu.cu"
+# 32 "bondsKernelsGpu1.cu"
 __nv_bool leapYear){
-# 42 "bondsKernelsGpu.cu"
+# 32 "bondsKernelsGpu1.cu"
 {
-# 43 "bondsKernelsGpu.cu"
+# 33 "bondsKernelsGpu1.cu"
 {
-# 44 "bondsKernelsGpu.cu"
- int __cuda_local_var_42453_6_non_const_MonthOffset[13];
-# 59 "bondsKernelsGpu.cu"
- int __cuda_local_var_42468_6_non_const_MonthLeapOffset[13];
-# 45 "bondsKernelsGpu.cu"
-((__cuda_local_var_42453_6_non_const_MonthOffset)[0]) = 0;
-# 46 "bondsKernelsGpu.cu"
-((__cuda_local_var_42453_6_non_const_MonthOffset)[1]) = 31;
-# 47 "bondsKernelsGpu.cu"
-((__cuda_local_var_42453_6_non_const_MonthOffset)[2]) = 59;
-# 48 "bondsKernelsGpu.cu"
-((__cuda_local_var_42453_6_non_const_MonthOffset)[3]) = 90;
-# 49 "bondsKernelsGpu.cu"
-((__cuda_local_var_42453_6_non_const_MonthOffset)[4]) = 120;
-# 50 "bondsKernelsGpu.cu"
-((__cuda_local_var_42453_6_non_const_MonthOffset)[5]) = 151;
-# 51 "bondsKernelsGpu.cu"
-((__cuda_local_var_42453_6_non_const_MonthOffset)[6]) = 181;
-# 52 "bondsKernelsGpu.cu"
-((__cuda_local_var_42453_6_non_const_MonthOffset)[7]) = 212;
-# 53 "bondsKernelsGpu.cu"
-((__cuda_local_var_42453_6_non_const_MonthOffset)[8]) = 243;
-# 54 "bondsKernelsGpu.cu"
-((__cuda_local_var_42453_6_non_const_MonthOffset)[9]) = 273;
-# 55 "bondsKernelsGpu.cu"
-((__cuda_local_var_42453_6_non_const_MonthOffset)[10]) = 304;
-# 56 "bondsKernelsGpu.cu"
-((__cuda_local_var_42453_6_non_const_MonthOffset)[11]) = 334;
-# 57 "bondsKernelsGpu.cu"
-((__cuda_local_var_42453_6_non_const_MonthOffset)[12]) = 365;
-# 60 "bondsKernelsGpu.cu"
-((__cuda_local_var_42468_6_non_const_MonthLeapOffset)[0]) = 0;
-# 61 "bondsKernelsGpu.cu"
-((__cuda_local_var_42468_6_non_const_MonthLeapOffset)[1]) = 31;
-# 62 "bondsKernelsGpu.cu"
-((__cuda_local_var_42468_6_non_const_MonthLeapOffset)[2]) = 60;
-# 63 "bondsKernelsGpu.cu"
-((__cuda_local_var_42468_6_non_const_MonthLeapOffset)[3]) = 91;
-# 64 "bondsKernelsGpu.cu"
-((__cuda_local_var_42468_6_non_const_MonthLeapOffset)[4]) = 121;
-# 65 "bondsKernelsGpu.cu"
-((__cuda_local_var_42468_6_non_const_MonthLeapOffset)[5]) = 152;
-# 66 "bondsKernelsGpu.cu"
-((__cuda_local_var_42468_6_non_const_MonthLeapOffset)[6]) = 182;
-# 67 "bondsKernelsGpu.cu"
-((__cuda_local_var_42468_6_non_const_MonthLeapOffset)[7]) = 213;
-# 68 "bondsKernelsGpu.cu"
-((__cuda_local_var_42468_6_non_const_MonthLeapOffset)[8]) = 244;
-# 69 "bondsKernelsGpu.cu"
-((__cuda_local_var_42468_6_non_const_MonthLeapOffset)[9]) = 274;
-# 70 "bondsKernelsGpu.cu"
-((__cuda_local_var_42468_6_non_const_MonthLeapOffset)[10]) = 305;
-# 71 "bondsKernelsGpu.cu"
-((__cuda_local_var_42468_6_non_const_MonthLeapOffset)[11]) = 335;
-# 72 "bondsKernelsGpu.cu"
-((__cuda_local_var_42468_6_non_const_MonthLeapOffset)[12]) = 366;
-# 74 "bondsKernelsGpu.cu"
-return (leapYear) ? ((__cuda_local_var_42468_6_non_const_MonthLeapOffset)[(m - 1)]) : ((__cuda_local_var_42453_6_non_const_MonthOffset)[(m - 1)]);
-# 75 "bondsKernelsGpu.cu"
+# 34 "bondsKernelsGpu1.cu"
+ int __cuda_local_var_42442_5_non_const_MonthOffset[13];
+# 48 "bondsKernelsGpu1.cu"
+ int __cuda_local_var_42456_6_non_const_MonthLeapOffset[13];
+# 35 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42442_5_non_const_MonthOffset)[0]) = 0;
+# 36 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42442_5_non_const_MonthOffset)[1]) = 31;
+# 37 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42442_5_non_const_MonthOffset)[2]) = 59;
+# 38 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42442_5_non_const_MonthOffset)[3]) = 90;
+# 39 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42442_5_non_const_MonthOffset)[4]) = 120;
+# 40 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42442_5_non_const_MonthOffset)[5]) = 151;
+# 41 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42442_5_non_const_MonthOffset)[6]) = 181;
+# 42 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42442_5_non_const_MonthOffset)[7]) = 212;
+# 43 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42442_5_non_const_MonthOffset)[8]) = 243;
+# 44 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42442_5_non_const_MonthOffset)[9]) = 273;
+# 45 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42442_5_non_const_MonthOffset)[10]) = 304;
+# 46 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42442_5_non_const_MonthOffset)[11]) = 334;
+# 47 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42442_5_non_const_MonthOffset)[12]) = 365;
+# 49 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42456_6_non_const_MonthLeapOffset)[0]) = 0;
+# 50 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42456_6_non_const_MonthLeapOffset)[1]) = 31;
+# 51 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42456_6_non_const_MonthLeapOffset)[2]) = 60;
+# 52 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42456_6_non_const_MonthLeapOffset)[3]) = 91;
+# 53 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42456_6_non_const_MonthLeapOffset)[4]) = 121;
+# 54 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42456_6_non_const_MonthLeapOffset)[5]) = 152;
+# 55 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42456_6_non_const_MonthLeapOffset)[6]) = 182;
+# 56 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42456_6_non_const_MonthLeapOffset)[7]) = 213;
+# 57 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42456_6_non_const_MonthLeapOffset)[8]) = 244;
+# 58 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42456_6_non_const_MonthLeapOffset)[9]) = 274;
+# 59 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42456_6_non_const_MonthLeapOffset)[10]) = 305;
+# 60 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42456_6_non_const_MonthLeapOffset)[11]) = 335;
+# 61 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42456_6_non_const_MonthLeapOffset)[12]) = 366;
+# 62 "bondsKernelsGpu1.cu"
+return (leapYear) ? ((__cuda_local_var_42456_6_non_const_MonthLeapOffset)[(m - 1)]) : ((__cuda_local_var_42442_5_non_const_MonthOffset)[(m - 1)]);
+# 63 "bondsKernelsGpu1.cu"
 }
-# 75 "bondsKernelsGpu.cu"
+# 63 "bondsKernelsGpu1.cu"
 }}
-# 78 "bondsKernelsGpu.cu"
+# 64 "bondsKernelsGpu1.cu"
  int _Z19yearOffsetKernelGpui(
-# 78 "bondsKernelsGpu.cu"
+# 64 "bondsKernelsGpu1.cu"
 int y){
-# 78 "bondsKernelsGpu.cu"
+# 64 "bondsKernelsGpu1.cu"
 {
-# 79 "bondsKernelsGpu.cu"
+# 65 "bondsKernelsGpu1.cu"
 {
-# 81 "bondsKernelsGpu.cu"
- int __cuda_local_var_42490_6_non_const_YearOffset[121];
-# 82 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[0]) = 0;
-# 82 "bondsKernelsGpu.cu"
+# 66 "bondsKernelsGpu1.cu"
+ int __cuda_local_var_42474_6_non_const_YearOffset[121];
+# 67 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[0]) = 0;
+# 67 "bondsKernelsGpu1.cu"
 ;
-# 83 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[1]) = 366;
-# 83 "bondsKernelsGpu.cu"
+# 68 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[1]) = 366;
+# 68 "bondsKernelsGpu1.cu"
 ;
-# 84 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[2]) = 731;
-# 85 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[3]) = 1096;
-# 86 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[4]) = 1461;
-# 87 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[5]) = 1827;
-# 88 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[6]) = 2192;
-# 89 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[7]) = 2557;
-# 90 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[8]) = 2922;
-# 91 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[9]) = 3288;
-# 92 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[10]) = 3653;
-# 93 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[11]) = 4018;
-# 94 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[12]) = 4383;
-# 95 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[13]) = 4749;
-# 96 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[14]) = 5114;
-# 97 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[15]) = 5479;
-# 98 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[16]) = 5844;
-# 99 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[17]) = 6210;
-# 100 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[18]) = 6575;
-# 101 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[19]) = 6940;
-# 102 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[20]) = 7305;
-# 103 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[21]) = 7671;
-# 106 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[22]) = 8036;
-# 107 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[23]) = 8401;
-# 108 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[24]) = 8766;
-# 109 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[25]) = 9132;
-# 110 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[26]) = 9497;
-# 111 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[27]) = 9862;
-# 112 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[28]) = 10227;
-# 113 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[29]) = 10593;
-# 114 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[30]) = 10958;
-# 115 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[31]) = 11323;
-# 116 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[32]) = 11688;
-# 117 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[33]) = 12054;
-# 119 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[34]) = 12419;
-# 120 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[35]) = 12784;
-# 121 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[36]) = 13149;
-# 122 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[37]) = 13515;
-# 123 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[38]) = 13880;
-# 124 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[39]) = 14245;
-# 125 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[40]) = 14610;
-# 126 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[41]) = 14976;
-# 127 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[42]) = 15341;
-# 128 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[43]) = 15706;
-# 129 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[44]) = 16071;
-# 130 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[45]) = 16437;
-# 132 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[46]) = 16802;
-# 133 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[47]) = 17167;
-# 134 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[48]) = 17532;
-# 135 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[49]) = 17898;
-# 136 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[50]) = 18263;
-# 137 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[51]) = 18628;
-# 138 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[52]) = 18993;
-# 139 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[53]) = 19359;
-# 140 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[54]) = 19724;
-# 141 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[55]) = 20089;
-# 142 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[56]) = 20454;
-# 143 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[57]) = 20820;
-# 145 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[58]) = 21185;
-# 146 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[59]) = 21550;
-# 147 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[60]) = 21915;
-# 148 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[61]) = 22281;
-# 149 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[62]) = 22646;
-# 150 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[63]) = 23011;
-# 151 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[64]) = 23376;
-# 152 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[65]) = 23742;
-# 153 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[66]) = 24107;
-# 154 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[67]) = 24472;
-# 155 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[68]) = 24837;
-# 156 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[69]) = 25203;
-# 158 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[70]) = 25568;
-# 159 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[71]) = 25933;
-# 160 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[72]) = 26298;
-# 161 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[73]) = 26664;
-# 162 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[74]) = 27029;
-# 163 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[75]) = 27394;
-# 164 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[76]) = 27759;
-# 165 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[77]) = 28125;
-# 166 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[78]) = 28490;
-# 167 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[79]) = 28855;
-# 168 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[80]) = 29220;
-# 169 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[81]) = 29586;
-# 171 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[82]) = 29951;
-# 172 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[83]) = 30316;
-# 173 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[84]) = 30681;
-# 174 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[85]) = 31047;
-# 175 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[86]) = 31412;
-# 176 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[87]) = 31777;
-# 177 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[88]) = 32142;
-# 178 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[89]) = 32508;
-# 179 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[90]) = 32873;
-# 180 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[91]) = 33238;
-# 181 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[92]) = 33603;
-# 182 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[93]) = 33969;
-# 184 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[94]) = 34334;
-# 185 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[95]) = 34699;
-# 186 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[96]) = 35064;
-# 187 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[97]) = 35430;
-# 188 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[98]) = 35795;
-# 189 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[99]) = 36160;
-# 190 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[100]) = 36525;
-# 191 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[101]) = 36891;
-# 192 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[102]) = 37256;
-# 193 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[103]) = 37621;
-# 194 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[104]) = 37986;
-# 195 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[105]) = 38352;
-# 197 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[106]) = 38717;
-# 198 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[107]) = 39082;
-# 199 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[108]) = 39447;
-# 200 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[109]) = 39813;
-# 201 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[110]) = 40178;
-# 202 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[111]) = 40543;
-# 203 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[112]) = 40908;
-# 204 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[113]) = 41274;
-# 205 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[114]) = 41639;
-# 206 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[115]) = 42004;
-# 207 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[116]) = 42369;
-# 208 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[117]) = 42735;
-# 209 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[118]) = 43100;
-# 210 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[119]) = 42735;
-# 211 "bondsKernelsGpu.cu"
-((__cuda_local_var_42490_6_non_const_YearOffset)[120]) = 43830;
-# 214 "bondsKernelsGpu.cu"
-return (__cuda_local_var_42490_6_non_const_YearOffset)[(y - 1900)];
-# 215 "bondsKernelsGpu.cu"
+# 69 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[2]) = 731;
+# 70 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[3]) = 1096;
+# 71 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[4]) = 1461;
+# 72 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[5]) = 1827;
+# 73 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[6]) = 2192;
+# 74 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[7]) = 2557;
+# 75 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[8]) = 2922;
+# 76 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[9]) = 3288;
+# 77 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[10]) = 3653;
+# 78 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[11]) = 4018;
+# 79 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[12]) = 4383;
+# 80 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[13]) = 4749;
+# 81 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[14]) = 5114;
+# 82 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[15]) = 5479;
+# 83 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[16]) = 5844;
+# 84 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[17]) = 6210;
+# 85 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[18]) = 6575;
+# 86 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[19]) = 6940;
+# 87 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[20]) = 7305;
+# 88 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[21]) = 7671;
+# 89 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[22]) = 8036;
+# 90 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[23]) = 8401;
+# 91 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[24]) = 8766;
+# 92 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[25]) = 9132;
+# 93 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[26]) = 9497;
+# 94 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[27]) = 9862;
+# 95 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[28]) = 10227;
+# 96 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[29]) = 10593;
+# 97 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[30]) = 10958;
+# 98 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[31]) = 11323;
+# 99 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[32]) = 11688;
+# 100 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[33]) = 12054;
+# 101 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[34]) = 12419;
+# 102 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[35]) = 12784;
+# 103 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[36]) = 13149;
+# 104 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[37]) = 13515;
+# 105 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[38]) = 13880;
+# 106 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[39]) = 14245;
+# 107 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[40]) = 14610;
+# 108 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[41]) = 14976;
+# 109 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[42]) = 15341;
+# 110 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[43]) = 15706;
+# 111 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[44]) = 16071;
+# 112 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[45]) = 16437;
+# 113 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[46]) = 16802;
+# 114 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[47]) = 17167;
+# 115 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[48]) = 17532;
+# 116 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[49]) = 17898;
+# 117 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[50]) = 18263;
+# 118 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[51]) = 18628;
+# 119 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[52]) = 18993;
+# 120 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[53]) = 19359;
+# 121 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[54]) = 19724;
+# 122 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[55]) = 20089;
+# 123 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[56]) = 20454;
+# 124 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[57]) = 20820;
+# 125 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[58]) = 21185;
+# 126 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[59]) = 21550;
+# 127 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[60]) = 21915;
+# 128 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[61]) = 22281;
+# 129 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[62]) = 22646;
+# 130 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[63]) = 23011;
+# 131 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[64]) = 23376;
+# 132 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[65]) = 23742;
+# 133 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[66]) = 24107;
+# 134 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[67]) = 24472;
+# 135 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[68]) = 24837;
+# 136 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[69]) = 25203;
+# 137 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[70]) = 25568;
+# 138 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[71]) = 25933;
+# 139 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[72]) = 26298;
+# 140 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[73]) = 26664;
+# 141 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[74]) = 27029;
+# 142 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[75]) = 27394;
+# 143 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[76]) = 27759;
+# 144 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[77]) = 28125;
+# 145 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[78]) = 28490;
+# 146 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[79]) = 28855;
+# 147 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[80]) = 29220;
+# 148 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[81]) = 29586;
+# 149 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[82]) = 29951;
+# 150 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[83]) = 30316;
+# 151 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[84]) = 30681;
+# 152 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[85]) = 31047;
+# 153 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[86]) = 31412;
+# 154 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[87]) = 31777;
+# 155 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[88]) = 32142;
+# 156 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[89]) = 32508;
+# 157 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[90]) = 32873;
+# 158 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[91]) = 33238;
+# 159 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[92]) = 33603;
+# 160 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[93]) = 33969;
+# 161 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[94]) = 34334;
+# 162 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[95]) = 34699;
+# 163 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[96]) = 35064;
+# 164 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[97]) = 35430;
+# 165 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[98]) = 35795;
+# 166 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[99]) = 36160;
+# 167 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[100]) = 36525;
+# 168 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[101]) = 36891;
+# 169 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[102]) = 37256;
+# 170 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[103]) = 37621;
+# 171 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[104]) = 37986;
+# 172 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[105]) = 38352;
+# 173 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[106]) = 38717;
+# 174 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[107]) = 39082;
+# 175 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[108]) = 39447;
+# 176 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[109]) = 39813;
+# 177 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[110]) = 40178;
+# 178 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[111]) = 40543;
+# 179 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[112]) = 40908;
+# 180 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[113]) = 41274;
+# 181 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[114]) = 41639;
+# 182 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[115]) = 42004;
+# 183 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[116]) = 42369;
+# 184 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[117]) = 42735;
+# 185 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[118]) = 43100;
+# 186 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[119]) = 42735;
+# 187 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42474_6_non_const_YearOffset)[120]) = 43830;
+# 188 "bondsKernelsGpu1.cu"
+return (__cuda_local_var_42474_6_non_const_YearOffset)[(y - 1900)];
+# 189 "bondsKernelsGpu1.cu"
 }
-# 215 "bondsKernelsGpu.cu"
+# 189 "bondsKernelsGpu1.cu"
 }}
-# 218 "bondsKernelsGpu.cu"
+# 190 "bondsKernelsGpu1.cu"
  __nv_bool _Z15isLeapKernelGpui(
-# 218 "bondsKernelsGpu.cu"
+# 190 "bondsKernelsGpu1.cu"
 int y){
-# 218 "bondsKernelsGpu.cu"
+# 190 "bondsKernelsGpu1.cu"
 {
-# 219 "bondsKernelsGpu.cu"
+# 191 "bondsKernelsGpu1.cu"
 {
-# 220 "bondsKernelsGpu.cu"
- __nv_bool __cuda_local_var_42629_14_non_const_YearIsLeap[121];
-# 222 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[0]) = ((__nv_bool)1);
-# 222 "bondsKernelsGpu.cu"
+# 192 "bondsKernelsGpu1.cu"
+ __nv_bool __cuda_local_var_42600_7_non_const_YearIsLeap[121];
+# 193 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[0]) = ((__nv_bool)1);
+# 193 "bondsKernelsGpu1.cu"
 ;
-# 223 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[1]) = ((__nv_bool)0);
-# 223 "bondsKernelsGpu.cu"
+# 194 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[1]) = ((__nv_bool)0);
+# 194 "bondsKernelsGpu1.cu"
 ;
-# 224 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[2]) = ((__nv_bool)0);
-# 225 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[3]) = ((__nv_bool)0);
-# 226 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[4]) = ((__nv_bool)1);
-# 227 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[5]) = ((__nv_bool)0);
-# 228 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[6]) = ((__nv_bool)0);
-# 229 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[7]) = ((__nv_bool)0);
-# 230 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[8]) = ((__nv_bool)1);
-# 231 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[9]) = ((__nv_bool)0);
-# 232 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[10]) = ((__nv_bool)0);
-# 233 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[11]) = ((__nv_bool)0);
-# 234 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[12]) = ((__nv_bool)1);
-# 235 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[13]) = ((__nv_bool)0);
-# 236 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[14]) = ((__nv_bool)0);
-# 237 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[15]) = ((__nv_bool)0);
-# 238 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[16]) = ((__nv_bool)1);
-# 239 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[17]) = ((__nv_bool)0);
-# 240 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[18]) = ((__nv_bool)0);
-# 241 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[19]) = ((__nv_bool)0);
-# 242 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[20]) = ((__nv_bool)1);
-# 243 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[21]) = ((__nv_bool)0);
-# 246 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[22]) = ((__nv_bool)0);
-# 247 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[23]) = ((__nv_bool)0);
-# 248 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[24]) = ((__nv_bool)1);
-# 249 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[25]) = ((__nv_bool)0);
-# 250 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[26]) = ((__nv_bool)0);
-# 251 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[27]) = ((__nv_bool)0);
-# 252 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[28]) = ((__nv_bool)1);
-# 253 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[29]) = ((__nv_bool)0);
-# 254 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[30]) = ((__nv_bool)0);
-# 255 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[31]) = ((__nv_bool)0);
-# 256 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[32]) = ((__nv_bool)1);
-# 257 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[33]) = ((__nv_bool)0);
-# 259 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[34]) = ((__nv_bool)0);
-# 260 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[35]) = ((__nv_bool)0);
-# 261 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[36]) = ((__nv_bool)1);
-# 262 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[37]) = ((__nv_bool)0);
-# 263 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[38]) = ((__nv_bool)0);
-# 264 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[39]) = ((__nv_bool)0);
-# 265 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[40]) = ((__nv_bool)1);
-# 266 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[41]) = ((__nv_bool)0);
-# 267 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[42]) = ((__nv_bool)0);
-# 268 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[43]) = ((__nv_bool)0);
-# 269 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[44]) = ((__nv_bool)1);
-# 270 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[45]) = ((__nv_bool)0);
-# 272 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[46]) = ((__nv_bool)0);
-# 273 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[47]) = ((__nv_bool)0);
-# 274 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[48]) = ((__nv_bool)1);
-# 275 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[49]) = ((__nv_bool)0);
-# 276 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[50]) = ((__nv_bool)0);
-# 277 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[51]) = ((__nv_bool)0);
-# 278 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[52]) = ((__nv_bool)1);
-# 279 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[53]) = ((__nv_bool)0);
-# 280 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[54]) = ((__nv_bool)0);
-# 281 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[55]) = ((__nv_bool)0);
-# 282 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[56]) = ((__nv_bool)1);
-# 283 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[57]) = ((__nv_bool)0);
-# 285 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[58]) = ((__nv_bool)0);
-# 286 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[59]) = ((__nv_bool)0);
-# 287 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[60]) = ((__nv_bool)1);
-# 288 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[61]) = ((__nv_bool)0);
-# 289 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[62]) = ((__nv_bool)0);
-# 290 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[63]) = ((__nv_bool)0);
-# 291 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[64]) = ((__nv_bool)1);
-# 292 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[65]) = ((__nv_bool)0);
-# 293 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[66]) = ((__nv_bool)0);
-# 294 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[67]) = ((__nv_bool)0);
-# 295 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[68]) = ((__nv_bool)1);
-# 296 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[69]) = ((__nv_bool)0);
-# 298 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[70]) = ((__nv_bool)0);
-# 299 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[71]) = ((__nv_bool)0);
-# 300 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[72]) = ((__nv_bool)1);
-# 301 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[73]) = ((__nv_bool)0);
-# 302 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[74]) = ((__nv_bool)0);
-# 303 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[75]) = ((__nv_bool)0);
-# 304 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[76]) = ((__nv_bool)1);
-# 305 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[77]) = ((__nv_bool)0);
-# 306 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[78]) = ((__nv_bool)0);
-# 307 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[79]) = ((__nv_bool)0);
-# 308 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[80]) = ((__nv_bool)1);
-# 309 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[81]) = ((__nv_bool)0);
-# 311 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[82]) = ((__nv_bool)0);
-# 312 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[83]) = ((__nv_bool)0);
-# 313 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[84]) = ((__nv_bool)1);
-# 314 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[85]) = ((__nv_bool)0);
-# 315 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[86]) = ((__nv_bool)0);
-# 316 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[87]) = ((__nv_bool)0);
-# 317 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[88]) = ((__nv_bool)1);
-# 318 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[89]) = ((__nv_bool)0);
-# 319 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[90]) = ((__nv_bool)0);
-# 320 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[91]) = ((__nv_bool)0);
-# 321 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[92]) = ((__nv_bool)1);
-# 322 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[93]) = ((__nv_bool)0);
-# 324 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[94]) = ((__nv_bool)0);
-# 325 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[95]) = ((__nv_bool)0);
-# 326 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[96]) = ((__nv_bool)1);
-# 327 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[97]) = ((__nv_bool)0);
-# 328 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[98]) = ((__nv_bool)0);
-# 329 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[99]) = ((__nv_bool)0);
-# 330 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[100]) = ((__nv_bool)1);
-# 331 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[101]) = ((__nv_bool)0);
-# 332 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[102]) = ((__nv_bool)0);
-# 333 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[103]) = ((__nv_bool)0);
-# 334 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[104]) = ((__nv_bool)1);
-# 335 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[105]) = ((__nv_bool)0);
-# 337 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[106]) = ((__nv_bool)0);
-# 338 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[107]) = ((__nv_bool)0);
-# 339 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[108]) = ((__nv_bool)1);
-# 340 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[109]) = ((__nv_bool)0);
-# 341 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[110]) = ((__nv_bool)0);
-# 342 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[111]) = ((__nv_bool)0);
-# 343 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[112]) = ((__nv_bool)1);
-# 344 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[113]) = ((__nv_bool)0);
-# 345 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[114]) = ((__nv_bool)0);
-# 346 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[115]) = ((__nv_bool)0);
-# 347 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[116]) = ((__nv_bool)1);
-# 348 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[117]) = ((__nv_bool)0);
-# 349 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[118]) = ((__nv_bool)0);
-# 350 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[119]) = ((__nv_bool)0);
-# 351 "bondsKernelsGpu.cu"
-((__cuda_local_var_42629_14_non_const_YearIsLeap)[120]) = ((__nv_bool)1);
-# 354 "bondsKernelsGpu.cu"
-return (__cuda_local_var_42629_14_non_const_YearIsLeap)[(y - 1900)];
-# 355 "bondsKernelsGpu.cu"
+# 195 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[2]) = ((__nv_bool)0);
+# 196 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[3]) = ((__nv_bool)0);
+# 197 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[4]) = ((__nv_bool)1);
+# 198 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[5]) = ((__nv_bool)0);
+# 199 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[6]) = ((__nv_bool)0);
+# 200 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[7]) = ((__nv_bool)0);
+# 201 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[8]) = ((__nv_bool)1);
+# 202 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[9]) = ((__nv_bool)0);
+# 203 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[10]) = ((__nv_bool)0);
+# 204 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[11]) = ((__nv_bool)0);
+# 205 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[12]) = ((__nv_bool)1);
+# 206 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[13]) = ((__nv_bool)0);
+# 207 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[14]) = ((__nv_bool)0);
+# 208 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[15]) = ((__nv_bool)0);
+# 209 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[16]) = ((__nv_bool)1);
+# 210 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[17]) = ((__nv_bool)0);
+# 211 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[18]) = ((__nv_bool)0);
+# 212 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[19]) = ((__nv_bool)0);
+# 213 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[20]) = ((__nv_bool)1);
+# 214 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[21]) = ((__nv_bool)0);
+# 215 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[22]) = ((__nv_bool)0);
+# 216 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[23]) = ((__nv_bool)0);
+# 217 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[24]) = ((__nv_bool)1);
+# 218 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[25]) = ((__nv_bool)0);
+# 219 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[26]) = ((__nv_bool)0);
+# 220 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[27]) = ((__nv_bool)0);
+# 221 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[28]) = ((__nv_bool)1);
+# 222 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[29]) = ((__nv_bool)0);
+# 223 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[30]) = ((__nv_bool)0);
+# 224 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[31]) = ((__nv_bool)0);
+# 225 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[32]) = ((__nv_bool)1);
+# 226 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[33]) = ((__nv_bool)0);
+# 227 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[34]) = ((__nv_bool)0);
+# 228 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[35]) = ((__nv_bool)0);
+# 229 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[36]) = ((__nv_bool)1);
+# 230 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[37]) = ((__nv_bool)0);
+# 231 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[38]) = ((__nv_bool)0);
+# 232 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[39]) = ((__nv_bool)0);
+# 233 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[40]) = ((__nv_bool)1);
+# 234 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[41]) = ((__nv_bool)0);
+# 235 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[42]) = ((__nv_bool)0);
+# 236 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[43]) = ((__nv_bool)0);
+# 237 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[44]) = ((__nv_bool)1);
+# 238 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[45]) = ((__nv_bool)0);
+# 239 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[46]) = ((__nv_bool)0);
+# 240 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[47]) = ((__nv_bool)0);
+# 241 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[48]) = ((__nv_bool)1);
+# 242 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[49]) = ((__nv_bool)0);
+# 243 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[50]) = ((__nv_bool)0);
+# 244 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[51]) = ((__nv_bool)0);
+# 245 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[52]) = ((__nv_bool)1);
+# 246 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[53]) = ((__nv_bool)0);
+# 247 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[54]) = ((__nv_bool)0);
+# 248 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[55]) = ((__nv_bool)0);
+# 249 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[56]) = ((__nv_bool)1);
+# 250 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[57]) = ((__nv_bool)0);
+# 251 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[58]) = ((__nv_bool)0);
+# 252 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[59]) = ((__nv_bool)0);
+# 253 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[60]) = ((__nv_bool)1);
+# 254 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[61]) = ((__nv_bool)0);
+# 255 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[62]) = ((__nv_bool)0);
+# 256 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[63]) = ((__nv_bool)0);
+# 257 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[64]) = ((__nv_bool)1);
+# 258 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[65]) = ((__nv_bool)0);
+# 259 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[66]) = ((__nv_bool)0);
+# 260 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[67]) = ((__nv_bool)0);
+# 261 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[68]) = ((__nv_bool)1);
+# 262 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[69]) = ((__nv_bool)0);
+# 263 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[70]) = ((__nv_bool)0);
+# 264 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[71]) = ((__nv_bool)0);
+# 265 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[72]) = ((__nv_bool)1);
+# 266 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[73]) = ((__nv_bool)0);
+# 267 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[74]) = ((__nv_bool)0);
+# 268 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[75]) = ((__nv_bool)0);
+# 269 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[76]) = ((__nv_bool)1);
+# 270 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[77]) = ((__nv_bool)0);
+# 271 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[78]) = ((__nv_bool)0);
+# 272 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[79]) = ((__nv_bool)0);
+# 273 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[80]) = ((__nv_bool)1);
+# 274 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[81]) = ((__nv_bool)0);
+# 275 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[82]) = ((__nv_bool)0);
+# 276 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[83]) = ((__nv_bool)0);
+# 277 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[84]) = ((__nv_bool)1);
+# 278 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[85]) = ((__nv_bool)0);
+# 279 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[86]) = ((__nv_bool)0);
+# 280 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[87]) = ((__nv_bool)0);
+# 281 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[88]) = ((__nv_bool)1);
+# 282 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[89]) = ((__nv_bool)0);
+# 283 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[90]) = ((__nv_bool)0);
+# 284 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[91]) = ((__nv_bool)0);
+# 285 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[92]) = ((__nv_bool)1);
+# 286 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[93]) = ((__nv_bool)0);
+# 287 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[94]) = ((__nv_bool)0);
+# 288 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[95]) = ((__nv_bool)0);
+# 289 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[96]) = ((__nv_bool)1);
+# 290 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[97]) = ((__nv_bool)0);
+# 291 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[98]) = ((__nv_bool)0);
+# 292 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[99]) = ((__nv_bool)0);
+# 293 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[100]) = ((__nv_bool)1);
+# 294 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[101]) = ((__nv_bool)0);
+# 295 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[102]) = ((__nv_bool)0);
+# 296 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[103]) = ((__nv_bool)0);
+# 297 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[104]) = ((__nv_bool)1);
+# 298 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[105]) = ((__nv_bool)0);
+# 299 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[106]) = ((__nv_bool)0);
+# 300 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[107]) = ((__nv_bool)0);
+# 301 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[108]) = ((__nv_bool)1);
+# 302 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[109]) = ((__nv_bool)0);
+# 303 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[110]) = ((__nv_bool)0);
+# 304 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[111]) = ((__nv_bool)0);
+# 305 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[112]) = ((__nv_bool)1);
+# 306 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[113]) = ((__nv_bool)0);
+# 307 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[114]) = ((__nv_bool)0);
+# 308 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[115]) = ((__nv_bool)0);
+# 309 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[116]) = ((__nv_bool)1);
+# 310 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[117]) = ((__nv_bool)0);
+# 311 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[118]) = ((__nv_bool)0);
+# 312 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[119]) = ((__nv_bool)0);
+# 313 "bondsKernelsGpu1.cu"
+((__cuda_local_var_42600_7_non_const_YearIsLeap)[120]) = ((__nv_bool)1);
+# 314 "bondsKernelsGpu1.cu"
+return (__cuda_local_var_42600_7_non_const_YearIsLeap)[(y - 1900)];
+# 315 "bondsKernelsGpu1.cu"
 }
-# 355 "bondsKernelsGpu.cu"
+# 315 "bondsKernelsGpu1.cu"
 }}
-# 358 "bondsKernelsGpu.cu"
+# 316 "bondsKernelsGpu1.cu"
  bondsDateStruct _Z22intializeDateKernelGpuiii(
-# 358 "bondsKernelsGpu.cu"
+# 316 "bondsKernelsGpu1.cu"
 int d,
-# 358 "bondsKernelsGpu.cu"
+# 316 "bondsKernelsGpu1.cu"
 int m,
-# 358 "bondsKernelsGpu.cu"
+# 316 "bondsKernelsGpu1.cu"
 int y){
-# 358 "bondsKernelsGpu.cu"
+# 316 "bondsKernelsGpu1.cu"
 {
-# 359 "bondsKernelsGpu.cu"
+# 317 "bondsKernelsGpu1.cu"
 {
-# 360 "bondsKernelsGpu.cu"
- bondsDateStruct __cuda_local_var_42769_18_non_const_currDate;
-# 366 "bondsKernelsGpu.cu"
- __nv_bool __cuda_local_var_42775_7_non_const_leap;
-# 367 "bondsKernelsGpu.cu"
- int __cuda_local_var_42776_6_non_const_offset;
-# 362 "bondsKernelsGpu.cu"
-(__cuda_local_var_42769_18_non_const_currDate.day) = d;
-# 363 "bondsKernelsGpu.cu"
-(__cuda_local_var_42769_18_non_const_currDate.month) = m;
-# 364 "bondsKernelsGpu.cu"
-(__cuda_local_var_42769_18_non_const_currDate.year) = y;
-# 366 "bondsKernelsGpu.cu"
-__cuda_local_var_42775_7_non_const_leap = (_Z15isLeapKernelGpui(y));
-# 367 "bondsKernelsGpu.cu"
-__cuda_local_var_42776_6_non_const_offset = (_Z20monthOffsetKernelGpuib(m, __cuda_local_var_42775_7_non_const_leap));
-# 369 "bondsKernelsGpu.cu"
-(__cuda_local_var_42769_18_non_const_currDate.dateSerialNum) = ((d + __cuda_local_var_42776_6_non_const_offset) + (_Z19yearOffsetKernelGpui(y)));
-# 371 "bondsKernelsGpu.cu"
-return __cuda_local_var_42769_18_non_const_currDate;
-# 372 "bondsKernelsGpu.cu"
+# 318 "bondsKernelsGpu1.cu"
+ bondsDateStruct __cuda_local_var_42726_17_non_const_currDate;
+# 322 "bondsKernelsGpu1.cu"
+ __nv_bool __cuda_local_var_42730_7_non_const_leap;
+# 323 "bondsKernelsGpu1.cu"
+ int __cuda_local_var_42731_5_non_const_offset;
+# 319 "bondsKernelsGpu1.cu"
+(__cuda_local_var_42726_17_non_const_currDate.day) = d;
+# 320 "bondsKernelsGpu1.cu"
+(__cuda_local_var_42726_17_non_const_currDate.month) = m;
+# 321 "bondsKernelsGpu1.cu"
+(__cuda_local_var_42726_17_non_const_currDate.year) = y;
+# 322 "bondsKernelsGpu1.cu"
+__cuda_local_var_42730_7_non_const_leap = (_Z15isLeapKernelGpui(y));
+# 323 "bondsKernelsGpu1.cu"
+__cuda_local_var_42731_5_non_const_offset = (_Z20monthOffsetKernelGpuib(m, __cuda_local_var_42730_7_non_const_leap));
+# 324 "bondsKernelsGpu1.cu"
+(__cuda_local_var_42726_17_non_const_currDate.dateSerialNum) = ((d + __cuda_local_var_42731_5_non_const_offset) + (_Z19yearOffsetKernelGpui(y)));
+# 325 "bondsKernelsGpu1.cu"
+return __cuda_local_var_42726_17_non_const_currDate;
+# 326 "bondsKernelsGpu1.cu"
 }
-# 372 "bondsKernelsGpu.cu"
+# 326 "bondsKernelsGpu1.cu"
 }}
-# 375 "bondsKernelsGpu.cu"
+# 327 "bondsKernelsGpu1.cu"
  dataType _Z15yearFractionGpu15bondsDateStructS_i(
-# 375 "bondsKernelsGpu.cu"
+# 327 "bondsKernelsGpu1.cu"
 bondsDateStruct d1,
-# 376 "bondsKernelsGpu.cu"
+# 327 "bondsKernelsGpu1.cu"
 bondsDateStruct d2,
-# 376 "bondsKernelsGpu.cu"
+# 327 "bondsKernelsGpu1.cu"
 int dayCounter){
-# 376 "bondsKernelsGpu.cu"
+# 327 "bondsKernelsGpu1.cu"
 {
-# 377 "bondsKernelsGpu.cu"
+# 328 "bondsKernelsGpu1.cu"
 {
-# 378 "bondsKernelsGpu.cu"
+# 329 "bondsKernelsGpu1.cu"
 return (dataType)(fdivide(((double)(_Z11dayCountGpu15bondsDateStructS_i(d1, d2, dayCounter))), (360.0)));
-# 379 "bondsKernelsGpu.cu"
+# 330 "bondsKernelsGpu1.cu"
 }
-# 379 "bondsKernelsGpu.cu"
+# 330 "bondsKernelsGpu1.cu"
 }}
-# 382 "bondsKernelsGpu.cu"
+# 331 "bondsKernelsGpu1.cu"
  int _Z11dayCountGpu15bondsDateStructS_i(
-# 382 "bondsKernelsGpu.cu"
+# 331 "bondsKernelsGpu1.cu"
 bondsDateStruct d1,
-# 382 "bondsKernelsGpu.cu"
+# 331 "bondsKernelsGpu1.cu"
 bondsDateStruct d2,
-# 382 "bondsKernelsGpu.cu"
+# 331 "bondsKernelsGpu1.cu"
 int dayCounter){
-# 382 "bondsKernelsGpu.cu"
+# 331 "bondsKernelsGpu1.cu"
 {
-# 383 "bondsKernelsGpu.cu"
+# 332 "bondsKernelsGpu1.cu"
 {
-# 384 "bondsKernelsGpu.cu"
+# 333 "bondsKernelsGpu1.cu"
 if (dayCounter == 0)
-# 385 "bondsKernelsGpu.cu"
+# 334 "bondsKernelsGpu1.cu"
 {
-# 386 "bondsKernelsGpu.cu"
- int __cuda_local_var_42795_7_non_const_dd1;
-# 386 "bondsKernelsGpu.cu"
- int __cuda_local_var_42795_21_non_const_dd2;
-# 387 "bondsKernelsGpu.cu"
- int __cuda_local_var_42796_7_non_const_mm1;
-# 387 "bondsKernelsGpu.cu"
- int __cuda_local_var_42796_23_non_const_mm2;
-# 388 "bondsKernelsGpu.cu"
- int __cuda_local_var_42797_7_non_const_yy1;
-# 388 "bondsKernelsGpu.cu"
- int __cuda_local_var_42797_22_non_const_yy2;
-# 386 "bondsKernelsGpu.cu"
-__cuda_local_var_42795_7_non_const_dd1 = (d1.day);
-# 386 "bondsKernelsGpu.cu"
-__cuda_local_var_42795_21_non_const_dd2 = (d2.day);
-# 387 "bondsKernelsGpu.cu"
-__cuda_local_var_42796_7_non_const_mm1 = (d1.month);
-# 387 "bondsKernelsGpu.cu"
-__cuda_local_var_42796_23_non_const_mm2 = (d2.month);
-# 388 "bondsKernelsGpu.cu"
-__cuda_local_var_42797_7_non_const_yy1 = (d1.year);
-# 388 "bondsKernelsGpu.cu"
-__cuda_local_var_42797_22_non_const_yy2 = (d2.year);
-# 390 "bondsKernelsGpu.cu"
-if ((__cuda_local_var_42795_21_non_const_dd2 == 31) && (__cuda_local_var_42795_7_non_const_dd1 < 30))
-# 391 "bondsKernelsGpu.cu"
+# 335 "bondsKernelsGpu1.cu"
+ int __cuda_local_var_42743_5_non_const_dd1;
+# 335 "bondsKernelsGpu1.cu"
+ int __cuda_local_var_42743_19_non_const_dd2;
+# 336 "bondsKernelsGpu1.cu"
+ int __cuda_local_var_42744_5_non_const_mm1;
+# 336 "bondsKernelsGpu1.cu"
+ int __cuda_local_var_42744_21_non_const_mm2;
+# 337 "bondsKernelsGpu1.cu"
+ int __cuda_local_var_42745_5_non_const_yy1;
+# 337 "bondsKernelsGpu1.cu"
+ int __cuda_local_var_42745_20_non_const_yy2;
+# 335 "bondsKernelsGpu1.cu"
+__cuda_local_var_42743_5_non_const_dd1 = (d1.day);
+# 335 "bondsKernelsGpu1.cu"
+__cuda_local_var_42743_19_non_const_dd2 = (d2.day);
+# 336 "bondsKernelsGpu1.cu"
+__cuda_local_var_42744_5_non_const_mm1 = (d1.month);
+# 336 "bondsKernelsGpu1.cu"
+__cuda_local_var_42744_21_non_const_mm2 = (d2.month);
+# 337 "bondsKernelsGpu1.cu"
+__cuda_local_var_42745_5_non_const_yy1 = (d1.year);
+# 337 "bondsKernelsGpu1.cu"
+__cuda_local_var_42745_20_non_const_yy2 = (d2.year);
+# 338 "bondsKernelsGpu1.cu"
+if ((__cuda_local_var_42743_19_non_const_dd2 == 31) && (__cuda_local_var_42743_5_non_const_dd1 < 30))
+# 339 "bondsKernelsGpu1.cu"
 {
-# 392 "bondsKernelsGpu.cu"
-__cuda_local_var_42795_21_non_const_dd2 = 1;
-# 392 "bondsKernelsGpu.cu"
-__cuda_local_var_42796_23_non_const_mm2++;
-# 393 "bondsKernelsGpu.cu"
+# 340 "bondsKernelsGpu1.cu"
+__cuda_local_var_42743_19_non_const_dd2 = 1;
+# 340 "bondsKernelsGpu1.cu"
+__cuda_local_var_42744_21_non_const_mm2++;
+# 341 "bondsKernelsGpu1.cu"
 }
-# 395 "bondsKernelsGpu.cu"
-return (((360 * (__cuda_local_var_42797_22_non_const_yy2 - __cuda_local_var_42797_7_non_const_yy1)) + (30 * ((__cuda_local_var_42796_23_non_const_mm2 - __cuda_local_var_42796_7_non_const_mm1) - 1))) + ((0 > (30 - __cuda_local_var_42795_7_non_const_dd1)) ? 0 : (30 - __cuda_local_var_42795_7_non_const_dd1))) + ((30 < __cuda_local_var_42795_21_non_const_dd2) ? 30 : __cuda_local_var_42795_21_non_const_dd2);
-# 396 "bondsKernelsGpu.cu"
+# 342 "bondsKernelsGpu1.cu"
+return (((360 * (__cuda_local_var_42745_20_non_const_yy2 - __cuda_local_var_42745_5_non_const_yy1)) + (30 * ((__cuda_local_var_42744_21_non_const_mm2 - __cuda_local_var_42744_5_non_const_mm1) - 1))) + ((0 > (30 - __cuda_local_var_42743_5_non_const_dd1)) ? 0 : (30 - __cuda_local_var_42743_5_non_const_dd1))) + ((30 < __cuda_local_var_42743_19_non_const_dd2) ? 30 : __cuda_local_var_42743_19_non_const_dd2);
+# 343 "bondsKernelsGpu1.cu"
 }
-# 399 "bondsKernelsGpu.cu"
+# 345 "bondsKernelsGpu1.cu"
 else
-# 399 "bondsKernelsGpu.cu"
+# 345 "bondsKernelsGpu1.cu"
 {
-# 400 "bondsKernelsGpu.cu"
+# 346 "bondsKernelsGpu1.cu"
 return (d2.dateSerialNum) - (d1.dateSerialNum);
-# 401 "bondsKernelsGpu.cu"
+# 347 "bondsKernelsGpu1.cu"
 }
-# 402 "bondsKernelsGpu.cu"
+# 348 "bondsKernelsGpu1.cu"
 }
-# 402 "bondsKernelsGpu.cu"
+# 348 "bondsKernelsGpu1.cu"
 }}
-# 405 "bondsKernelsGpu.cu"
+# 349 "bondsKernelsGpu1.cu"
  dataType _Z17couponNotionalGpuv(void){
-# 405 "bondsKernelsGpu.cu"
+# 349 "bondsKernelsGpu1.cu"
 {
-# 406 "bondsKernelsGpu.cu"
+# 350 "bondsKernelsGpu1.cu"
 {
-# 407 "bondsKernelsGpu.cu"
+# 351 "bondsKernelsGpu1.cu"
 return (100.0);
-# 408 "bondsKernelsGpu.cu"
+# 352 "bondsKernelsGpu1.cu"
 }
-# 408 "bondsKernelsGpu.cu"
+# 352 "bondsKernelsGpu1.cu"
 }}
-# 410 "bondsKernelsGpu.cu"
+# 353 "bondsKernelsGpu1.cu"
  dataType _Z15bondNotionalGpuv(void){
-# 410 "bondsKernelsGpu.cu"
+# 353 "bondsKernelsGpu1.cu"
 {
-# 411 "bondsKernelsGpu.cu"
+# 354 "bondsKernelsGpu1.cu"
 {
-# 412 "bondsKernelsGpu.cu"
+# 355 "bondsKernelsGpu1.cu"
 return (100.0);
-# 413 "bondsKernelsGpu.cu"
+# 356 "bondsKernelsGpu1.cu"
 }
-# 413 "bondsKernelsGpu.cu"
+# 356 "bondsKernelsGpu1.cu"
 }}
-# 416 "bondsKernelsGpu.cu"
+# 357 "bondsKernelsGpu1.cu"
  dataType _Z25fixedRateCouponNominalGpuv(void){
-# 416 "bondsKernelsGpu.cu"
+# 357 "bondsKernelsGpu1.cu"
 {
-# 417 "bondsKernelsGpu.cu"
+# 358 "bondsKernelsGpu1.cu"
 {
-# 418 "bondsKernelsGpu.cu"
+# 359 "bondsKernelsGpu1.cu"
 return (100.0);
-# 419 "bondsKernelsGpu.cu"
+# 360 "bondsKernelsGpu1.cu"
 }
-# 419 "bondsKernelsGpu.cu"
+# 360 "bondsKernelsGpu1.cu"
 }}
-# 421 "bondsKernelsGpu.cu"
+# 361 "bondsKernelsGpu1.cu"
  __nv_bool _Z19eventHasOccurredGpu15bondsDateStructS_(
-# 421 "bondsKernelsGpu.cu"
+# 361 "bondsKernelsGpu1.cu"
 bondsDateStruct currDate,
-# 421 "bondsKernelsGpu.cu"
+# 361 "bondsKernelsGpu1.cu"
 bondsDateStruct eventDate){
-# 421 "bondsKernelsGpu.cu"
+# 361 "bondsKernelsGpu1.cu"
 {
-# 422 "bondsKernelsGpu.cu"
+# 362 "bondsKernelsGpu1.cu"
 {
-# 423 "bondsKernelsGpu.cu"
+# 363 "bondsKernelsGpu1.cu"
 return (__nv_bool)((eventDate.dateSerialNum) > (currDate.dateSerialNum));
-# 424 "bondsKernelsGpu.cu"
+# 364 "bondsKernelsGpu1.cu"
 }
-# 424 "bondsKernelsGpu.cu"
+# 364 "bondsKernelsGpu1.cu"
 }}
-# 427 "bondsKernelsGpu.cu"
+# 365 "bondsKernelsGpu1.cu"
  __nv_bool _Z22cashFlowHasOccurredGpu15bondsDateStructS_(
-# 427 "bondsKernelsGpu.cu"
+# 365 "bondsKernelsGpu1.cu"
 bondsDateStruct refDate,
-# 427 "bondsKernelsGpu.cu"
+# 365 "bondsKernelsGpu1.cu"
 bondsDateStruct eventDate){
-# 427 "bondsKernelsGpu.cu"
+# 365 "bondsKernelsGpu1.cu"
 {
-# 428 "bondsKernelsGpu.cu"
+# 366 "bondsKernelsGpu1.cu"
 {
-# 429 "bondsKernelsGpu.cu"
+# 367 "bondsKernelsGpu1.cu"
 return _Z19eventHasOccurredGpu15bondsDateStructS_(refDate, eventDate);
-# 430 "bondsKernelsGpu.cu"
+# 368 "bondsKernelsGpu1.cu"
 }
-# 430 "bondsKernelsGpu.cu"
+# 368 "bondsKernelsGpu1.cu"
 }}
-# 434 "bondsKernelsGpu.cu"
+# 369 "bondsKernelsGpu1.cu"
  bondsDateStruct _Z14advanceDateGpu15bondsDateStructi(
-# 434 "bondsKernelsGpu.cu"
+# 369 "bondsKernelsGpu1.cu"
 bondsDateStruct date,
-# 434 "bondsKernelsGpu.cu"
+# 369 "bondsKernelsGpu1.cu"
 int numMonthsAdvance){
-# 434 "bondsKernelsGpu.cu"
+# 369 "bondsKernelsGpu1.cu"
 {
-# 435 "bondsKernelsGpu.cu"
+# 370 "bondsKernelsGpu1.cu"
 {
-# 436 "bondsKernelsGpu.cu"
- int __cuda_local_var_42845_6_non_const_d;
-# 437 "bondsKernelsGpu.cu"
- int __cuda_local_var_42846_6_non_const_m;
-# 438 "bondsKernelsGpu.cu"
- int __cuda_local_var_42847_6_non_const_y;
-# 452 "bondsKernelsGpu.cu"
- int __cuda_local_var_42861_6_non_const_length;
-# 456 "bondsKernelsGpu.cu"
- bondsDateStruct __cuda_local_var_42865_18_non_const_newDate;
-# 436 "bondsKernelsGpu.cu"
-__cuda_local_var_42845_6_non_const_d = (date.day);
-# 437 "bondsKernelsGpu.cu"
-__cuda_local_var_42846_6_non_const_m = ((date.month) + numMonthsAdvance);
-# 438 "bondsKernelsGpu.cu"
-__cuda_local_var_42847_6_non_const_y = (date.year);
-# 440 "bondsKernelsGpu.cu"
-while (__cuda_local_var_42846_6_non_const_m > 12)
-# 441 "bondsKernelsGpu.cu"
+# 371 "bondsKernelsGpu1.cu"
+ int __cuda_local_var_42779_5_non_const_d;
+# 372 "bondsKernelsGpu1.cu"
+ int __cuda_local_var_42780_5_non_const_m;
+# 373 "bondsKernelsGpu1.cu"
+ int __cuda_local_var_42781_5_non_const_y;
+# 384 "bondsKernelsGpu1.cu"
+ int __cuda_local_var_42792_6_non_const_length;
+# 387 "bondsKernelsGpu1.cu"
+ bondsDateStruct __cuda_local_var_42795_18_non_const_newDate;
+# 371 "bondsKernelsGpu1.cu"
+__cuda_local_var_42779_5_non_const_d = (date.day);
+# 372 "bondsKernelsGpu1.cu"
+__cuda_local_var_42780_5_non_const_m = ((date.month) + numMonthsAdvance);
+# 373 "bondsKernelsGpu1.cu"
+__cuda_local_var_42781_5_non_const_y = (date.year);
+# 374 "bondsKernelsGpu1.cu"
+while (__cuda_local_var_42780_5_non_const_m > 12)
+# 375 "bondsKernelsGpu1.cu"
 {
-# 442 "bondsKernelsGpu.cu"
-__cuda_local_var_42846_6_non_const_m -= 12;
-# 443 "bondsKernelsGpu.cu"
-__cuda_local_var_42847_6_non_const_y += 1;
-# 444 "bondsKernelsGpu.cu"
+# 376 "bondsKernelsGpu1.cu"
+__cuda_local_var_42780_5_non_const_m -= 12;
+# 377 "bondsKernelsGpu1.cu"
+__cuda_local_var_42781_5_non_const_y += 1;
+# 378 "bondsKernelsGpu1.cu"
 }
-# 446 "bondsKernelsGpu.cu"
-while (__cuda_local_var_42846_6_non_const_m < 1)
-# 447 "bondsKernelsGpu.cu"
+# 379 "bondsKernelsGpu1.cu"
+while (__cuda_local_var_42780_5_non_const_m < 1)
+# 380 "bondsKernelsGpu1.cu"
 {
-# 448 "bondsKernelsGpu.cu"
-__cuda_local_var_42846_6_non_const_m += 12;
-# 449 "bondsKernelsGpu.cu"
-__cuda_local_var_42847_6_non_const_y -= 1;
-# 450 "bondsKernelsGpu.cu"
+# 381 "bondsKernelsGpu1.cu"
+__cuda_local_var_42780_5_non_const_m += 12;
+# 382 "bondsKernelsGpu1.cu"
+__cuda_local_var_42781_5_non_const_y -= 1;
+# 383 "bondsKernelsGpu1.cu"
 }
-# 452 "bondsKernelsGpu.cu"
-__cuda_local_var_42861_6_non_const_length = (_Z20monthLengthKernelGpuib(__cuda_local_var_42846_6_non_const_m, (_Z15isLeapKernelGpui(__cuda_local_var_42847_6_non_const_y))));
-# 453 "bondsKernelsGpu.cu"
-if (__cuda_local_var_42845_6_non_const_d > __cuda_local_var_42861_6_non_const_length)
-# 453 "bondsKernelsGpu.cu"
+# 384 "bondsKernelsGpu1.cu"
+__cuda_local_var_42792_6_non_const_length = (_Z20monthLengthKernelGpuib(__cuda_local_var_42780_5_non_const_m, (_Z15isLeapKernelGpui(__cuda_local_var_42781_5_non_const_y))));
+# 385 "bondsKernelsGpu1.cu"
+if (__cuda_local_var_42779_5_non_const_d > __cuda_local_var_42792_6_non_const_length)
+# 385 "bondsKernelsGpu1.cu"
 {
-# 454 "bondsKernelsGpu.cu"
-__cuda_local_var_42845_6_non_const_d = __cuda_local_var_42861_6_non_const_length;
-# 454 "bondsKernelsGpu.cu"
+# 386 "bondsKernelsGpu1.cu"
+__cuda_local_var_42779_5_non_const_d = __cuda_local_var_42792_6_non_const_length;
+# 386 "bondsKernelsGpu1.cu"
 }
-# 456 "bondsKernelsGpu.cu"
-__cuda_local_var_42865_18_non_const_newDate = (_Z22intializeDateKernelGpuiii(__cuda_local_var_42845_6_non_const_d, __cuda_local_var_42846_6_non_const_m, __cuda_local_var_42847_6_non_const_y));
-# 458 "bondsKernelsGpu.cu"
-return __cuda_local_var_42865_18_non_const_newDate;
-# 459 "bondsKernelsGpu.cu"
+# 387 "bondsKernelsGpu1.cu"
+__cuda_local_var_42795_18_non_const_newDate = (_Z22intializeDateKernelGpuiii(__cuda_local_var_42779_5_non_const_d, __cuda_local_var_42780_5_non_const_m, __cuda_local_var_42781_5_non_const_y));
+# 388 "bondsKernelsGpu1.cu"
+return __cuda_local_var_42795_18_non_const_newDate;
+# 389 "bondsKernelsGpu1.cu"
 }
-# 459 "bondsKernelsGpu.cu"
+# 389 "bondsKernelsGpu1.cu"
 }}
-# 461 "bondsKernelsGpu.cu"
+# 390 "bondsKernelsGpu1.cu"
  int _Z18getNumCashFlowsGpu12inArgsStructi(
-# 461 "bondsKernelsGpu.cu"
+# 390 "bondsKernelsGpu1.cu"
 inArgsStruct inArgs,
-# 461 "bondsKernelsGpu.cu"
+# 390 "bondsKernelsGpu1.cu"
 int bondNum){
-# 461 "bondsKernelsGpu.cu"
+# 390 "bondsKernelsGpu1.cu"
 {
-# 462 "bondsKernelsGpu.cu"
+# 391 "bondsKernelsGpu1.cu"
 {
-# 463 "bondsKernelsGpu.cu"
- int __cuda_local_var_42872_6_non_const_numCashFlows;
-# 466 "bondsKernelsGpu.cu"
- bondsDateStruct __cuda_local_var_42875_18_non_const_currCashflowDate;
-# 463 "bondsKernelsGpu.cu"
-__cuda_local_var_42872_6_non_const_numCashFlows = 0;
-# 466 "bondsKernelsGpu.cu"
-__cuda_local_var_42875_18_non_const_currCashflowDate = (((inArgs.bond)[bondNum]).maturityDate);
-# 468 "bondsKernelsGpu.cu"
-while ((__cuda_local_var_42875_18_non_const_currCashflowDate.dateSerialNum) > ((((inArgs.bond)[bondNum]).startDate).dateSerialNum))
-# 469 "bondsKernelsGpu.cu"
+# 392 "bondsKernelsGpu1.cu"
+ int __cuda_local_var_42800_5_non_const_numCashFlows;
+# 393 "bondsKernelsGpu1.cu"
+ bondsDateStruct __cuda_local_var_42801_18_non_const_currCashflowDate;
+# 392 "bondsKernelsGpu1.cu"
+__cuda_local_var_42800_5_non_const_numCashFlows = 0;
+# 393 "bondsKernelsGpu1.cu"
+__cuda_local_var_42801_18_non_const_currCashflowDate = (((inArgs.bond)[bondNum]).maturityDate);
+# 394 "bondsKernelsGpu1.cu"
+while ((__cuda_local_var_42801_18_non_const_currCashflowDate.dateSerialNum) > ((((inArgs.bond)[bondNum]).startDate).dateSerialNum))
+# 395 "bondsKernelsGpu1.cu"
 {
-# 470 "bondsKernelsGpu.cu"
-__cuda_local_var_42872_6_non_const_numCashFlows++;
-# 471 "bondsKernelsGpu.cu"
-__cuda_local_var_42875_18_non_const_currCashflowDate = (_Z14advanceDateGpu15bondsDateStructi(__cuda_local_var_42875_18_non_const_currCashflowDate, (-6)));
-# 472 "bondsKernelsGpu.cu"
+# 396 "bondsKernelsGpu1.cu"
+__cuda_local_var_42800_5_non_const_numCashFlows++;
+# 397 "bondsKernelsGpu1.cu"
+__cuda_local_var_42801_18_non_const_currCashflowDate = (_Z14advanceDateGpu15bondsDateStructi(__cuda_local_var_42801_18_non_const_currCashflowDate, (-6)));
+# 398 "bondsKernelsGpu1.cu"
 }
-# 474 "bondsKernelsGpu.cu"
-return __cuda_local_var_42872_6_non_const_numCashFlows + 1;
-# 475 "bondsKernelsGpu.cu"
+# 399 "bondsKernelsGpu1.cu"
+return __cuda_local_var_42800_5_non_const_numCashFlows + 1;
+# 400 "bondsKernelsGpu1.cu"
 }
-# 475 "bondsKernelsGpu.cu"
+# 400 "bondsKernelsGpu1.cu"
 }}
-# 481 "bondsKernelsGpu.cu"
+# 401 "bondsKernelsGpu1.cu"
  dataType _Z16getDirtyPriceGpu12inArgsStructi15cashFlowsStructi(
-# 481 "bondsKernelsGpu.cu"
+# 401 "bondsKernelsGpu1.cu"
 inArgsStruct inArgs,
-# 481 "bondsKernelsGpu.cu"
+# 401 "bondsKernelsGpu1.cu"
 int bondNum,
-# 481 "bondsKernelsGpu.cu"
+# 401 "bondsKernelsGpu1.cu"
 cashFlowsStruct cashFlows,
-# 481 "bondsKernelsGpu.cu"
+# 401 "bondsKernelsGpu1.cu"
 int numLegs){
-# 481 "bondsKernelsGpu.cu"
+# 401 "bondsKernelsGpu1.cu"
 {
-# 482 "bondsKernelsGpu.cu"
+# 402 "bondsKernelsGpu1.cu"
 {
-# 483 "bondsKernelsGpu.cu"
- dataType __cuda_local_var_42892_11_non_const_currentNotional;
-# 483 "bondsKernelsGpu.cu"
-__cuda_local_var_42892_11_non_const_currentNotional = (_Z15bondNotionalGpuv());
-# 484 "bondsKernelsGpu.cu"
-return (dataType)(fdivide(((_Z48discountingBondEngineCalculateSettlementValueGpu12inArgsStructi15cashFlowsStructi(inArgs, bondNum, cashFlows, numLegs)) * (100.0)), __cuda_local_var_42892_11_non_const_currentNotional));
-# 485 "bondsKernelsGpu.cu"
+# 403 "bondsKernelsGpu1.cu"
+ dataType __cuda_local_var_42811_10_non_const_currentNotional;
+# 403 "bondsKernelsGpu1.cu"
+__cuda_local_var_42811_10_non_const_currentNotional = (_Z15bondNotionalGpuv());
+# 404 "bondsKernelsGpu1.cu"
+return (dataType)(fdivide(((_Z48discountingBondEngineCalculateSettlementValueGpu12inArgsStructi15cashFlowsStructi(inArgs, bondNum, cashFlows, numLegs)) * (100.0)), __cuda_local_var_42811_10_non_const_currentNotional));
+# 405 "bondsKernelsGpu1.cu"
 }
-# 485 "bondsKernelsGpu.cu"
+# 405 "bondsKernelsGpu1.cu"
 }}
-# 488 "bondsKernelsGpu.cu"
+# 406 "bondsKernelsGpu1.cu"
  dataType _Z19getAccruedAmountGpu12inArgsStruct15bondsDateStructi15cashFlowsStructi(
-# 488 "bondsKernelsGpu.cu"
+# 406 "bondsKernelsGpu1.cu"
 inArgsStruct inArgs,
-# 488 "bondsKernelsGpu.cu"
+# 406 "bondsKernelsGpu1.cu"
 bondsDateStruct date,
-# 488 "bondsKernelsGpu.cu"
+# 406 "bondsKernelsGpu1.cu"
 int bondNum,
-# 488 "bondsKernelsGpu.cu"
+# 406 "bondsKernelsGpu1.cu"
 cashFlowsStruct cashFlows,
-# 488 "bondsKernelsGpu.cu"
+# 406 "bondsKernelsGpu1.cu"
 int numLegs){
-# 488 "bondsKernelsGpu.cu"
+# 406 "bondsKernelsGpu1.cu"
 {
-# 489 "bondsKernelsGpu.cu"
+# 407 "bondsKernelsGpu1.cu"
 {
-# 490 "bondsKernelsGpu.cu"
+# 408 "bondsKernelsGpu1.cu"
 return _Z20bondAccruedAmountGpu12inArgsStruct15bondsDateStructi15cashFlowsStructi(inArgs, date, bondNum, cashFlows, numLegs);
-# 491 "bondsKernelsGpu.cu"
+# 409 "bondsKernelsGpu1.cu"
 }
-# 491 "bondsKernelsGpu.cu"
+# 409 "bondsKernelsGpu1.cu"
 }}
-# 494 "bondsKernelsGpu.cu"
+# 410 "bondsKernelsGpu1.cu"
  dataType _Z48discountingBondEngineCalculateSettlementValueGpu12inArgsStructi15cashFlowsStructi(
-# 494 "bondsKernelsGpu.cu"
+# 410 "bondsKernelsGpu1.cu"
 inArgsStruct inArgs,
-# 494 "bondsKernelsGpu.cu"
+# 410 "bondsKernelsGpu1.cu"
 int bondNum,
-# 494 "bondsKernelsGpu.cu"
+# 410 "bondsKernelsGpu1.cu"
 cashFlowsStruct cashFlows,
-# 494 "bondsKernelsGpu.cu"
+# 410 "bondsKernelsGpu1.cu"
 int numLegs){
-# 494 "bondsKernelsGpu.cu"
+# 410 "bondsKernelsGpu1.cu"
 {
-# 495 "bondsKernelsGpu.cu"
+# 411 "bondsKernelsGpu1.cu"
 {
-# 497 "bondsKernelsGpu.cu"
- bondsDateStruct __cuda_local_var_42906_18_non_const_currDate;
-# 497 "bondsKernelsGpu.cu"
-__cuda_local_var_42906_18_non_const_currDate = ((inArgs.currDate)[bondNum]);
-# 499 "bondsKernelsGpu.cu"
-if ((__cuda_local_var_42906_18_non_const_currDate.dateSerialNum) < ((((inArgs.bond)[bondNum]).startDate).dateSerialNum))
-# 500 "bondsKernelsGpu.cu"
+# 412 "bondsKernelsGpu1.cu"
+ bondsDateStruct __cuda_local_var_42820_18_non_const_currDate;
+# 412 "bondsKernelsGpu1.cu"
+__cuda_local_var_42820_18_non_const_currDate = ((inArgs.currDate)[bondNum]);
+# 413 "bondsKernelsGpu1.cu"
+if ((__cuda_local_var_42820_18_non_const_currDate.dateSerialNum) < ((((inArgs.bond)[bondNum]).startDate).dateSerialNum))
+# 414 "bondsKernelsGpu1.cu"
 {
-# 501 "bondsKernelsGpu.cu"
-__cuda_local_var_42906_18_non_const_currDate = (((inArgs.bond)[bondNum]).startDate);
-# 502 "bondsKernelsGpu.cu"
+# 415 "bondsKernelsGpu1.cu"
+__cuda_local_var_42820_18_non_const_currDate = (((inArgs.bond)[bondNum]).startDate);
+# 416 "bondsKernelsGpu1.cu"
 }
-# 506 "bondsKernelsGpu.cu"
-return _Z15cashFlowsNpvGpu15cashFlowsStruct20bondsYieldTermStructb15bondsDateStructS1_i(cashFlows, ((inArgs.discountCurve)[bondNum]), ((__nv_bool)0), __cuda_local_var_42906_18_non_const_currDate, __cuda_local_var_42906_18_non_const_currDate, numLegs);
-# 512 "bondsKernelsGpu.cu"
+# 417 "bondsKernelsGpu1.cu"
+return _Z15cashFlowsNpvGpu15cashFlowsStruct20bondsYieldTermStructb15bondsDateStructS1_i(cashFlows, ((inArgs.discountCurve)[bondNum]), ((__nv_bool)0), __cuda_local_var_42820_18_non_const_currDate, __cuda_local_var_42820_18_non_const_currDate, numLegs);
+# 418 "bondsKernelsGpu1.cu"
 }
-# 512 "bondsKernelsGpu.cu"
+# 418 "bondsKernelsGpu1.cu"
 }}
-# 515 "bondsKernelsGpu.cu"
+# 419 "bondsKernelsGpu1.cu"
  dataType _Z20bondAccruedAmountGpu12inArgsStruct15bondsDateStructi15cashFlowsStructi(
-# 515 "bondsKernelsGpu.cu"
+# 419 "bondsKernelsGpu1.cu"
 inArgsStruct inArgs,
-# 515 "bondsKernelsGpu.cu"
+# 419 "bondsKernelsGpu1.cu"
 bondsDateStruct date,
-# 515 "bondsKernelsGpu.cu"
+# 419 "bondsKernelsGpu1.cu"
 int bondNum,
-# 515 "bondsKernelsGpu.cu"
+# 419 "bondsKernelsGpu1.cu"
 cashFlowsStruct cashFlows,
-# 515 "bondsKernelsGpu.cu"
+# 419 "bondsKernelsGpu1.cu"
 int numLegs){
-# 515 "bondsKernelsGpu.cu"
+# 419 "bondsKernelsGpu1.cu"
 {
-# 516 "bondsKernelsGpu.cu"
+# 420 "bondsKernelsGpu1.cu"
 {
-# 517 "bondsKernelsGpu.cu"
- dataType __cuda_local_var_42926_11_non_const_currentNotional;
-# 517 "bondsKernelsGpu.cu"
-__cuda_local_var_42926_11_non_const_currentNotional = (_Z15bondNotionalGpuv());
-# 518 "bondsKernelsGpu.cu"
-if (__cuda_local_var_42926_11_non_const_currentNotional == (0.0))
-# 518 "bondsKernelsGpu.cu"
+# 421 "bondsKernelsGpu1.cu"
+ dataType __cuda_local_var_42829_10_non_const_currentNotional;
+# 421 "bondsKernelsGpu1.cu"
+__cuda_local_var_42829_10_non_const_currentNotional = (_Z15bondNotionalGpuv());
+# 422 "bondsKernelsGpu1.cu"
+if (__cuda_local_var_42829_10_non_const_currentNotional == (0.0))
+# 422 "bondsKernelsGpu1.cu"
 {
-# 519 "bondsKernelsGpu.cu"
+# 423 "bondsKernelsGpu1.cu"
 return (0.0);
-# 519 "bondsKernelsGpu.cu"
+# 423 "bondsKernelsGpu1.cu"
 }
-# 521 "bondsKernelsGpu.cu"
+# 424 "bondsKernelsGpu1.cu"
 return _Z29bondFunctionsAccruedAmountGpu12inArgsStruct15bondsDateStructi15cashFlowsStructi(inArgs, date, bondNum, cashFlows, numLegs);
-# 522 "bondsKernelsGpu.cu"
+# 425 "bondsKernelsGpu1.cu"
 }
-# 522 "bondsKernelsGpu.cu"
+# 425 "bondsKernelsGpu1.cu"
 }}
-# 525 "bondsKernelsGpu.cu"
+# 426 "bondsKernelsGpu1.cu"
  dataType _Z29bondFunctionsAccruedAmountGpu12inArgsStruct15bondsDateStructi15cashFlowsStructi(
-# 525 "bondsKernelsGpu.cu"
+# 426 "bondsKernelsGpu1.cu"
 inArgsStruct inArgs,
-# 525 "bondsKernelsGpu.cu"
+# 426 "bondsKernelsGpu1.cu"
 bondsDateStruct date,
-# 525 "bondsKernelsGpu.cu"
+# 426 "bondsKernelsGpu1.cu"
 int bondNum,
-# 525 "bondsKernelsGpu.cu"
+# 426 "bondsKernelsGpu1.cu"
 cashFlowsStruct cashFlows,
-# 525 "bondsKernelsGpu.cu"
+# 426 "bondsKernelsGpu1.cu"
 int numLegs){
-# 525 "bondsKernelsGpu.cu"
+# 426 "bondsKernelsGpu1.cu"
 {
-# 526 "bondsKernelsGpu.cu"
+# 427 "bondsKernelsGpu1.cu"
 {
-# 527 "bondsKernelsGpu.cu"
+# 428 "bondsKernelsGpu1.cu"
 return (dataType)(fdivide(((_Z25cashFlowsAccruedAmountGpu15cashFlowsStructb15bondsDateStructi12inArgsStructi(cashFlows, ((__nv_bool)0), date, numLegs, inArgs, bondNum)) * (100.0)), (_Z15bondNotionalGpuv())));
-# 530 "bondsKernelsGpu.cu"
+# 430 "bondsKernelsGpu1.cu"
 }
-# 530 "bondsKernelsGpu.cu"
+# 430 "bondsKernelsGpu1.cu"
 }}
-# 538 "bondsKernelsGpu.cu"
+# 431 "bondsKernelsGpu1.cu"
  dataType _Z25cashFlowsAccruedAmountGpu15cashFlowsStructb15bondsDateStructi12inArgsStructi(
-# 538 "bondsKernelsGpu.cu"
+# 431 "bondsKernelsGpu1.cu"
 cashFlowsStruct cashFlows,
-# 539 "bondsKernelsGpu.cu"
+# 431 "bondsKernelsGpu1.cu"
 __nv_bool includecurrDateFlows,
-# 540 "bondsKernelsGpu.cu"
+# 431 "bondsKernelsGpu1.cu"
 bondsDateStruct currDate,
-# 541 "bondsKernelsGpu.cu"
+# 431 "bondsKernelsGpu1.cu"
 int numLegs,
-# 541 "bondsKernelsGpu.cu"
+# 431 "bondsKernelsGpu1.cu"
 inArgsStruct inArgs,
-# 541 "bondsKernelsGpu.cu"
+# 431 "bondsKernelsGpu1.cu"
 int bondNum){
-# 541 "bondsKernelsGpu.cu"
+# 431 "bondsKernelsGpu1.cu"
 {
-# 542 "bondsKernelsGpu.cu"
+# 432 "bondsKernelsGpu1.cu"
 {
-# 543 "bondsKernelsGpu.cu"
- int __cuda_local_var_42952_6_non_const_legComputeNum;
-# 546 "bondsKernelsGpu.cu"
- dataType __cuda_local_var_42955_18_non_const_result;
-# 548 "bondsKernelsGpu.cu"
- int __cuda_local_var_42957_6_non_const_i;
-# 543 "bondsKernelsGpu.cu"
-__cuda_local_var_42952_6_non_const_legComputeNum = (_Z27cashFlowsNextCashFlowNumGpu15cashFlowsStruct15bondsDateStructi(cashFlows, currDate, numLegs));
-# 546 "bondsKernelsGpu.cu"
-__cuda_local_var_42955_18_non_const_result = (0.0);
-# 550 "bondsKernelsGpu.cu"
-for (__cuda_local_var_42957_6_non_const_i = __cuda_local_var_42952_6_non_const_legComputeNum; (__cuda_local_var_42957_6_non_const_i < numLegs); ++__cuda_local_var_42957_6_non_const_i)
-# 551 "bondsKernelsGpu.cu"
+# 433 "bondsKernelsGpu1.cu"
+ int __cuda_local_var_42841_5_non_const_legComputeNum;
+# 434 "bondsKernelsGpu1.cu"
+ dataType __cuda_local_var_42842_11_non_const_result;
+# 435 "bondsKernelsGpu1.cu"
+ int __cuda_local_var_42843_6_non_const_i;
+# 433 "bondsKernelsGpu1.cu"
+__cuda_local_var_42841_5_non_const_legComputeNum = (_Z27cashFlowsNextCashFlowNumGpu15cashFlowsStruct15bondsDateStructi(cashFlows, currDate, numLegs));
+# 434 "bondsKernelsGpu1.cu"
+__cuda_local_var_42842_11_non_const_result = (0.0);
+# 436 "bondsKernelsGpu1.cu"
+for (__cuda_local_var_42843_6_non_const_i = __cuda_local_var_42841_5_non_const_legComputeNum; (__cuda_local_var_42843_6_non_const_i < numLegs); ++__cuda_local_var_42843_6_non_const_i)
+# 437 "bondsKernelsGpu1.cu"
 {
-# 552 "bondsKernelsGpu.cu"
-__cuda_local_var_42955_18_non_const_result += (_Z31fixedRateCouponAccruedAmountGpu15cashFlowsStructi15bondsDateStruct12inArgsStructi(cashFlows, __cuda_local_var_42957_6_non_const_i, currDate, inArgs, bondNum));
-# 553 "bondsKernelsGpu.cu"
+# 438 "bondsKernelsGpu1.cu"
+__cuda_local_var_42842_11_non_const_result += (_Z31fixedRateCouponAccruedAmountGpu15cashFlowsStructi15bondsDateStruct12inArgsStructi(cashFlows, __cuda_local_var_42843_6_non_const_i, currDate, inArgs, bondNum));
+# 439 "bondsKernelsGpu1.cu"
 }
-# 555 "bondsKernelsGpu.cu"
-return __cuda_local_var_42955_18_non_const_result;
-# 556 "bondsKernelsGpu.cu"
+# 440 "bondsKernelsGpu1.cu"
+return __cuda_local_var_42842_11_non_const_result;
+# 441 "bondsKernelsGpu1.cu"
 }
-# 556 "bondsKernelsGpu.cu"
+# 441 "bondsKernelsGpu1.cu"
 }}
-# 559 "bondsKernelsGpu.cu"
+# 442 "bondsKernelsGpu1.cu"
  dataType _Z31fixedRateCouponAccruedAmountGpu15cashFlowsStructi15bondsDateStruct12inArgsStructi(
-# 559 "bondsKernelsGpu.cu"
+# 442 "bondsKernelsGpu1.cu"
 cashFlowsStruct cashFlows,
-# 559 "bondsKernelsGpu.cu"
+# 442 "bondsKernelsGpu1.cu"
 int numLeg,
-# 559 "bondsKernelsGpu.cu"
+# 442 "bondsKernelsGpu1.cu"
 bondsDateStruct d,
-# 559 "bondsKernelsGpu.cu"
+# 442 "bondsKernelsGpu1.cu"
 inArgsStruct inArgs,
-# 559 "bondsKernelsGpu.cu"
+# 442 "bondsKernelsGpu1.cu"
 int bondNum){
-# 559 "bondsKernelsGpu.cu"
+# 442 "bondsKernelsGpu1.cu"
 {
-# 560 "bondsKernelsGpu.cu"
+# 443 "bondsKernelsGpu1.cu"
 {
-# 561 "bondsKernelsGpu.cu"
+# 444 "bondsKernelsGpu1.cu"
 if (((d.dateSerialNum) <= ((((cashFlows.legs)[numLeg]).accrualStartDate).dateSerialNum)) || ((d.dateSerialNum) > (((inArgs.maturityDate)[bondNum]).dateSerialNum)))
-# 562 "bondsKernelsGpu.cu"
+# 445 "bondsKernelsGpu1.cu"
 {
-# 563 "bondsKernelsGpu.cu"
+# 446 "bondsKernelsGpu1.cu"
 return (0.0);
-# 564 "bondsKernelsGpu.cu"
+# 447 "bondsKernelsGpu1.cu"
 }
-# 566 "bondsKernelsGpu.cu"
+# 449 "bondsKernelsGpu1.cu"
 else
-# 566 "bondsKernelsGpu.cu"
+# 449 "bondsKernelsGpu1.cu"
 {
-# 567 "bondsKernelsGpu.cu"
- bondsDateStruct __cuda_local_var_42976_19_non_const_endDate;
-# 567 "bondsKernelsGpu.cu"
-__cuda_local_var_42976_19_non_const_endDate = (((cashFlows.legs)[numLeg]).accrualEndDate);
-# 568 "bondsKernelsGpu.cu"
+# 450 "bondsKernelsGpu1.cu"
+ bondsDateStruct __cuda_local_var_42858_17_non_const_endDate;
+# 450 "bondsKernelsGpu1.cu"
+__cuda_local_var_42858_17_non_const_endDate = (((cashFlows.legs)[numLeg]).accrualEndDate);
+# 451 "bondsKernelsGpu1.cu"
 if ((d.dateSerialNum) < ((((cashFlows.legs)[numLeg]).accrualEndDate).dateSerialNum))
-# 569 "bondsKernelsGpu.cu"
+# 452 "bondsKernelsGpu1.cu"
 {
-# 570 "bondsKernelsGpu.cu"
-__cuda_local_var_42976_19_non_const_endDate = d;
-# 571 "bondsKernelsGpu.cu"
+# 453 "bondsKernelsGpu1.cu"
+__cuda_local_var_42858_17_non_const_endDate = d;
+# 454 "bondsKernelsGpu1.cu"
 }
-# 573 "bondsKernelsGpu.cu"
-return (_Z25fixedRateCouponNominalGpuv()) * ((_Z29interestRateCompoundFactorGpu13intRateStruct15bondsDateStructS0_i((cashFlows.intRate), (((cashFlows.legs)[numLeg]).accrualStartDate), __cuda_local_var_42976_19_non_const_endDate, (cashFlows.dayCounter))) - (1.0));
-# 574 "bondsKernelsGpu.cu"
+# 455 "bondsKernelsGpu1.cu"
+return (_Z25fixedRateCouponNominalGpuv()) * ((_Z29interestRateCompoundFactorGpu13intRateStruct15bondsDateStructS0_i((cashFlows.intRate), (((cashFlows.legs)[numLeg]).accrualStartDate), __cuda_local_var_42858_17_non_const_endDate, (cashFlows.dayCounter))) - (1.0));
+# 456 "bondsKernelsGpu1.cu"
 }
-# 575 "bondsKernelsGpu.cu"
+# 457 "bondsKernelsGpu1.cu"
 }
-# 575 "bondsKernelsGpu.cu"
+# 457 "bondsKernelsGpu1.cu"
 }}
-# 581 "bondsKernelsGpu.cu"
+# 458 "bondsKernelsGpu1.cu"
  dataType _Z15cashFlowsNpvGpu15cashFlowsStruct20bondsYieldTermStructb15bondsDateStructS1_i(
-# 581 "bondsKernelsGpu.cu"
+# 458 "bondsKernelsGpu1.cu"
 cashFlowsStruct cashFlows,
-# 582 "bondsKernelsGpu.cu"
+# 458 "bondsKernelsGpu1.cu"
 bondsYieldTermStruct discountCurve,
-# 583 "bondsKernelsGpu.cu"
+# 458 "bondsKernelsGpu1.cu"
 __nv_bool includecurrDateFlows,
-# 584 "bondsKernelsGpu.cu"
+# 458 "bondsKernelsGpu1.cu"
 bondsDateStruct currDate,
-# 585 "bondsKernelsGpu.cu"
+# 458 "bondsKernelsGpu1.cu"
 bondsDateStruct npvDate,
-# 586 "bondsKernelsGpu.cu"
+# 458 "bondsKernelsGpu1.cu"
 int numLegs){
-# 586 "bondsKernelsGpu.cu"
+# 458 "bondsKernelsGpu1.cu"
 {
-# 587 "bondsKernelsGpu.cu"
+# 459 "bondsKernelsGpu1.cu"
 {
-# 590 "bondsKernelsGpu.cu"
- dataType __cuda_local_var_42999_18_non_const_totalNPV;
-# 592 "bondsKernelsGpu.cu"
- int __cuda_local_var_43001_6_non_const_i;
-# 588 "bondsKernelsGpu.cu"
+# 461 "bondsKernelsGpu1.cu"
+ dataType __cuda_local_var_42869_11_non_const_totalNPV;
+# 462 "bondsKernelsGpu1.cu"
+ int __cuda_local_var_42870_6_non_const_i;
+# 460 "bondsKernelsGpu1.cu"
 npvDate = currDate;
-# 590 "bondsKernelsGpu.cu"
-__cuda_local_var_42999_18_non_const_totalNPV = (0.0);
-# 594 "bondsKernelsGpu.cu"
-for (__cuda_local_var_43001_6_non_const_i = 0; (__cuda_local_var_43001_6_non_const_i < numLegs); ++__cuda_local_var_43001_6_non_const_i)
-# 594 "bondsKernelsGpu.cu"
+# 461 "bondsKernelsGpu1.cu"
+__cuda_local_var_42869_11_non_const_totalNPV = (0.0);
+# 463 "bondsKernelsGpu1.cu"
+for (__cuda_local_var_42870_6_non_const_i = 0; (__cuda_local_var_42870_6_non_const_i < numLegs); ++__cuda_local_var_42870_6_non_const_i)
+# 463 "bondsKernelsGpu1.cu"
 {
-# 598 "bondsKernelsGpu.cu"
-if (!(_Z22cashFlowHasOccurredGpu15bondsDateStructS_((((cashFlows.legs)[__cuda_local_var_43001_6_non_const_i]).paymentDate), currDate)))
-# 598 "bondsKernelsGpu.cu"
+# 464 "bondsKernelsGpu1.cu"
+if (!(_Z22cashFlowHasOccurredGpu15bondsDateStructS_((((cashFlows.legs)[__cuda_local_var_42870_6_non_const_i]).paymentDate), currDate)))
+# 464 "bondsKernelsGpu1.cu"
 {
-# 599 "bondsKernelsGpu.cu"
-__cuda_local_var_42999_18_non_const_totalNPV += ((_Z24fixedRateCouponAmountGpu15cashFlowsStructi(cashFlows, __cuda_local_var_43001_6_non_const_i)) * (_Z34bondsYieldTermStructureDiscountGpu20bondsYieldTermStruct15bondsDateStruct(discountCurve, (((cashFlows.legs)[__cuda_local_var_43001_6_non_const_i]).paymentDate))));
-# 599 "bondsKernelsGpu.cu"
+# 465 "bondsKernelsGpu1.cu"
+__cuda_local_var_42869_11_non_const_totalNPV += ((_Z24fixedRateCouponAmountGpu15cashFlowsStructi(cashFlows, __cuda_local_var_42870_6_non_const_i)) * (_Z34bondsYieldTermStructureDiscountGpu20bondsYieldTermStruct15bondsDateStruct(discountCurve, (((cashFlows.legs)[__cuda_local_var_42870_6_non_const_i]).paymentDate))));
+# 465 "bondsKernelsGpu1.cu"
 }
-# 601 "bondsKernelsGpu.cu"
+# 467 "bondsKernelsGpu1.cu"
 }
-# 603 "bondsKernelsGpu.cu"
-return (dataType)(fdivide(__cuda_local_var_42999_18_non_const_totalNPV, (_Z34bondsYieldTermStructureDiscountGpu20bondsYieldTermStruct15bondsDateStruct(discountCurve, npvDate))));
-# 604 "bondsKernelsGpu.cu"
+# 468 "bondsKernelsGpu1.cu"
+return (dataType)(fdivide(__cuda_local_var_42869_11_non_const_totalNPV, (_Z34bondsYieldTermStructureDiscountGpu20bondsYieldTermStruct15bondsDateStruct(discountCurve, npvDate))));
+# 469 "bondsKernelsGpu1.cu"
 }
-# 604 "bondsKernelsGpu.cu"
+# 469 "bondsKernelsGpu1.cu"
 }}
-# 609 "bondsKernelsGpu.cu"
+# 470 "bondsKernelsGpu1.cu"
  dataType _Z34bondsYieldTermStructureDiscountGpu20bondsYieldTermStruct15bondsDateStruct(
-# 609 "bondsKernelsGpu.cu"
+# 470 "bondsKernelsGpu1.cu"
 bondsYieldTermStruct ytStruct,
-# 609 "bondsKernelsGpu.cu"
+# 470 "bondsKernelsGpu1.cu"
 bondsDateStruct t){
-# 609 "bondsKernelsGpu.cu"
+# 470 "bondsKernelsGpu1.cu"
 {
-# 610 "bondsKernelsGpu.cu"
+# 471 "bondsKernelsGpu1.cu"
 {
-# 611 "bondsKernelsGpu.cu"
+# 472 "bondsKernelsGpu1.cu"
 ((ytStruct.intRate).rate) = (ytStruct.forward);
-# 612 "bondsKernelsGpu.cu"
+# 473 "bondsKernelsGpu1.cu"
 ((ytStruct.intRate).freq) = (ytStruct.frequency);
-# 613 "bondsKernelsGpu.cu"
+# 474 "bondsKernelsGpu1.cu"
 ((ytStruct.intRate).comp) = ((int)(__double2int_rz(((double)(ytStruct.compounding)))));
-# 614 "bondsKernelsGpu.cu"
+# 475 "bondsKernelsGpu1.cu"
 return _Z26flatForwardDiscountImplGpu13intRateStructd((ytStruct.intRate), (_Z15yearFractionGpu15bondsDateStructS_i((ytStruct.refDate), t, (ytStruct.dayCounter))));
-# 615 "bondsKernelsGpu.cu"
+# 476 "bondsKernelsGpu1.cu"
 }
-# 615 "bondsKernelsGpu.cu"
+# 476 "bondsKernelsGpu1.cu"
 }}
-# 618 "bondsKernelsGpu.cu"
+# 477 "bondsKernelsGpu1.cu"
  dataType _Z26flatForwardDiscountImplGpu13intRateStructd(
-# 618 "bondsKernelsGpu.cu"
+# 477 "bondsKernelsGpu1.cu"
 intRateStruct intRate,
-# 618 "bondsKernelsGpu.cu"
+# 477 "bondsKernelsGpu1.cu"
 dataType t){
-# 618 "bondsKernelsGpu.cu"
+# 477 "bondsKernelsGpu1.cu"
 {
-# 619 "bondsKernelsGpu.cu"
+# 478 "bondsKernelsGpu1.cu"
 {
-# 620 "bondsKernelsGpu.cu"
+# 479 "bondsKernelsGpu1.cu"
 return _Z29interestRateDiscountFactorGpu13intRateStructd(intRate, t);
-# 621 "bondsKernelsGpu.cu"
+# 480 "bondsKernelsGpu1.cu"
 }
-# 621 "bondsKernelsGpu.cu"
+# 480 "bondsKernelsGpu1.cu"
 }}
-# 627 "bondsKernelsGpu.cu"
+# 481 "bondsKernelsGpu1.cu"
  dataType _Z29interestRateDiscountFactorGpu13intRateStructd(
-# 627 "bondsKernelsGpu.cu"
+# 481 "bondsKernelsGpu1.cu"
 intRateStruct intRate,
-# 627 "bondsKernelsGpu.cu"
+# 481 "bondsKernelsGpu1.cu"
 dataType t){
-# 627 "bondsKernelsGpu.cu"
+# 481 "bondsKernelsGpu1.cu"
 {
-# 628 "bondsKernelsGpu.cu"
+# 482 "bondsKernelsGpu1.cu"
 {
-# 629 "bondsKernelsGpu.cu"
+# 483 "bondsKernelsGpu1.cu"
 return (1.0) / (_Z36interestRateCompoundFactorGpuTwoArgs13intRateStructd(intRate, t));
-# 630 "bondsKernelsGpu.cu"
+# 484 "bondsKernelsGpu1.cu"
 }
-# 630 "bondsKernelsGpu.cu"
+# 484 "bondsKernelsGpu1.cu"
 }}
-# 633 "bondsKernelsGpu.cu"
+# 485 "bondsKernelsGpu1.cu"
  dataType _Z36interestRateCompoundFactorGpuTwoArgs13intRateStructd(
-# 633 "bondsKernelsGpu.cu"
+# 485 "bondsKernelsGpu1.cu"
 intRateStruct intRate,
-# 633 "bondsKernelsGpu.cu"
+# 485 "bondsKernelsGpu1.cu"
 dataType t){
-# 633 "bondsKernelsGpu.cu"
+# 485 "bondsKernelsGpu1.cu"
 {
-# 634 "bondsKernelsGpu.cu"
+# 486 "bondsKernelsGpu1.cu"
 {
-# 636 "bondsKernelsGpu.cu"
+# 487 "bondsKernelsGpu1.cu"
 {
-# 637 "bondsKernelsGpu.cu"
+# 488 "bondsKernelsGpu1.cu"
 if ((intRate.comp) == 0)
-# 637 "bondsKernelsGpu.cu"
+# 488 "bondsKernelsGpu1.cu"
 {
-# 638 "bondsKernelsGpu.cu"
+# 489 "bondsKernelsGpu1.cu"
 return (1.0) + ((intRate.rate) * t);
-# 638 "bondsKernelsGpu.cu"
+# 489 "bondsKernelsGpu1.cu"
 }
-# 638 "bondsKernelsGpu.cu"
+# 489 "bondsKernelsGpu1.cu"
 else
-# 638 "bondsKernelsGpu.cu"
+# 489 "bondsKernelsGpu1.cu"
 {
-# 639 "bondsKernelsGpu.cu"
+# 490 "bondsKernelsGpu1.cu"
 if ((intRate.comp) == 1)
-# 639 "bondsKernelsGpu.cu"
+# 490 "bondsKernelsGpu1.cu"
 {
-# 640 "bondsKernelsGpu.cu"
+# 491 "bondsKernelsGpu1.cu"
 return pow(((1.0) + ((double)(fdivide((intRate.rate), (intRate.freq))))), ((intRate.freq) * t));
-# 640 "bondsKernelsGpu.cu"
+# 491 "bondsKernelsGpu1.cu"
 }
-# 640 "bondsKernelsGpu.cu"
+# 491 "bondsKernelsGpu1.cu"
 else
-# 640 "bondsKernelsGpu.cu"
+# 491 "bondsKernelsGpu1.cu"
 {
-# 641 "bondsKernelsGpu.cu"
+# 492 "bondsKernelsGpu1.cu"
 if ((intRate.comp) == 2)
-# 641 "bondsKernelsGpu.cu"
+# 492 "bondsKernelsGpu1.cu"
 {
-# 642 "bondsKernelsGpu.cu"
+# 493 "bondsKernelsGpu1.cu"
 return exp(((intRate.rate) * t));
-# 642 "bondsKernelsGpu.cu"
+# 493 "bondsKernelsGpu1.cu"
 }
-# 642 "bondsKernelsGpu.cu"
+# 493 "bondsKernelsGpu1.cu"
 }
-# 642 "bondsKernelsGpu.cu"
+# 493 "bondsKernelsGpu1.cu"
 }
-# 643 "bondsKernelsGpu.cu"
+# 494 "bondsKernelsGpu1.cu"
 }
-# 645 "bondsKernelsGpu.cu"
+# 495 "bondsKernelsGpu1.cu"
 return (0.0);
-# 646 "bondsKernelsGpu.cu"
+# 496 "bondsKernelsGpu1.cu"
 }
-# 646 "bondsKernelsGpu.cu"
+# 496 "bondsKernelsGpu1.cu"
 }}
-# 649 "bondsKernelsGpu.cu"
+# 497 "bondsKernelsGpu1.cu"
  dataType _Z24fixedRateCouponAmountGpu15cashFlowsStructi(
-# 649 "bondsKernelsGpu.cu"
+# 497 "bondsKernelsGpu1.cu"
 cashFlowsStruct cashFlows,
-# 649 "bondsKernelsGpu.cu"
+# 497 "bondsKernelsGpu1.cu"
 int numLeg){
-# 649 "bondsKernelsGpu.cu"
+# 497 "bondsKernelsGpu1.cu"
 {
-# 650 "bondsKernelsGpu.cu"
+# 498 "bondsKernelsGpu1.cu"
 {
-# 651 "bondsKernelsGpu.cu"
+# 499 "bondsKernelsGpu1.cu"
 if ((((cashFlows.legs)[numLeg]).amount) == (-1.0))
-# 652 "bondsKernelsGpu.cu"
+# 500 "bondsKernelsGpu1.cu"
 {
-# 653 "bondsKernelsGpu.cu"
+# 501 "bondsKernelsGpu1.cu"
 return (_Z25fixedRateCouponNominalGpuv()) * ((_Z29interestRateCompoundFactorGpu13intRateStruct15bondsDateStructS0_i((cashFlows.intRate), (((cashFlows.legs)[numLeg]).accrualStartDate), (((cashFlows.legs)[numLeg]).accrualEndDate), (cashFlows.dayCounter))) - (1.0));
-# 655 "bondsKernelsGpu.cu"
+# 503 "bondsKernelsGpu1.cu"
 }
-# 657 "bondsKernelsGpu.cu"
+# 505 "bondsKernelsGpu1.cu"
 else
-# 657 "bondsKernelsGpu.cu"
+# 505 "bondsKernelsGpu1.cu"
 {
-# 658 "bondsKernelsGpu.cu"
+# 506 "bondsKernelsGpu1.cu"
 return ((cashFlows.legs)[numLeg]).amount;
-# 659 "bondsKernelsGpu.cu"
+# 507 "bondsKernelsGpu1.cu"
 }
-# 660 "bondsKernelsGpu.cu"
+# 508 "bondsKernelsGpu1.cu"
 }
-# 660 "bondsKernelsGpu.cu"
+# 508 "bondsKernelsGpu1.cu"
 }}
-# 662 "bondsKernelsGpu.cu"
+# 509 "bondsKernelsGpu1.cu"
  dataType _Z29interestRateCompoundFactorGpu13intRateStruct15bondsDateStructS0_i(
-# 662 "bondsKernelsGpu.cu"
+# 509 "bondsKernelsGpu1.cu"
 intRateStruct intRate,
-# 662 "bondsKernelsGpu.cu"
+# 509 "bondsKernelsGpu1.cu"
 bondsDateStruct d1,
-# 663 "bondsKernelsGpu.cu"
+# 509 "bondsKernelsGpu1.cu"
 bondsDateStruct d2,
-# 663 "bondsKernelsGpu.cu"
+# 509 "bondsKernelsGpu1.cu"
 int dayCounter){
-# 663 "bondsKernelsGpu.cu"
+# 509 "bondsKernelsGpu1.cu"
 {
-# 664 "bondsKernelsGpu.cu"
+# 510 "bondsKernelsGpu1.cu"
 {
-# 665 "bondsKernelsGpu.cu"
- dataType __cuda_local_var_43074_11_non_const_t;
-# 665 "bondsKernelsGpu.cu"
-__cuda_local_var_43074_11_non_const_t = (_Z15yearFractionGpu15bondsDateStructS_i(d1, d2, dayCounter));
-# 666 "bondsKernelsGpu.cu"
-return _Z36interestRateCompoundFactorGpuTwoArgs13intRateStructd(intRate, __cuda_local_var_43074_11_non_const_t);
-# 667 "bondsKernelsGpu.cu"
+# 511 "bondsKernelsGpu1.cu"
+ dataType __cuda_local_var_42919_10_non_const_t;
+# 511 "bondsKernelsGpu1.cu"
+__cuda_local_var_42919_10_non_const_t = (_Z15yearFractionGpu15bondsDateStructS_i(d1, d2, dayCounter));
+# 512 "bondsKernelsGpu1.cu"
+return _Z36interestRateCompoundFactorGpuTwoArgs13intRateStructd(intRate, __cuda_local_var_42919_10_non_const_t);
+# 513 "bondsKernelsGpu1.cu"
 }
-# 667 "bondsKernelsGpu.cu"
+# 513 "bondsKernelsGpu1.cu"
 }}
-# 671 "bondsKernelsGpu.cu"
+# 514 "bondsKernelsGpu1.cu"
  dataType _Z26interestRateImpliedRateGpudidd(
-# 671 "bondsKernelsGpu.cu"
+# 514 "bondsKernelsGpu1.cu"
 dataType compound,
-# 672 "bondsKernelsGpu.cu"
+# 514 "bondsKernelsGpu1.cu"
 int comp,
-# 673 "bondsKernelsGpu.cu"
+# 514 "bondsKernelsGpu1.cu"
 dataType freq,
-# 674 "bondsKernelsGpu.cu"
+# 514 "bondsKernelsGpu1.cu"
 dataType t){
-# 674 "bondsKernelsGpu.cu"
+# 514 "bondsKernelsGpu1.cu"
 {
-# 675 "bondsKernelsGpu.cu"
+# 515 "bondsKernelsGpu1.cu"
 {
-# 676 "bondsKernelsGpu.cu"
- dataType __cuda_local_var_43085_18_non_const_r;
-# 676 "bondsKernelsGpu.cu"
-__cuda_local_var_43085_18_non_const_r = (0.0);
-# 677 "bondsKernelsGpu.cu"
+# 516 "bondsKernelsGpu1.cu"
+ dataType __cuda_local_var_42924_11_non_const_r;
+# 516 "bondsKernelsGpu1.cu"
+__cuda_local_var_42924_11_non_const_r = (0.0);
+# 517 "bondsKernelsGpu1.cu"
 if (compound == (1.0))
-# 678 "bondsKernelsGpu.cu"
+# 518 "bondsKernelsGpu1.cu"
 {
-# 679 "bondsKernelsGpu.cu"
-__cuda_local_var_43085_18_non_const_r = (0.0);
-# 680 "bondsKernelsGpu.cu"
+# 519 "bondsKernelsGpu1.cu"
+__cuda_local_var_42924_11_non_const_r = (0.0);
+# 520 "bondsKernelsGpu1.cu"
 }
-# 682 "bondsKernelsGpu.cu"
+# 521 "bondsKernelsGpu1.cu"
 else
-# 682 "bondsKernelsGpu.cu"
+# 521 "bondsKernelsGpu1.cu"
 {
-# 684 "bondsKernelsGpu.cu"
+# 522 "bondsKernelsGpu1.cu"
 switch (comp)
-# 685 "bondsKernelsGpu.cu"
+# 523 "bondsKernelsGpu1.cu"
 {
-# 686 "bondsKernelsGpu.cu"
+# 524 "bondsKernelsGpu1.cu"
 case 0:
-# 687 "bondsKernelsGpu.cu"
-__cuda_local_var_43085_18_non_const_r = ((dataType)(fdivide((compound - (1.0)), t)));
-# 688 "bondsKernelsGpu.cu"
+# 524 "bondsKernelsGpu1.cu"
+__cuda_local_var_42924_11_non_const_r = ((dataType)(fdivide((compound - (1.0)), t)));
+# 525 "bondsKernelsGpu1.cu"
 goto __T20;
-# 689 "bondsKernelsGpu.cu"
+# 526 "bondsKernelsGpu1.cu"
 case 1:
-# 690 "bondsKernelsGpu.cu"
-__cuda_local_var_43085_18_non_const_r = (((pow(((dataType)compound), ((1.0) / (freq * t)))) - (1.0)) * freq);
-# 691 "bondsKernelsGpu.cu"
+# 526 "bondsKernelsGpu1.cu"
+__cuda_local_var_42924_11_non_const_r = (((pow(((dataType)compound), ((1.0) / (freq * t)))) - (1.0)) * freq);
+# 527 "bondsKernelsGpu1.cu"
 goto __T20;
-# 692 "bondsKernelsGpu.cu"
+# 528 "bondsKernelsGpu1.cu"
 }
-# 692 "bondsKernelsGpu.cu"
+# 528 "bondsKernelsGpu1.cu"
 __T20:;
-# 692 "bondsKernelsGpu.cu"
+# 528 "bondsKernelsGpu1.cu"
 ;
-# 693 "bondsKernelsGpu.cu"
+# 529 "bondsKernelsGpu1.cu"
 }
-# 695 "bondsKernelsGpu.cu"
-return __cuda_local_var_43085_18_non_const_r;
-# 696 "bondsKernelsGpu.cu"
+# 530 "bondsKernelsGpu1.cu"
+return __cuda_local_var_42924_11_non_const_r;
+# 531 "bondsKernelsGpu1.cu"
 }
-# 696 "bondsKernelsGpu.cu"
+# 531 "bondsKernelsGpu1.cu"
 }}
-# 699 "bondsKernelsGpu.cu"
+# 532 "bondsKernelsGpu1.cu"
  dataType _Z20getMarketRepoRateGpu15bondsDateStructidS_12inArgsStructi(
-# 699 "bondsKernelsGpu.cu"
+# 532 "bondsKernelsGpu1.cu"
 bondsDateStruct d,
-# 700 "bondsKernelsGpu.cu"
+# 532 "bondsKernelsGpu1.cu"
 int comp,
-# 701 "bondsKernelsGpu.cu"
+# 532 "bondsKernelsGpu1.cu"
 dataType freq,
-# 702 "bondsKernelsGpu.cu"
+# 532 "bondsKernelsGpu1.cu"
 bondsDateStruct referenceDate,
-# 703 "bondsKernelsGpu.cu"
+# 532 "bondsKernelsGpu1.cu"
 inArgsStruct inArgs,
-# 703 "bondsKernelsGpu.cu"
+# 532 "bondsKernelsGpu1.cu"
 int bondNum){
-# 703 "bondsKernelsGpu.cu"
+# 532 "bondsKernelsGpu1.cu"
 {
-# 704 "bondsKernelsGpu.cu"
+# 533 "bondsKernelsGpu1.cu"
 {
-# 705 "bondsKernelsGpu.cu"
- dataType __cuda_local_var_43114_11_non_const_compound;
-# 705 "bondsKernelsGpu.cu"
-__cuda_local_var_43114_11_non_const_compound = ((1.0) / (_Z34bondsYieldTermStructureDiscountGpu20bondsYieldTermStruct15bondsDateStruct(((inArgs.repoCurve)[bondNum]), d)));
-# 706 "bondsKernelsGpu.cu"
-return _Z26interestRateImpliedRateGpudidd(__cuda_local_var_43114_11_non_const_compound, comp, freq, (_Z15yearFractionGpu15bondsDateStructS_i(referenceDate, d, (((inArgs.repoCurve)[bondNum]).dayCounter))));
-# 709 "bondsKernelsGpu.cu"
+# 534 "bondsKernelsGpu1.cu"
+ dataType __cuda_local_var_42942_10_non_const_compound;
+# 534 "bondsKernelsGpu1.cu"
+__cuda_local_var_42942_10_non_const_compound = ((1.0) / (_Z34bondsYieldTermStructureDiscountGpu20bondsYieldTermStruct15bondsDateStruct(((inArgs.repoCurve)[bondNum]), d)));
+# 535 "bondsKernelsGpu1.cu"
+return _Z26interestRateImpliedRateGpudidd(__cuda_local_var_42942_10_non_const_compound, comp, freq, (_Z15yearFractionGpu15bondsDateStructS_i(referenceDate, d, (((inArgs.repoCurve)[bondNum]).dayCounter))));
+# 536 "bondsKernelsGpu1.cu"
 }
-# 709 "bondsKernelsGpu.cu"
+# 536 "bondsKernelsGpu1.cu"
 }}
-# 712 "bondsKernelsGpu.cu"
+# 537 "bondsKernelsGpu1.cu"
  couponStruct _Z24cashFlowsNextCashFlowGpu15cashFlowsStruct15bondsDateStructi(
-# 712 "bondsKernelsGpu.cu"
+# 537 "bondsKernelsGpu1.cu"
 cashFlowsStruct cashFlows,
-# 713 "bondsKernelsGpu.cu"
+# 537 "bondsKernelsGpu1.cu"
 bondsDateStruct currDate,
-# 714 "bondsKernelsGpu.cu"
+# 537 "bondsKernelsGpu1.cu"
 int numLegs){
-# 714 "bondsKernelsGpu.cu"
+# 537 "bondsKernelsGpu1.cu"
 {
-# 715 "bondsKernelsGpu.cu"
+# 538 "bondsKernelsGpu1.cu"
 {
-# 716 "bondsKernelsGpu.cu"
- int __cuda_local_var_43125_6_non_const_i;
-# 717 "bondsKernelsGpu.cu"
-for (__cuda_local_var_43125_6_non_const_i = 0; (__cuda_local_var_43125_6_non_const_i < numLegs); ++__cuda_local_var_43125_6_non_const_i)
-# 718 "bondsKernelsGpu.cu"
+# 539 "bondsKernelsGpu1.cu"
+ int __cuda_local_var_42947_5_non_const_i;
+# 540 "bondsKernelsGpu1.cu"
+for (__cuda_local_var_42947_5_non_const_i = 0; (__cuda_local_var_42947_5_non_const_i < numLegs); ++__cuda_local_var_42947_5_non_const_i)
+# 541 "bondsKernelsGpu1.cu"
 {
-# 721 "bondsKernelsGpu.cu"
-if (!(_Z22cashFlowHasOccurredGpu15bondsDateStructS_((((cashFlows.legs)[__cuda_local_var_43125_6_non_const_i]).paymentDate), currDate)))
-# 721 "bondsKernelsGpu.cu"
+# 542 "bondsKernelsGpu1.cu"
+if (!(_Z22cashFlowHasOccurredGpu15bondsDateStructS_((((cashFlows.legs)[__cuda_local_var_42947_5_non_const_i]).paymentDate), currDate)))
+# 542 "bondsKernelsGpu1.cu"
 {
-# 722 "bondsKernelsGpu.cu"
-return (cashFlows.legs)[__cuda_local_var_43125_6_non_const_i];
-# 722 "bondsKernelsGpu.cu"
+# 543 "bondsKernelsGpu1.cu"
+return (cashFlows.legs)[__cuda_local_var_42947_5_non_const_i];
+# 543 "bondsKernelsGpu1.cu"
 }
-# 723 "bondsKernelsGpu.cu"
+# 544 "bondsKernelsGpu1.cu"
 }
-# 724 "bondsKernelsGpu.cu"
+# 545 "bondsKernelsGpu1.cu"
 return (cashFlows.legs)[(numLegs - 1)];
-# 725 "bondsKernelsGpu.cu"
+# 546 "bondsKernelsGpu1.cu"
 }
-# 725 "bondsKernelsGpu.cu"
+# 546 "bondsKernelsGpu1.cu"
 }}
-# 728 "bondsKernelsGpu.cu"
+# 547 "bondsKernelsGpu1.cu"
  int _Z27cashFlowsNextCashFlowNumGpu15cashFlowsStruct15bondsDateStructi(
-# 728 "bondsKernelsGpu.cu"
+# 547 "bondsKernelsGpu1.cu"
 cashFlowsStruct cashFlows,
-# 729 "bondsKernelsGpu.cu"
+# 547 "bondsKernelsGpu1.cu"
 bondsDateStruct currDate,
-# 730 "bondsKernelsGpu.cu"
+# 547 "bondsKernelsGpu1.cu"
 int numLegs){
-# 730 "bondsKernelsGpu.cu"
+# 547 "bondsKernelsGpu1.cu"
 {
-# 731 "bondsKernelsGpu.cu"
+# 548 "bondsKernelsGpu1.cu"
 {
-# 732 "bondsKernelsGpu.cu"
- int __cuda_local_var_43141_6_non_const_i;
-# 734 "bondsKernelsGpu.cu"
-for (__cuda_local_var_43141_6_non_const_i = 0; (__cuda_local_var_43141_6_non_const_i < numLegs); ++__cuda_local_var_43141_6_non_const_i)
-# 735 "bondsKernelsGpu.cu"
+# 549 "bondsKernelsGpu1.cu"
+ int __cuda_local_var_42957_5_non_const_i;
+# 550 "bondsKernelsGpu1.cu"
+for (__cuda_local_var_42957_5_non_const_i = 0; (__cuda_local_var_42957_5_non_const_i < numLegs); ++__cuda_local_var_42957_5_non_const_i)
+# 551 "bondsKernelsGpu1.cu"
 {
-# 737 "bondsKernelsGpu.cu"
-if (!(_Z22cashFlowHasOccurredGpu15bondsDateStructS_((((cashFlows.legs)[__cuda_local_var_43141_6_non_const_i]).paymentDate), currDate)))
-# 737 "bondsKernelsGpu.cu"
+# 552 "bondsKernelsGpu1.cu"
+if (!(_Z22cashFlowHasOccurredGpu15bondsDateStructS_((((cashFlows.legs)[__cuda_local_var_42957_5_non_const_i]).paymentDate), currDate)))
+# 552 "bondsKernelsGpu1.cu"
 {
-# 738 "bondsKernelsGpu.cu"
-return __cuda_local_var_43141_6_non_const_i;
-# 738 "bondsKernelsGpu.cu"
+# 553 "bondsKernelsGpu1.cu"
+return __cuda_local_var_42957_5_non_const_i;
+# 553 "bondsKernelsGpu1.cu"
 }
-# 739 "bondsKernelsGpu.cu"
+# 554 "bondsKernelsGpu1.cu"
 }
-# 741 "bondsKernelsGpu.cu"
+# 555 "bondsKernelsGpu1.cu"
 return numLegs - 1;
-# 742 "bondsKernelsGpu.cu"
+# 556 "bondsKernelsGpu1.cu"
 }
-# 742 "bondsKernelsGpu.cu"
+# 556 "bondsKernelsGpu1.cu"
 }}
-# 745 "bondsKernelsGpu.cu"
+# 557 "bondsKernelsGpu1.cu"
  dataType _Z15getBondYieldGpudiid15bondsDateStructdi12inArgsStructi15cashFlowsStructi(
-# 745 "bondsKernelsGpu.cu"
+# 557 "bondsKernelsGpu1.cu"
 dataType cleanPrice,
-# 746 "bondsKernelsGpu.cu"
+# 557 "bondsKernelsGpu1.cu"
 int dc,
-# 747 "bondsKernelsGpu.cu"
+# 557 "bondsKernelsGpu1.cu"
 int comp,
-# 748 "bondsKernelsGpu.cu"
+# 557 "bondsKernelsGpu1.cu"
 dataType freq,
-# 749 "bondsKernelsGpu.cu"
+# 557 "bondsKernelsGpu1.cu"
 bondsDateStruct settlement,
-# 750 "bondsKernelsGpu.cu"
+# 557 "bondsKernelsGpu1.cu"
 dataType accuracy,
-# 751 "bondsKernelsGpu.cu"
+# 557 "bondsKernelsGpu1.cu"
 int maxEvaluations,
-# 752 "bondsKernelsGpu.cu"
+# 557 "bondsKernelsGpu1.cu"
 inArgsStruct currInArgs,
-# 752 "bondsKernelsGpu.cu"
+# 557 "bondsKernelsGpu1.cu"
 int bondNum,
-# 752 "bondsKernelsGpu.cu"
+# 557 "bondsKernelsGpu1.cu"
 cashFlowsStruct cashFlows,
-# 752 "bondsKernelsGpu.cu"
+# 557 "bondsKernelsGpu1.cu"
 int numLegs){
-# 752 "bondsKernelsGpu.cu"
+# 557 "bondsKernelsGpu1.cu"
 {
-# 753 "bondsKernelsGpu.cu"
+# 558 "bondsKernelsGpu1.cu"
 {
-# 754 "bondsKernelsGpu.cu"
- dataType __cuda_local_var_43163_11_non_const_currentNotional;
-# 754 "bondsKernelsGpu.cu"
-__cuda_local_var_43163_11_non_const_currentNotional = (_Z15bondNotionalGpuv());
-# 756 "bondsKernelsGpu.cu"
-if (__cuda_local_var_43163_11_non_const_currentNotional == (0.0))
-# 756 "bondsKernelsGpu.cu"
+# 559 "bondsKernelsGpu1.cu"
+ dataType __cuda_local_var_42967_10_non_const_currentNotional;
+# 559 "bondsKernelsGpu1.cu"
+__cuda_local_var_42967_10_non_const_currentNotional = (_Z15bondNotionalGpuv());
+# 560 "bondsKernelsGpu1.cu"
+if (__cuda_local_var_42967_10_non_const_currentNotional == (0.0))
+# 560 "bondsKernelsGpu1.cu"
 {
-# 757 "bondsKernelsGpu.cu"
+# 561 "bondsKernelsGpu1.cu"
 return (0.0);
-# 757 "bondsKernelsGpu.cu"
+# 561 "bondsKernelsGpu1.cu"
 }
-# 759 "bondsKernelsGpu.cu"
+# 562 "bondsKernelsGpu1.cu"
 if (((((currInArgs.bond)[bondNum]).startDate).dateSerialNum) > (settlement.dateSerialNum))
-# 760 "bondsKernelsGpu.cu"
+# 563 "bondsKernelsGpu1.cu"
 {
-# 761 "bondsKernelsGpu.cu"
+# 564 "bondsKernelsGpu1.cu"
 settlement = (((currInArgs.bond)[bondNum]).startDate);
-# 762 "bondsKernelsGpu.cu"
+# 565 "bondsKernelsGpu1.cu"
 }
-# 764 "bondsKernelsGpu.cu"
+# 566 "bondsKernelsGpu1.cu"
 return _Z24getBondFunctionsYieldGpudiid15bondsDateStructdi12inArgsStructi15cashFlowsStructi(cleanPrice, dc, comp, freq, settlement, accuracy, maxEvaluations, currInArgs, bondNum, cashFlows, numLegs);
-# 767 "bondsKernelsGpu.cu"
+# 567 "bondsKernelsGpu1.cu"
 }
-# 767 "bondsKernelsGpu.cu"
+# 567 "bondsKernelsGpu1.cu"
 }}
-# 770 "bondsKernelsGpu.cu"
+# 568 "bondsKernelsGpu1.cu"
  dataType _Z24getBondFunctionsYieldGpudiid15bondsDateStructdi12inArgsStructi15cashFlowsStructi(
-# 770 "bondsKernelsGpu.cu"
+# 568 "bondsKernelsGpu1.cu"
 dataType cleanPrice,
-# 771 "bondsKernelsGpu.cu"
+# 568 "bondsKernelsGpu1.cu"
 int dc,
-# 772 "bondsKernelsGpu.cu"
+# 568 "bondsKernelsGpu1.cu"
 int comp,
-# 773 "bondsKernelsGpu.cu"
+# 568 "bondsKernelsGpu1.cu"
 dataType freq,
-# 774 "bondsKernelsGpu.cu"
+# 568 "bondsKernelsGpu1.cu"
 bondsDateStruct settlement,
-# 775 "bondsKernelsGpu.cu"
+# 568 "bondsKernelsGpu1.cu"
 dataType accuracy,
-# 776 "bondsKernelsGpu.cu"
+# 568 "bondsKernelsGpu1.cu"
 int maxEvaluations,
-# 777 "bondsKernelsGpu.cu"
+# 568 "bondsKernelsGpu1.cu"
 inArgsStruct currInArgs,
-# 777 "bondsKernelsGpu.cu"
+# 568 "bondsKernelsGpu1.cu"
 int bondNum,
-# 777 "bondsKernelsGpu.cu"
+# 568 "bondsKernelsGpu1.cu"
 cashFlowsStruct cashFlows,
-# 777 "bondsKernelsGpu.cu"
+# 568 "bondsKernelsGpu1.cu"
 int numLegs){
-# 777 "bondsKernelsGpu.cu"
+# 568 "bondsKernelsGpu1.cu"
 {
-# 778 "bondsKernelsGpu.cu"
+# 569 "bondsKernelsGpu1.cu"
 {
-# 779 "bondsKernelsGpu.cu"
- dataType __cuda_local_var_43188_18_non_const_dirtyPrice;
-# 779 "bondsKernelsGpu.cu"
-__cuda_local_var_43188_18_non_const_dirtyPrice = (cleanPrice + (_Z29bondFunctionsAccruedAmountGpu12inArgsStruct15bondsDateStructi15cashFlowsStructi(currInArgs, settlement, bondNum, cashFlows, numLegs)));
-# 780 "bondsKernelsGpu.cu"
-__cuda_local_var_43188_18_non_const_dirtyPrice = ((dataType)(fdivide(__cuda_local_var_43188_18_non_const_dirtyPrice, (fdivide((100.0), (_Z15bondNotionalGpuv()))))));
-# 782 "bondsKernelsGpu.cu"
-return _Z20getCashFlowsYieldGpu15cashFlowsStructdiidb15bondsDateStructS0_idid(cashFlows, __cuda_local_var_43188_18_non_const_dirtyPrice, dc, comp, freq, ((__nv_bool)0), settlement, settlement, numLegs, accuracy, maxEvaluations, (0.05000000074505805969));
-# 786 "bondsKernelsGpu.cu"
+# 570 "bondsKernelsGpu1.cu"
+ dataType __cuda_local_var_42978_11_non_const_dirtyPrice;
+# 570 "bondsKernelsGpu1.cu"
+__cuda_local_var_42978_11_non_const_dirtyPrice = (cleanPrice + (_Z29bondFunctionsAccruedAmountGpu12inArgsStruct15bondsDateStructi15cashFlowsStructi(currInArgs, settlement, bondNum, cashFlows, numLegs)));
+# 571 "bondsKernelsGpu1.cu"
+__cuda_local_var_42978_11_non_const_dirtyPrice = ((dataType)(fdivide(__cuda_local_var_42978_11_non_const_dirtyPrice, (fdivide((100.0), (_Z15bondNotionalGpuv()))))));
+# 572 "bondsKernelsGpu1.cu"
+return _Z20getCashFlowsYieldGpu15cashFlowsStructdiidb15bondsDateStructS0_idid(cashFlows, __cuda_local_var_42978_11_non_const_dirtyPrice, dc, comp, freq, ((__nv_bool)0), settlement, settlement, numLegs, accuracy, maxEvaluations, (0.05000000074505805969));
+# 573 "bondsKernelsGpu1.cu"
 }
-# 786 "bondsKernelsGpu.cu"
+# 573 "bondsKernelsGpu1.cu"
 }}
-# 789 "bondsKernelsGpu.cu"
+# 574 "bondsKernelsGpu1.cu"
  dataType _Z20getCashFlowsYieldGpu15cashFlowsStructdiidb15bondsDateStructS0_idid(
-# 789 "bondsKernelsGpu.cu"
+# 574 "bondsKernelsGpu1.cu"
 cashFlowsStruct leg,
-# 790 "bondsKernelsGpu.cu"
+# 574 "bondsKernelsGpu1.cu"
 dataType npv,
-# 791 "bondsKernelsGpu.cu"
+# 574 "bondsKernelsGpu1.cu"
 int dayCounter,
-# 792 "bondsKernelsGpu.cu"
+# 574 "bondsKernelsGpu1.cu"
 int compounding,
-# 793 "bondsKernelsGpu.cu"
+# 574 "bondsKernelsGpu1.cu"
 dataType frequency,
-# 794 "bondsKernelsGpu.cu"
+# 574 "bondsKernelsGpu1.cu"
 __nv_bool includecurrDateFlows,
-# 795 "bondsKernelsGpu.cu"
+# 574 "bondsKernelsGpu1.cu"
 bondsDateStruct currDate,
-# 796 "bondsKernelsGpu.cu"
+# 574 "bondsKernelsGpu1.cu"
 bondsDateStruct npvDate,
-# 797 "bondsKernelsGpu.cu"
+# 574 "bondsKernelsGpu1.cu"
 int numLegs,
-# 798 "bondsKernelsGpu.cu"
+# 574 "bondsKernelsGpu1.cu"
 dataType accuracy,
-# 799 "bondsKernelsGpu.cu"
+# 574 "bondsKernelsGpu1.cu"
 int maxIterations,
-# 800 "bondsKernelsGpu.cu"
+# 574 "bondsKernelsGpu1.cu"
 dataType guess){
-# 800 "bondsKernelsGpu.cu"
+# 574 "bondsKernelsGpu1.cu"
 {
-# 801 "bondsKernelsGpu.cu"
+# 575 "bondsKernelsGpu1.cu"
 {
-# 803 "bondsKernelsGpu.cu"
- solverStruct __cuda_local_var_43212_15_non_const_solver;
-# 805 "bondsKernelsGpu.cu"
- irrFinderStruct __cuda_local_var_43214_18_non_const_objFunction;
-# 804 "bondsKernelsGpu.cu"
-(__cuda_local_var_43212_15_non_const_solver.maxEvaluations_) = maxIterations;
-# 807 "bondsKernelsGpu.cu"
-(__cuda_local_var_43214_18_non_const_objFunction.npv) = npv;
-# 808 "bondsKernelsGpu.cu"
-(__cuda_local_var_43214_18_non_const_objFunction.dayCounter) = dayCounter;
-# 809 "bondsKernelsGpu.cu"
-(__cuda_local_var_43214_18_non_const_objFunction.comp) = compounding;
-# 810 "bondsKernelsGpu.cu"
-(__cuda_local_var_43214_18_non_const_objFunction.freq) = frequency;
-# 811 "bondsKernelsGpu.cu"
-(__cuda_local_var_43214_18_non_const_objFunction.includecurrDateFlows) = includecurrDateFlows;
-# 812 "bondsKernelsGpu.cu"
-(__cuda_local_var_43214_18_non_const_objFunction.currDate) = currDate;
-# 813 "bondsKernelsGpu.cu"
-(__cuda_local_var_43214_18_non_const_objFunction.npvDate) = npvDate;
-# 815 "bondsKernelsGpu.cu"
-return _Z14solverSolveGpu12solverStruct15irrFinderStructddd15cashFlowsStructi(__cuda_local_var_43212_15_non_const_solver, __cuda_local_var_43214_18_non_const_objFunction, accuracy, guess, ((dataType)(fdivide(guess, (10.0)))), leg, numLegs);
-# 816 "bondsKernelsGpu.cu"
+# 576 "bondsKernelsGpu1.cu"
+ solverStruct __cuda_local_var_42984_15_non_const_solver;
+# 578 "bondsKernelsGpu1.cu"
+ irrFinderStruct __cuda_local_var_42986_17_non_const_objFunction;
+# 577 "bondsKernelsGpu1.cu"
+(__cuda_local_var_42984_15_non_const_solver.maxEvaluations_) = maxIterations;
+# 579 "bondsKernelsGpu1.cu"
+(__cuda_local_var_42986_17_non_const_objFunction.npv) = npv;
+# 580 "bondsKernelsGpu1.cu"
+(__cuda_local_var_42986_17_non_const_objFunction.dayCounter) = dayCounter;
+# 581 "bondsKernelsGpu1.cu"
+(__cuda_local_var_42986_17_non_const_objFunction.comp) = compounding;
+# 582 "bondsKernelsGpu1.cu"
+(__cuda_local_var_42986_17_non_const_objFunction.freq) = frequency;
+# 583 "bondsKernelsGpu1.cu"
+(__cuda_local_var_42986_17_non_const_objFunction.includecurrDateFlows) = includecurrDateFlows;
+# 584 "bondsKernelsGpu1.cu"
+(__cuda_local_var_42986_17_non_const_objFunction.currDate) = currDate;
+# 585 "bondsKernelsGpu1.cu"
+(__cuda_local_var_42986_17_non_const_objFunction.npvDate) = npvDate;
+# 586 "bondsKernelsGpu1.cu"
+return _Z14solverSolveGpu12solverStruct15irrFinderStructddd15cashFlowsStructi(__cuda_local_var_42984_15_non_const_solver, __cuda_local_var_42986_17_non_const_objFunction, accuracy, guess, ((dataType)(fdivide(guess, (10.0)))), leg, numLegs);
+# 587 "bondsKernelsGpu1.cu"
 }
-# 816 "bondsKernelsGpu.cu"
+# 587 "bondsKernelsGpu1.cu"
 }}
-# 819 "bondsKernelsGpu.cu"
+# 588 "bondsKernelsGpu1.cu"
  dataType _Z14solverSolveGpu12solverStruct15irrFinderStructddd15cashFlowsStructi(
-# 819 "bondsKernelsGpu.cu"
+# 588 "bondsKernelsGpu1.cu"
 solverStruct solver,
-# 820 "bondsKernelsGpu.cu"
+# 588 "bondsKernelsGpu1.cu"
 irrFinderStruct f,
-# 821 "bondsKernelsGpu.cu"
+# 588 "bondsKernelsGpu1.cu"
 dataType accuracy,
-# 822 "bondsKernelsGpu.cu"
+# 588 "bondsKernelsGpu1.cu"
 dataType guess,
-# 823 "bondsKernelsGpu.cu"
+# 588 "bondsKernelsGpu1.cu"
 dataType step,
-# 824 "bondsKernelsGpu.cu"
+# 588 "bondsKernelsGpu1.cu"
 cashFlowsStruct cashFlows,
-# 825 "bondsKernelsGpu.cu"
+# 588 "bondsKernelsGpu1.cu"
 int numLegs){
-# 825 "bondsKernelsGpu.cu"
+# 588 "bondsKernelsGpu1.cu"
 {
-# 826 "bondsKernelsGpu.cu"
+# 589 "bondsKernelsGpu1.cu"
 {
-# 830 "bondsKernelsGpu.cu"
- dataType __cuda_local_var_43239_11_non_const_growthFactor;
-# 831 "bondsKernelsGpu.cu"
- int __cuda_local_var_43240_6_non_const_flipflop;
-# 828 "bondsKernelsGpu.cu"
+# 591 "bondsKernelsGpu1.cu"
+ dataType __cuda_local_var_42999_11_non_const_growthFactor;
+# 592 "bondsKernelsGpu1.cu"
+ int __cuda_local_var_43000_5_non_const_flipflop;
+# 590 "bondsKernelsGpu1.cu"
 accuracy = ((accuracy > (1.000000045813704966e-18)) ? accuracy : (1.000000045813704966e-18));
-# 830 "bondsKernelsGpu.cu"
-__cuda_local_var_43239_11_non_const_growthFactor = (1.600000000000000089);
-# 831 "bondsKernelsGpu.cu"
-__cuda_local_var_43240_6_non_const_flipflop = (-1);
-# 833 "bondsKernelsGpu.cu"
+# 591 "bondsKernelsGpu1.cu"
+__cuda_local_var_42999_11_non_const_growthFactor = (1.600000000000000089);
+# 592 "bondsKernelsGpu1.cu"
+__cuda_local_var_43000_5_non_const_flipflop = (-1);
+# 593 "bondsKernelsGpu1.cu"
 (solver.root_) = guess;
-# 834 "bondsKernelsGpu.cu"
+# 594 "bondsKernelsGpu1.cu"
 (solver.fxMax_) = (_Z6fOpGpu15irrFinderStructd15cashFlowsStructi(f, (solver.root_), cashFlows, numLegs));
-# 837 "bondsKernelsGpu.cu"
+# 595 "bondsKernelsGpu1.cu"
 if (_Z8closeGpudd((solver.fxMax_), (0.0)))
-# 838 "bondsKernelsGpu.cu"
+# 596 "bondsKernelsGpu1.cu"
 {
-# 839 "bondsKernelsGpu.cu"
+# 597 "bondsKernelsGpu1.cu"
 return solver.root_;
-# 840 "bondsKernelsGpu.cu"
+# 598 "bondsKernelsGpu1.cu"
 }
-# 840 "bondsKernelsGpu.cu"
+# 598 "bondsKernelsGpu1.cu"
 else
-# 840 "bondsKernelsGpu.cu"
+# 598 "bondsKernelsGpu1.cu"
 {
-# 841 "bondsKernelsGpu.cu"
+# 599 "bondsKernelsGpu1.cu"
 if (_Z8closeGpudd((solver.fxMax_), (0.0)))
-# 842 "bondsKernelsGpu.cu"
+# 600 "bondsKernelsGpu1.cu"
 {
-# 843 "bondsKernelsGpu.cu"
+# 601 "bondsKernelsGpu1.cu"
 (solver.xMin_) = ((solver.root_) - step);
-# 844 "bondsKernelsGpu.cu"
+# 602 "bondsKernelsGpu1.cu"
 (solver.fxMin_) = (_Z6fOpGpu15irrFinderStructd15cashFlowsStructi(f, (solver.xMin_), cashFlows, numLegs));
-# 845 "bondsKernelsGpu.cu"
+# 603 "bondsKernelsGpu1.cu"
 (solver.xMax_) = (solver.root_);
-# 846 "bondsKernelsGpu.cu"
+# 604 "bondsKernelsGpu1.cu"
 }
-# 848 "bondsKernelsGpu.cu"
+# 605 "bondsKernelsGpu1.cu"
 else
-# 848 "bondsKernelsGpu.cu"
+# 605 "bondsKernelsGpu1.cu"
 {
-# 849 "bondsKernelsGpu.cu"
+# 606 "bondsKernelsGpu1.cu"
 (solver.xMin_) = (solver.root_);
-# 850 "bondsKernelsGpu.cu"
+# 607 "bondsKernelsGpu1.cu"
 (solver.fxMin_) = (solver.fxMax_);
-# 851 "bondsKernelsGpu.cu"
+# 608 "bondsKernelsGpu1.cu"
 (solver.xMax_) = ((solver.root_) + step);
-# 852 "bondsKernelsGpu.cu"
+# 609 "bondsKernelsGpu1.cu"
 (solver.fxMax_) = (_Z6fOpGpu15irrFinderStructd15cashFlowsStructi(f, (solver.xMax_), cashFlows, numLegs));
-# 853 "bondsKernelsGpu.cu"
+# 610 "bondsKernelsGpu1.cu"
 }
-# 853 "bondsKernelsGpu.cu"
+# 610 "bondsKernelsGpu1.cu"
 }
-# 855 "bondsKernelsGpu.cu"
+# 611 "bondsKernelsGpu1.cu"
 (solver.evaluationNumber_) = 2;
-# 856 "bondsKernelsGpu.cu"
+# 612 "bondsKernelsGpu1.cu"
 while ((solver.evaluationNumber_) <= (solver.maxEvaluations_))
-# 857 "bondsKernelsGpu.cu"
+# 613 "bondsKernelsGpu1.cu"
 {
-# 858 "bondsKernelsGpu.cu"
+# 614 "bondsKernelsGpu1.cu"
 if (((solver.fxMin_) * (solver.fxMax_)) <= (0.0))
-# 859 "bondsKernelsGpu.cu"
+# 615 "bondsKernelsGpu1.cu"
 {
-# 860 "bondsKernelsGpu.cu"
+# 616 "bondsKernelsGpu1.cu"
 if (_Z8closeGpudd((solver.fxMin_), (0.0)))
-# 860 "bondsKernelsGpu.cu"
+# 616 "bondsKernelsGpu1.cu"
 {
-# 861 "bondsKernelsGpu.cu"
+# 617 "bondsKernelsGpu1.cu"
 return solver.xMin_;
-# 861 "bondsKernelsGpu.cu"
+# 617 "bondsKernelsGpu1.cu"
 }
-# 862 "bondsKernelsGpu.cu"
+# 618 "bondsKernelsGpu1.cu"
 if (_Z8closeGpudd((solver.fxMax_), (0.0)))
-# 862 "bondsKernelsGpu.cu"
+# 618 "bondsKernelsGpu1.cu"
 {
-# 863 "bondsKernelsGpu.cu"
+# 619 "bondsKernelsGpu1.cu"
 return solver.xMax_;
-# 863 "bondsKernelsGpu.cu"
+# 619 "bondsKernelsGpu1.cu"
 }
-# 864 "bondsKernelsGpu.cu"
+# 620 "bondsKernelsGpu1.cu"
 (solver.root_) = ((dataType)(fdivide(((solver.xMax_) + (solver.xMin_)), (2.0))));
-# 865 "bondsKernelsGpu.cu"
+# 621 "bondsKernelsGpu1.cu"
 return _Z12solveImplGpu12solverStruct15irrFinderStructd15cashFlowsStructi(solver, f, accuracy, cashFlows, numLegs);
-# 866 "bondsKernelsGpu.cu"
+# 622 "bondsKernelsGpu1.cu"
 }
-# 867 "bondsKernelsGpu.cu"
+# 623 "bondsKernelsGpu1.cu"
 if ((fabs((solver.fxMin_))) < (fabs((solver.fxMax_))))
-# 868 "bondsKernelsGpu.cu"
+# 624 "bondsKernelsGpu1.cu"
 {
-# 869 "bondsKernelsGpu.cu"
-(solver.xMin_) = ((solver.xMin_) + (__cuda_local_var_43239_11_non_const_growthFactor * ((solver.xMin_) - (solver.xMax_))));
-# 870 "bondsKernelsGpu.cu"
+# 625 "bondsKernelsGpu1.cu"
+(solver.xMin_) = ((solver.xMin_) + (__cuda_local_var_42999_11_non_const_growthFactor * ((solver.xMin_) - (solver.xMax_))));
+# 626 "bondsKernelsGpu1.cu"
 (solver.fxMin_) = (_Z6fOpGpu15irrFinderStructd15cashFlowsStructi(f, (solver.xMin_), cashFlows, numLegs));
-# 871 "bondsKernelsGpu.cu"
+# 627 "bondsKernelsGpu1.cu"
 }
-# 871 "bondsKernelsGpu.cu"
+# 627 "bondsKernelsGpu1.cu"
 else
-# 871 "bondsKernelsGpu.cu"
+# 627 "bondsKernelsGpu1.cu"
 {
-# 872 "bondsKernelsGpu.cu"
+# 628 "bondsKernelsGpu1.cu"
 if ((fabs((solver.fxMin_))) > (fabs((solver.fxMax_))))
-# 873 "bondsKernelsGpu.cu"
+# 629 "bondsKernelsGpu1.cu"
 {
-# 874 "bondsKernelsGpu.cu"
-(solver.xMax_) = ((solver.xMax_) + (__cuda_local_var_43239_11_non_const_growthFactor * ((solver.xMax_) - (solver.xMin_))));
-# 875 "bondsKernelsGpu.cu"
+# 630 "bondsKernelsGpu1.cu"
+(solver.xMax_) = ((solver.xMax_) + (__cuda_local_var_42999_11_non_const_growthFactor * ((solver.xMax_) - (solver.xMin_))));
+# 631 "bondsKernelsGpu1.cu"
 (solver.fxMax_) = (_Z6fOpGpu15irrFinderStructd15cashFlowsStructi(f, (solver.xMax_), cashFlows, numLegs));
-# 876 "bondsKernelsGpu.cu"
+# 632 "bondsKernelsGpu1.cu"
 }
-# 876 "bondsKernelsGpu.cu"
+# 632 "bondsKernelsGpu1.cu"
 else
-# 876 "bondsKernelsGpu.cu"
+# 632 "bondsKernelsGpu1.cu"
 {
-# 877 "bondsKernelsGpu.cu"
-if (__cuda_local_var_43240_6_non_const_flipflop == (-1))
-# 878 "bondsKernelsGpu.cu"
+# 633 "bondsKernelsGpu1.cu"
+if (__cuda_local_var_43000_5_non_const_flipflop == (-1))
+# 634 "bondsKernelsGpu1.cu"
 {
-# 879 "bondsKernelsGpu.cu"
-(solver.xMin_) = ((solver.xMin_) + (__cuda_local_var_43239_11_non_const_growthFactor * ((solver.xMin_) - (solver.xMax_))));
-# 880 "bondsKernelsGpu.cu"
+# 635 "bondsKernelsGpu1.cu"
+(solver.xMin_) = ((solver.xMin_) + (__cuda_local_var_42999_11_non_const_growthFactor * ((solver.xMin_) - (solver.xMax_))));
+# 636 "bondsKernelsGpu1.cu"
 (solver.fxMin_) = (_Z6fOpGpu15irrFinderStructd15cashFlowsStructi(f, (solver.xMin_), cashFlows, numLegs));
-# 881 "bondsKernelsGpu.cu"
+# 637 "bondsKernelsGpu1.cu"
 (solver.evaluationNumber_)++;
-# 882 "bondsKernelsGpu.cu"
-__cuda_local_var_43240_6_non_const_flipflop = 1;
-# 883 "bondsKernelsGpu.cu"
+# 638 "bondsKernelsGpu1.cu"
+__cuda_local_var_43000_5_non_const_flipflop = 1;
+# 639 "bondsKernelsGpu1.cu"
 }
-# 883 "bondsKernelsGpu.cu"
+# 639 "bondsKernelsGpu1.cu"
 else
-# 883 "bondsKernelsGpu.cu"
+# 639 "bondsKernelsGpu1.cu"
 {
-# 884 "bondsKernelsGpu.cu"
-if (__cuda_local_var_43240_6_non_const_flipflop == 1)
-# 885 "bondsKernelsGpu.cu"
+# 640 "bondsKernelsGpu1.cu"
+if (__cuda_local_var_43000_5_non_const_flipflop == 1)
+# 641 "bondsKernelsGpu1.cu"
 {
-# 886 "bondsKernelsGpu.cu"
-(solver.xMax_) = ((solver.xMax_) + (__cuda_local_var_43239_11_non_const_growthFactor * ((solver.xMax_) - (solver.xMin_))));
-# 887 "bondsKernelsGpu.cu"
+# 642 "bondsKernelsGpu1.cu"
+(solver.xMax_) = ((solver.xMax_) + (__cuda_local_var_42999_11_non_const_growthFactor * ((solver.xMax_) - (solver.xMin_))));
+# 643 "bondsKernelsGpu1.cu"
 (solver.fxMax_) = (_Z6fOpGpu15irrFinderStructd15cashFlowsStructi(f, (solver.xMax_), cashFlows, numLegs));
-# 888 "bondsKernelsGpu.cu"
-__cuda_local_var_43240_6_non_const_flipflop = (-1);
-# 889 "bondsKernelsGpu.cu"
+# 644 "bondsKernelsGpu1.cu"
+__cuda_local_var_43000_5_non_const_flipflop = (-1);
+# 645 "bondsKernelsGpu1.cu"
 }
-# 889 "bondsKernelsGpu.cu"
+# 645 "bondsKernelsGpu1.cu"
 }
-# 889 "bondsKernelsGpu.cu"
+# 645 "bondsKernelsGpu1.cu"
 }
-# 889 "bondsKernelsGpu.cu"
+# 645 "bondsKernelsGpu1.cu"
 }
-# 890 "bondsKernelsGpu.cu"
+# 646 "bondsKernelsGpu1.cu"
 (solver.evaluationNumber_)++;
-# 891 "bondsKernelsGpu.cu"
+# 647 "bondsKernelsGpu1.cu"
 }
-# 893 "bondsKernelsGpu.cu"
+# 648 "bondsKernelsGpu1.cu"
 return (0.0);
-# 894 "bondsKernelsGpu.cu"
+# 649 "bondsKernelsGpu1.cu"
 }
-# 894 "bondsKernelsGpu.cu"
+# 649 "bondsKernelsGpu1.cu"
 }}
-# 897 "bondsKernelsGpu.cu"
+# 650 "bondsKernelsGpu1.cu"
  dataType _Z20cashFlowsNpvYieldGpu15cashFlowsStruct13intRateStructb15bondsDateStructS1_i(
-# 897 "bondsKernelsGpu.cu"
+# 650 "bondsKernelsGpu1.cu"
 cashFlowsStruct cashFlows,
-# 898 "bondsKernelsGpu.cu"
+# 650 "bondsKernelsGpu1.cu"
 intRateStruct y,
-# 899 "bondsKernelsGpu.cu"
+# 650 "bondsKernelsGpu1.cu"
 __nv_bool includecurrDateFlows,
-# 900 "bondsKernelsGpu.cu"
+# 650 "bondsKernelsGpu1.cu"
 bondsDateStruct currDate,
-# 901 "bondsKernelsGpu.cu"
+# 650 "bondsKernelsGpu1.cu"
 bondsDateStruct npvDate,
-# 902 "bondsKernelsGpu.cu"
+# 650 "bondsKernelsGpu1.cu"
 int numLegs){
-# 902 "bondsKernelsGpu.cu"
+# 650 "bondsKernelsGpu1.cu"
 {
-# 903 "bondsKernelsGpu.cu"
+# 651 "bondsKernelsGpu1.cu"
 {
-# 904 "bondsKernelsGpu.cu"
- dataType __cuda_local_var_43313_18_non_const_npv;
-# 905 "bondsKernelsGpu.cu"
- dataType __cuda_local_var_43314_18_non_const_discount;
-# 906 "bondsKernelsGpu.cu"
- bondsDateStruct __cuda_local_var_43315_25_non_const_lastDate;
-# 907 "bondsKernelsGpu.cu"
- __nv_bool __cuda_local_var_43316_7_non_const_first;
-# 909 "bondsKernelsGpu.cu"
- int __cuda_local_var_43318_6_non_const_i;
-# 904 "bondsKernelsGpu.cu"
-__cuda_local_var_43313_18_non_const_npv = (0.0);
-# 905 "bondsKernelsGpu.cu"
-__cuda_local_var_43314_18_non_const_discount = (1.0);
-# 907 "bondsKernelsGpu.cu"
-__cuda_local_var_43316_7_non_const_first = ((__nv_bool)1);
-# 910 "bondsKernelsGpu.cu"
-for (__cuda_local_var_43318_6_non_const_i = 0; (__cuda_local_var_43318_6_non_const_i < numLegs); ++__cuda_local_var_43318_6_non_const_i)
-# 910 "bondsKernelsGpu.cu"
+# 652 "bondsKernelsGpu1.cu"
+ dataType __cuda_local_var_43060_11_non_const_npv;
+# 653 "bondsKernelsGpu1.cu"
+ dataType __cuda_local_var_43061_11_non_const_discount;
+# 654 "bondsKernelsGpu1.cu"
+ bondsDateStruct __cuda_local_var_43062_18_non_const_lastDate;
+# 655 "bondsKernelsGpu1.cu"
+ __nv_bool __cuda_local_var_43063_6_non_const_first;
+# 656 "bondsKernelsGpu1.cu"
+ int __cuda_local_var_43064_6_non_const_i;
+# 652 "bondsKernelsGpu1.cu"
+__cuda_local_var_43060_11_non_const_npv = (0.0);
+# 653 "bondsKernelsGpu1.cu"
+__cuda_local_var_43061_11_non_const_discount = (1.0);
+# 655 "bondsKernelsGpu1.cu"
+__cuda_local_var_43063_6_non_const_first = ((__nv_bool)1);
+# 657 "bondsKernelsGpu1.cu"
+for (__cuda_local_var_43064_6_non_const_i = 0; (__cuda_local_var_43064_6_non_const_i < numLegs); ++__cuda_local_var_43064_6_non_const_i)
+# 657 "bondsKernelsGpu1.cu"
 {
-# 911 "bondsKernelsGpu.cu"
+# 658 "bondsKernelsGpu1.cu"
 {
-# 917 "bondsKernelsGpu.cu"
- bondsDateStruct __cuda_local_var_43326_29_non_const_couponDate;
-# 918 "bondsKernelsGpu.cu"
- dataType __cuda_local_var_43327_22_non_const_amount;
-# 914 "bondsKernelsGpu.cu"
-if (_Z22cashFlowHasOccurredGpu15bondsDateStructS_((((cashFlows.legs)[__cuda_local_var_43318_6_non_const_i]).paymentDate), currDate))
-# 914 "bondsKernelsGpu.cu"
+# 661 "bondsKernelsGpu1.cu"
+ bondsDateStruct __cuda_local_var_43069_18_non_const_couponDate;
+# 662 "bondsKernelsGpu1.cu"
+ dataType __cuda_local_var_43070_11_non_const_amount;
+# 659 "bondsKernelsGpu1.cu"
+if (_Z22cashFlowHasOccurredGpu15bondsDateStructS_((((cashFlows.legs)[__cuda_local_var_43064_6_non_const_i]).paymentDate), currDate))
+# 659 "bondsKernelsGpu1.cu"
 {
-# 915 "bondsKernelsGpu.cu"
+# 660 "bondsKernelsGpu1.cu"
 goto __T21;
-# 915 "bondsKernelsGpu.cu"
+# 660 "bondsKernelsGpu1.cu"
 }
-# 917 "bondsKernelsGpu.cu"
-__cuda_local_var_43326_29_non_const_couponDate = (((cashFlows.legs)[__cuda_local_var_43318_6_non_const_i]).paymentDate);
-# 918 "bondsKernelsGpu.cu"
-__cuda_local_var_43327_22_non_const_amount = (_Z24fixedRateCouponAmountGpu15cashFlowsStructi(cashFlows, __cuda_local_var_43318_6_non_const_i));
-# 919 "bondsKernelsGpu.cu"
-if (__cuda_local_var_43316_7_non_const_first)
-# 920 "bondsKernelsGpu.cu"
+# 661 "bondsKernelsGpu1.cu"
+__cuda_local_var_43069_18_non_const_couponDate = (((cashFlows.legs)[__cuda_local_var_43064_6_non_const_i]).paymentDate);
+# 662 "bondsKernelsGpu1.cu"
+__cuda_local_var_43070_11_non_const_amount = (_Z24fixedRateCouponAmountGpu15cashFlowsStructi(cashFlows, __cuda_local_var_43064_6_non_const_i));
+# 663 "bondsKernelsGpu1.cu"
+if (__cuda_local_var_43063_6_non_const_first)
+# 664 "bondsKernelsGpu1.cu"
 {
-# 921 "bondsKernelsGpu.cu"
-__cuda_local_var_43316_7_non_const_first = ((__nv_bool)0);
-# 922 "bondsKernelsGpu.cu"
-if (__cuda_local_var_43318_6_non_const_i > 0)
-# 922 "bondsKernelsGpu.cu"
+# 665 "bondsKernelsGpu1.cu"
+__cuda_local_var_43063_6_non_const_first = ((__nv_bool)0);
+# 666 "bondsKernelsGpu1.cu"
+if (__cuda_local_var_43064_6_non_const_i > 0)
+# 666 "bondsKernelsGpu1.cu"
 {
-# 923 "bondsKernelsGpu.cu"
-__cuda_local_var_43315_25_non_const_lastDate = (_Z14advanceDateGpu15bondsDateStructi((((cashFlows.legs)[__cuda_local_var_43318_6_non_const_i]).paymentDate), (-6)));
-# 924 "bondsKernelsGpu.cu"
+# 667 "bondsKernelsGpu1.cu"
+__cuda_local_var_43062_18_non_const_lastDate = (_Z14advanceDateGpu15bondsDateStructi((((cashFlows.legs)[__cuda_local_var_43064_6_non_const_i]).paymentDate), (-6)));
+# 668 "bondsKernelsGpu1.cu"
 }
-# 924 "bondsKernelsGpu.cu"
+# 668 "bondsKernelsGpu1.cu"
 else
-# 924 "bondsKernelsGpu.cu"
+# 668 "bondsKernelsGpu1.cu"
 {
-# 925 "bondsKernelsGpu.cu"
-__cuda_local_var_43315_25_non_const_lastDate = (((cashFlows.legs)[__cuda_local_var_43318_6_non_const_i]).accrualStartDate);
-# 926 "bondsKernelsGpu.cu"
+# 669 "bondsKernelsGpu1.cu"
+__cuda_local_var_43062_18_non_const_lastDate = (((cashFlows.legs)[__cuda_local_var_43064_6_non_const_i]).accrualStartDate);
+# 670 "bondsKernelsGpu1.cu"
 }
-# 927 "bondsKernelsGpu.cu"
-__cuda_local_var_43314_18_non_const_discount *= (_Z29interestRateDiscountFactorGpu13intRateStructd(y, (_Z15yearFractionGpu15bondsDateStructS_i(npvDate, __cuda_local_var_43326_29_non_const_couponDate, (y.dayCounter)))));
-# 928 "bondsKernelsGpu.cu"
+# 671 "bondsKernelsGpu1.cu"
+__cuda_local_var_43061_11_non_const_discount *= (_Z29interestRateDiscountFactorGpu13intRateStructd(y, (_Z15yearFractionGpu15bondsDateStructS_i(npvDate, __cuda_local_var_43069_18_non_const_couponDate, (y.dayCounter)))));
+# 672 "bondsKernelsGpu1.cu"
 }
-# 930 "bondsKernelsGpu.cu"
+# 673 "bondsKernelsGpu1.cu"
 else
-# 930 "bondsKernelsGpu.cu"
+# 673 "bondsKernelsGpu1.cu"
 {
-# 931 "bondsKernelsGpu.cu"
-__cuda_local_var_43314_18_non_const_discount *= (_Z29interestRateDiscountFactorGpu13intRateStructd(y, (_Z15yearFractionGpu15bondsDateStructS_i(__cuda_local_var_43315_25_non_const_lastDate, __cuda_local_var_43326_29_non_const_couponDate, (y.dayCounter)))));
-# 932 "bondsKernelsGpu.cu"
+# 674 "bondsKernelsGpu1.cu"
+__cuda_local_var_43061_11_non_const_discount *= (_Z29interestRateDiscountFactorGpu13intRateStructd(y, (_Z15yearFractionGpu15bondsDateStructS_i(__cuda_local_var_43062_18_non_const_lastDate, __cuda_local_var_43069_18_non_const_couponDate, (y.dayCounter)))));
+# 675 "bondsKernelsGpu1.cu"
 }
-# 934 "bondsKernelsGpu.cu"
-__cuda_local_var_43315_25_non_const_lastDate = __cuda_local_var_43326_29_non_const_couponDate;
-# 936 "bondsKernelsGpu.cu"
-__cuda_local_var_43313_18_non_const_npv += (__cuda_local_var_43327_22_non_const_amount * __cuda_local_var_43314_18_non_const_discount);
-# 937 "bondsKernelsGpu.cu"
+# 676 "bondsKernelsGpu1.cu"
+__cuda_local_var_43062_18_non_const_lastDate = __cuda_local_var_43069_18_non_const_couponDate;
+# 677 "bondsKernelsGpu1.cu"
+__cuda_local_var_43060_11_non_const_npv += (__cuda_local_var_43070_11_non_const_amount * __cuda_local_var_43061_11_non_const_discount);
+# 678 "bondsKernelsGpu1.cu"
 }
-# 937 "bondsKernelsGpu.cu"
+# 678 "bondsKernelsGpu1.cu"
 __T21:;
-# 937 "bondsKernelsGpu.cu"
+# 678 "bondsKernelsGpu1.cu"
 ;
-# 937 "bondsKernelsGpu.cu"
+# 678 "bondsKernelsGpu1.cu"
 }
-# 939 "bondsKernelsGpu.cu"
-return __cuda_local_var_43313_18_non_const_npv;
-# 940 "bondsKernelsGpu.cu"
+# 679 "bondsKernelsGpu1.cu"
+return __cuda_local_var_43060_11_non_const_npv;
+# 680 "bondsKernelsGpu1.cu"
 }
-# 940 "bondsKernelsGpu.cu"
+# 680 "bondsKernelsGpu1.cu"
 }}
-# 942 "bondsKernelsGpu.cu"
+# 681 "bondsKernelsGpu1.cu"
  dataType _Z6fOpGpu15irrFinderStructd15cashFlowsStructi(
-# 942 "bondsKernelsGpu.cu"
+# 681 "bondsKernelsGpu1.cu"
 irrFinderStruct f,
-# 942 "bondsKernelsGpu.cu"
+# 681 "bondsKernelsGpu1.cu"
 dataType y,
-# 942 "bondsKernelsGpu.cu"
+# 681 "bondsKernelsGpu1.cu"
 cashFlowsStruct cashFlows,
-# 942 "bondsKernelsGpu.cu"
+# 681 "bondsKernelsGpu1.cu"
 int numLegs){
-# 942 "bondsKernelsGpu.cu"
+# 681 "bondsKernelsGpu1.cu"
 {
-# 943 "bondsKernelsGpu.cu"
+# 682 "bondsKernelsGpu1.cu"
 {
-# 944 "bondsKernelsGpu.cu"
- intRateStruct __cuda_local_var_43353_16_non_const_yield;
-# 951 "bondsKernelsGpu.cu"
- dataType __cuda_local_var_43360_11_non_const_NPV;
-# 946 "bondsKernelsGpu.cu"
-(__cuda_local_var_43353_16_non_const_yield.rate) = y;
-# 947 "bondsKernelsGpu.cu"
-(__cuda_local_var_43353_16_non_const_yield.comp) = (f.comp);
-# 948 "bondsKernelsGpu.cu"
-(__cuda_local_var_43353_16_non_const_yield.freq) = (f.freq);
-# 949 "bondsKernelsGpu.cu"
-(__cuda_local_var_43353_16_non_const_yield.dayCounter) = (f.dayCounter);
-# 951 "bondsKernelsGpu.cu"
-__cuda_local_var_43360_11_non_const_NPV = (_Z20cashFlowsNpvYieldGpu15cashFlowsStruct13intRateStructb15bondsDateStructS1_i(cashFlows, __cuda_local_var_43353_16_non_const_yield, ((__nv_bool)0), (f.currDate), (f.npvDate), numLegs));
-# 958 "bondsKernelsGpu.cu"
-return (f.npv) - __cuda_local_var_43360_11_non_const_NPV;
-# 959 "bondsKernelsGpu.cu"
+# 683 "bondsKernelsGpu1.cu"
+ intRateStruct __cuda_local_var_43091_15_non_const_yield;
+# 688 "bondsKernelsGpu1.cu"
+ dataType __cuda_local_var_43096_11_non_const_NPV;
+# 684 "bondsKernelsGpu1.cu"
+(__cuda_local_var_43091_15_non_const_yield.rate) = y;
+# 685 "bondsKernelsGpu1.cu"
+(__cuda_local_var_43091_15_non_const_yield.comp) = (f.comp);
+# 686 "bondsKernelsGpu1.cu"
+(__cuda_local_var_43091_15_non_const_yield.freq) = (f.freq);
+# 687 "bondsKernelsGpu1.cu"
+(__cuda_local_var_43091_15_non_const_yield.dayCounter) = (f.dayCounter);
+# 688 "bondsKernelsGpu1.cu"
+__cuda_local_var_43096_11_non_const_NPV = (_Z20cashFlowsNpvYieldGpu15cashFlowsStruct13intRateStructb15bondsDateStructS1_i(cashFlows, __cuda_local_var_43091_15_non_const_yield, ((__nv_bool)0), (f.currDate), (f.npvDate), numLegs));
+# 689 "bondsKernelsGpu1.cu"
+return (f.npv) - __cuda_local_var_43096_11_non_const_NPV;
+# 690 "bondsKernelsGpu1.cu"
 }
-# 959 "bondsKernelsGpu.cu"
+# 690 "bondsKernelsGpu1.cu"
 }}
-# 963 "bondsKernelsGpu.cu"
+# 691 "bondsKernelsGpu1.cu"
  dataType _Z14fDerivativeGpu15irrFinderStructd15cashFlowsStructi(
-# 963 "bondsKernelsGpu.cu"
+# 691 "bondsKernelsGpu1.cu"
 irrFinderStruct f,
-# 963 "bondsKernelsGpu.cu"
+# 691 "bondsKernelsGpu1.cu"
 dataType y,
-# 963 "bondsKernelsGpu.cu"
+# 691 "bondsKernelsGpu1.cu"
 cashFlowsStruct cashFlows,
-# 963 "bondsKernelsGpu.cu"
+# 691 "bondsKernelsGpu1.cu"
 int numLegs){
-# 963 "bondsKernelsGpu.cu"
+# 691 "bondsKernelsGpu1.cu"
 {
-# 964 "bondsKernelsGpu.cu"
+# 692 "bondsKernelsGpu1.cu"
 {
-# 965 "bondsKernelsGpu.cu"
- intRateStruct __cuda_local_var_43374_16_non_const_yield;
-# 966 "bondsKernelsGpu.cu"
-(__cuda_local_var_43374_16_non_const_yield.rate) = y;
-# 967 "bondsKernelsGpu.cu"
-(__cuda_local_var_43374_16_non_const_yield.dayCounter) = (f.dayCounter);
-# 968 "bondsKernelsGpu.cu"
-(__cuda_local_var_43374_16_non_const_yield.comp) = (f.comp);
-# 969 "bondsKernelsGpu.cu"
-(__cuda_local_var_43374_16_non_const_yield.freq) = (f.freq);
-# 972 "bondsKernelsGpu.cu"
-return _Z19modifiedDurationGpu15cashFlowsStruct13intRateStructb15bondsDateStructS1_i(cashFlows, __cuda_local_var_43374_16_non_const_yield, (f.includecurrDateFlows), (f.currDate), (f.npvDate), numLegs);
-# 975 "bondsKernelsGpu.cu"
+# 693 "bondsKernelsGpu1.cu"
+ intRateStruct __cuda_local_var_43101_15_non_const_yield;
+# 694 "bondsKernelsGpu1.cu"
+(__cuda_local_var_43101_15_non_const_yield.rate) = y;
+# 695 "bondsKernelsGpu1.cu"
+(__cuda_local_var_43101_15_non_const_yield.dayCounter) = (f.dayCounter);
+# 696 "bondsKernelsGpu1.cu"
+(__cuda_local_var_43101_15_non_const_yield.comp) = (f.comp);
+# 697 "bondsKernelsGpu1.cu"
+(__cuda_local_var_43101_15_non_const_yield.freq) = (f.freq);
+# 698 "bondsKernelsGpu1.cu"
+return _Z19modifiedDurationGpu15cashFlowsStruct13intRateStructb15bondsDateStructS1_i(cashFlows, __cuda_local_var_43101_15_non_const_yield, (f.includecurrDateFlows), (f.currDate), (f.npvDate), numLegs);
+# 699 "bondsKernelsGpu1.cu"
 }
-# 975 "bondsKernelsGpu.cu"
+# 699 "bondsKernelsGpu1.cu"
 }}
-# 978 "bondsKernelsGpu.cu"
+# 700 "bondsKernelsGpu1.cu"
  __nv_bool _Z8closeGpudd(
-# 978 "bondsKernelsGpu.cu"
+# 700 "bondsKernelsGpu1.cu"
 dataType x,
-# 978 "bondsKernelsGpu.cu"
+# 700 "bondsKernelsGpu1.cu"
 dataType y){
-# 978 "bondsKernelsGpu.cu"
+# 700 "bondsKernelsGpu1.cu"
 {
-# 979 "bondsKernelsGpu.cu"
+# 701 "bondsKernelsGpu1.cu"
 {
-# 980 "bondsKernelsGpu.cu"
+# 702 "bondsKernelsGpu1.cu"
 return _Z17closeGpuThreeArgsddi(x, y, 42);
-# 981 "bondsKernelsGpu.cu"
+# 703 "bondsKernelsGpu1.cu"
 }
-# 981 "bondsKernelsGpu.cu"
+# 703 "bondsKernelsGpu1.cu"
 }}
-# 984 "bondsKernelsGpu.cu"
+# 704 "bondsKernelsGpu1.cu"
  __nv_bool _Z17closeGpuThreeArgsddi(
-# 984 "bondsKernelsGpu.cu"
+# 704 "bondsKernelsGpu1.cu"
 dataType x,
-# 984 "bondsKernelsGpu.cu"
+# 704 "bondsKernelsGpu1.cu"
 dataType y,
-# 984 "bondsKernelsGpu.cu"
+# 704 "bondsKernelsGpu1.cu"
 int n){
-# 984 "bondsKernelsGpu.cu"
+# 704 "bondsKernelsGpu1.cu"
 {
-# 985 "bondsKernelsGpu.cu"
+# 705 "bondsKernelsGpu1.cu"
 {
-# 986 "bondsKernelsGpu.cu"
- dataType __cuda_local_var_43395_11_non_const_diff;
-# 987 "bondsKernelsGpu.cu"
- dataType __cuda_local_var_43396_11_non_const_tolerance;
-# 986 "bondsKernelsGpu.cu"
-__cuda_local_var_43395_11_non_const_diff = (fabs((x - y)));
-# 987 "bondsKernelsGpu.cu"
-__cuda_local_var_43396_11_non_const_tolerance = ((dataType)(((float)n) * (1.000000046e-18F)));
-# 989 "bondsKernelsGpu.cu"
-return (__nv_bool)((__cuda_local_var_43395_11_non_const_diff <= (__cuda_local_var_43396_11_non_const_tolerance * (fabs(x)))) && (__cuda_local_var_43395_11_non_const_diff <= (__cuda_local_var_43396_11_non_const_tolerance * (fabs(y)))));
-# 991 "bondsKernelsGpu.cu"
+# 706 "bondsKernelsGpu1.cu"
+ dataType __cuda_local_var_43114_10_non_const_diff;
+# 707 "bondsKernelsGpu1.cu"
+ dataType __cuda_local_var_43115_10_non_const_tolerance;
+# 706 "bondsKernelsGpu1.cu"
+__cuda_local_var_43114_10_non_const_diff = (fabs((x - y)));
+# 707 "bondsKernelsGpu1.cu"
+__cuda_local_var_43115_10_non_const_tolerance = ((dataType)(((float)n) * (1.000000046e-18F)));
+# 708 "bondsKernelsGpu1.cu"
+return (__nv_bool)((__cuda_local_var_43114_10_non_const_diff <= (__cuda_local_var_43115_10_non_const_tolerance * (fabs(x)))) && (__cuda_local_var_43114_10_non_const_diff <= (__cuda_local_var_43115_10_non_const_tolerance * (fabs(y)))));
+# 710 "bondsKernelsGpu1.cu"
 }
-# 991 "bondsKernelsGpu.cu"
+# 710 "bondsKernelsGpu1.cu"
 }}
-# 994 "bondsKernelsGpu.cu"
+# 711 "bondsKernelsGpu1.cu"
  dataType _Z16enforceBoundsGpud(
-# 994 "bondsKernelsGpu.cu"
+# 711 "bondsKernelsGpu1.cu"
 dataType x){
-# 994 "bondsKernelsGpu.cu"
+# 711 "bondsKernelsGpu1.cu"
 {
-# 995 "bondsKernelsGpu.cu"
+# 712 "bondsKernelsGpu1.cu"
 {
-# 1000 "bondsKernelsGpu.cu"
+# 717 "bondsKernelsGpu1.cu"
 return x;
-# 1001 "bondsKernelsGpu.cu"
+# 718 "bondsKernelsGpu1.cu"
 }
-# 1001 "bondsKernelsGpu.cu"
+# 718 "bondsKernelsGpu1.cu"
 }}
-# 1004 "bondsKernelsGpu.cu"
+# 719 "bondsKernelsGpu1.cu"
  dataType _Z12solveImplGpu12solverStruct15irrFinderStructd15cashFlowsStructi(
-# 1004 "bondsKernelsGpu.cu"
+# 719 "bondsKernelsGpu1.cu"
 solverStruct solver,
-# 1004 "bondsKernelsGpu.cu"
+# 719 "bondsKernelsGpu1.cu"
 irrFinderStruct f,
-# 1005 "bondsKernelsGpu.cu"
+# 719 "bondsKernelsGpu1.cu"
 dataType xAccuracy,
-# 1005 "bondsKernelsGpu.cu"
+# 719 "bondsKernelsGpu1.cu"
 cashFlowsStruct cashFlows,
-# 1005 "bondsKernelsGpu.cu"
+# 719 "bondsKernelsGpu1.cu"
 int numLegs){
-# 1005 "bondsKernelsGpu.cu"
+# 719 "bondsKernelsGpu1.cu"
 {
-# 1006 "bondsKernelsGpu.cu"
+# 720 "bondsKernelsGpu1.cu"
 {
-# 1007 "bondsKernelsGpu.cu"
- dataType __cuda_local_var_43416_11_non_const_froot;
-# 1007 "bondsKernelsGpu.cu"
- dataType __cuda_local_var_43416_18_non_const_dfroot;
-# 1007 "bondsKernelsGpu.cu"
- dataType __cuda_local_var_43416_26_non_const_dx;
-# 1007 "bondsKernelsGpu.cu"
- dataType __cuda_local_var_43416_30_non_const_dxold;
-# 1008 "bondsKernelsGpu.cu"
- dataType __cuda_local_var_43417_11_non_const_xh;
-# 1008 "bondsKernelsGpu.cu"
- dataType __cuda_local_var_43417_15_non_const_xl;
-# 1011 "bondsKernelsGpu.cu"
+# 721 "bondsKernelsGpu1.cu"
+ dataType __cuda_local_var_43129_10_non_const_froot;
+# 721 "bondsKernelsGpu1.cu"
+ dataType __cuda_local_var_43129_17_non_const_dfroot;
+# 721 "bondsKernelsGpu1.cu"
+ dataType __cuda_local_var_43129_25_non_const_dx;
+# 721 "bondsKernelsGpu1.cu"
+ dataType __cuda_local_var_43129_29_non_const_dxold;
+# 722 "bondsKernelsGpu1.cu"
+ dataType __cuda_local_var_43130_10_non_const_xh;
+# 722 "bondsKernelsGpu1.cu"
+ dataType __cuda_local_var_43130_14_non_const_xl;
+# 723 "bondsKernelsGpu1.cu"
 if ((solver.fxMin_) < (0.0))
-# 1012 "bondsKernelsGpu.cu"
+# 724 "bondsKernelsGpu1.cu"
 {
-# 1013 "bondsKernelsGpu.cu"
-__cuda_local_var_43417_15_non_const_xl = (solver.xMin_);
-# 1014 "bondsKernelsGpu.cu"
-__cuda_local_var_43417_11_non_const_xh = (solver.xMax_);
-# 1015 "bondsKernelsGpu.cu"
+# 725 "bondsKernelsGpu1.cu"
+__cuda_local_var_43130_14_non_const_xl = (solver.xMin_);
+# 726 "bondsKernelsGpu1.cu"
+__cuda_local_var_43130_10_non_const_xh = (solver.xMax_);
+# 727 "bondsKernelsGpu1.cu"
 }
-# 1017 "bondsKernelsGpu.cu"
+# 728 "bondsKernelsGpu1.cu"
 else
-# 1017 "bondsKernelsGpu.cu"
+# 728 "bondsKernelsGpu1.cu"
 {
-# 1018 "bondsKernelsGpu.cu"
-__cuda_local_var_43417_11_non_const_xh = (solver.xMin_);
-# 1019 "bondsKernelsGpu.cu"
-__cuda_local_var_43417_15_non_const_xl = (solver.xMax_);
-# 1020 "bondsKernelsGpu.cu"
+# 729 "bondsKernelsGpu1.cu"
+__cuda_local_var_43130_10_non_const_xh = (solver.xMin_);
+# 730 "bondsKernelsGpu1.cu"
+__cuda_local_var_43130_14_non_const_xl = (solver.xMax_);
+# 731 "bondsKernelsGpu1.cu"
 }
-# 1023 "bondsKernelsGpu.cu"
-__cuda_local_var_43416_30_non_const_dxold = ((solver.xMax_) - (solver.xMin_));
-# 1028 "bondsKernelsGpu.cu"
-__cuda_local_var_43416_26_non_const_dx = __cuda_local_var_43416_30_non_const_dxold;
-# 1030 "bondsKernelsGpu.cu"
-__cuda_local_var_43416_11_non_const_froot = (_Z6fOpGpu15irrFinderStructd15cashFlowsStructi(f, (solver.root_), cashFlows, numLegs));
-# 1031 "bondsKernelsGpu.cu"
-__cuda_local_var_43416_18_non_const_dfroot = (_Z14fDerivativeGpu15irrFinderStructd15cashFlowsStructi(f, (solver.root_), cashFlows, numLegs));
-# 1033 "bondsKernelsGpu.cu"
+# 732 "bondsKernelsGpu1.cu"
+__cuda_local_var_43129_29_non_const_dxold = ((solver.xMax_) - (solver.xMin_));
+# 733 "bondsKernelsGpu1.cu"
+__cuda_local_var_43129_25_non_const_dx = __cuda_local_var_43129_29_non_const_dxold;
+# 734 "bondsKernelsGpu1.cu"
+__cuda_local_var_43129_10_non_const_froot = (_Z6fOpGpu15irrFinderStructd15cashFlowsStructi(f, (solver.root_), cashFlows, numLegs));
+# 735 "bondsKernelsGpu1.cu"
+__cuda_local_var_43129_17_non_const_dfroot = (_Z14fDerivativeGpu15irrFinderStructd15cashFlowsStructi(f, (solver.root_), cashFlows, numLegs));
+# 736 "bondsKernelsGpu1.cu"
 ++(solver.evaluationNumber_);
-# 1035 "bondsKernelsGpu.cu"
+# 737 "bondsKernelsGpu1.cu"
 while ((solver.evaluationNumber_) <= (solver.maxEvaluations_))
-# 1036 "bondsKernelsGpu.cu"
+# 738 "bondsKernelsGpu1.cu"
 {
-# 1038 "bondsKernelsGpu.cu"
-if (((((((solver.root_) - __cuda_local_var_43417_11_non_const_xh) * __cuda_local_var_43416_18_non_const_dfroot) - __cuda_local_var_43416_11_non_const_froot) * ((((solver.root_) - __cuda_local_var_43417_15_non_const_xl) * __cuda_local_var_43416_18_non_const_dfroot) - __cuda_local_var_43416_11_non_const_froot)) > (0.0)) || ((fabs(((2.0) * __cuda_local_var_43416_11_non_const_froot))) > (fabs((__cuda_local_var_43416_30_non_const_dxold * __cuda_local_var_43416_18_non_const_dfroot)))))
-# 1041 "bondsKernelsGpu.cu"
+# 739 "bondsKernelsGpu1.cu"
+if (((((((solver.root_) - __cuda_local_var_43130_10_non_const_xh) * __cuda_local_var_43129_17_non_const_dfroot) - __cuda_local_var_43129_10_non_const_froot) * ((((solver.root_) - __cuda_local_var_43130_14_non_const_xl) * __cuda_local_var_43129_17_non_const_dfroot) - __cuda_local_var_43129_10_non_const_froot)) > (0.0)) || ((fabs(((2.0) * __cuda_local_var_43129_10_non_const_froot))) > (fabs((__cuda_local_var_43129_29_non_const_dxold * __cuda_local_var_43129_17_non_const_dfroot)))))
+# 742 "bondsKernelsGpu1.cu"
 {
-# 1042 "bondsKernelsGpu.cu"
-__cuda_local_var_43416_30_non_const_dxold = __cuda_local_var_43416_26_non_const_dx;
-# 1043 "bondsKernelsGpu.cu"
-__cuda_local_var_43416_26_non_const_dx = ((dataType)(fdivide((__cuda_local_var_43417_11_non_const_xh - __cuda_local_var_43417_15_non_const_xl), (2.0))));
-# 1044 "bondsKernelsGpu.cu"
-(solver.root_) = (__cuda_local_var_43417_15_non_const_xl + __cuda_local_var_43416_26_non_const_dx);
-# 1045 "bondsKernelsGpu.cu"
+# 743 "bondsKernelsGpu1.cu"
+__cuda_local_var_43129_29_non_const_dxold = __cuda_local_var_43129_25_non_const_dx;
+# 744 "bondsKernelsGpu1.cu"
+__cuda_local_var_43129_25_non_const_dx = ((dataType)(fdivide((__cuda_local_var_43130_10_non_const_xh - __cuda_local_var_43130_14_non_const_xl), (2.0))));
+# 745 "bondsKernelsGpu1.cu"
+(solver.root_) = (__cuda_local_var_43130_14_non_const_xl + __cuda_local_var_43129_25_non_const_dx);
+# 746 "bondsKernelsGpu1.cu"
 }
-# 1047 "bondsKernelsGpu.cu"
+# 747 "bondsKernelsGpu1.cu"
 else
-# 1047 "bondsKernelsGpu.cu"
+# 747 "bondsKernelsGpu1.cu"
 {
-# 1048 "bondsKernelsGpu.cu"
-__cuda_local_var_43416_30_non_const_dxold = __cuda_local_var_43416_26_non_const_dx;
-# 1049 "bondsKernelsGpu.cu"
-__cuda_local_var_43416_26_non_const_dx = ((dataType)(fdivide(__cuda_local_var_43416_11_non_const_froot, __cuda_local_var_43416_18_non_const_dfroot)));
-# 1050 "bondsKernelsGpu.cu"
-(solver.root_) -= __cuda_local_var_43416_26_non_const_dx;
-# 1051 "bondsKernelsGpu.cu"
+# 748 "bondsKernelsGpu1.cu"
+__cuda_local_var_43129_29_non_const_dxold = __cuda_local_var_43129_25_non_const_dx;
+# 749 "bondsKernelsGpu1.cu"
+__cuda_local_var_43129_25_non_const_dx = ((dataType)(fdivide(__cuda_local_var_43129_10_non_const_froot, __cuda_local_var_43129_17_non_const_dfroot)));
+# 750 "bondsKernelsGpu1.cu"
+(solver.root_) -= __cuda_local_var_43129_25_non_const_dx;
+# 751 "bondsKernelsGpu1.cu"
 }
-# 1054 "bondsKernelsGpu.cu"
-if ((fabs(__cuda_local_var_43416_26_non_const_dx)) < xAccuracy)
-# 1054 "bondsKernelsGpu.cu"
+# 752 "bondsKernelsGpu1.cu"
+if ((fabs(__cuda_local_var_43129_25_non_const_dx)) < xAccuracy)
+# 752 "bondsKernelsGpu1.cu"
 {
-# 1055 "bondsKernelsGpu.cu"
+# 753 "bondsKernelsGpu1.cu"
 return solver.root_;
-# 1055 "bondsKernelsGpu.cu"
+# 753 "bondsKernelsGpu1.cu"
 }
-# 1056 "bondsKernelsGpu.cu"
-__cuda_local_var_43416_11_non_const_froot = (_Z6fOpGpu15irrFinderStructd15cashFlowsStructi(f, (solver.root_), cashFlows, numLegs));
-# 1057 "bondsKernelsGpu.cu"
-__cuda_local_var_43416_18_non_const_dfroot = (_Z14fDerivativeGpu15irrFinderStructd15cashFlowsStructi(f, (solver.root_), cashFlows, numLegs));
-# 1058 "bondsKernelsGpu.cu"
+# 754 "bondsKernelsGpu1.cu"
+__cuda_local_var_43129_10_non_const_froot = (_Z6fOpGpu15irrFinderStructd15cashFlowsStructi(f, (solver.root_), cashFlows, numLegs));
+# 755 "bondsKernelsGpu1.cu"
+__cuda_local_var_43129_17_non_const_dfroot = (_Z14fDerivativeGpu15irrFinderStructd15cashFlowsStructi(f, (solver.root_), cashFlows, numLegs));
+# 756 "bondsKernelsGpu1.cu"
 ++(solver.evaluationNumber_);
-# 1059 "bondsKernelsGpu.cu"
-if (__cuda_local_var_43416_11_non_const_froot < (0.0))
-# 1059 "bondsKernelsGpu.cu"
+# 757 "bondsKernelsGpu1.cu"
+if (__cuda_local_var_43129_10_non_const_froot < (0.0))
+# 757 "bondsKernelsGpu1.cu"
 {
-# 1060 "bondsKernelsGpu.cu"
-__cuda_local_var_43417_15_non_const_xl = (solver.root_);
-# 1060 "bondsKernelsGpu.cu"
+# 758 "bondsKernelsGpu1.cu"
+__cuda_local_var_43130_14_non_const_xl = (solver.root_);
+# 758 "bondsKernelsGpu1.cu"
 }
-# 1060 "bondsKernelsGpu.cu"
+# 758 "bondsKernelsGpu1.cu"
 else
-# 1060 "bondsKernelsGpu.cu"
+# 758 "bondsKernelsGpu1.cu"
 {
-# 1062 "bondsKernelsGpu.cu"
-__cuda_local_var_43417_11_non_const_xh = (solver.root_);
-# 1062 "bondsKernelsGpu.cu"
+# 760 "bondsKernelsGpu1.cu"
+__cuda_local_var_43130_10_non_const_xh = (solver.root_);
+# 760 "bondsKernelsGpu1.cu"
 }
-# 1063 "bondsKernelsGpu.cu"
+# 761 "bondsKernelsGpu1.cu"
 }
-# 1065 "bondsKernelsGpu.cu"
+# 762 "bondsKernelsGpu1.cu"
 return solver.root_;
-# 1066 "bondsKernelsGpu.cu"
+# 763 "bondsKernelsGpu1.cu"
 }
-# 1066 "bondsKernelsGpu.cu"
+# 763 "bondsKernelsGpu1.cu"
 }}
-# 1071 "bondsKernelsGpu.cu"
+# 764 "bondsKernelsGpu1.cu"
  dataType _Z19modifiedDurationGpu15cashFlowsStruct13intRateStructb15bondsDateStructS1_i(
-# 1071 "bondsKernelsGpu.cu"
+# 764 "bondsKernelsGpu1.cu"
 cashFlowsStruct cashFlows,
-# 1072 "bondsKernelsGpu.cu"
+# 764 "bondsKernelsGpu1.cu"
 intRateStruct y,
-# 1073 "bondsKernelsGpu.cu"
+# 764 "bondsKernelsGpu1.cu"
 __nv_bool includecurrDateFlows,
-# 1074 "bondsKernelsGpu.cu"
+# 764 "bondsKernelsGpu1.cu"
 bondsDateStruct currDate,
-# 1075 "bondsKernelsGpu.cu"
+# 764 "bondsKernelsGpu1.cu"
 bondsDateStruct npvDate,
-# 1076 "bondsKernelsGpu.cu"
+# 764 "bondsKernelsGpu1.cu"
 int numLegs){
-# 1076 "bondsKernelsGpu.cu"
+# 764 "bondsKernelsGpu1.cu"
 {
-# 1077 "bondsKernelsGpu.cu"
+# 765 "bondsKernelsGpu1.cu"
 {
-# 1078 "bondsKernelsGpu.cu"
- dataType __cuda_local_var_43487_11_non_const_P;
-# 1079 "bondsKernelsGpu.cu"
- dataType __cuda_local_var_43488_11_non_const_dPdy;
-# 1080 "bondsKernelsGpu.cu"
- dataType __cuda_local_var_43489_11_non_const_r;
-# 1081 "bondsKernelsGpu.cu"
- dataType __cuda_local_var_43490_11_non_const_N;
-# 1082 "bondsKernelsGpu.cu"
- int __cuda_local_var_43491_6_non_const_dc;
-# 1084 "bondsKernelsGpu.cu"
- int __cuda_local_var_43493_6_non_const_i;
-# 1078 "bondsKernelsGpu.cu"
-__cuda_local_var_43487_11_non_const_P = (0.0);
-# 1079 "bondsKernelsGpu.cu"
-__cuda_local_var_43488_11_non_const_dPdy = (0.0);
-# 1080 "bondsKernelsGpu.cu"
-__cuda_local_var_43489_11_non_const_r = (y.rate);
-# 1081 "bondsKernelsGpu.cu"
-__cuda_local_var_43490_11_non_const_N = (y.freq);
-# 1082 "bondsKernelsGpu.cu"
-__cuda_local_var_43491_6_non_const_dc = (y.dayCounter);
-# 1085 "bondsKernelsGpu.cu"
-for (__cuda_local_var_43493_6_non_const_i = 0; (__cuda_local_var_43493_6_non_const_i < numLegs); ++__cuda_local_var_43493_6_non_const_i)
-# 1086 "bondsKernelsGpu.cu"
+# 766 "bondsKernelsGpu1.cu"
+ dataType __cuda_local_var_43174_10_non_const_P;
+# 767 "bondsKernelsGpu1.cu"
+ dataType __cuda_local_var_43175_10_non_const_dPdy;
+# 768 "bondsKernelsGpu1.cu"
+ dataType __cuda_local_var_43176_10_non_const_r;
+# 769 "bondsKernelsGpu1.cu"
+ dataType __cuda_local_var_43177_10_non_const_N;
+# 770 "bondsKernelsGpu1.cu"
+ int __cuda_local_var_43178_5_non_const_dc;
+# 771 "bondsKernelsGpu1.cu"
+ int __cuda_local_var_43179_6_non_const_i;
+# 766 "bondsKernelsGpu1.cu"
+__cuda_local_var_43174_10_non_const_P = (0.0);
+# 767 "bondsKernelsGpu1.cu"
+__cuda_local_var_43175_10_non_const_dPdy = (0.0);
+# 768 "bondsKernelsGpu1.cu"
+__cuda_local_var_43176_10_non_const_r = (y.rate);
+# 769 "bondsKernelsGpu1.cu"
+__cuda_local_var_43177_10_non_const_N = (y.freq);
+# 770 "bondsKernelsGpu1.cu"
+__cuda_local_var_43178_5_non_const_dc = (y.dayCounter);
+# 772 "bondsKernelsGpu1.cu"
+for (__cuda_local_var_43179_6_non_const_i = 0; (__cuda_local_var_43179_6_non_const_i < numLegs); ++__cuda_local_var_43179_6_non_const_i)
+# 773 "bondsKernelsGpu1.cu"
 {
-# 1089 "bondsKernelsGpu.cu"
-if (!(_Z22cashFlowHasOccurredGpu15bondsDateStructS_((((cashFlows.legs)[__cuda_local_var_43493_6_non_const_i]).paymentDate), currDate)))
-# 1090 "bondsKernelsGpu.cu"
+# 774 "bondsKernelsGpu1.cu"
+if (!(_Z22cashFlowHasOccurredGpu15bondsDateStructS_((((cashFlows.legs)[__cuda_local_var_43179_6_non_const_i]).paymentDate), currDate)))
+# 775 "bondsKernelsGpu1.cu"
 {
-# 1091 "bondsKernelsGpu.cu"
- dataType __cuda_local_var_43500_13_non_const_t;
-# 1093 "bondsKernelsGpu.cu"
- dataType __cuda_local_var_43502_13_non_const_c;
-# 1094 "bondsKernelsGpu.cu"
- dataType __cuda_local_var_43503_13_non_const_B;
-# 1091 "bondsKernelsGpu.cu"
-__cuda_local_var_43500_13_non_const_t = (_Z15yearFractionGpu15bondsDateStructS_i(npvDate, (((cashFlows.legs)[__cuda_local_var_43493_6_non_const_i]).paymentDate), __cuda_local_var_43491_6_non_const_dc));
-# 1093 "bondsKernelsGpu.cu"
-__cuda_local_var_43502_13_non_const_c = (_Z24fixedRateCouponAmountGpu15cashFlowsStructi(cashFlows, __cuda_local_var_43493_6_non_const_i));
-# 1094 "bondsKernelsGpu.cu"
-__cuda_local_var_43503_13_non_const_B = (_Z29interestRateDiscountFactorGpu13intRateStructd(y, __cuda_local_var_43500_13_non_const_t));
-# 1096 "bondsKernelsGpu.cu"
-__cuda_local_var_43487_11_non_const_P += (__cuda_local_var_43502_13_non_const_c * __cuda_local_var_43503_13_non_const_B);
-# 1098 "bondsKernelsGpu.cu"
+# 776 "bondsKernelsGpu1.cu"
+ dataType __cuda_local_var_43184_10_non_const_t;
+# 777 "bondsKernelsGpu1.cu"
+ dataType __cuda_local_var_43185_10_non_const_c;
+# 778 "bondsKernelsGpu1.cu"
+ dataType __cuda_local_var_43186_10_non_const_B;
+# 776 "bondsKernelsGpu1.cu"
+__cuda_local_var_43184_10_non_const_t = (_Z15yearFractionGpu15bondsDateStructS_i(npvDate, (((cashFlows.legs)[__cuda_local_var_43179_6_non_const_i]).paymentDate), __cuda_local_var_43178_5_non_const_dc));
+# 777 "bondsKernelsGpu1.cu"
+__cuda_local_var_43185_10_non_const_c = (_Z24fixedRateCouponAmountGpu15cashFlowsStructi(cashFlows, __cuda_local_var_43179_6_non_const_i));
+# 778 "bondsKernelsGpu1.cu"
+__cuda_local_var_43186_10_non_const_B = (_Z29interestRateDiscountFactorGpu13intRateStructd(y, __cuda_local_var_43184_10_non_const_t));
+# 779 "bondsKernelsGpu1.cu"
+__cuda_local_var_43174_10_non_const_P += (__cuda_local_var_43185_10_non_const_c * __cuda_local_var_43186_10_non_const_B);
+# 780 "bondsKernelsGpu1.cu"
 {
-# 1099 "bondsKernelsGpu.cu"
+# 781 "bondsKernelsGpu1.cu"
 if ((y.comp) == 0)
-# 1099 "bondsKernelsGpu.cu"
+# 781 "bondsKernelsGpu1.cu"
 {
-# 1100 "bondsKernelsGpu.cu"
-__cuda_local_var_43488_11_non_const_dPdy -= (((__cuda_local_var_43502_13_non_const_c * __cuda_local_var_43503_13_non_const_B) * __cuda_local_var_43503_13_non_const_B) * __cuda_local_var_43500_13_non_const_t);
-# 1100 "bondsKernelsGpu.cu"
+# 782 "bondsKernelsGpu1.cu"
+__cuda_local_var_43175_10_non_const_dPdy -= (((__cuda_local_var_43185_10_non_const_c * __cuda_local_var_43186_10_non_const_B) * __cuda_local_var_43186_10_non_const_B) * __cuda_local_var_43184_10_non_const_t);
+# 782 "bondsKernelsGpu1.cu"
 }
-# 1101 "bondsKernelsGpu.cu"
+# 783 "bondsKernelsGpu1.cu"
 if ((y.comp) == 1)
-# 1101 "bondsKernelsGpu.cu"
+# 783 "bondsKernelsGpu1.cu"
 {
-# 1102 "bondsKernelsGpu.cu"
-__cuda_local_var_43488_11_non_const_dPdy -= ((double)(fdivide(((__cuda_local_var_43502_13_non_const_c * __cuda_local_var_43500_13_non_const_t) * __cuda_local_var_43503_13_non_const_B), ((1.0) + ((double)(fdivide(__cuda_local_var_43489_11_non_const_r, __cuda_local_var_43490_11_non_const_N)))))));
-# 1102 "bondsKernelsGpu.cu"
+# 784 "bondsKernelsGpu1.cu"
+__cuda_local_var_43175_10_non_const_dPdy -= ((double)(fdivide(((__cuda_local_var_43185_10_non_const_c * __cuda_local_var_43184_10_non_const_t) * __cuda_local_var_43186_10_non_const_B), ((1.0) + ((double)(fdivide(__cuda_local_var_43176_10_non_const_r, __cuda_local_var_43177_10_non_const_N)))))));
+# 784 "bondsKernelsGpu1.cu"
 }
-# 1103 "bondsKernelsGpu.cu"
+# 785 "bondsKernelsGpu1.cu"
 if ((y.comp) == 2)
-# 1103 "bondsKernelsGpu.cu"
+# 785 "bondsKernelsGpu1.cu"
 {
-# 1104 "bondsKernelsGpu.cu"
-__cuda_local_var_43488_11_non_const_dPdy -= ((__cuda_local_var_43502_13_non_const_c * __cuda_local_var_43503_13_non_const_B) * __cuda_local_var_43500_13_non_const_t);
-# 1104 "bondsKernelsGpu.cu"
+# 786 "bondsKernelsGpu1.cu"
+__cuda_local_var_43175_10_non_const_dPdy -= ((__cuda_local_var_43185_10_non_const_c * __cuda_local_var_43186_10_non_const_B) * __cuda_local_var_43184_10_non_const_t);
+# 786 "bondsKernelsGpu1.cu"
 }
-# 1105 "bondsKernelsGpu.cu"
+# 787 "bondsKernelsGpu1.cu"
 if ((y.comp) == 3)
-# 1106 "bondsKernelsGpu.cu"
+# 788 "bondsKernelsGpu1.cu"
 {
-# 1107 "bondsKernelsGpu.cu"
-if (__cuda_local_var_43500_13_non_const_t <= ((1.0) / __cuda_local_var_43490_11_non_const_N))
-# 1107 "bondsKernelsGpu.cu"
+# 789 "bondsKernelsGpu1.cu"
+if (__cuda_local_var_43184_10_non_const_t <= ((1.0) / __cuda_local_var_43177_10_non_const_N))
+# 789 "bondsKernelsGpu1.cu"
 {
-# 1108 "bondsKernelsGpu.cu"
-__cuda_local_var_43488_11_non_const_dPdy -= (((__cuda_local_var_43502_13_non_const_c * __cuda_local_var_43503_13_non_const_B) * __cuda_local_var_43503_13_non_const_B) * __cuda_local_var_43500_13_non_const_t);
-# 1108 "bondsKernelsGpu.cu"
+# 790 "bondsKernelsGpu1.cu"
+__cuda_local_var_43175_10_non_const_dPdy -= (((__cuda_local_var_43185_10_non_const_c * __cuda_local_var_43186_10_non_const_B) * __cuda_local_var_43186_10_non_const_B) * __cuda_local_var_43184_10_non_const_t);
+# 790 "bondsKernelsGpu1.cu"
 }
-# 1108 "bondsKernelsGpu.cu"
+# 790 "bondsKernelsGpu1.cu"
 else
-# 1108 "bondsKernelsGpu.cu"
+# 790 "bondsKernelsGpu1.cu"
 {
-# 1110 "bondsKernelsGpu.cu"
-__cuda_local_var_43488_11_non_const_dPdy -= ((double)(fdivide(((__cuda_local_var_43502_13_non_const_c * __cuda_local_var_43500_13_non_const_t) * __cuda_local_var_43503_13_non_const_B), ((1.0) + ((double)(fdivide(__cuda_local_var_43489_11_non_const_r, __cuda_local_var_43490_11_non_const_N)))))));
-# 1110 "bondsKernelsGpu.cu"
+# 792 "bondsKernelsGpu1.cu"
+__cuda_local_var_43175_10_non_const_dPdy -= ((double)(fdivide(((__cuda_local_var_43185_10_non_const_c * __cuda_local_var_43184_10_non_const_t) * __cuda_local_var_43186_10_non_const_B), ((1.0) + ((double)(fdivide(__cuda_local_var_43176_10_non_const_r, __cuda_local_var_43177_10_non_const_N)))))));
+# 792 "bondsKernelsGpu1.cu"
 }
-# 1111 "bondsKernelsGpu.cu"
+# 793 "bondsKernelsGpu1.cu"
 }
-# 1112 "bondsKernelsGpu.cu"
+# 794 "bondsKernelsGpu1.cu"
 }
-# 1113 "bondsKernelsGpu.cu"
+# 795 "bondsKernelsGpu1.cu"
 }
-# 1114 "bondsKernelsGpu.cu"
+# 796 "bondsKernelsGpu1.cu"
 }
-# 1116 "bondsKernelsGpu.cu"
-if (__cuda_local_var_43487_11_non_const_P == (0.0))
-# 1117 "bondsKernelsGpu.cu"
+# 797 "bondsKernelsGpu1.cu"
+if (__cuda_local_var_43174_10_non_const_P == (0.0))
+# 798 "bondsKernelsGpu1.cu"
 {
-# 1118 "bondsKernelsGpu.cu"
+# 799 "bondsKernelsGpu1.cu"
 return (0.0);
-# 1119 "bondsKernelsGpu.cu"
+# 800 "bondsKernelsGpu1.cu"
 }
-# 1120 "bondsKernelsGpu.cu"
-return (dataType)(fdivide(((-1.0) * __cuda_local_var_43488_11_non_const_dPdy), __cuda_local_var_43487_11_non_const_P));
-# 1121 "bondsKernelsGpu.cu"
+# 801 "bondsKernelsGpu1.cu"
+return (dataType)(fdivide(((-1.0) * __cuda_local_var_43175_10_non_const_dPdy), __cuda_local_var_43174_10_non_const_P));
+# 802 "bondsKernelsGpu1.cu"
 }
-# 1121 "bondsKernelsGpu.cu"
+# 802 "bondsKernelsGpu1.cu"
 }}
-# 1124 "bondsKernelsGpu.cu"
+# 803 "bondsKernelsGpu1.cu"
 __attribute__((global)) __attribute__((__used__)) void _Z18getBondsResultsGpu12inArgsStruct13resultsStructi(
-# 1124 "bondsKernelsGpu.cu"
+# 803 "bondsKernelsGpu1.cu"
 inArgsStruct inArgs,
-# 1125 "bondsKernelsGpu.cu"
+# 803 "bondsKernelsGpu1.cu"
 resultsStruct results,
-# 1126 "bondsKernelsGpu.cu"
+# 803 "bondsKernelsGpu1.cu"
 int n){
-# 1126 "bondsKernelsGpu.cu"
+# 803 "bondsKernelsGpu1.cu"
 {
-# 1127 "bondsKernelsGpu.cu"
+# 804 "bondsKernelsGpu1.cu"
 {
-# 1128 "bondsKernelsGpu.cu"
- int __cuda_local_var_43537_6_non_const_bondNum;
-# 1128 "bondsKernelsGpu.cu"
-__cuda_local_var_43537_6_non_const_bondNum = ((int)(((blockIdx.x) * (blockDim.x)) + (threadIdx.x)));
-# 1129 "bondsKernelsGpu.cu"
-if (__cuda_local_var_43537_6_non_const_bondNum < n)
-# 1130 "bondsKernelsGpu.cu"
+# 805 "bondsKernelsGpu1.cu"
+ int __cuda_local_var_43213_5_non_const_bondNum;
+# 805 "bondsKernelsGpu1.cu"
+__cuda_local_var_43213_5_non_const_bondNum = ((int)(((blockIdx.x) * (blockDim.x)) + (threadIdx.x)));
+# 806 "bondsKernelsGpu1.cu"
+if (__cuda_local_var_43213_5_non_const_bondNum < n)
+# 807 "bondsKernelsGpu1.cu"
 {
-# 1131 "bondsKernelsGpu.cu"
- int __cuda_local_var_43540_7_non_const_numLegs;
-# 1133 "bondsKernelsGpu.cu"
- int __cuda_local_var_43542_7_non_const_numCashFlows;
-# 1136 "bondsKernelsGpu.cu"
- bondsDateStruct __cuda_local_var_43545_19_non_const_currCashflowDate;
-# 1149 "bondsKernelsGpu.cu"
- cashFlowsStruct __cuda_local_var_43558_24_non_const_cashFlows;
-# 1150 "bondsKernelsGpu.cu"
- couponStruct __cuda_local_var_43559_16_non_const_cashLegs[9];
-# 1161 "bondsKernelsGpu.cu"
- bondsDateStruct __cuda_local_var_43570_19_non_const_currStartDate;
-# 1162 "bondsKernelsGpu.cu"
- bondsDateStruct __cuda_local_var_43571_19_non_const_currEndDate;
-# 1164 "bondsKernelsGpu.cu"
- int __cuda_local_var_43573_7_non_const_cashFlowNum;
-# 1133 "bondsKernelsGpu.cu"
-__cuda_local_var_43542_7_non_const_numCashFlows = 0;
-# 1136 "bondsKernelsGpu.cu"
-__cuda_local_var_43545_19_non_const_currCashflowDate = (((inArgs.bond)[__cuda_local_var_43537_6_non_const_bondNum]).maturityDate);
-# 1138 "bondsKernelsGpu.cu"
-while ((__cuda_local_var_43545_19_non_const_currCashflowDate.dateSerialNum) > ((((inArgs.bond)[__cuda_local_var_43537_6_non_const_bondNum]).startDate).dateSerialNum))
-# 1139 "bondsKernelsGpu.cu"
+# 808 "bondsKernelsGpu1.cu"
+ int __cuda_local_var_43216_5_non_const_numLegs;
+# 809 "bondsKernelsGpu1.cu"
+ int __cuda_local_var_43217_6_non_const_numCashFlows;
+# 810 "bondsKernelsGpu1.cu"
+ bondsDateStruct __cuda_local_var_43218_18_non_const_currCashflowDate;
+# 817 "bondsKernelsGpu1.cu"
+ cashFlowsStruct __cuda_local_var_43225_18_non_const_cashFlows;
+# 818 "bondsKernelsGpu1.cu"
+ couponStruct __cuda_local_var_43226_14_non_const_cashLegs[9];
+# 826 "bondsKernelsGpu1.cu"
+ bondsDateStruct __cuda_local_var_43234_18_non_const_currStartDate;
+# 827 "bondsKernelsGpu1.cu"
+ bondsDateStruct __cuda_local_var_43235_17_non_const_currEndDate;
+# 828 "bondsKernelsGpu1.cu"
+ int __cuda_local_var_43236_6_non_const_cashFlowNum;
+# 809 "bondsKernelsGpu1.cu"
+__cuda_local_var_43217_6_non_const_numCashFlows = 0;
+# 810 "bondsKernelsGpu1.cu"
+__cuda_local_var_43218_18_non_const_currCashflowDate = (((inArgs.bond)[__cuda_local_var_43213_5_non_const_bondNum]).maturityDate);
+# 811 "bondsKernelsGpu1.cu"
+while ((__cuda_local_var_43218_18_non_const_currCashflowDate.dateSerialNum) > ((((inArgs.bond)[__cuda_local_var_43213_5_non_const_bondNum]).startDate).dateSerialNum))
+# 812 "bondsKernelsGpu1.cu"
 {
-# 1140 "bondsKernelsGpu.cu"
-__cuda_local_var_43542_7_non_const_numCashFlows++;
-# 1141 "bondsKernelsGpu.cu"
-__cuda_local_var_43545_19_non_const_currCashflowDate = (_Z14advanceDateGpu15bondsDateStructi(__cuda_local_var_43545_19_non_const_currCashflowDate, (-6)));
-# 1142 "bondsKernelsGpu.cu"
+# 813 "bondsKernelsGpu1.cu"
+__cuda_local_var_43217_6_non_const_numCashFlows++;
+# 814 "bondsKernelsGpu1.cu"
+__cuda_local_var_43218_18_non_const_currCashflowDate = (_Z14advanceDateGpu15bondsDateStructi(__cuda_local_var_43218_18_non_const_currCashflowDate, (-6)));
+# 815 "bondsKernelsGpu1.cu"
 }
-# 1144 "bondsKernelsGpu.cu"
-__cuda_local_var_43540_7_non_const_numLegs = (__cuda_local_var_43542_7_non_const_numCashFlows + 1);
-# 1151 "bondsKernelsGpu.cu"
-(__cuda_local_var_43558_24_non_const_cashFlows.legs) = (__cuda_local_var_43559_16_non_const_cashLegs);
-# 1153 "bondsKernelsGpu.cu"
-((__cuda_local_var_43558_24_non_const_cashFlows.intRate).dayCounter) = 0;
-# 1154 "bondsKernelsGpu.cu"
-((__cuda_local_var_43558_24_non_const_cashFlows.intRate).rate) = ((dataType)(((inArgs.bond)[__cuda_local_var_43537_6_non_const_bondNum]).rate));
-# 1155 "bondsKernelsGpu.cu"
-((__cuda_local_var_43558_24_non_const_cashFlows.intRate).freq) = (1.0);
-# 1156 "bondsKernelsGpu.cu"
-((__cuda_local_var_43558_24_non_const_cashFlows.intRate).comp) = 0;
-# 1157 "bondsKernelsGpu.cu"
-(__cuda_local_var_43558_24_non_const_cashFlows.dayCounter) = 0;
-# 1158 "bondsKernelsGpu.cu"
-(__cuda_local_var_43558_24_non_const_cashFlows.nominal) = 100;
-# 1161 "bondsKernelsGpu.cu"
-__cuda_local_var_43570_19_non_const_currStartDate = (_Z14advanceDateGpu15bondsDateStructi((((inArgs.bond)[__cuda_local_var_43537_6_non_const_bondNum]).maturityDate), ((__cuda_local_var_43540_7_non_const_numLegs - 1) * (-6))));
-# 1161 "bondsKernelsGpu.cu"
+# 816 "bondsKernelsGpu1.cu"
+__cuda_local_var_43216_5_non_const_numLegs = (__cuda_local_var_43217_6_non_const_numCashFlows + 1);
+# 819 "bondsKernelsGpu1.cu"
+(__cuda_local_var_43225_18_non_const_cashFlows.legs) = (__cuda_local_var_43226_14_non_const_cashLegs);
+# 820 "bondsKernelsGpu1.cu"
+((__cuda_local_var_43225_18_non_const_cashFlows.intRate).dayCounter) = 0;
+# 821 "bondsKernelsGpu1.cu"
+((__cuda_local_var_43225_18_non_const_cashFlows.intRate).rate) = ((dataType)(((inArgs.bond)[__cuda_local_var_43213_5_non_const_bondNum]).rate));
+# 822 "bondsKernelsGpu1.cu"
+((__cuda_local_var_43225_18_non_const_cashFlows.intRate).freq) = (1.0);
+# 823 "bondsKernelsGpu1.cu"
+((__cuda_local_var_43225_18_non_const_cashFlows.intRate).comp) = 0;
+# 824 "bondsKernelsGpu1.cu"
+(__cuda_local_var_43225_18_non_const_cashFlows.dayCounter) = 0;
+# 825 "bondsKernelsGpu1.cu"
+(__cuda_local_var_43225_18_non_const_cashFlows.nominal) = 100;
+# 826 "bondsKernelsGpu1.cu"
+__cuda_local_var_43234_18_non_const_currStartDate = (_Z14advanceDateGpu15bondsDateStructi((((inArgs.bond)[__cuda_local_var_43213_5_non_const_bondNum]).maturityDate), ((__cuda_local_var_43216_5_non_const_numLegs - 1) * (-6))));
+# 826 "bondsKernelsGpu1.cu"
 ;
-# 1162 "bondsKernelsGpu.cu"
-__cuda_local_var_43571_19_non_const_currEndDate = (_Z14advanceDateGpu15bondsDateStructi(__cuda_local_var_43570_19_non_const_currStartDate, 6));
-# 1165 "bondsKernelsGpu.cu"
-for (__cuda_local_var_43573_7_non_const_cashFlowNum = 0; (__cuda_local_var_43573_7_non_const_cashFlowNum < (__cuda_local_var_43540_7_non_const_numLegs - 1)); __cuda_local_var_43573_7_non_const_cashFlowNum++)
-# 1166 "bondsKernelsGpu.cu"
+# 827 "bondsKernelsGpu1.cu"
+__cuda_local_var_43235_17_non_const_currEndDate = (_Z14advanceDateGpu15bondsDateStructi(__cuda_local_var_43234_18_non_const_currStartDate, 6));
+# 829 "bondsKernelsGpu1.cu"
+for (__cuda_local_var_43236_6_non_const_cashFlowNum = 0; (__cuda_local_var_43236_6_non_const_cashFlowNum < (__cuda_local_var_43216_5_non_const_numLegs - 1)); __cuda_local_var_43236_6_non_const_cashFlowNum++)
+# 830 "bondsKernelsGpu1.cu"
 {
-# 1167 "bondsKernelsGpu.cu"
-(((__cuda_local_var_43558_24_non_const_cashFlows.legs)[__cuda_local_var_43573_7_non_const_cashFlowNum]).paymentDate) = __cuda_local_var_43571_19_non_const_currEndDate;
-# 1170 "bondsKernelsGpu.cu"
-(((__cuda_local_var_43558_24_non_const_cashFlows.legs)[__cuda_local_var_43573_7_non_const_cashFlowNum]).accrualStartDate) = __cuda_local_var_43570_19_non_const_currStartDate;
-# 1171 "bondsKernelsGpu.cu"
-(((__cuda_local_var_43558_24_non_const_cashFlows.legs)[__cuda_local_var_43573_7_non_const_cashFlowNum]).accrualEndDate) = __cuda_local_var_43571_19_non_const_currEndDate;
-# 1173 "bondsKernelsGpu.cu"
-(((__cuda_local_var_43558_24_non_const_cashFlows.legs)[__cuda_local_var_43573_7_non_const_cashFlowNum]).amount) = (-1.0);
-# 1175 "bondsKernelsGpu.cu"
-__cuda_local_var_43570_19_non_const_currStartDate = __cuda_local_var_43571_19_non_const_currEndDate;
-# 1176 "bondsKernelsGpu.cu"
-__cuda_local_var_43571_19_non_const_currEndDate = (_Z14advanceDateGpu15bondsDateStructi(__cuda_local_var_43571_19_non_const_currEndDate, 6));
-# 1177 "bondsKernelsGpu.cu"
+# 831 "bondsKernelsGpu1.cu"
+(((__cuda_local_var_43225_18_non_const_cashFlows.legs)[__cuda_local_var_43236_6_non_const_cashFlowNum]).paymentDate) = __cuda_local_var_43235_17_non_const_currEndDate;
+# 832 "bondsKernelsGpu1.cu"
+(((__cuda_local_var_43225_18_non_const_cashFlows.legs)[__cuda_local_var_43236_6_non_const_cashFlowNum]).accrualStartDate) = __cuda_local_var_43234_18_non_const_currStartDate;
+# 833 "bondsKernelsGpu1.cu"
+(((__cuda_local_var_43225_18_non_const_cashFlows.legs)[__cuda_local_var_43236_6_non_const_cashFlowNum]).accrualEndDate) = __cuda_local_var_43235_17_non_const_currEndDate;
+# 834 "bondsKernelsGpu1.cu"
+(((__cuda_local_var_43225_18_non_const_cashFlows.legs)[__cuda_local_var_43236_6_non_const_cashFlowNum]).amount) = (-1.0);
+# 835 "bondsKernelsGpu1.cu"
+__cuda_local_var_43234_18_non_const_currStartDate = __cuda_local_var_43235_17_non_const_currEndDate;
+# 836 "bondsKernelsGpu1.cu"
+__cuda_local_var_43235_17_non_const_currEndDate = (_Z14advanceDateGpu15bondsDateStructi(__cuda_local_var_43235_17_non_const_currEndDate, 6));
+# 837 "bondsKernelsGpu1.cu"
 }
-# 1179 "bondsKernelsGpu.cu"
-(((__cuda_local_var_43558_24_non_const_cashFlows.legs)[(__cuda_local_var_43540_7_non_const_numLegs - 1)]).paymentDate) = (((inArgs.bond)[__cuda_local_var_43537_6_non_const_bondNum]).maturityDate);
-# 1180 "bondsKernelsGpu.cu"
-(((__cuda_local_var_43558_24_non_const_cashFlows.legs)[(__cuda_local_var_43540_7_non_const_numLegs - 1)]).accrualStartDate) = ((inArgs.currDate)[__cuda_local_var_43537_6_non_const_bondNum]);
-# 1181 "bondsKernelsGpu.cu"
-(((__cuda_local_var_43558_24_non_const_cashFlows.legs)[(__cuda_local_var_43540_7_non_const_numLegs - 1)]).accrualEndDate) = ((inArgs.currDate)[__cuda_local_var_43537_6_non_const_bondNum]);
-# 1182 "bondsKernelsGpu.cu"
-(((__cuda_local_var_43558_24_non_const_cashFlows.legs)[(__cuda_local_var_43540_7_non_const_numLegs - 1)]).amount) = (100.0);
-# 1184 "bondsKernelsGpu.cu"
-((results.bondForwardVal)[__cuda_local_var_43537_6_non_const_bondNum]) = (_Z15getBondYieldGpudiid15bondsDateStructdi12inArgsStructi15cashFlowsStructi(((inArgs.bondCleanPrice)[__cuda_local_var_43537_6_non_const_bondNum]), 0, 1, (2.0), ((inArgs.currDate)[__cuda_local_var_43537_6_non_const_bondNum]), (1.000000000000000021e-08), 100, inArgs, __cuda_local_var_43537_6_non_const_bondNum, __cuda_local_var_43558_24_non_const_cashFlows, __cuda_local_var_43540_7_non_const_numLegs));
-# 1192 "bondsKernelsGpu.cu"
-(((inArgs.discountCurve)[__cuda_local_var_43537_6_non_const_bondNum]).forward) = ((results.bondForwardVal)[__cuda_local_var_43537_6_non_const_bondNum]);
-# 1193 "bondsKernelsGpu.cu"
-((results.dirtyPrice)[__cuda_local_var_43537_6_non_const_bondNum]) = (_Z16getDirtyPriceGpu12inArgsStructi15cashFlowsStructi(inArgs, __cuda_local_var_43537_6_non_const_bondNum, __cuda_local_var_43558_24_non_const_cashFlows, __cuda_local_var_43540_7_non_const_numLegs));
-# 1194 "bondsKernelsGpu.cu"
-((results.accruedAmountCurrDate)[__cuda_local_var_43537_6_non_const_bondNum]) = (_Z19getAccruedAmountGpu12inArgsStruct15bondsDateStructi15cashFlowsStructi(inArgs, ((inArgs.currDate)[__cuda_local_var_43537_6_non_const_bondNum]), __cuda_local_var_43537_6_non_const_bondNum, __cuda_local_var_43558_24_non_const_cashFlows, __cuda_local_var_43540_7_non_const_numLegs));
-# 1195 "bondsKernelsGpu.cu"
-((results.cleanPrice)[__cuda_local_var_43537_6_non_const_bondNum]) = (((results.dirtyPrice)[__cuda_local_var_43537_6_non_const_bondNum]) - ((results.accruedAmountCurrDate)[__cuda_local_var_43537_6_non_const_bondNum]));
-# 1196 "bondsKernelsGpu.cu"
+# 838 "bondsKernelsGpu1.cu"
+(((__cuda_local_var_43225_18_non_const_cashFlows.legs)[(__cuda_local_var_43216_5_non_const_numLegs - 1)]).paymentDate) = (((inArgs.bond)[__cuda_local_var_43213_5_non_const_bondNum]).maturityDate);
+# 839 "bondsKernelsGpu1.cu"
+(((__cuda_local_var_43225_18_non_const_cashFlows.legs)[(__cuda_local_var_43216_5_non_const_numLegs - 1)]).accrualStartDate) = ((inArgs.currDate)[__cuda_local_var_43213_5_non_const_bondNum]);
+# 840 "bondsKernelsGpu1.cu"
+(((__cuda_local_var_43225_18_non_const_cashFlows.legs)[(__cuda_local_var_43216_5_non_const_numLegs - 1)]).accrualEndDate) = ((inArgs.currDate)[__cuda_local_var_43213_5_non_const_bondNum]);
+# 841 "bondsKernelsGpu1.cu"
+(((__cuda_local_var_43225_18_non_const_cashFlows.legs)[(__cuda_local_var_43216_5_non_const_numLegs - 1)]).amount) = (100.0);
+# 842 "bondsKernelsGpu1.cu"
+((results.bondForwardVal)[__cuda_local_var_43213_5_non_const_bondNum]) = (_Z15getBondYieldGpudiid15bondsDateStructdi12inArgsStructi15cashFlowsStructi(((inArgs.bondCleanPrice)[__cuda_local_var_43213_5_non_const_bondNum]), 0, 1, (2.0), ((inArgs.currDate)[__cuda_local_var_43213_5_non_const_bondNum]), (1.000000000000000021e-08), 100, inArgs, __cuda_local_var_43213_5_non_const_bondNum, __cuda_local_var_43225_18_non_const_cashFlows, __cuda_local_var_43216_5_non_const_numLegs));
+# 843 "bondsKernelsGpu1.cu"
+(((inArgs.discountCurve)[__cuda_local_var_43213_5_non_const_bondNum]).forward) = ((results.bondForwardVal)[__cuda_local_var_43213_5_non_const_bondNum]);
+# 844 "bondsKernelsGpu1.cu"
+((results.dirtyPrice)[__cuda_local_var_43213_5_non_const_bondNum]) = (_Z16getDirtyPriceGpu12inArgsStructi15cashFlowsStructi(inArgs, __cuda_local_var_43213_5_non_const_bondNum, __cuda_local_var_43225_18_non_const_cashFlows, __cuda_local_var_43216_5_non_const_numLegs));
+# 845 "bondsKernelsGpu1.cu"
+((results.accruedAmountCurrDate)[__cuda_local_var_43213_5_non_const_bondNum]) = (_Z19getAccruedAmountGpu12inArgsStruct15bondsDateStructi15cashFlowsStructi(inArgs, ((inArgs.currDate)[__cuda_local_var_43213_5_non_const_bondNum]), __cuda_local_var_43213_5_non_const_bondNum, __cuda_local_var_43225_18_non_const_cashFlows, __cuda_local_var_43216_5_non_const_numLegs));
+# 846 "bondsKernelsGpu1.cu"
+((results.cleanPrice)[__cuda_local_var_43213_5_non_const_bondNum]) = (((results.dirtyPrice)[__cuda_local_var_43213_5_non_const_bondNum]) - ((results.accruedAmountCurrDate)[__cuda_local_var_43213_5_non_const_bondNum]));
+# 847 "bondsKernelsGpu1.cu"
 }
-# 1197 "bondsKernelsGpu.cu"
+# 848 "bondsKernelsGpu1.cu"
 }
-# 1197 "bondsKernelsGpu.cu"
+# 848 "bondsKernelsGpu1.cu"
 }}

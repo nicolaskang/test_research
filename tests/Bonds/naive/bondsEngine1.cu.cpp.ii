@@ -32698,402 +32698,272 @@ __attribute__((unused)) dataType solveImplGpu(solverStruct solver, irrFinderStru
 __attribute__((unused)) dataType modifiedDurationGpu(cashFlowsStruct cashFlows, intRateStruct y, bool includeSettlementDateFlows, bondsDateStruct settlementDate, bondsDateStruct npvDate, int numLegs);
 # 209 "bondsKernelsGpu.cuh"
 __attribute__((unused)) dataType getCashFlowsYieldGpu(cashFlowsStruct cashFlows, dataType npv, int dayCounter, int compounding, dataType frequency, bool includeSettlementDateFlows, bondsDateStruct settlementDate, bondsDateStruct npvDate, int numLegs, dataType accuracy, int maxIterations, dataType guess);
-# 8 "bondsKernelsGpu.cu"
+# 2 "bondsKernelsGpu1.cu"
 __attribute__((unused)) int monthLengthKernelGpu(int month, bool leapYear)
-# 9 "bondsKernelsGpu.cu"
+# 3 "bondsKernelsGpu1.cu"
 {int volatile ___ = 1;(void)month;(void)leapYear;
-# 39 "bondsKernelsGpu.cu"
+# 31 "bondsKernelsGpu1.cu"
 ::exit(___);}
-# 42 "bondsKernelsGpu.cu"
+# 32 "bondsKernelsGpu1.cu"
 __attribute__((unused)) int monthOffsetKernelGpu(int m, bool leapYear)
-# 43 "bondsKernelsGpu.cu"
+# 33 "bondsKernelsGpu1.cu"
 {int volatile ___ = 1;(void)m;(void)leapYear;
-# 75 "bondsKernelsGpu.cu"
+# 63 "bondsKernelsGpu1.cu"
 ::exit(___);}
-# 78 "bondsKernelsGpu.cu"
+# 64 "bondsKernelsGpu1.cu"
 __attribute__((unused)) int yearOffsetKernelGpu(int y)
-# 79 "bondsKernelsGpu.cu"
+# 65 "bondsKernelsGpu1.cu"
 {int volatile ___ = 1;(void)y;
-# 215 "bondsKernelsGpu.cu"
+# 189 "bondsKernelsGpu1.cu"
 ::exit(___);}
-# 218 "bondsKernelsGpu.cu"
+# 190 "bondsKernelsGpu1.cu"
 __attribute__((unused)) bool isLeapKernelGpu(int y)
-# 219 "bondsKernelsGpu.cu"
+# 191 "bondsKernelsGpu1.cu"
 {int volatile ___ = 1;(void)y;
-# 355 "bondsKernelsGpu.cu"
+# 315 "bondsKernelsGpu1.cu"
 ::exit(___);}
-# 358 "bondsKernelsGpu.cu"
+# 316 "bondsKernelsGpu1.cu"
 __attribute__((unused)) bondsDateStruct intializeDateKernelGpu(int d, int m, int y)
-# 359 "bondsKernelsGpu.cu"
+# 317 "bondsKernelsGpu1.cu"
 {int volatile ___ = 1;(void)d;(void)m;(void)y;
-# 372 "bondsKernelsGpu.cu"
+# 326 "bondsKernelsGpu1.cu"
 ::exit(___);}
-# 375 "bondsKernelsGpu.cu"
-__attribute__((unused)) dataType yearFractionGpu(bondsDateStruct d1, bondsDateStruct
-# 376 "bondsKernelsGpu.cu"
-d2, int dayCounter)
-# 377 "bondsKernelsGpu.cu"
+# 327 "bondsKernelsGpu1.cu"
+__attribute__((unused)) dataType yearFractionGpu(bondsDateStruct d1, bondsDateStruct d2, int dayCounter)
+# 328 "bondsKernelsGpu1.cu"
 {int volatile ___ = 1;(void)d1;(void)d2;(void)dayCounter;
-# 379 "bondsKernelsGpu.cu"
+# 330 "bondsKernelsGpu1.cu"
 ::exit(___);}
-# 382 "bondsKernelsGpu.cu"
+# 331 "bondsKernelsGpu1.cu"
 __attribute__((unused)) int dayCountGpu(bondsDateStruct d1, bondsDateStruct d2, int dayCounter)
-# 383 "bondsKernelsGpu.cu"
+# 332 "bondsKernelsGpu1.cu"
 {int volatile ___ = 1;(void)d1;(void)d2;(void)dayCounter;
-# 402 "bondsKernelsGpu.cu"
+# 348 "bondsKernelsGpu1.cu"
 ::exit(___);}
-# 405 "bondsKernelsGpu.cu"
+# 349 "bondsKernelsGpu1.cu"
 __attribute__((unused)) dataType couponNotionalGpu()
-# 406 "bondsKernelsGpu.cu"
+# 350 "bondsKernelsGpu1.cu"
 {int volatile ___ = 1;
-# 408 "bondsKernelsGpu.cu"
+# 352 "bondsKernelsGpu1.cu"
 ::exit(___);}
-# 410 "bondsKernelsGpu.cu"
+# 353 "bondsKernelsGpu1.cu"
 __attribute__((unused)) dataType bondNotionalGpu()
-# 411 "bondsKernelsGpu.cu"
+# 354 "bondsKernelsGpu1.cu"
 {int volatile ___ = 1;
-# 413 "bondsKernelsGpu.cu"
+# 356 "bondsKernelsGpu1.cu"
 ::exit(___);}
-# 416 "bondsKernelsGpu.cu"
+# 357 "bondsKernelsGpu1.cu"
 __attribute__((unused)) dataType fixedRateCouponNominalGpu()
-# 417 "bondsKernelsGpu.cu"
+# 358 "bondsKernelsGpu1.cu"
 {int volatile ___ = 1;
-# 419 "bondsKernelsGpu.cu"
+# 360 "bondsKernelsGpu1.cu"
 ::exit(___);}
-# 421 "bondsKernelsGpu.cu"
+# 361 "bondsKernelsGpu1.cu"
 __attribute__((unused)) bool eventHasOccurredGpu(bondsDateStruct currDate, bondsDateStruct eventDate)
-# 422 "bondsKernelsGpu.cu"
+# 362 "bondsKernelsGpu1.cu"
 {int volatile ___ = 1;(void)currDate;(void)eventDate;
-# 424 "bondsKernelsGpu.cu"
+# 364 "bondsKernelsGpu1.cu"
 ::exit(___);}
-# 427 "bondsKernelsGpu.cu"
+# 365 "bondsKernelsGpu1.cu"
 __attribute__((unused)) bool cashFlowHasOccurredGpu(bondsDateStruct refDate, bondsDateStruct eventDate)
-# 428 "bondsKernelsGpu.cu"
+# 366 "bondsKernelsGpu1.cu"
 {int volatile ___ = 1;(void)refDate;(void)eventDate;
-# 430 "bondsKernelsGpu.cu"
+# 368 "bondsKernelsGpu1.cu"
 ::exit(___);}
-# 434 "bondsKernelsGpu.cu"
+# 369 "bondsKernelsGpu1.cu"
 __attribute__((unused)) bondsDateStruct advanceDateGpu(bondsDateStruct date, int numMonthsAdvance)
-# 435 "bondsKernelsGpu.cu"
+# 370 "bondsKernelsGpu1.cu"
 {int volatile ___ = 1;(void)date;(void)numMonthsAdvance;
-# 459 "bondsKernelsGpu.cu"
+# 389 "bondsKernelsGpu1.cu"
 ::exit(___);}
-# 461 "bondsKernelsGpu.cu"
+# 390 "bondsKernelsGpu1.cu"
 __attribute__((unused)) int getNumCashFlowsGpu(inArgsStruct inArgs, int bondNum)
-# 462 "bondsKernelsGpu.cu"
+# 391 "bondsKernelsGpu1.cu"
 {int volatile ___ = 1;(void)inArgs;(void)bondNum;
-# 475 "bondsKernelsGpu.cu"
+# 400 "bondsKernelsGpu1.cu"
 ::exit(___);}
-# 481 "bondsKernelsGpu.cu"
+# 401 "bondsKernelsGpu1.cu"
 __attribute__((unused)) dataType getDirtyPriceGpu(inArgsStruct inArgs, int bondNum, cashFlowsStruct cashFlows, int numLegs)
-# 482 "bondsKernelsGpu.cu"
+# 402 "bondsKernelsGpu1.cu"
 {int volatile ___ = 1;(void)inArgs;(void)bondNum;(void)cashFlows;(void)numLegs;
-# 485 "bondsKernelsGpu.cu"
+# 405 "bondsKernelsGpu1.cu"
 ::exit(___);}
-# 488 "bondsKernelsGpu.cu"
+# 406 "bondsKernelsGpu1.cu"
 __attribute__((unused)) dataType getAccruedAmountGpu(inArgsStruct inArgs, bondsDateStruct date, int bondNum, cashFlowsStruct cashFlows, int numLegs)
-# 489 "bondsKernelsGpu.cu"
+# 407 "bondsKernelsGpu1.cu"
 {int volatile ___ = 1;(void)inArgs;(void)date;(void)bondNum;(void)cashFlows;(void)numLegs;
-# 491 "bondsKernelsGpu.cu"
+# 409 "bondsKernelsGpu1.cu"
 ::exit(___);}
-# 494 "bondsKernelsGpu.cu"
+# 410 "bondsKernelsGpu1.cu"
 __attribute__((unused)) dataType discountingBondEngineCalculateSettlementValueGpu(inArgsStruct inArgs, int bondNum, cashFlowsStruct cashFlows, int numLegs)
-# 495 "bondsKernelsGpu.cu"
+# 411 "bondsKernelsGpu1.cu"
 {int volatile ___ = 1;(void)inArgs;(void)bondNum;(void)cashFlows;(void)numLegs;
-# 512 "bondsKernelsGpu.cu"
+# 418 "bondsKernelsGpu1.cu"
 ::exit(___);}
-# 515 "bondsKernelsGpu.cu"
+# 419 "bondsKernelsGpu1.cu"
 __attribute__((unused)) dataType bondAccruedAmountGpu(inArgsStruct inArgs, bondsDateStruct date, int bondNum, cashFlowsStruct cashFlows, int numLegs)
-# 516 "bondsKernelsGpu.cu"
+# 420 "bondsKernelsGpu1.cu"
 {int volatile ___ = 1;(void)inArgs;(void)date;(void)bondNum;(void)cashFlows;(void)numLegs;
-# 522 "bondsKernelsGpu.cu"
+# 425 "bondsKernelsGpu1.cu"
 ::exit(___);}
-# 525 "bondsKernelsGpu.cu"
+# 426 "bondsKernelsGpu1.cu"
 __attribute__((unused)) dataType bondFunctionsAccruedAmountGpu(inArgsStruct inArgs, bondsDateStruct date, int bondNum, cashFlowsStruct cashFlows, int numLegs)
-# 526 "bondsKernelsGpu.cu"
+# 427 "bondsKernelsGpu1.cu"
 {int volatile ___ = 1;(void)inArgs;(void)date;(void)bondNum;(void)cashFlows;(void)numLegs;
-# 530 "bondsKernelsGpu.cu"
+# 430 "bondsKernelsGpu1.cu"
 ::exit(___);}
-# 538 "bondsKernelsGpu.cu"
-__attribute__((unused)) dataType cashFlowsAccruedAmountGpu(cashFlowsStruct cashFlows, bool
-# 539 "bondsKernelsGpu.cu"
-includecurrDateFlows, bondsDateStruct
-# 540 "bondsKernelsGpu.cu"
-currDate, int
-# 541 "bondsKernelsGpu.cu"
-numLegs, inArgsStruct inArgs, int bondNum)
-# 542 "bondsKernelsGpu.cu"
+# 431 "bondsKernelsGpu1.cu"
+__attribute__((unused)) dataType cashFlowsAccruedAmountGpu(cashFlowsStruct cashFlows, bool includecurrDateFlows, bondsDateStruct currDate, int numLegs, inArgsStruct inArgs, int bondNum)
+# 432 "bondsKernelsGpu1.cu"
 {int volatile ___ = 1;(void)cashFlows;(void)includecurrDateFlows;(void)currDate;(void)numLegs;(void)inArgs;(void)bondNum;
-# 556 "bondsKernelsGpu.cu"
+# 441 "bondsKernelsGpu1.cu"
 ::exit(___);}
-# 559 "bondsKernelsGpu.cu"
+# 442 "bondsKernelsGpu1.cu"
 __attribute__((unused)) dataType fixedRateCouponAccruedAmountGpu(cashFlowsStruct cashFlows, int numLeg, bondsDateStruct d, inArgsStruct inArgs, int bondNum)
-# 560 "bondsKernelsGpu.cu"
+# 443 "bondsKernelsGpu1.cu"
 {int volatile ___ = 1;(void)cashFlows;(void)numLeg;(void)d;(void)inArgs;(void)bondNum;
-# 575 "bondsKernelsGpu.cu"
+# 457 "bondsKernelsGpu1.cu"
 ::exit(___);}
-# 581 "bondsKernelsGpu.cu"
-__attribute__((unused)) dataType cashFlowsNpvGpu(cashFlowsStruct cashFlows, bondsYieldTermStruct
-# 582 "bondsKernelsGpu.cu"
-discountCurve, bool
-# 583 "bondsKernelsGpu.cu"
-includecurrDateFlows, bondsDateStruct
-# 584 "bondsKernelsGpu.cu"
-currDate, bondsDateStruct
-# 585 "bondsKernelsGpu.cu"
-npvDate, int
-# 586 "bondsKernelsGpu.cu"
-numLegs)
-# 587 "bondsKernelsGpu.cu"
+# 458 "bondsKernelsGpu1.cu"
+__attribute__((unused)) dataType cashFlowsNpvGpu(cashFlowsStruct cashFlows, bondsYieldTermStruct discountCurve, bool includecurrDateFlows, bondsDateStruct currDate, bondsDateStruct npvDate, int numLegs)
+# 459 "bondsKernelsGpu1.cu"
 {int volatile ___ = 1;(void)cashFlows;(void)discountCurve;(void)includecurrDateFlows;(void)currDate;(void)npvDate;(void)numLegs;
-# 604 "bondsKernelsGpu.cu"
+# 469 "bondsKernelsGpu1.cu"
 ::exit(___);}
-# 609 "bondsKernelsGpu.cu"
+# 470 "bondsKernelsGpu1.cu"
 __attribute__((unused)) dataType bondsYieldTermStructureDiscountGpu(bondsYieldTermStruct ytStruct, bondsDateStruct t)
-# 610 "bondsKernelsGpu.cu"
+# 471 "bondsKernelsGpu1.cu"
 {int volatile ___ = 1;(void)ytStruct;(void)t;
-# 615 "bondsKernelsGpu.cu"
+# 476 "bondsKernelsGpu1.cu"
 ::exit(___);}
-# 618 "bondsKernelsGpu.cu"
+# 477 "bondsKernelsGpu1.cu"
 __attribute__((unused)) dataType flatForwardDiscountImplGpu(intRateStruct intRate, dataType t)
-# 619 "bondsKernelsGpu.cu"
+# 478 "bondsKernelsGpu1.cu"
 {int volatile ___ = 1;(void)intRate;(void)t;
-# 621 "bondsKernelsGpu.cu"
+# 480 "bondsKernelsGpu1.cu"
 ::exit(___);}
-# 627 "bondsKernelsGpu.cu"
+# 481 "bondsKernelsGpu1.cu"
 __attribute__((unused)) dataType interestRateDiscountFactorGpu(intRateStruct intRate, dataType t)
-# 628 "bondsKernelsGpu.cu"
+# 482 "bondsKernelsGpu1.cu"
 {int volatile ___ = 1;(void)intRate;(void)t;
-# 630 "bondsKernelsGpu.cu"
+# 484 "bondsKernelsGpu1.cu"
 ::exit(___);}
-# 633 "bondsKernelsGpu.cu"
+# 485 "bondsKernelsGpu1.cu"
 __attribute__((unused)) dataType interestRateCompoundFactorGpuTwoArgs(intRateStruct intRate, dataType t)
-# 634 "bondsKernelsGpu.cu"
+# 486 "bondsKernelsGpu1.cu"
 {int volatile ___ = 1;(void)intRate;(void)t;
-# 646 "bondsKernelsGpu.cu"
+# 496 "bondsKernelsGpu1.cu"
 ::exit(___);}
-# 649 "bondsKernelsGpu.cu"
+# 497 "bondsKernelsGpu1.cu"
 __attribute__((unused)) dataType fixedRateCouponAmountGpu(cashFlowsStruct cashFlows, int numLeg)
-# 650 "bondsKernelsGpu.cu"
+# 498 "bondsKernelsGpu1.cu"
 {int volatile ___ = 1;(void)cashFlows;(void)numLeg;
-# 660 "bondsKernelsGpu.cu"
+# 508 "bondsKernelsGpu1.cu"
 ::exit(___);}
-# 662 "bondsKernelsGpu.cu"
-__attribute__((unused)) dataType interestRateCompoundFactorGpu(intRateStruct intRate, bondsDateStruct d1, bondsDateStruct
-# 663 "bondsKernelsGpu.cu"
-d2, int dayCounter)
-# 664 "bondsKernelsGpu.cu"
+# 509 "bondsKernelsGpu1.cu"
+__attribute__((unused)) dataType interestRateCompoundFactorGpu(intRateStruct intRate, bondsDateStruct d1, bondsDateStruct d2, int dayCounter)
+# 510 "bondsKernelsGpu1.cu"
 {int volatile ___ = 1;(void)intRate;(void)d1;(void)d2;(void)dayCounter;
-# 667 "bondsKernelsGpu.cu"
+# 513 "bondsKernelsGpu1.cu"
 ::exit(___);}
-# 671 "bondsKernelsGpu.cu"
-__attribute__((unused)) dataType interestRateImpliedRateGpu(dataType compound, int
-# 672 "bondsKernelsGpu.cu"
-comp, dataType
-# 673 "bondsKernelsGpu.cu"
-freq, dataType
-# 674 "bondsKernelsGpu.cu"
-t)
-# 675 "bondsKernelsGpu.cu"
+# 514 "bondsKernelsGpu1.cu"
+__attribute__((unused)) dataType interestRateImpliedRateGpu(dataType compound, int comp, dataType freq, dataType t)
+# 515 "bondsKernelsGpu1.cu"
 {int volatile ___ = 1;(void)compound;(void)comp;(void)freq;(void)t;
-# 696 "bondsKernelsGpu.cu"
+# 531 "bondsKernelsGpu1.cu"
 ::exit(___);}
-# 699 "bondsKernelsGpu.cu"
-__attribute__((unused)) dataType getMarketRepoRateGpu(bondsDateStruct d, int
-# 700 "bondsKernelsGpu.cu"
-comp, dataType
-# 701 "bondsKernelsGpu.cu"
-freq, bondsDateStruct
-# 702 "bondsKernelsGpu.cu"
-referenceDate, inArgsStruct
-# 703 "bondsKernelsGpu.cu"
-inArgs, int bondNum)
-# 704 "bondsKernelsGpu.cu"
+# 532 "bondsKernelsGpu1.cu"
+__attribute__((unused)) dataType getMarketRepoRateGpu(bondsDateStruct d, int comp, dataType freq, bondsDateStruct referenceDate, inArgsStruct inArgs, int bondNum)
+# 533 "bondsKernelsGpu1.cu"
 {int volatile ___ = 1;(void)d;(void)comp;(void)freq;(void)referenceDate;(void)inArgs;(void)bondNum;
-# 709 "bondsKernelsGpu.cu"
+# 536 "bondsKernelsGpu1.cu"
 ::exit(___);}
-# 712 "bondsKernelsGpu.cu"
-__attribute__((unused)) couponStruct cashFlowsNextCashFlowGpu(cashFlowsStruct cashFlows, bondsDateStruct
-# 713 "bondsKernelsGpu.cu"
-currDate, int
-# 714 "bondsKernelsGpu.cu"
-numLegs)
-# 715 "bondsKernelsGpu.cu"
+# 537 "bondsKernelsGpu1.cu"
+__attribute__((unused)) couponStruct cashFlowsNextCashFlowGpu(cashFlowsStruct cashFlows, bondsDateStruct currDate, int numLegs)
+# 538 "bondsKernelsGpu1.cu"
 {int volatile ___ = 1;(void)cashFlows;(void)currDate;(void)numLegs;
-# 725 "bondsKernelsGpu.cu"
+# 546 "bondsKernelsGpu1.cu"
 ::exit(___);}
-# 728 "bondsKernelsGpu.cu"
-__attribute__((unused)) int cashFlowsNextCashFlowNumGpu(cashFlowsStruct cashFlows, bondsDateStruct
-# 729 "bondsKernelsGpu.cu"
-currDate, int
-# 730 "bondsKernelsGpu.cu"
-numLegs)
-# 731 "bondsKernelsGpu.cu"
+# 547 "bondsKernelsGpu1.cu"
+__attribute__((unused)) int cashFlowsNextCashFlowNumGpu(cashFlowsStruct cashFlows, bondsDateStruct currDate, int numLegs)
+# 548 "bondsKernelsGpu1.cu"
 {int volatile ___ = 1;(void)cashFlows;(void)currDate;(void)numLegs;
-# 742 "bondsKernelsGpu.cu"
+# 556 "bondsKernelsGpu1.cu"
 ::exit(___);}
-# 745 "bondsKernelsGpu.cu"
-__attribute__((unused)) dataType getBondYieldGpu(dataType cleanPrice, int
-# 746 "bondsKernelsGpu.cu"
-dc, int
-# 747 "bondsKernelsGpu.cu"
-comp, dataType
-# 748 "bondsKernelsGpu.cu"
-freq, bondsDateStruct
-# 749 "bondsKernelsGpu.cu"
-settlement, dataType
-# 750 "bondsKernelsGpu.cu"
-accuracy, int
-# 751 "bondsKernelsGpu.cu"
-maxEvaluations, inArgsStruct
-# 752 "bondsKernelsGpu.cu"
-currInArgs, int bondNum, cashFlowsStruct cashFlows, int numLegs)
-# 753 "bondsKernelsGpu.cu"
+# 557 "bondsKernelsGpu1.cu"
+__attribute__((unused)) dataType getBondYieldGpu(dataType cleanPrice, int dc, int comp, dataType freq, bondsDateStruct settlement, dataType accuracy, int maxEvaluations, inArgsStruct currInArgs, int bondNum, cashFlowsStruct cashFlows, int numLegs)
+# 558 "bondsKernelsGpu1.cu"
 {int volatile ___ = 1;(void)cleanPrice;(void)dc;(void)comp;(void)freq;(void)settlement;(void)accuracy;(void)maxEvaluations;(void)currInArgs;(void)bondNum;(void)cashFlows;(void)numLegs;
-# 767 "bondsKernelsGpu.cu"
+# 567 "bondsKernelsGpu1.cu"
 ::exit(___);}
-# 770 "bondsKernelsGpu.cu"
-__attribute__((unused)) dataType getBondFunctionsYieldGpu(dataType cleanPrice, int
-# 771 "bondsKernelsGpu.cu"
-dc, int
-# 772 "bondsKernelsGpu.cu"
-comp, dataType
-# 773 "bondsKernelsGpu.cu"
-freq, bondsDateStruct
-# 774 "bondsKernelsGpu.cu"
-settlement, dataType
-# 775 "bondsKernelsGpu.cu"
-accuracy, int
-# 776 "bondsKernelsGpu.cu"
-maxEvaluations, inArgsStruct
-# 777 "bondsKernelsGpu.cu"
-currInArgs, int bondNum, cashFlowsStruct cashFlows, int numLegs)
-# 778 "bondsKernelsGpu.cu"
+# 568 "bondsKernelsGpu1.cu"
+__attribute__((unused)) dataType getBondFunctionsYieldGpu(dataType cleanPrice, int dc, int comp, dataType freq, bondsDateStruct settlement, dataType accuracy, int maxEvaluations, inArgsStruct currInArgs, int bondNum, cashFlowsStruct cashFlows, int numLegs)
+# 569 "bondsKernelsGpu1.cu"
 {int volatile ___ = 1;(void)cleanPrice;(void)dc;(void)comp;(void)freq;(void)settlement;(void)accuracy;(void)maxEvaluations;(void)currInArgs;(void)bondNum;(void)cashFlows;(void)numLegs;
-# 786 "bondsKernelsGpu.cu"
+# 573 "bondsKernelsGpu1.cu"
 ::exit(___);}
-# 789 "bondsKernelsGpu.cu"
-__attribute__((unused)) dataType getCashFlowsYieldGpu(cashFlowsStruct leg, dataType
-# 790 "bondsKernelsGpu.cu"
-npv, int
-# 791 "bondsKernelsGpu.cu"
-dayCounter, int
-# 792 "bondsKernelsGpu.cu"
-compounding, dataType
-# 793 "bondsKernelsGpu.cu"
-frequency, bool
-# 794 "bondsKernelsGpu.cu"
-includecurrDateFlows, bondsDateStruct
-# 795 "bondsKernelsGpu.cu"
-currDate, bondsDateStruct
-# 796 "bondsKernelsGpu.cu"
-npvDate, int
-# 797 "bondsKernelsGpu.cu"
-numLegs, dataType
-# 798 "bondsKernelsGpu.cu"
-accuracy, int
-# 799 "bondsKernelsGpu.cu"
-maxIterations, dataType
-# 800 "bondsKernelsGpu.cu"
-guess)
-# 801 "bondsKernelsGpu.cu"
+# 574 "bondsKernelsGpu1.cu"
+__attribute__((unused)) dataType getCashFlowsYieldGpu(cashFlowsStruct leg, dataType npv, int dayCounter, int compounding, dataType frequency, bool includecurrDateFlows, bondsDateStruct currDate, bondsDateStruct npvDate, int numLegs, dataType accuracy, int maxIterations, dataType guess)
+# 575 "bondsKernelsGpu1.cu"
 {int volatile ___ = 1;(void)leg;(void)npv;(void)dayCounter;(void)compounding;(void)frequency;(void)includecurrDateFlows;(void)currDate;(void)npvDate;(void)numLegs;(void)accuracy;(void)maxIterations;(void)guess;
-# 816 "bondsKernelsGpu.cu"
+# 587 "bondsKernelsGpu1.cu"
 ::exit(___);}
-# 819 "bondsKernelsGpu.cu"
-__attribute__((unused)) dataType solverSolveGpu(solverStruct solver, irrFinderStruct
-# 820 "bondsKernelsGpu.cu"
-f, dataType
-# 821 "bondsKernelsGpu.cu"
-accuracy, dataType
-# 822 "bondsKernelsGpu.cu"
-guess, dataType
-# 823 "bondsKernelsGpu.cu"
-step, cashFlowsStruct
-# 824 "bondsKernelsGpu.cu"
-cashFlows, int
-# 825 "bondsKernelsGpu.cu"
-numLegs)
-# 826 "bondsKernelsGpu.cu"
+# 588 "bondsKernelsGpu1.cu"
+__attribute__((unused)) dataType solverSolveGpu(solverStruct solver, irrFinderStruct f, dataType accuracy, dataType guess, dataType step, cashFlowsStruct cashFlows, int numLegs)
+# 589 "bondsKernelsGpu1.cu"
 {int volatile ___ = 1;(void)solver;(void)f;(void)accuracy;(void)guess;(void)step;(void)cashFlows;(void)numLegs;
-# 894 "bondsKernelsGpu.cu"
+# 649 "bondsKernelsGpu1.cu"
 ::exit(___);}
-# 897 "bondsKernelsGpu.cu"
-__attribute__((unused)) dataType cashFlowsNpvYieldGpu(cashFlowsStruct cashFlows, intRateStruct
-# 898 "bondsKernelsGpu.cu"
-y, bool
-# 899 "bondsKernelsGpu.cu"
-includecurrDateFlows, bondsDateStruct
-# 900 "bondsKernelsGpu.cu"
-currDate, bondsDateStruct
-# 901 "bondsKernelsGpu.cu"
-npvDate, int
-# 902 "bondsKernelsGpu.cu"
-numLegs)
-# 903 "bondsKernelsGpu.cu"
+# 650 "bondsKernelsGpu1.cu"
+__attribute__((unused)) dataType cashFlowsNpvYieldGpu(cashFlowsStruct cashFlows, intRateStruct y, bool includecurrDateFlows, bondsDateStruct currDate, bondsDateStruct npvDate, int numLegs)
+# 651 "bondsKernelsGpu1.cu"
 {int volatile ___ = 1;(void)cashFlows;(void)y;(void)includecurrDateFlows;(void)currDate;(void)npvDate;(void)numLegs;
-# 940 "bondsKernelsGpu.cu"
+# 680 "bondsKernelsGpu1.cu"
 ::exit(___);}
-# 942 "bondsKernelsGpu.cu"
+# 681 "bondsKernelsGpu1.cu"
 __attribute__((unused)) dataType fOpGpu(irrFinderStruct f, dataType y, cashFlowsStruct cashFlows, int numLegs)
-# 943 "bondsKernelsGpu.cu"
+# 682 "bondsKernelsGpu1.cu"
 {int volatile ___ = 1;(void)f;(void)y;(void)cashFlows;(void)numLegs;
-# 959 "bondsKernelsGpu.cu"
+# 690 "bondsKernelsGpu1.cu"
 ::exit(___);}
-# 963 "bondsKernelsGpu.cu"
+# 691 "bondsKernelsGpu1.cu"
 __attribute__((unused)) dataType fDerivativeGpu(irrFinderStruct f, dataType y, cashFlowsStruct cashFlows, int numLegs)
-# 964 "bondsKernelsGpu.cu"
+# 692 "bondsKernelsGpu1.cu"
 {int volatile ___ = 1;(void)f;(void)y;(void)cashFlows;(void)numLegs;
-# 975 "bondsKernelsGpu.cu"
+# 699 "bondsKernelsGpu1.cu"
 ::exit(___);}
-# 978 "bondsKernelsGpu.cu"
+# 700 "bondsKernelsGpu1.cu"
 __attribute__((unused)) bool closeGpu(dataType x, dataType y)
-# 979 "bondsKernelsGpu.cu"
+# 701 "bondsKernelsGpu1.cu"
 {int volatile ___ = 1;(void)x;(void)y;
-# 981 "bondsKernelsGpu.cu"
+# 703 "bondsKernelsGpu1.cu"
 ::exit(___);}
-# 984 "bondsKernelsGpu.cu"
+# 704 "bondsKernelsGpu1.cu"
 __attribute__((unused)) bool closeGpuThreeArgs(dataType x, dataType y, int n)
-# 985 "bondsKernelsGpu.cu"
+# 705 "bondsKernelsGpu1.cu"
 {int volatile ___ = 1;(void)x;(void)y;(void)n;
-# 991 "bondsKernelsGpu.cu"
+# 710 "bondsKernelsGpu1.cu"
 ::exit(___);}
-# 994 "bondsKernelsGpu.cu"
+# 711 "bondsKernelsGpu1.cu"
 __attribute__((unused)) dataType enforceBoundsGpu(dataType x)
-# 995 "bondsKernelsGpu.cu"
+# 712 "bondsKernelsGpu1.cu"
 {int volatile ___ = 1;(void)x;
-# 1001 "bondsKernelsGpu.cu"
+# 718 "bondsKernelsGpu1.cu"
 ::exit(___);}
-# 1004 "bondsKernelsGpu.cu"
-__attribute__((unused)) dataType solveImplGpu(solverStruct solver, irrFinderStruct f, dataType
-# 1005 "bondsKernelsGpu.cu"
-xAccuracy, cashFlowsStruct cashFlows, int numLegs)
-# 1006 "bondsKernelsGpu.cu"
+# 719 "bondsKernelsGpu1.cu"
+__attribute__((unused)) dataType solveImplGpu(solverStruct solver, irrFinderStruct f, dataType xAccuracy, cashFlowsStruct cashFlows, int numLegs)
+# 720 "bondsKernelsGpu1.cu"
 {int volatile ___ = 1;(void)solver;(void)f;(void)xAccuracy;(void)cashFlows;(void)numLegs;
-# 1066 "bondsKernelsGpu.cu"
+# 763 "bondsKernelsGpu1.cu"
 ::exit(___);}
-# 1071 "bondsKernelsGpu.cu"
-__attribute__((unused)) dataType modifiedDurationGpu(cashFlowsStruct cashFlows, intRateStruct
-# 1072 "bondsKernelsGpu.cu"
-y, bool
-# 1073 "bondsKernelsGpu.cu"
-includecurrDateFlows, bondsDateStruct
-# 1074 "bondsKernelsGpu.cu"
-currDate, bondsDateStruct
-# 1075 "bondsKernelsGpu.cu"
-npvDate, int
-# 1076 "bondsKernelsGpu.cu"
-numLegs)
-# 1077 "bondsKernelsGpu.cu"
+# 764 "bondsKernelsGpu1.cu"
+__attribute__((unused)) dataType modifiedDurationGpu(cashFlowsStruct cashFlows, intRateStruct y, bool includecurrDateFlows, bondsDateStruct currDate, bondsDateStruct npvDate, int numLegs)
+# 765 "bondsKernelsGpu1.cu"
 {int volatile ___ = 1;(void)cashFlows;(void)y;(void)includecurrDateFlows;(void)currDate;(void)npvDate;(void)numLegs;
-# 1121 "bondsKernelsGpu.cu"
+# 802 "bondsKernelsGpu1.cu"
 ::exit(___);}
-# 1124 "bondsKernelsGpu.cu"
-void getBondsResultsGpu(inArgsStruct inArgs, resultsStruct
-# 1125 "bondsKernelsGpu.cu"
-results, int
-# 1126 "bondsKernelsGpu.cu"
-n) ;
+# 803 "bondsKernelsGpu1.cu"
+void getBondsResultsGpu(inArgsStruct inArgs, resultsStruct results, int n) ;
 # 11 "bondsKernelsCpu.cuh"
 int monthLengthKernelCpu(int month, bool leapYear);
 # 14 "bondsKernelsCpu.cuh"
@@ -34894,465 +34764,465 @@ extern "C" int lutimes(const char * __file, const timeval __tvp[2]) throw()
 extern "C" int futimes(int __fd, const timeval __tvp[2]) throw();
 # 155 "/usr/include/sys/time.h" 3
 extern "C" int futimesat(int __fd, const char * __file, const timeval __tvp[2]) throw();
-# 18 "bondsEngine1.cu"
+# 13 "bondsEngine1.cu"
 int monthLengthCpu(int month, bool leapYear)
-# 19 "bondsEngine1.cu"
+# 14 "bondsEngine1.cu"
 {
-# 20 "bondsEngine1.cu"
+# 15 "bondsEngine1.cu"
 int MonthLength[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-# 24 "bondsEngine1.cu"
+# 17 "bondsEngine1.cu"
 int MonthLeapLength[] = {31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-# 28 "bondsEngine1.cu"
+# 19 "bondsEngine1.cu"
 return leapYear ? (MonthLeapLength)[month - 1] : ((MonthLength)[month - 1]);
-# 29 "bondsEngine1.cu"
+# 20 "bondsEngine1.cu"
 }
-# 32 "bondsEngine1.cu"
+# 21 "bondsEngine1.cu"
 int monthOffsetCpu(int m, bool leapYear)
-# 33 "bondsEngine1.cu"
+# 22 "bondsEngine1.cu"
 {
-# 34 "bondsEngine1.cu"
+# 23 "bondsEngine1.cu"
 int MonthOffset[] = {0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334, 365};
-# 37 "bondsEngine1.cu"
+# 25 "bondsEngine1.cu"
 int MonthLeapOffset[] = {0, 31, 60, 91, 121, 152, 182, 213, 244, 274, 305, 335, 366};
-# 40 "bondsEngine1.cu"
+# 27 "bondsEngine1.cu"
 return leapYear ? (MonthLeapOffset)[m - 1] : ((MonthOffset)[m - 1]);
-# 41 "bondsEngine1.cu"
+# 28 "bondsEngine1.cu"
 }
-# 44 "bondsEngine1.cu"
+# 29 "bondsEngine1.cu"
 int yearOffsetCpu(int y)
-# 45 "bondsEngine1.cu"
+# 30 "bondsEngine1.cu"
 {
-# 46 "bondsEngine1.cu"
+# 31 "bondsEngine1.cu"
 int YearOffset[] = {0, 366, 731, 1096, 1461, 1827, 2192, 2557, 2922, 3288, 3653, 4018, 4383, 4749, 5114, 5479, 5844, 6210, 6575, 6940, 7305, 7671, 8036, 8401, 8766, 9132, 9497, 9862, 10227, 10593, 10958, 11323, 11688, 12054, 12419, 12784, 13149, 13515, 13880, 14245, 14610, 14976, 15341, 15706, 16071, 16437, 16802, 17167, 17532, 17898, 18263, 18628, 18993, 19359, 19724, 20089, 20454, 20820, 21185, 21550, 21915, 22281, 22646, 23011, 23376, 23742, 24107, 24472, 24837, 25203, 25568, 25933, 26298, 26664, 27029, 27394, 27759, 28125, 28490, 28855, 29220, 29586, 29951, 30316, 30681, 31047, 31412, 31777, 32142, 32508, 32873, 33238, 33603, 33969, 34334, 34699, 35064, 35430, 35795, 36160, 36525, 36891, 37256, 37621, 37986, 38352, 38717, 39082, 39447, 39813, 40178, 40543, 40908, 41274, 41639, 42004, 42369, 42735, 43100, 43465, 43830, 44196, 44561, 44926, 45291, 45657, 46022, 46387, 46752, 47118, 47483, 47848, 48213, 48579, 48944, 49309, 49674, 50040, 50405, 50770, 51135, 51501, 51866, 52231, 52596, 52962, 53327, 53692, 54057, 54423, 54788, 55153, 55518, 55884, 56249, 56614, 56979, 57345, 57710, 58075, 58440, 58806, 59171, 59536, 59901, 60267, 60632, 60997, 61362, 61728, 62093, 62458, 62823, 63189, 63554, 63919, 64284, 64650, 65015, 65380, 65745, 66111, 66476, 66841, 67206, 67572, 67937, 68302, 68667, 69033, 69398, 69763, 70128, 70494, 70859, 71224, 71589, 71955, 72320, 72685, 73050, 73415, 73780, 74145, 74510, 74876, 75241, 75606, 75971, 76337, 76702, 77067, 77432, 77798, 78163, 78528, 78893, 79259, 79624, 79989, 80354, 80720, 81085, 81450, 81815, 82181, 82546, 82911, 83276, 83642, 84007, 84372, 84737, 85103, 85468, 85833, 86198, 86564, 86929, 87294, 87659, 88025, 88390, 88755, 89120, 89486, 89851, 90216, 90581, 90947, 91312, 91677, 92042, 92408, 92773, 93138, 93503, 93869, 94234, 94599, 94964, 95330, 95695, 96060, 96425, 96791, 97156, 97521, 97886, 98252, 98617, 98982, 99347, 99713, 100078, 100443, 100808, 101174, 101539, 101904, 102269, 102635, 103000, 103365, 103730, 104096, 104461, 104826, 105191, 105557, 105922, 106287, 106652, 107018, 107383, 107748, 108113, 108479, 108844, 109209, 109574};
-# 80 "bondsEngine1.cu"
+# 33 "bondsEngine1.cu"
 return (YearOffset)[y - 1900];
-# 81 "bondsEngine1.cu"
+# 34 "bondsEngine1.cu"
 }
-# 84 "bondsEngine1.cu"
+# 35 "bondsEngine1.cu"
 bool isLeapCpu(int y)
-# 85 "bondsEngine1.cu"
+# 36 "bondsEngine1.cu"
 {
-# 86 "bondsEngine1.cu"
+# 37 "bondsEngine1.cu"
 bool YearIsLeap[] = {true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, false, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, true, false, false, false, false};
-# 120 "bondsEngine1.cu"
+# 39 "bondsEngine1.cu"
 return (YearIsLeap)[y - 1900];
-# 121 "bondsEngine1.cu"
+# 40 "bondsEngine1.cu"
 }
-# 124 "bondsEngine1.cu"
+# 41 "bondsEngine1.cu"
 bondsDateStruct intializeDateCpu(int d, int m, int y)
-# 125 "bondsEngine1.cu"
+# 42 "bondsEngine1.cu"
 {
-# 126 "bondsEngine1.cu"
+# 43 "bondsEngine1.cu"
 bondsDateStruct currDate;
-# 128 "bondsEngine1.cu"
+# 44 "bondsEngine1.cu"
 (currDate.day) = d;
-# 129 "bondsEngine1.cu"
+# 45 "bondsEngine1.cu"
 (currDate.month) = m;
-# 130 "bondsEngine1.cu"
+# 46 "bondsEngine1.cu"
 (currDate.year) = y;
-# 132 "bondsEngine1.cu"
+# 47 "bondsEngine1.cu"
 bool leap = isLeapCpu(y);
-# 133 "bondsEngine1.cu"
+# 48 "bondsEngine1.cu"
 int offset = monthOffsetCpu(m, leap);
-# 135 "bondsEngine1.cu"
+# 49 "bondsEngine1.cu"
 (currDate.dateSerialNum) = ((d + offset) + yearOffsetCpu(y));
-# 137 "bondsEngine1.cu"
+# 50 "bondsEngine1.cu"
 return currDate;
-# 138 "bondsEngine1.cu"
+# 51 "bondsEngine1.cu"
 }
-# 142 "bondsEngine1.cu"
+# 52 "bondsEngine1.cu"
 void runRepoEngine()
-# 143 "bondsEngine1.cu"
+# 53 "bondsEngine1.cu"
 {
-# 145 "bondsEngine1.cu"
+# 54 "bondsEngine1.cu"
 {
-# 147 "bondsEngine1.cu"
+# 55 "bondsEngine1.cu"
 int numBonds = 1000000;
-# 148 "bondsEngine1.cu"
+# 56 "bondsEngine1.cu"
 printf("\nNumber of Bonds: %d\n\n", numBonds);
-# 152 "bondsEngine1.cu"
+# 57 "bondsEngine1.cu"
 inArgsStruct inArgsHost;
-# 154 "bondsEngine1.cu"
+# 58 "bondsEngine1.cu"
 (inArgsHost.discountCurve) = ((bondsYieldTermStruct *)malloc(numBonds * sizeof(bondsYieldTermStruct)));
-# 155 "bondsEngine1.cu"
+# 59 "bondsEngine1.cu"
 (inArgsHost.repoCurve) = ((bondsYieldTermStruct *)malloc(numBonds * sizeof(bondsYieldTermStruct)));
-# 156 "bondsEngine1.cu"
+# 60 "bondsEngine1.cu"
 (inArgsHost.currDate) = ((bondsDateStruct *)malloc(numBonds * sizeof(bondsDateStruct)));
-# 157 "bondsEngine1.cu"
+# 61 "bondsEngine1.cu"
 (inArgsHost.maturityDate) = ((bondsDateStruct *)malloc(numBonds * sizeof(bondsDateStruct)));
-# 158 "bondsEngine1.cu"
+# 62 "bondsEngine1.cu"
 (inArgsHost.bondCleanPrice) = ((dataType *)malloc(numBonds * sizeof(dataType)));
-# 159 "bondsEngine1.cu"
+# 63 "bondsEngine1.cu"
 (inArgsHost.bond) = ((bondStruct *)malloc(numBonds * sizeof(bondStruct)));
-# 160 "bondsEngine1.cu"
+# 64 "bondsEngine1.cu"
 (inArgsHost.dummyStrike) = ((dataType *)malloc(numBonds * sizeof(dataType)));
-# 162 "bondsEngine1.cu"
+# 65 "bondsEngine1.cu"
 srand(time(__null));
-# 164 "bondsEngine1.cu"
+# 66 "bondsEngine1.cu"
 int numBond;
-# 165 "bondsEngine1.cu"
+# 67 "bondsEngine1.cu"
 for (numBond = 0; numBond < numBonds; numBond++)
-# 166 "bondsEngine1.cu"
+# 68 "bondsEngine1.cu"
 {
-# 170 "bondsEngine1.cu"
+# 69 "bondsEngine1.cu"
 dataType repoRate = (0.07000000000000000666);
-# 172 "bondsEngine1.cu"
+# 70 "bondsEngine1.cu"
 int repoCompounding = 0;
-# 173 "bondsEngine1.cu"
+# 71 "bondsEngine1.cu"
 dataType repoCompoundFreq = (1);
-# 175 "bondsEngine1.cu"
+# 72 "bondsEngine1.cu"
 bondsDateStruct bondIssueDate = intializeDateCpu((rand() % 28) + 1, (rand() % 12) + 1, 1999 - (rand() % 2));
-# 176 "bondsEngine1.cu"
+# 73 "bondsEngine1.cu"
 bondsDateStruct bondMaturityDate = intializeDateCpu((rand() % 28) + 1, (rand() % 12) + 1, 2000 + (rand() % 2));
-# 178 "bondsEngine1.cu"
+# 74 "bondsEngine1.cu"
 bondsDateStruct todaysDate = intializeDateCpu((bondMaturityDate.day) - 1, bondMaturityDate.month, bondMaturityDate.year);
-# 181 "bondsEngine1.cu"
+# 75 "bondsEngine1.cu"
 bondStruct bond;
-# 182 "bondsEngine1.cu"
+# 76 "bondsEngine1.cu"
 (bond.startDate) = bondIssueDate;
-# 183 "bondsEngine1.cu"
+# 77 "bondsEngine1.cu"
 (bond.maturityDate) = bondMaturityDate;
-# 184 "bondsEngine1.cu"
+# 78 "bondsEngine1.cu"
 (bond.rate) = ((0.08000000000000000167) + (((((float)rand()) / ((float)2147483647)) - (0.5)) * (0.1000000000000000056)));
-# 186 "bondsEngine1.cu"
+# 79 "bondsEngine1.cu"
 dataType bondCouponFrequency = (2);
-# 188 "bondsEngine1.cu"
+# 80 "bondsEngine1.cu"
 dataType bondCleanPrice = (89.97693786000000671);
-# 190 "bondsEngine1.cu"
+# 81 "bondsEngine1.cu"
 bondsYieldTermStruct bondCurve;
-# 192 "bondsEngine1.cu"
+# 82 "bondsEngine1.cu"
 (bondCurve.refDate) = todaysDate;
-# 193 "bondsEngine1.cu"
+# 83 "bondsEngine1.cu"
 (bondCurve.calDate) = todaysDate;
-# 194 "bondsEngine1.cu"
+# 84 "bondsEngine1.cu"
 (bondCurve.forward) = (-(0.1000000015F));
-# 195 "bondsEngine1.cu"
+# 85 "bondsEngine1.cu"
 (bondCurve.compounding) = (1);
-# 196 "bondsEngine1.cu"
+# 86 "bondsEngine1.cu"
 (bondCurve.frequency) = bondCouponFrequency;
-# 197 "bondsEngine1.cu"
+# 87 "bondsEngine1.cu"
 (bondCurve.dayCounter) = 0;
-# 200 "bondsEngine1.cu"
+# 88 "bondsEngine1.cu"
 (bondCurve.refDate) = todaysDate;
-# 201 "bondsEngine1.cu"
+# 89 "bondsEngine1.cu"
 (bondCurve.calDate) = todaysDate;
-# 202 "bondsEngine1.cu"
+# 90 "bondsEngine1.cu"
 (bondCurve.compounding) = (1);
-# 203 "bondsEngine1.cu"
+# 91 "bondsEngine1.cu"
 (bondCurve.frequency) = bondCouponFrequency;
-# 208 "bondsEngine1.cu"
+# 92 "bondsEngine1.cu"
 dataType dummyStrike = (91.57450000000000045);
-# 210 "bondsEngine1.cu"
+# 93 "bondsEngine1.cu"
 bondsYieldTermStruct repoCurve;
-# 211 "bondsEngine1.cu"
+# 94 "bondsEngine1.cu"
 (repoCurve.refDate) = todaysDate;
-# 212 "bondsEngine1.cu"
+# 95 "bondsEngine1.cu"
 (repoCurve.calDate) = todaysDate;
-# 213 "bondsEngine1.cu"
+# 96 "bondsEngine1.cu"
 (repoCurve.forward) = repoRate;
-# 214 "bondsEngine1.cu"
+# 97 "bondsEngine1.cu"
 (repoCurve.compounding) = repoCompounding;
-# 215 "bondsEngine1.cu"
+# 98 "bondsEngine1.cu"
 (repoCurve.frequency) = repoCompoundFreq;
-# 216 "bondsEngine1.cu"
+# 99 "bondsEngine1.cu"
 (repoCurve.dayCounter) = 1;
-# 219 "bondsEngine1.cu"
+# 100 "bondsEngine1.cu"
 ((inArgsHost.discountCurve)[numBond]) = bondCurve;
-# 220 "bondsEngine1.cu"
+# 101 "bondsEngine1.cu"
 ((inArgsHost.repoCurve)[numBond]) = repoCurve;
-# 221 "bondsEngine1.cu"
+# 102 "bondsEngine1.cu"
 ((inArgsHost.currDate)[numBond]) = todaysDate;
-# 222 "bondsEngine1.cu"
+# 103 "bondsEngine1.cu"
 ((inArgsHost.maturityDate)[numBond]) = bondMaturityDate;
-# 223 "bondsEngine1.cu"
+# 104 "bondsEngine1.cu"
 ((inArgsHost.bondCleanPrice)[numBond]) = bondCleanPrice;
-# 224 "bondsEngine1.cu"
+# 105 "bondsEngine1.cu"
 ((inArgsHost.bond)[numBond]) = bond;
-# 225 "bondsEngine1.cu"
+# 106 "bondsEngine1.cu"
 ((inArgsHost.dummyStrike)[numBond]) = dummyStrike;
-# 228 "bondsEngine1.cu"
+# 107 "bondsEngine1.cu"
 }
-# 229 "bondsEngine1.cu"
+# 108 "bondsEngine1.cu"
 printf("Inputs for bond with index %d\n", numBonds / 2);
-# 230 "bondsEngine1.cu"
+# 109 "bondsEngine1.cu"
 printf("Bond Issue Date: %d-%d-%d\n", (((inArgsHost.bond)[numBonds / 2]).startDate).month, (((inArgsHost.bond)[numBonds / 2]).startDate).day, (((inArgsHost.bond)[numBonds / 2]).startDate).year);
-# 231 "bondsEngine1.cu"
+# 110 "bondsEngine1.cu"
 printf("Bond Maturity Date: %d-%d-%d\n", (((inArgsHost.bond)[numBonds / 2]).maturityDate).month, (((inArgsHost.bond)[numBonds / 2]).maturityDate).day, (((inArgsHost.bond)[numBonds / 2]).maturityDate).year);
-# 232 "bondsEngine1.cu"
+# 111 "bondsEngine1.cu"
 printf("Bond rate: %f\n\n", ((inArgsHost.bond)[numBonds / 2]).rate);
-# 234 "bondsEngine1.cu"
+# 112 "bondsEngine1.cu"
 resultsStruct resultsHost;
-# 235 "bondsEngine1.cu"
+# 113 "bondsEngine1.cu"
 resultsStruct resultsFromGpu;
-# 237 "bondsEngine1.cu"
+# 114 "bondsEngine1.cu"
 (resultsHost.dirtyPrice) = ((dataType *)malloc(numBonds * sizeof(dataType)));
-# 238 "bondsEngine1.cu"
+# 115 "bondsEngine1.cu"
 (resultsHost.accruedAmountCurrDate) = ((dataType *)malloc(numBonds * sizeof(dataType))); ;
-# 239 "bondsEngine1.cu"
+# 116 "bondsEngine1.cu"
 (resultsHost.cleanPrice) = ((dataType *)malloc(numBonds * sizeof(dataType))); ;
-# 240 "bondsEngine1.cu"
+# 117 "bondsEngine1.cu"
 (resultsHost.bondForwardVal) = ((dataType *)malloc(numBonds * sizeof(dataType))); ;
-# 242 "bondsEngine1.cu"
+# 118 "bondsEngine1.cu"
 (resultsFromGpu.dirtyPrice) = ((dataType *)malloc(numBonds * sizeof(dataType)));
-# 243 "bondsEngine1.cu"
+# 119 "bondsEngine1.cu"
 (resultsFromGpu.accruedAmountCurrDate) = ((dataType *)malloc(numBonds * sizeof(dataType))); ;
-# 244 "bondsEngine1.cu"
+# 120 "bondsEngine1.cu"
 (resultsFromGpu.cleanPrice) = ((dataType *)malloc(numBonds * sizeof(dataType))); ;
-# 245 "bondsEngine1.cu"
+# 121 "bondsEngine1.cu"
 (resultsFromGpu.bondForwardVal) = ((dataType *)malloc(numBonds * sizeof(dataType))); ;
-# 248 "bondsEngine1.cu"
+# 122 "bondsEngine1.cu"
 bondsYieldTermStruct *discountCurveGpu;
-# 249 "bondsEngine1.cu"
+# 123 "bondsEngine1.cu"
 bondsYieldTermStruct *repoCurveGpu;
-# 250 "bondsEngine1.cu"
+# 124 "bondsEngine1.cu"
 bondsDateStruct *currDateGpu;
-# 251 "bondsEngine1.cu"
+# 125 "bondsEngine1.cu"
 bondsDateStruct *maturityDateGpu;
-# 252 "bondsEngine1.cu"
+# 126 "bondsEngine1.cu"
 dataType *bondCleanPriceGpu;
-# 253 "bondsEngine1.cu"
+# 127 "bondsEngine1.cu"
 bondStruct *bondGpu;
-# 254 "bondsEngine1.cu"
+# 128 "bondsEngine1.cu"
 dataType *dummyStrikeGpu;
-# 256 "bondsEngine1.cu"
+# 129 "bondsEngine1.cu"
 dataType *dirtyPriceGpu;
-# 257 "bondsEngine1.cu"
+# 130 "bondsEngine1.cu"
 dataType *accruedAmountCurrDateGpu;
-# 258 "bondsEngine1.cu"
+# 131 "bondsEngine1.cu"
 dataType *cleanPriceGpu;
-# 259 "bondsEngine1.cu"
+# 132 "bondsEngine1.cu"
 dataType *bondForwardValGpu;
-# 262 "bondsEngine1.cu"
+# 133 "bondsEngine1.cu"
 cudaMalloc(&discountCurveGpu, numBonds * sizeof(bondsYieldTermStruct));
-# 263 "bondsEngine1.cu"
+# 134 "bondsEngine1.cu"
 cudaMalloc(&repoCurveGpu, numBonds * sizeof(bondsYieldTermStruct));
-# 264 "bondsEngine1.cu"
+# 135 "bondsEngine1.cu"
 cudaMalloc(&currDateGpu, numBonds * sizeof(bondsDateStruct));
-# 265 "bondsEngine1.cu"
+# 136 "bondsEngine1.cu"
 cudaMalloc(&maturityDateGpu, numBonds * sizeof(bondsDateStruct));
-# 266 "bondsEngine1.cu"
+# 137 "bondsEngine1.cu"
 cudaMalloc(&bondCleanPriceGpu, numBonds * sizeof(dataType));
-# 267 "bondsEngine1.cu"
+# 138 "bondsEngine1.cu"
 cudaMalloc(&bondGpu, numBonds * sizeof(bondStruct));
-# 268 "bondsEngine1.cu"
+# 139 "bondsEngine1.cu"
 cudaMalloc(&dummyStrikeGpu, numBonds * sizeof(dataType));
-# 270 "bondsEngine1.cu"
+# 140 "bondsEngine1.cu"
 cudaMalloc(&dirtyPriceGpu, numBonds * sizeof(dataType));
-# 271 "bondsEngine1.cu"
+# 141 "bondsEngine1.cu"
 cudaMalloc(&accruedAmountCurrDateGpu, numBonds * sizeof(dataType));
-# 272 "bondsEngine1.cu"
+# 142 "bondsEngine1.cu"
 cudaMalloc(&cleanPriceGpu, numBonds * sizeof(dataType));
-# 273 "bondsEngine1.cu"
+# 143 "bondsEngine1.cu"
 cudaMalloc(&bondForwardValGpu, numBonds * sizeof(dataType));
-# 276 "bondsEngine1.cu"
+# 144 "bondsEngine1.cu"
 cudaMemcpy(discountCurveGpu, inArgsHost.discountCurve, numBonds * sizeof(bondsYieldTermStruct), cudaMemcpyHostToDevice);
-# 277 "bondsEngine1.cu"
+# 145 "bondsEngine1.cu"
 cudaMemcpy(repoCurveGpu, inArgsHost.repoCurve, numBonds * sizeof(bondsYieldTermStruct), cudaMemcpyHostToDevice);
-# 278 "bondsEngine1.cu"
+# 146 "bondsEngine1.cu"
 cudaMemcpy(currDateGpu, inArgsHost.currDate, numBonds * sizeof(bondsDateStruct), cudaMemcpyHostToDevice);
-# 279 "bondsEngine1.cu"
+# 147 "bondsEngine1.cu"
 cudaMemcpy(maturityDateGpu, inArgsHost.maturityDate, numBonds * sizeof(bondsDateStruct), cudaMemcpyHostToDevice);
-# 280 "bondsEngine1.cu"
+# 148 "bondsEngine1.cu"
 cudaMemcpy(bondCleanPriceGpu, inArgsHost.bondCleanPrice, numBonds * sizeof(dataType), cudaMemcpyHostToDevice);
-# 281 "bondsEngine1.cu"
+# 149 "bondsEngine1.cu"
 cudaMemcpy(bondGpu, inArgsHost.bond, numBonds * sizeof(bondStruct), cudaMemcpyHostToDevice);
-# 282 "bondsEngine1.cu"
+# 150 "bondsEngine1.cu"
 cudaMemcpy(dummyStrikeGpu, inArgsHost.dummyStrike, numBonds * sizeof(dataType), cudaMemcpyHostToDevice);
-# 287 "bondsEngine1.cu"
+# 151 "bondsEngine1.cu"
 long seconds, useconds;
-# 288 "bondsEngine1.cu"
+# 152 "bondsEngine1.cu"
 float mtimeCpu;
-# 289 "bondsEngine1.cu"
+# 153 "bondsEngine1.cu"
 float mtimeGpu;
-# 291 "bondsEngine1.cu"
+# 154 "bondsEngine1.cu"
 timeval start;
-# 292 "bondsEngine1.cu"
+# 155 "bondsEngine1.cu"
 timeval end;
-# 297 "bondsEngine1.cu"
+# 156 "bondsEngine1.cu"
 inArgsStruct inArgs;
-# 298 "bondsEngine1.cu"
+# 157 "bondsEngine1.cu"
 (inArgs.discountCurve) = discountCurveGpu;
-# 299 "bondsEngine1.cu"
+# 158 "bondsEngine1.cu"
 (inArgs.repoCurve) = repoCurveGpu;
-# 300 "bondsEngine1.cu"
+# 159 "bondsEngine1.cu"
 (inArgs.currDate) = currDateGpu;
-# 301 "bondsEngine1.cu"
+# 160 "bondsEngine1.cu"
 (inArgs.maturityDate) = maturityDateGpu;
-# 302 "bondsEngine1.cu"
+# 161 "bondsEngine1.cu"
 (inArgs.bondCleanPrice) = bondCleanPriceGpu;
-# 303 "bondsEngine1.cu"
+# 162 "bondsEngine1.cu"
 (inArgs.bond) = bondGpu;
-# 304 "bondsEngine1.cu"
+# 163 "bondsEngine1.cu"
 (inArgs.dummyStrike) = dummyStrikeGpu;
-# 306 "bondsEngine1.cu"
+# 164 "bondsEngine1.cu"
 resultsStruct results;
-# 307 "bondsEngine1.cu"
+# 165 "bondsEngine1.cu"
 (results.dirtyPrice) = dirtyPriceGpu;
-# 308 "bondsEngine1.cu"
+# 166 "bondsEngine1.cu"
 (results.accruedAmountCurrDate) = accruedAmountCurrDateGpu;
-# 309 "bondsEngine1.cu"
+# 167 "bondsEngine1.cu"
 (results.cleanPrice) = cleanPriceGpu;
-# 310 "bondsEngine1.cu"
+# 168 "bondsEngine1.cu"
 (results.bondForwardVal) = bondForwardValGpu;
-# 312 "bondsEngine1.cu"
+# 169 "bondsEngine1.cu"
 gettimeofday(&start, __null);
-# 313 "bondsEngine1.cu"
+# 170 "bondsEngine1.cu"
 dim3 grid(ceil(((float)numBonds) / ((float)(256.0F))), 1, 1);
-# 314 "bondsEngine1.cu"
+# 171 "bondsEngine1.cu"
 dim3 threads(256, 1, 1);
-# 315 "bondsEngine1.cu"
+# 172 "bondsEngine1.cu"
 (cudaConfigureCall(grid, threads)) ? (void)0 : (getBondsResultsGpu)(inArgs, results, numBonds);
-# 316 "bondsEngine1.cu"
+# 173 "bondsEngine1.cu"
 cudaThreadSynchronize();
-# 318 "bondsEngine1.cu"
+# 174 "bondsEngine1.cu"
 gettimeofday(&end, __null);
-# 320 "bondsEngine1.cu"
+# 175 "bondsEngine1.cu"
 cudaMemcpy(resultsFromGpu.dirtyPrice, dirtyPriceGpu, numBonds * sizeof(dataType), cudaMemcpyDeviceToHost);
-# 321 "bondsEngine1.cu"
+# 176 "bondsEngine1.cu"
 cudaMemcpy(resultsFromGpu.accruedAmountCurrDate, accruedAmountCurrDateGpu, numBonds * sizeof(dataType), cudaMemcpyDeviceToHost);
-# 322 "bondsEngine1.cu"
+# 177 "bondsEngine1.cu"
 cudaMemcpy(resultsFromGpu.cleanPrice, cleanPriceGpu, numBonds * sizeof(dataType), cudaMemcpyDeviceToHost);
-# 323 "bondsEngine1.cu"
+# 178 "bondsEngine1.cu"
 cudaMemcpy(resultsFromGpu.bondForwardVal, bondForwardValGpu, numBonds * sizeof(dataType), cudaMemcpyDeviceToHost);
-# 325 "bondsEngine1.cu"
+# 179 "bondsEngine1.cu"
 seconds = ((end.tv_sec) - (start.tv_sec));
-# 326 "bondsEngine1.cu"
+# 180 "bondsEngine1.cu"
 useconds = ((end.tv_usec) - (start.tv_usec));
-# 328 "bondsEngine1.cu"
+# 181 "bondsEngine1.cu"
 mtimeGpu = (((seconds * (1000)) + (((float)useconds) / (1000.0))) + ((0.5F)));
-# 329 "bondsEngine1.cu"
+# 182 "bondsEngine1.cu"
 printf("Run on GPU\n");
-# 330 "bondsEngine1.cu"
+# 183 "bondsEngine1.cu"
 printf("Processing time on GPU (CUDA): %f (ms) \n\n", mtimeGpu);
-# 333 "bondsEngine1.cu"
+# 184 "bondsEngine1.cu"
 double totPrice = (0.0);
-# 334 "bondsEngine1.cu"
+# 185 "bondsEngine1.cu"
 int numBond1;
-# 335 "bondsEngine1.cu"
+# 186 "bondsEngine1.cu"
 for (numBond1 = 0; numBond1 < numBonds; numBond1++)
-# 336 "bondsEngine1.cu"
+# 187 "bondsEngine1.cu"
 {
-# 337 "bondsEngine1.cu"
+# 188 "bondsEngine1.cu"
 totPrice += ((resultsFromGpu.dirtyPrice)[numBond1]);
-# 338 "bondsEngine1.cu"
+# 189 "bondsEngine1.cu"
 }
-# 341 "bondsEngine1.cu"
+# 190 "bondsEngine1.cu"
 printf("Sum of output dirty prices on GPU: %f\n", totPrice);
-# 342 "bondsEngine1.cu"
+# 191 "bondsEngine1.cu"
 printf("Outputs on GPU for bond with index %d: \n", numBonds / 2);
-# 343 "bondsEngine1.cu"
+# 192 "bondsEngine1.cu"
 printf("Dirty Price: %f\n", (resultsFromGpu.dirtyPrice)[numBonds / 2]);
-# 344 "bondsEngine1.cu"
+# 193 "bondsEngine1.cu"
 printf("Accrued Amount: %f\n", (resultsFromGpu.accruedAmountCurrDate)[numBonds / 2]);
-# 345 "bondsEngine1.cu"
+# 194 "bondsEngine1.cu"
 printf("Clean Price: %f\n", (resultsFromGpu.cleanPrice)[numBonds / 2]);
-# 346 "bondsEngine1.cu"
+# 195 "bondsEngine1.cu"
 printf("Bond Forward Val: %f\n\n", (resultsFromGpu.bondForwardVal)[numBonds / 2]);
-# 349 "bondsEngine1.cu"
+# 196 "bondsEngine1.cu"
 gettimeofday(&start, __null);
-# 351 "bondsEngine1.cu"
+# 197 "bondsEngine1.cu"
 getBondsResultsCpu(inArgsHost, resultsHost, numBonds);
-# 353 "bondsEngine1.cu"
+# 198 "bondsEngine1.cu"
 gettimeofday(&end, __null);
-# 356 "bondsEngine1.cu"
+# 199 "bondsEngine1.cu"
 seconds = ((end.tv_sec) - (start.tv_sec));
-# 357 "bondsEngine1.cu"
+# 200 "bondsEngine1.cu"
 useconds = ((end.tv_usec) - (start.tv_usec));
-# 359 "bondsEngine1.cu"
+# 201 "bondsEngine1.cu"
 mtimeCpu = (((seconds * (1000)) + (((float)useconds) / (1000.0))) + ((0.5F)));
-# 360 "bondsEngine1.cu"
+# 202 "bondsEngine1.cu"
 printf("Run on CPU\n");
-# 361 "bondsEngine1.cu"
+# 203 "bondsEngine1.cu"
 printf("Processing time on CPU: %f (ms) \n\n", mtimeCpu);
-# 363 "bondsEngine1.cu"
+# 204 "bondsEngine1.cu"
 totPrice = (0.0);
-# 364 "bondsEngine1.cu"
+# 205 "bondsEngine1.cu"
 for (numBond1 = 0; numBond1 < numBonds; numBond1++)
-# 365 "bondsEngine1.cu"
+# 206 "bondsEngine1.cu"
 {
-# 366 "bondsEngine1.cu"
+# 207 "bondsEngine1.cu"
 totPrice += ((resultsHost.dirtyPrice)[numBond1]);
-# 367 "bondsEngine1.cu"
+# 208 "bondsEngine1.cu"
 }
-# 368 "bondsEngine1.cu"
+# 209 "bondsEngine1.cu"
 printf("Sum of output dirty prices on CPU: %f\n", totPrice);
-# 369 "bondsEngine1.cu"
+# 210 "bondsEngine1.cu"
 printf("Outputs on CPU for bond with index %d: \n", numBonds / 2);
-# 370 "bondsEngine1.cu"
+# 211 "bondsEngine1.cu"
 printf("Dirty Price: %f\n", (resultsHost.dirtyPrice)[numBonds / 2]);
-# 371 "bondsEngine1.cu"
+# 212 "bondsEngine1.cu"
 printf("Accrued Amount: %f\n", (resultsHost.accruedAmountCurrDate)[numBonds / 2]);
-# 372 "bondsEngine1.cu"
+# 213 "bondsEngine1.cu"
 printf("Clean Price: %f\n", (resultsHost.cleanPrice)[numBonds / 2]);
-# 373 "bondsEngine1.cu"
+# 214 "bondsEngine1.cu"
 printf("Bond Forward Val: %f\n\n", (resultsHost.bondForwardVal)[numBonds / 2]);
-# 375 "bondsEngine1.cu"
+# 215 "bondsEngine1.cu"
 printf("Speedup using GPU: %f\n", mtimeCpu / mtimeGpu);
-# 378 "bondsEngine1.cu"
+# 216 "bondsEngine1.cu"
 cudaFree(discountCurveGpu);
-# 379 "bondsEngine1.cu"
+# 217 "bondsEngine1.cu"
 cudaFree(repoCurveGpu);
-# 380 "bondsEngine1.cu"
+# 218 "bondsEngine1.cu"
 cudaFree(currDateGpu);
-# 381 "bondsEngine1.cu"
+# 219 "bondsEngine1.cu"
 cudaFree(maturityDateGpu);
-# 382 "bondsEngine1.cu"
+# 220 "bondsEngine1.cu"
 cudaFree(bondCleanPriceGpu);
-# 383 "bondsEngine1.cu"
+# 221 "bondsEngine1.cu"
 cudaFree(bondGpu);
-# 384 "bondsEngine1.cu"
+# 222 "bondsEngine1.cu"
 cudaFree(dummyStrikeGpu);
-# 386 "bondsEngine1.cu"
+# 223 "bondsEngine1.cu"
 cudaFree(dirtyPriceGpu);
-# 387 "bondsEngine1.cu"
+# 224 "bondsEngine1.cu"
 cudaFree(accruedAmountCurrDateGpu);
-# 388 "bondsEngine1.cu"
+# 225 "bondsEngine1.cu"
 cudaFree(cleanPriceGpu);
-# 389 "bondsEngine1.cu"
+# 226 "bondsEngine1.cu"
 cudaFree(bondForwardValGpu);
-# 391 "bondsEngine1.cu"
+# 227 "bondsEngine1.cu"
 free(resultsHost.dirtyPrice);
-# 392 "bondsEngine1.cu"
+# 228 "bondsEngine1.cu"
 free(resultsHost.accruedAmountCurrDate); ;
-# 393 "bondsEngine1.cu"
+# 229 "bondsEngine1.cu"
 free(resultsHost.cleanPrice); ;
-# 394 "bondsEngine1.cu"
+# 230 "bondsEngine1.cu"
 free(resultsHost.bondForwardVal); ;
-# 396 "bondsEngine1.cu"
+# 231 "bondsEngine1.cu"
 free(resultsFromGpu.dirtyPrice);
-# 397 "bondsEngine1.cu"
+# 232 "bondsEngine1.cu"
 free(resultsFromGpu.accruedAmountCurrDate); ;
-# 398 "bondsEngine1.cu"
+# 233 "bondsEngine1.cu"
 free(resultsFromGpu.cleanPrice); ;
-# 399 "bondsEngine1.cu"
+# 234 "bondsEngine1.cu"
 free(resultsFromGpu.bondForwardVal);
-# 401 "bondsEngine1.cu"
+# 235 "bondsEngine1.cu"
 free(inArgsHost.discountCurve);
-# 402 "bondsEngine1.cu"
+# 236 "bondsEngine1.cu"
 free(inArgsHost.repoCurve);
-# 403 "bondsEngine1.cu"
+# 237 "bondsEngine1.cu"
 free(inArgsHost.currDate);
-# 404 "bondsEngine1.cu"
+# 238 "bondsEngine1.cu"
 free(inArgsHost.maturityDate);
-# 405 "bondsEngine1.cu"
+# 239 "bondsEngine1.cu"
 free(inArgsHost.bondCleanPrice);
-# 406 "bondsEngine1.cu"
+# 240 "bondsEngine1.cu"
 free(inArgsHost.bond);
-# 407 "bondsEngine1.cu"
+# 241 "bondsEngine1.cu"
 free(inArgsHost.dummyStrike);
-# 409 "bondsEngine1.cu"
+# 242 "bondsEngine1.cu"
 }
-# 411 "bondsEngine1.cu"
+# 243 "bondsEngine1.cu"
 }
-# 414 "bondsEngine1.cu"
+# 244 "bondsEngine1.cu"
 int main(int argc, char **argv)
-# 415 "bondsEngine1.cu"
+# 245 "bondsEngine1.cu"
 {
-# 416 "bondsEngine1.cu"
+# 246 "bondsEngine1.cu"
 runRepoEngine();
-# 417 "bondsEngine1.cu"
+# 247 "bondsEngine1.cu"
 return 0;
-# 418 "bondsEngine1.cu"
+# 248 "bondsEngine1.cu"
 }
 # 1 "bondsEngine1.cudafe1.stub.c"
 # 1 "bondsEngine1.cudafe1.stub.c"
@@ -47895,11 +47765,11 @@ extern void __device_stub__Z18getBondsResultsGpu12inArgsStruct13resultsStructi(i
 static void __nv_cudaEntityRegisterCallback(void **);
 static void __sti____cudaRegisterAll_20_bondsEngine1_cpp1_ii_a2593f4e(void) __attribute__((__constructor__));
 void __device_stub__Z18getBondsResultsGpu12inArgsStruct13resultsStructi(inArgsStruct&__par0, resultsStruct&__par1, int __par2){if (cudaSetupArgument((void *)(__cudaAddressOf(__par0)), sizeof(__par0), (size_t)0UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(__cudaAddressOf(__par1)), sizeof(__par1), (size_t)56UL) != cudaSuccess) return;if (cudaSetupArgument((void *)(char *)&__par2, sizeof(__par2), (size_t)88UL) != cudaSuccess) return;{ volatile static char *__f __attribute__((unused)); __f = ((char *)((void ( *)(inArgsStruct, resultsStruct, int))getBondsResultsGpu)); (void)cudaLaunch(((char *)((void ( *)(inArgsStruct, resultsStruct, int))getBondsResultsGpu))); };}
-# 1124 "bondsKernelsGpu.cu"
+# 803 "bondsKernelsGpu1.cu"
 void getBondsResultsGpu( inArgsStruct __cuda_0,resultsStruct __cuda_1,int __cuda_2)
-# 1127 "bondsKernelsGpu.cu"
+# 804 "bondsKernelsGpu1.cu"
 {__device_stub__Z18getBondsResultsGpu12inArgsStruct13resultsStructi( __cuda_0,__cuda_1,__cuda_2);
-# 1197 "bondsKernelsGpu.cu"
+# 848 "bondsKernelsGpu1.cu"
 }
 # 1 "bondsEngine1.cudafe1.stub.c"
 static void __nv_cudaEntityRegisterCallback( void **__T27) { { volatile static void **__ref __attribute__((unused)); __ref = (volatile void **)__T27; }; __nv_save_fatbinhandle_for_managed_rt(__T27); __cudaRegisterFunction(__T27, (const char*)((void ( *)(inArgsStruct, resultsStruct, int))getBondsResultsGpu), (char*)"_Z18getBondsResultsGpu12inArgsStruct13resultsStructi", "_Z18getBondsResultsGpu12inArgsStruct13resultsStructi", -1, (uint3*)0, (uint3*)0, (dim3*)0, (dim3*)0, (int*)0); }

@@ -1,5 +1,5 @@
  #include "bondsStructs.cuh"
-#include "bondsKernelsGpu.cu"
+#include "bondsKernelsGpu1.cu"
 #include "bondsKernelsCpu.cu"
 #include <stdio.h>
 #include <stdlib.h>
