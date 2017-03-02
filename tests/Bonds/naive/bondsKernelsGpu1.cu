@@ -1,4 +1,4 @@
-#include "bondsKernelsGpu1.cuh"
+#include "bondsKernelsGpu.cuh"
 __device__ int monthLengthKernelGpu(int month, bool leapYear) 
 {
 int MonthLength[12];
@@ -341,7 +341,8 @@ dd2 = 1; mm2++;
 }
  return 360*(yy2-yy1) + 30*(mm2-mm1-1) + MAX(0, 30-dd1) + MIN(30, dd2);
 }
-else{
+else
+{
 return (d2.dateSerialNum - d1.dateSerialNum);
 }
 }
@@ -444,7 +445,8 @@ if (d.dateSerialNum <= cashFlows.legs[numLeg].accrualStartDate.dateSerialNum || 
 {
 return 0.0;
 }
-else{
+else
+{
 bondsDateStruct endDate = cashFlows.legs[numLeg].accrualEndDate;
 if (d.dateSerialNum < cashFlows.legs[numLeg].accrualEndDate.dateSerialNum)
 {
@@ -499,7 +501,8 @@ if (cashFlows.legs[numLeg].amount == COMPUTE_AMOUNT)
 return fixedRateCouponNominalGpu()*(interestRateCompoundFactorGpu(cashFlows.intRate, cashFlows.legs[numLeg].accrualStartDate,
  cashFlows.legs[numLeg].accrualEndDate, cashFlows.dayCounter) - 1.0);
 }
-else{
+else
+{
 return cashFlows.legs[numLeg].amount;
 }
 }
@@ -753,7 +756,8 @@ dfroot = fDerivativeGpu(f, solver.root_, cashFlows, numLegs);
 ++solver.evaluationNumber_;
 if (froot < 0.0)
 xl=solver.root_;
-elsexh=solver.root_;
+else
+xh=solver.root_;
 }
 return solver.root_;
 }
@@ -784,7 +788,8 @@ if (y.comp == SIMPLE_THEN_COMPOUNDED_INTEREST)
 {
 if (t<=1.0/N)
 dPdy -= c * B*B * t;
-elsedPdy -= c * t * B/(1+r/N);
+else
+dPdy -= c * t * B/(1+r/N);
 }
 }
 }
