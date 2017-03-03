@@ -1,4 +1,3 @@
-#include "test.cu"
 //blackScholesAnalyticEngine.cu
 //Scott Grauer-Gray
 //Functions for running black scholes using the analytic engine (from Quantlib) on the GPU
@@ -248,11 +247,8 @@ void runBlackScholesAnalyticEngine()
 
 	struct timeval start;
 	gettimeofday(&start, NULL);
-	vals* localvars0;
-	cudaMalloc((void**)&localvars0, grid.x*grid.y*grid.z*threads.x*threads.y*threads.z*sizeof(vals*));
 
-	getOutValOption <<<grid ,threads >>> (optionsGpu,outputValsGpu,numVals,localvars0);
-	cudaFree(localvars0);
+	getOutValOption <<< grid, threads >>>(optionsGpu, outputValsGpu, numVals);
 	cudaDeviceSynchronize();
 
 	struct timeval end;
