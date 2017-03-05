@@ -1,3 +1,2 @@
-./ori_Monte/monteCarloEngine.cu ./new_Monte/monteCarloEngine.cu
-./ori_Monte/monteCarloKernels.cu ./new_Monte/monteCarloKernels.cu
-./ori_Monte/monteCarloKernels.cuh ./new_Monte/monteCarloKernels.cuh
+./sgemm/naive/sgemm_kernel.cu ./new_sgemm/sgemm_kernel.cu
+./sgemm/naive/main.cu ./new_sgemm/main.cu
