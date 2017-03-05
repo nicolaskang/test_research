@@ -90828,183 +90828,173 @@ extern wostream wclog;
 static ios_base::Init __ioinit; 
 # 77
 }
-# 50 "sgemm_kernel.cu"
+# 4 "sgemm_kernel.cu"
 void mysgemmNT(const float *A, int lda, const float *B, int ldb, float *C, int ldc, int k, float alpha, float beta) ;
 #if 0
-# 51
+# 5
 { 
-# 53
+# 6
 float c[16]; 
-# 54
+# 7
 for (int i = 0; i < 16; i++) { 
-# 55
+# 8
 ((c)[i]) = (0.0F); }  
-# 56
+# 9
 int mid = ((__device_builtin_variable_threadIdx.y) * (__device_builtin_variable_blockDim.x)) + (__device_builtin_variable_threadIdx.x); 
-# 57
+# 10
 int m = ((__device_builtin_variable_blockIdx.x) * (16 * 8)) + mid; 
-# 58
+# 11
 int n = ((__device_builtin_variable_blockIdx.y) * (16)) + (__device_builtin_variable_threadIdx.x); 
-# 59
+# 12
 __attribute__((unused)) static float b_s[8][16]; 
-# 60
+# 13
 for (int i = 0; i < k; i += 8) { 
-# 61
+# 14
 float a; 
-# 62
+# 15
 (((b_s)[__device_builtin_variable_threadIdx.y])[__device_builtin_variable_threadIdx.x]) = (B[n + ((i + (__device_builtin_variable_threadIdx.y)) * ldb)]); 
-# 63
+# 16
 __syncthreads(); 
-# 64
+# 17
 for (int j = 0; j < 8; j++) { 
-# 65
+# 18
 a = (A[m + ((i + j) * lda)]); 
-# 66
+# 19
 for (int kk = 0; kk < 16; kk++) { 
-# 67
-((c)[kk]) += (a * (((b_s)[j])[kk])); }  
-# 69
-}  
-# 70
+# 20
+((c)[kk]) += (a * (((b_s)[j])[kk])); }  }  
+# 21
 __syncthreads(); 
-# 71
+# 22
 }  
-# 72
+# 23
 int t = ((ldc * (__device_builtin_variable_blockIdx.y)) * (16)) + m; 
-# 73
+# 24
 for (int i = 0; i < 16; i++) { 
-# 74
-(C[t + (i * ldc)]) = (((C[t + (i * ldc)]) * beta) + (alpha * ((c)[i]))); 
-# 75
-}  
-# 76
+# 25
+(C[t + (i * ldc)]) = (((C[t + (i * ldc)]) * beta) + (alpha * ((c)[i]))); }  
+# 26
 } 
 #endif
-# 78 "sgemm_kernel.cu"
+# 27 "sgemm_kernel.cu"
 void regtileSgemm(char transa, char transb, int m, int n, int k, float alpha, const float *A, int lda, const float *B, int ldb, float beta, float *C, int ldc) 
-# 79
-{ 
-# 80
-if ((transa != ('N')) && (transa != ('n'))) { 
-# 81
-(((std::cerr << ("unsupported value of \'transa\' in regtileSgemm()"))) << (std::endl)); 
-# 82
-return; 
-# 83
-}  
-# 85
-if ((transb != ('T')) && (transb != ('t'))) { 
-# 86
-(((std::cerr << ("unsupported value of \'transb\' in regtileSgemm()"))) << (std::endl)); 
-# 87
-return; 
-# 88
-}  
-# 91
-if ((m % (16 * 8)) || (n % 16)) { 
-# 92
-(((((((((std::cerr << ("unsupported size of matrix. m should be multiple of "))) << (16 * 8))) << ("; n should be multiple of "))) << (16))) << (std::endl)); 
-# 94
-}  
-# 97
-dim3 grid(m / (16 * 8), n / 16), threads(16, 8); 
-# 98
-(cudaConfigureCall(grid, threads)) ? (void)0 : (mysgemmNT)(A, lda, B, ldb, C, ldc, k, alpha, beta); 
-# 99
-{ cudaError_t err = cudaGetLastError(); if ((cudaSuccess) != err) { fprintf(stderr, "Cuda error: %s in file \'%s\' in line %i : %s.\n", "mySgemm", "sgemm_kernel.cu", 99, cudaGetErrorString(err)); exit(1); }  } ; 
-# 101
-} 
-# 24 "main.cu"
-extern bool readColMajorMatrixFile(const char * fn, int & nr_row, int & nr_col, std::vector< float>  & v); 
-# 25
-extern bool writeColMajorMatrixFile(const char * fn, int, int, std::vector< float>  &); 
 # 28
-extern "C" void computeGold(float *, const float *, const float *, unsigned, unsigned, unsigned); 
+{ 
+# 29
+if ((transa != ('N')) && (transa != ('n'))) { 
+# 30
+(((std::cerr << ("unsupported value of \'transa\' in regtileSgemm()"))) << (std::endl)); 
 # 31
-int main(int argc, char *argv[]) { 
+return; 
+# 32
+}  
+# 33
+if ((transb != ('T')) && (transb != ('t'))) { 
 # 34
-float *dA, *dB, *dC; 
+(((std::cerr << ("unsupported value of \'transb\' in regtileSgemm()"))) << (std::endl)); 
 # 35
-size_t A_sz, B_sz, C_sz; 
+return; 
 # 36
-int matArow, matAcol; 
+}  
 # 37
-int matBrow, matBcol; 
+if ((m % (16 * 8)) || (n % 16)) { 
 # 38
-std::vector< float>  matA, matBT; 
+(((((((((std::cerr << ("unsupported size of matrix. m should be multiple of "))) << (16 * 8))) << ("; n should be multiple of "))) << (16))) << (std::endl)); }  
 # 39
-int n; 
+dim3 grid(m / (16 * 8), n / 16), threads(16, 8); 
 # 40
-if (argc == 2) { 
+(cudaConfigureCall(grid, threads)) ? (void)0 : (mysgemmNT)(A, lda, B, ldb, C, ldc, k, alpha, beta); 
 # 41
+} 
+# 10 "main.cu"
+extern bool readColMajorMatrixFile(const char * fn, int & nr_row, int & nr_col, std::vector< float>  & v); 
+# 11
+extern bool writeColMajorMatrixFile(const char * fn, int, int, std::vector< float>  &); 
+# 12
+extern "C" void computeGold(float *, const float *, const float *, unsigned, unsigned, unsigned); 
+# 13
+int main(int argc, char *argv[]) { 
+# 14
+float *dA, *dB, *dC; 
+# 15
+size_t A_sz, B_sz, C_sz; 
+# 16
+int matArow, matAcol; 
+# 17
+int matBrow, matBcol; 
+# 18
+std::vector< float>  matA, matBT; 
+# 19
+int n; 
+# 20
+if (argc == 2) { 
+# 21
 n = atoi(argv[1]); 
-# 42
+# 22
 A_sz = ((n * n) * sizeof(float)); 
-# 43
+# 23
 B_sz = A_sz; 
-# 44
+# 24
 C_sz = A_sz; 
-# 45
+# 25
 matArow = n; 
-# 46
+# 26
 matAcol = n; 
-# 47
+# 27
 matBrow = n; 
-# 48
+# 28
 matBcol = n; 
-# 49
+# 29
 } else { 
-# 50
+# 30
 printf("error in input"); 
-# 51
+# 31
 return 0; 
-# 52
+# 32
 }  
-# 54
+# 33
 for (int i = 0; i < n; i++) { 
-# 55
+# 34
 for (int j = 0; j < n; j++) { 
-# 56
+# 35
 matA.push_back((static_cast< float>(rand())) / (static_cast< float>(2147483647 / 40))); 
-# 57
+# 36
 matBT.push_back((static_cast< float>(rand())) / (static_cast< float>(2147483647 / 40))); 
-# 59
+# 37
 }  }  
-# 62
+# 38
 std::vector< float>  matC(matArow * matBcol); 
-# 63
+# 39
 cudaMalloc((void **)(&dA), A_sz); 
-# 64
+# 40
 cudaMalloc((void **)(&dB), B_sz); 
-# 65
+# 41
 cudaMalloc((void **)(&dC), C_sz); 
-# 68
+# 42
 cudaMemcpy(dA, &matA.front(), A_sz, cudaMemcpyHostToDevice); 
-# 69
+# 43
 cudaMemcpy(dB, &matBT.front(), B_sz, cudaMemcpyHostToDevice); 
-# 73
+# 44
 regtileSgemm('N', 'T', matArow, matBcol, matAcol, (1.0F), dA, matArow, dB, matBcol, (0.0F), dC, matArow); 
-# 76
+# 45
 cudaMemcpy(&matC.front(), dC, C_sz, cudaMemcpyDeviceToHost); 
-# 78
+# 46
 for (int i = 100; i < 103; i++) { 
-# 79
+# 47
 for (int j = 100; j < 103; j++) { 
-# 80
+# 48
 printf("%d ", matC.at((i * n) + j)); }  
-# 81
-printf("\n"); 
-# 82
-}  
-# 86
+# 49
+printf("\n"); }  
+# 50
 cudaFree(dA); 
-# 87
+# 51
 cudaFree(dB); 
-# 88
+# 52
 cudaFree(dC); 
-# 89
+# 53
 return 0; 
-# 90
+# 54
 } 
 
 # 1 "main.cudafe1.stub.c"

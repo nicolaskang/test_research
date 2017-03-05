@@ -41638,7 +41638,6 @@ static __inline__ __attribute__((host)) cudaError_t cudaBindSurfaceToArray(
 #pragma GCC diagnostic pop
 # 1 "<command-line>" 2
 # 1 "main.cu"
-# 13 "main.cu"
 # 1 "/usr/include/stdio.h" 1 3 4
 # 29 "/usr/include/stdio.h" 3 4
 extern "C" {
@@ -42440,7 +42439,7 @@ extern int ftrylockfile (FILE *__stream) throw () ;
 extern void funlockfile (FILE *__stream) throw ();
 # 943 "/usr/include/stdio.h" 3 4
 }
-# 14 "main.cu" 2
+# 2 "main.cu" 2
 
 
 
@@ -42546,7 +42545,7 @@ extern int futimesat (int __fd, const char *__file,
         const struct timeval __tvp[2]) throw ();
 # 190 "/usr/include/sys/time.h" 3 4
 }
-# 18 "main.cu" 2
+# 6 "main.cu" 2
 # 1 "/usr/include/malloc.h" 1 3 4
 # 24 "/usr/include/malloc.h" 3 4
 # 1 "/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stddef.h" 1 3 4
@@ -42663,7 +42662,7 @@ extern void __malloc_check_init (void) throw () __attribute__ ((__deprecated__))
 
 
 }
-# 19 "main.cu" 2
+# 7 "main.cu" 2
 # 1 "/usr/include/c++/4.8.2/vector" 1 3
 # 58 "/usr/include/c++/4.8.2/vector" 3
        
@@ -47658,7 +47657,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 }
 # 70 "/usr/include/c++/4.8.2/vector" 2 3
-# 20 "main.cu" 2
+# 8 "main.cu" 2
 # 1 "/usr/include/c++/4.8.2/iostream" 1 3
 # 36 "/usr/include/c++/4.8.2/iostream" 3
        
@@ -61640,12 +61639,13 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 }
-# 21 "main.cu" 2
+# 9 "main.cu" 2
 # 1 "sgemm_kernel.cu" 1
-# 50 "sgemm_kernel.cu"
+
+
+
 __attribute__((global)) void mysgemmNT( const float *A, int lda, const float *B, int ldb, float* C, int ldc, int k, float alpha, float beta )
 {
-
     float c[16];
     for (int i=0; i < 16; i++)
  c[i] = 0.0f;
@@ -61660,54 +61660,33 @@ __attribute__((global)) void mysgemmNT( const float *A, int lda, const float *B,
  for (int j = 0; j < 8; j++) {
      a = A[m + (i+j)*lda];
      for (int kk = 0; kk < 16; kk++)
-  c[kk] += a * b_s[j][kk];
-
- }
+  c[kk] += a * b_s[j][kk];}
  __syncthreads();
     }
     int t = ldc*blockIdx.y * 16 + m;
     for (int i = 0; i < 16; i++) {
- C[t+i*ldc] = C[t+i*ldc] * beta + alpha * c[i];
-    }
+ C[t+i*ldc] = C[t+i*ldc] * beta + alpha * c[i];}
 }
-
 void regtileSgemm( char transa, char transb, int m, int n, int k, float alpha, const float *A, int lda, const float *B, int ldb, float beta, float *C, int ldc )
 {
   if ((transa != 'N') && (transa != 'n')) {
     std::cerr << "unsupported value of 'transa' in regtileSgemm()" << std::endl;
     return;
   }
-
   if ((transb != 'T') && (transb != 't')) {
     std::cerr << "unsupported value of 'transb' in regtileSgemm()" << std::endl;
     return;
   }
-
-
   if ((m%(16*8)) || (n%16)) {
-    std::cerr << "unsupported size of matrix. m should be multiple of " << (16*8)
-      << "; n should be multiple of " << 16 << std::endl;
-  }
-
-
+    std::cerr << "unsupported size of matrix. m should be multiple of " << (16*8)<< "; n should be multiple of " << 16 << std::endl;}
   dim3 grid( m/(16*8), n/16 ), threads( 16, 8 );
   mysgemmNT<<<grid, threads>>>( A, lda, B, ldb, C, ldc, k, alpha, beta);
-  { cudaError_t err = cudaGetLastError(); if( cudaSuccess != err) { fprintf(stderr, "Cuda error: %s in file '%s' in line %i : %s.\n", "mySgemm", "sgemm_kernel.cu", 99, cudaGetErrorString( err) ); exit(1); } };
-
 }
-# 22 "main.cu" 2
-
-
+# 10 "main.cu" 2
 extern bool readColMajorMatrixFile(const char *fn, int &nr_row, int &nr_col, std::vector<float>&v);
 extern bool writeColMajorMatrixFile(const char *fn, int, int, std::vector<float>&);
-
-extern "C"
-void computeGold(float *, const float*, const float*, unsigned int, unsigned int, unsigned int);
-
-int
-main (int argc, char *argv[]) {
-
-
+extern "C" void computeGold(float *, const float*, const float*, unsigned int, unsigned int, unsigned int);
+int main (int argc, char *argv[]) {
   float *dA, *dB, *dC;
   size_t A_sz, B_sz, C_sz;
   int matArow, matAcol;
@@ -61727,39 +61706,23 @@ main (int argc, char *argv[]) {
  printf("error in input");
  return 0;
   }
-
   for(int i = 0; i < n; i++)
     for(int j = 0; j < n; j++){
    matA.push_back(static_cast <float> (rand()) / (static_cast <float> (2147483647/40)));
    matBT.push_back(static_cast <float> (rand()) / (static_cast <float> (2147483647/40)));
-
   }
-
-
   std::vector<float> matC(matArow*matBcol);
   cudaMalloc((void**)&dA, A_sz);
   cudaMalloc((void**)&dB, B_sz);
   cudaMalloc((void**)&dC, C_sz);
-
-
   cudaMemcpy(dA, &matA.front(), A_sz, cudaMemcpyHostToDevice);
   cudaMemcpy(dB, &matBT.front(), B_sz, cudaMemcpyHostToDevice);
-
-
-
-  regtileSgemm('N', 'T', matArow, matBcol, matAcol, 1.0f,
-      dA, matArow, dB, matBcol, 0.0f, dC, matArow);
-
-    cudaMemcpy(&matC.front(), dC, C_sz, cudaMemcpyDeviceToHost);
-
+  regtileSgemm('N', 'T', matArow, matBcol, matAcol, 1.0f, dA, matArow, dB, matBcol, 0.0f, dC, matArow);
+  cudaMemcpy(&matC.front(), dC, C_sz, cudaMemcpyDeviceToHost);
  for(int i = 100; i < 103; i++){
     for(int j = 100; j < 103; j++)
    printf("%d ", matC.at(i * n + j));
- printf("\n");
-  }
-
-
-
+ printf("\n");}
   cudaFree(dA);
   cudaFree(dB);
   cudaFree(dC);

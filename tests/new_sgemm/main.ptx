@@ -11,7 +11,7 @@
 .address_size 64
 
 	// .globl	_Z9mysgemmNTPKfiS0_iPfiiff
-// _Z9mysgemmNTPKfiS0_iPfiiff$__cuda_local_var_61121_35_non_const_b_s has been demoted
+// _Z9mysgemmNTPKfiS0_iPfiiff$__cuda_local_var_61125_35_non_const_b_s has been demoted
 
 .visible .entry _Z9mysgemmNTPKfiS0_iPfiiff(
 	.param .u64 _Z9mysgemmNTPKfiS0_iPfiiff_param_0,
@@ -30,7 +30,7 @@
 	.reg .b32 	%r<39>;
 	.reg .b64 	%rd<37>;
 	// demoted variable
-	.shared .align 4 .b8 _Z9mysgemmNTPKfiS0_iPfiiff$__cuda_local_var_61121_35_non_const_b_s[512];
+	.shared .align 4 .b8 _Z9mysgemmNTPKfiS0_iPfiiff$__cuda_local_var_61125_35_non_const_b_s[512];
 
 	ld.param.u64 	%rd1, [_Z9mysgemmNTPKfiS0_iPfiiff_param_0];
 	ld.param.u32 	%r5, [_Z9mysgemmNTPKfiS0_iPfiiff_param_1];
@@ -92,7 +92,7 @@ BB0_2:
 	add.s64 	%rd6, %rd4, %rd5;
 	ld.global.f32 	%f99, [%rd6];
 	mul.wide.u32 	%rd7, %r10, 64;
-	mov.u64 	%rd8, _Z9mysgemmNTPKfiS0_iPfiiff$__cuda_local_var_61121_35_non_const_b_s;
+	mov.u64 	%rd8, _Z9mysgemmNTPKfiS0_iPfiiff$__cuda_local_var_61125_35_non_const_b_s;
 	add.s64 	%rd9, %rd8, %rd7;
 	mul.wide.u32 	%rd10, %r14, 4;
 	add.s64 	%rd11, %rd9, %rd10;

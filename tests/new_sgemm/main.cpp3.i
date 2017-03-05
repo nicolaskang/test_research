@@ -1597,7 +1597,7 @@ int extern const warpSize;
 # 1 "/usr/local/cuda-7.5/targets/x86_64-linux/include/crt/storage_class.h" 1 3
 # 265 "/usr/local/cuda/bin/../targets/x86_64-linux/include/crt/device_runtime.h" 2 3
 # 214 "/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stddef.h" 2 3
-# 50 "sgemm_kernel.cu"
+# 4 "sgemm_kernel.cu"
 __attribute__((global)) __attribute__((__used__)) extern void _Z9mysgemmNTPKfiS0_iPfiiff(const float *, int, const float *, int, float *, int, int, float, float);
 # 1 "/usr/local/cuda/bin/../targets/x86_64-linux/include/common_functions.h" 1
 # 224 "/usr/local/cuda/bin/../targets/x86_64-linux/include/common_functions.h"
@@ -7934,138 +7934,138 @@ static __inline__ __attribute__((always_inline)) double fma(double a, double b, 
 # 271 "/usr/local/cuda-7.5/targets/x86_64-linux/include/math_functions_dbl_ptx3.h" 2 3
 # 10215 "/usr/local/cuda-7.5/targets/x86_64-linux/include/math_functions.h" 2 3
 # 225 "/usr/local/cuda/bin/../targets/x86_64-linux/include/common_functions.h" 2
-# 52 "sgemm_kernel.cu" 2
-# 50 "sgemm_kernel.cu"
+# 6 "sgemm_kernel.cu" 2
+# 4 "sgemm_kernel.cu"
 __attribute__((global)) __attribute__((__used__)) void _Z9mysgemmNTPKfiS0_iPfiiff(
-# 50 "sgemm_kernel.cu"
+# 4 "sgemm_kernel.cu"
 const float *A,
-# 50 "sgemm_kernel.cu"
+# 4 "sgemm_kernel.cu"
 int lda,
-# 50 "sgemm_kernel.cu"
+# 4 "sgemm_kernel.cu"
 const float *B,
-# 50 "sgemm_kernel.cu"
+# 4 "sgemm_kernel.cu"
 int ldb,
-# 50 "sgemm_kernel.cu"
+# 4 "sgemm_kernel.cu"
 float *C,
-# 50 "sgemm_kernel.cu"
+# 4 "sgemm_kernel.cu"
 int ldc,
-# 50 "sgemm_kernel.cu"
+# 4 "sgemm_kernel.cu"
 int k,
-# 50 "sgemm_kernel.cu"
+# 4 "sgemm_kernel.cu"
 float alpha,
-# 50 "sgemm_kernel.cu"
+# 4 "sgemm_kernel.cu"
 float beta){
-# 50 "sgemm_kernel.cu"
+# 4 "sgemm_kernel.cu"
 {
-# 51 "sgemm_kernel.cu"
+# 5 "sgemm_kernel.cu"
 {
-# 53 "sgemm_kernel.cu"
- float __cuda_local_var_61115_11_non_const_c[16];
-# 56 "sgemm_kernel.cu"
- int __cuda_local_var_61118_9_non_const_mid;
-# 57 "sgemm_kernel.cu"
- int __cuda_local_var_61119_9_non_const_m;
-# 58 "sgemm_kernel.cu"
- int __cuda_local_var_61120_9_non_const_n;
-# 59 "sgemm_kernel.cu"
-static __attribute__((shared)) __attribute__((__used__)) float __cuda_local_var_61121_35_non_const_b_s[8][16];
-# 72 "sgemm_kernel.cu"
- int __cuda_local_var_61134_9_non_const_t;
-# 73 "sgemm_kernel.cu"
+# 6 "sgemm_kernel.cu"
+ float __cuda_local_var_61119_11_non_const_c[16];
+# 9 "sgemm_kernel.cu"
+ int __cuda_local_var_61122_9_non_const_mid;
+# 10 "sgemm_kernel.cu"
+ int __cuda_local_var_61123_9_non_const_m;
+# 11 "sgemm_kernel.cu"
+ int __cuda_local_var_61124_9_non_const_n;
+# 12 "sgemm_kernel.cu"
+static __attribute__((shared)) __attribute__((__used__)) float __cuda_local_var_61125_35_non_const_b_s[8][16];
+# 23 "sgemm_kernel.cu"
+ int __cuda_local_var_61136_9_non_const_t;
+# 24 "sgemm_kernel.cu"
 {
-# 54 "sgemm_kernel.cu"
+# 7 "sgemm_kernel.cu"
  int i;
-# 54 "sgemm_kernel.cu"
+# 7 "sgemm_kernel.cu"
 i = 0;
-# 54 "sgemm_kernel.cu"
+# 7 "sgemm_kernel.cu"
 for (; (i < 16); i++)
-# 54 "sgemm_kernel.cu"
+# 7 "sgemm_kernel.cu"
 {
-# 55 "sgemm_kernel.cu"
-((__cuda_local_var_61115_11_non_const_c)[i]) = (0.0F);
-# 55 "sgemm_kernel.cu"
+# 8 "sgemm_kernel.cu"
+((__cuda_local_var_61119_11_non_const_c)[i]) = (0.0F);
+# 8 "sgemm_kernel.cu"
 }
-# 55 "sgemm_kernel.cu"
+# 8 "sgemm_kernel.cu"
 }
-# 56 "sgemm_kernel.cu"
-__cuda_local_var_61118_9_non_const_mid = ((int)(((threadIdx.y) * (blockDim.x)) + (threadIdx.x)));
-# 57 "sgemm_kernel.cu"
-__cuda_local_var_61119_9_non_const_m = ((int)(((blockIdx.x) * 128U) + ((unsigned)__cuda_local_var_61118_9_non_const_mid)));
-# 58 "sgemm_kernel.cu"
-__cuda_local_var_61120_9_non_const_n = ((int)(((blockIdx.y) * 16U) + (threadIdx.x)));
-# 58 "sgemm_kernel.cu"
+# 9 "sgemm_kernel.cu"
+__cuda_local_var_61122_9_non_const_mid = ((int)(((threadIdx.y) * (blockDim.x)) + (threadIdx.x)));
+# 10 "sgemm_kernel.cu"
+__cuda_local_var_61123_9_non_const_m = ((int)(((blockIdx.x) * 128U) + ((unsigned)__cuda_local_var_61122_9_non_const_mid)));
+# 11 "sgemm_kernel.cu"
+__cuda_local_var_61124_9_non_const_n = ((int)(((blockIdx.y) * 16U) + (threadIdx.x)));
+# 11 "sgemm_kernel.cu"
 {
-# 60 "sgemm_kernel.cu"
+# 13 "sgemm_kernel.cu"
  int i;
-# 60 "sgemm_kernel.cu"
+# 13 "sgemm_kernel.cu"
 i = 0;
-# 60 "sgemm_kernel.cu"
+# 13 "sgemm_kernel.cu"
 for (; (i < k); i += 8)
-# 60 "sgemm_kernel.cu"
+# 13 "sgemm_kernel.cu"
 {
-# 61 "sgemm_kernel.cu"
- float __cuda_local_var_61123_8_non_const_a;
-# 62 "sgemm_kernel.cu"
-((((__cuda_local_var_61121_35_non_const_b_s)[(threadIdx.y)]))[(threadIdx.x)]) = (B[(((unsigned)__cuda_local_var_61120_9_non_const_n) + ((((unsigned)i) + (threadIdx.y)) * ((unsigned)ldb)))]);
-# 63 "sgemm_kernel.cu"
+# 14 "sgemm_kernel.cu"
+ float __cuda_local_var_61127_8_non_const_a;
+# 15 "sgemm_kernel.cu"
+((((__cuda_local_var_61125_35_non_const_b_s)[(threadIdx.y)]))[(threadIdx.x)]) = (B[(((unsigned)__cuda_local_var_61124_9_non_const_n) + ((((unsigned)i) + (threadIdx.y)) * ((unsigned)ldb)))]);
+# 16 "sgemm_kernel.cu"
 __syncthreads();
-# 63 "sgemm_kernel.cu"
+# 16 "sgemm_kernel.cu"
 {
-# 64 "sgemm_kernel.cu"
+# 17 "sgemm_kernel.cu"
  int j;
-# 64 "sgemm_kernel.cu"
+# 17 "sgemm_kernel.cu"
 j = 0;
-# 64 "sgemm_kernel.cu"
+# 17 "sgemm_kernel.cu"
 for (; (j < 8); j++)
-# 64 "sgemm_kernel.cu"
+# 17 "sgemm_kernel.cu"
 {
-# 65 "sgemm_kernel.cu"
-__cuda_local_var_61123_8_non_const_a = (A[(__cuda_local_var_61119_9_non_const_m + ((i + j) * lda))]);
-# 65 "sgemm_kernel.cu"
+# 18 "sgemm_kernel.cu"
+__cuda_local_var_61127_8_non_const_a = (A[(__cuda_local_var_61123_9_non_const_m + ((i + j) * lda))]);
+# 18 "sgemm_kernel.cu"
 {
-# 66 "sgemm_kernel.cu"
+# 19 "sgemm_kernel.cu"
  int kk;
-# 66 "sgemm_kernel.cu"
+# 19 "sgemm_kernel.cu"
 kk = 0;
-# 66 "sgemm_kernel.cu"
+# 19 "sgemm_kernel.cu"
 for (; (kk < 16); kk++)
-# 66 "sgemm_kernel.cu"
+# 19 "sgemm_kernel.cu"
 {
-# 67 "sgemm_kernel.cu"
-((__cuda_local_var_61115_11_non_const_c)[kk]) += (__cuda_local_var_61123_8_non_const_a * ((((__cuda_local_var_61121_35_non_const_b_s)[j]))[kk]));
-# 67 "sgemm_kernel.cu"
+# 20 "sgemm_kernel.cu"
+((__cuda_local_var_61119_11_non_const_c)[kk]) += (__cuda_local_var_61127_8_non_const_a * ((((__cuda_local_var_61125_35_non_const_b_s)[j]))[kk]));
+# 20 "sgemm_kernel.cu"
 }
-# 67 "sgemm_kernel.cu"
+# 20 "sgemm_kernel.cu"
 }
-# 69 "sgemm_kernel.cu"
+# 20 "sgemm_kernel.cu"
 }
-# 69 "sgemm_kernel.cu"
+# 20 "sgemm_kernel.cu"
 }
-# 70 "sgemm_kernel.cu"
+# 21 "sgemm_kernel.cu"
 __syncthreads();
-# 71 "sgemm_kernel.cu"
+# 22 "sgemm_kernel.cu"
 }
-# 71 "sgemm_kernel.cu"
+# 22 "sgemm_kernel.cu"
 }
-# 72 "sgemm_kernel.cu"
-__cuda_local_var_61134_9_non_const_t = ((int)(((((unsigned)ldc) * (blockIdx.y)) * 16U) + ((unsigned)__cuda_local_var_61119_9_non_const_m)));
-# 72 "sgemm_kernel.cu"
+# 23 "sgemm_kernel.cu"
+__cuda_local_var_61136_9_non_const_t = ((int)(((((unsigned)ldc) * (blockIdx.y)) * 16U) + ((unsigned)__cuda_local_var_61123_9_non_const_m)));
+# 23 "sgemm_kernel.cu"
 {
-# 73 "sgemm_kernel.cu"
+# 24 "sgemm_kernel.cu"
  int i;
-# 73 "sgemm_kernel.cu"
+# 24 "sgemm_kernel.cu"
 i = 0;
-# 73 "sgemm_kernel.cu"
+# 24 "sgemm_kernel.cu"
 for (; (i < 16); i++)
-# 73 "sgemm_kernel.cu"
+# 24 "sgemm_kernel.cu"
 {
-# 74 "sgemm_kernel.cu"
-(C[(__cuda_local_var_61134_9_non_const_t + (i * ldc))]) = (((C[(__cuda_local_var_61134_9_non_const_t + (i * ldc))]) * beta) + (alpha * ((__cuda_local_var_61115_11_non_const_c)[i])));
-# 75 "sgemm_kernel.cu"
+# 25 "sgemm_kernel.cu"
+(C[(__cuda_local_var_61136_9_non_const_t + (i * ldc))]) = (((C[(__cuda_local_var_61136_9_non_const_t + (i * ldc))]) * beta) + (alpha * ((__cuda_local_var_61119_11_non_const_c)[i])));
+# 25 "sgemm_kernel.cu"
 }
-# 75 "sgemm_kernel.cu"
+# 25 "sgemm_kernel.cu"
 }
-# 76 "sgemm_kernel.cu"
+# 26 "sgemm_kernel.cu"
 }
-# 76 "sgemm_kernel.cu"
+# 26 "sgemm_kernel.cu"
 }}

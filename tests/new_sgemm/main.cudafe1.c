@@ -34,8 +34,6 @@ __codecvt_ok,
 __codecvt_partial,
 __codecvt_error,
 __codecvt_noconv};
-# 246 "/usr/include/libio.h" 3
-struct _IO_FILE;
 # 191 "/usr/include/math.h" 3
 enum _ZUt_ {
 FP_NAN,
@@ -403,8 +401,6 @@ typedef unsigned long size_t;
 struct __C3 { struct __C2 *regions; void **obj_table; struct __C1 *array_table; unsigned short saved_region_number;char __nv_no_debug_dummy_end_padding_0[6];}; struct __C5 { const struct __type_info *tinfo; unsigned char flags; unsigned char *ptr_flags;}; struct __C6 { long setjmp_buffer[25]; struct __C5 *catch_entries; void *rtinfo; unsigned short region_number;char __nv_no_debug_dummy_end_padding_0[6];}; union __C7 { struct __C6 try_block; struct __C3 function; struct __C5 *throw_spec;}; struct __C8 { struct __C8 *next; unsigned char kind; union __C7 variant;};
 # 39 "/usr/include/xlocale.h" 3
 typedef struct __locale_struct *__locale_t;
-# 48 "/usr/include/stdio.h" 3
-typedef struct _IO_FILE FILE;
 # 32 "/usr/include/c++/4.8.2/x86_64-redhat-linux/bits/atomic_word.h" 3
 typedef int _Atomic_word;
 # 1857 "/usr/include/c++/4.8.2/x86_64-redhat-linux/bits/c++config.h" 3
@@ -610,10 +606,6 @@ struct _ZN9__gnu_cxx17__normal_iteratorIPfSt6vectorIfSaIfEEEE {
 
 _ZNSt6vectorIfSaIfEE7pointerE _M_current;};
 void *memcpy(void*, const void*, size_t); void *memset(void*, int, size_t);
-# 1073 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
-extern enum cudaError cudaGetLastError(void);
-# 1144 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
-extern const char *cudaGetErrorString(enum cudaError);
 # 2782 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
 extern enum cudaError cudaConfigureCall(struct dim3, struct dim3, size_t, struct CUstream_st *);
 # 2964 "/usr/local/cuda/bin/../targets/x86_64-linux/include/cuda_runtime_api.h"
@@ -626,13 +618,11 @@ extern enum cudaError cudaMemcpy(void *, const void *, size_t, enum cudaMemcpyKi
 extern __attribute__((__pure__)) __attribute__((__nothrow__)) int atoi(const char *);
 # 374 "/usr/include/stdlib.h" 3
 extern __attribute__((__nothrow__)) int rand(void);
-# 542 "/usr/include/stdlib.h" 3
-extern __attribute__((__nothrow__)) __attribute__((__noreturn__)) void exit(int);
 extern int setjmp();
 extern void __exception_caught();
-# 78 "sgemm_kernel.cu"
+# 27 "sgemm_kernel.cu"
 extern void _Z12regtileSgemmcciiifPKfiS0_ifPfi(char, char, int, int, int, float, const float *, int, const float *, int, float, float *, int);
-# 31 "main.cu"
+# 13 "main.cu"
 extern int main(int, char **);
 extern __attribute__((__noreturn__)) void __rethrow();
 extern void __suppress_optim_on_vars_in_try();
@@ -742,8 +732,6 @@ extern int __cudaRegisterEntry();
 extern int __cudaRegisterBinary();
 static void __sti___12_main_cpp1_ii_5c2e31e0(void) __attribute__((__constructor__));
 extern int __cxa_atexit();
-# 170 "/usr/include/stdio.h" 3
-extern struct _IO_FILE *stderr;
 extern struct __C8 *__curr_eh_stack_entry;
 extern unsigned short __eh_curr_region;
 extern int __catch_clause_number;
@@ -752,136 +740,109 @@ extern _ZSt7ostream _ZSt4cerr __attribute__((visibility("default")));
 # 74 "/usr/include/c++/4.8.2/iostream" 3
 static struct _ZNSt8ios_base4InitE _ZSt8__ioinit __attribute__((visibility("default"))) = {0};
 extern void *__dso_handle __attribute__((visibility("hidden")));
-# 78 "sgemm_kernel.cu"
+# 27 "sgemm_kernel.cu"
 void _Z12regtileSgemmcciiifPKfiS0_ifPfi( char transa,  char transb,  int m,  int n,  int k,  float alpha,  const float *A,  int lda,  const float *B,  int ldb,  float beta,  float *C,  int ldc)
 {  unsigned __T20;
  unsigned __T21;
-# 97 "sgemm_kernel.cu"
- struct dim3 __cuda_local_var_61159_8_non_const_grid;
-# 97 "sgemm_kernel.cu"
- struct dim3 __cuda_local_var_61159_32_non_const_threads;
-# 80 "sgemm_kernel.cu"
+# 39 "sgemm_kernel.cu"
+ struct dim3 __cuda_local_var_61152_8_non_const_grid;
+# 39 "sgemm_kernel.cu"
+ struct dim3 __cuda_local_var_61152_32_non_const_threads;
+# 29 "sgemm_kernel.cu"
 if ((((int)transa) != 78) && (((int)transa) != 110)) {
 _ZNSolsEPFRSoS_E((_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc((&_ZSt4cerr), ((const char *)"unsupported value of \'transa\' in regtileSgemm()"))), _ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_);
 return;
 }
-
 if ((((int)transb) != 84) && (((int)transb) != 116)) {
 _ZNSolsEPFRSoS_E((_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc((&_ZSt4cerr), ((const char *)"unsupported value of \'transb\' in regtileSgemm()"))), _ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_);
 return;
 }
-
-
 if ((m % 128) || (n % 16)) {
-_ZNSolsEPFRSoS_E((_ZNSolsEi((_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc((_ZNSolsEi((_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc((&_ZSt4cerr), ((const char *)"unsupported size of matrix. m should be multiple of "))), 128)), ((const char *)"; n should be multiple of "))), 16)), _ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_);
-
-}
-
-
+_ZNSolsEPFRSoS_E((_ZNSolsEi((_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc((_ZNSolsEi((_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc((&_ZSt4cerr), ((const char *)"unsupported size of matrix. m should be multiple of "))), 128)), ((const char *)"; n should be multiple of "))), 16)), _ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_); }
 { __T20 = ((unsigned)(m / 128)); __T21 = ((unsigned)(n / 16));
 # 421 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
-{ (__cuda_local_var_61159_8_non_const_grid.x) = __T20; (__cuda_local_var_61159_8_non_const_grid.y) = __T21; (__cuda_local_var_61159_8_non_const_grid.z) = 1U; }
-# 97 "sgemm_kernel.cu"
+{ (__cuda_local_var_61152_8_non_const_grid.x) = __T20; (__cuda_local_var_61152_8_non_const_grid.y) = __T21; (__cuda_local_var_61152_8_non_const_grid.z) = 1U; }
+# 39 "sgemm_kernel.cu"
 } {
 # 421 "/usr/local/cuda/bin/../targets/x86_64-linux/include/vector_types.h"
-(__cuda_local_var_61159_32_non_const_threads.x) = 16U; (__cuda_local_var_61159_32_non_const_threads.y) = 8U; (__cuda_local_var_61159_32_non_const_threads.z) = 1U;
-# 97 "sgemm_kernel.cu"
+(__cuda_local_var_61152_32_non_const_threads.x) = 16U; (__cuda_local_var_61152_32_non_const_threads.y) = 8U; (__cuda_local_var_61152_32_non_const_threads.z) = 1U;
+# 39 "sgemm_kernel.cu"
 }
-(cudaConfigureCall(__cuda_local_var_61159_8_non_const_grid, __cuda_local_var_61159_32_non_const_threads, 0UL, ((struct CUstream_st *)0LL))) ? ((void)0) : (__device_stub__Z9mysgemmNTPKfiS0_iPfiiff(A, lda, B, ldb, C, ldc, k, alpha, beta));
-{  enum cudaError __cuda_local_var_61161_17_non_const_err;
-# 99 "sgemm_kernel.cu"
-__cuda_local_var_61161_17_non_const_err = (cudaGetLastError()); if (0 != ((int)__cuda_local_var_61161_17_non_const_err)) { fprintf(stderr, ((const char *)"Cuda error: %s in file \'%s\' in line %i : %s.\n"), ((const char *)("mySgemm")), ((const char *)("sgemm_kernel.cu")), 99, (cudaGetErrorString(__cuda_local_var_61161_17_non_const_err))); exit(1); } } ; 
-
+(cudaConfigureCall(__cuda_local_var_61152_8_non_const_grid, __cuda_local_var_61152_32_non_const_threads, 0UL, ((struct CUstream_st *)0LL))) ? ((void)0) : (__device_stub__Z9mysgemmNTPKfiS0_iPfiiff(A, lda, B, ldb, C, ldc, k, alpha, beta)); 
 }
-# 31 "main.cu"
+# 13 "main.cu"
 int main( int argc,  char **argv) {  _ZNSt6vectorIfSaIfEE10value_typeE __T22;
  _ZNSt6vectorIfSaIfEE14allocator_typeE __T23;
-
- float *__cuda_local_var_61177_10_non_const_dA;
-# 34 "main.cu"
- float *__cuda_local_var_61177_15_non_const_dB;
-# 34 "main.cu"
- float *__cuda_local_var_61177_20_non_const_dC;
- size_t __cuda_local_var_61178_10_non_const_A_sz;
-# 35 "main.cu"
- size_t __cuda_local_var_61178_16_non_const_B_sz;
-# 35 "main.cu"
- size_t __cuda_local_var_61178_22_non_const_C_sz;
- int __cuda_local_var_61179_7_non_const_matArow;
-# 36 "main.cu"
- int __cuda_local_var_61179_16_non_const_matAcol;
- int __cuda_local_var_61180_7_non_const_matBrow;
-# 37 "main.cu"
- int __cuda_local_var_61180_16_non_const_matBcol;
- struct _ZSt6vectorIfSaIfEE __cuda_local_var_61181_22_non_const_matA;
+# 14 "main.cu"
+ float *__cuda_local_var_61160_10_non_const_dA;
+# 14 "main.cu"
+ float *__cuda_local_var_61160_15_non_const_dB;
+# 14 "main.cu"
+ float *__cuda_local_var_61160_20_non_const_dC;
+ size_t __cuda_local_var_61161_10_non_const_A_sz;
+# 15 "main.cu"
+ size_t __cuda_local_var_61161_16_non_const_B_sz;
+# 15 "main.cu"
+ size_t __cuda_local_var_61161_22_non_const_C_sz;
+ int __cuda_local_var_61162_7_non_const_matArow;
+# 16 "main.cu"
+ int __cuda_local_var_61162_16_non_const_matAcol;
+ int __cuda_local_var_61163_7_non_const_matBrow;
+# 17 "main.cu"
+ int __cuda_local_var_61163_16_non_const_matBcol;
+ struct _ZSt6vectorIfSaIfEE __cuda_local_var_61164_22_non_const_matA;
+# 18 "main.cu"
+ struct _ZSt6vectorIfSaIfEE __cuda_local_var_61164_28_non_const_matBT;
+ int __cuda_local_var_61165_7_non_const_n;
 # 38 "main.cu"
- struct _ZSt6vectorIfSaIfEE __cuda_local_var_61181_28_non_const_matBT;
- int __cuda_local_var_61182_7_non_const_n;
-# 62 "main.cu"
- struct _ZSt6vectorIfSaIfEE __cuda_local_var_61205_22_non_const_matC;
-# 38 "main.cu"
-_ZNSt6vectorIfSaIfEEC1Ev((&__cuda_local_var_61181_22_non_const_matA)); _ZNSt6vectorIfSaIfEEC1Ev((&__cuda_local_var_61181_28_non_const_matBT));
+ struct _ZSt6vectorIfSaIfEE __cuda_local_var_61184_22_non_const_matC;
+# 18 "main.cu"
+_ZNSt6vectorIfSaIfEEC1Ev((&__cuda_local_var_61164_22_non_const_matA)); _ZNSt6vectorIfSaIfEEC1Ev((&__cuda_local_var_61164_28_non_const_matBT));
 
 if (argc == 2) {
-__cuda_local_var_61182_7_non_const_n = (atoi(((const char *)(argv[1]))));
-__cuda_local_var_61178_10_non_const_A_sz = (((unsigned long)(__cuda_local_var_61182_7_non_const_n * __cuda_local_var_61182_7_non_const_n)) * 4UL);
-__cuda_local_var_61178_16_non_const_B_sz = __cuda_local_var_61178_10_non_const_A_sz;
-__cuda_local_var_61178_22_non_const_C_sz = __cuda_local_var_61178_10_non_const_A_sz;
-__cuda_local_var_61179_7_non_const_matArow = __cuda_local_var_61182_7_non_const_n;
-__cuda_local_var_61179_16_non_const_matAcol = __cuda_local_var_61182_7_non_const_n;
-__cuda_local_var_61180_7_non_const_matBrow = __cuda_local_var_61182_7_non_const_n;
-__cuda_local_var_61180_16_non_const_matBcol = __cuda_local_var_61182_7_non_const_n;
+__cuda_local_var_61165_7_non_const_n = (atoi(((const char *)(argv[1]))));
+__cuda_local_var_61161_10_non_const_A_sz = (((unsigned long)(__cuda_local_var_61165_7_non_const_n * __cuda_local_var_61165_7_non_const_n)) * 4UL);
+__cuda_local_var_61161_16_non_const_B_sz = __cuda_local_var_61161_10_non_const_A_sz;
+__cuda_local_var_61161_22_non_const_C_sz = __cuda_local_var_61161_10_non_const_A_sz;
+__cuda_local_var_61162_7_non_const_matArow = __cuda_local_var_61165_7_non_const_n;
+__cuda_local_var_61162_16_non_const_matAcol = __cuda_local_var_61165_7_non_const_n;
+__cuda_local_var_61163_7_non_const_matBrow = __cuda_local_var_61165_7_non_const_n;
+__cuda_local_var_61163_16_non_const_matBcol = __cuda_local_var_61165_7_non_const_n;
 } else  {
 printf(((const char *)"error in input")); {
-_ZNSt6vectorIfSaIfEED1Ev((&__cuda_local_var_61181_28_non_const_matBT)); _ZNSt6vectorIfSaIfEED1Ev((&__cuda_local_var_61181_22_non_const_matA)); return 0; }
+_ZNSt6vectorIfSaIfEED1Ev((&__cuda_local_var_61164_28_non_const_matBT)); _ZNSt6vectorIfSaIfEED1Ev((&__cuda_local_var_61164_22_non_const_matA)); return 0; }
 } {
-
  int i;
-# 54 "main.cu"
-i = 0; for (; (i < __cuda_local_var_61182_7_non_const_n); i++) { {
+# 33 "main.cu"
+i = 0; for (; (i < __cuda_local_var_61165_7_non_const_n); i++) { {
  int j;
-# 55 "main.cu"
-j = 0; for (; (j < __cuda_local_var_61182_7_non_const_n); j++) {  _ZNSt6vectorIfSaIfEE10value_typeE __T24;
+# 34 "main.cu"
+j = 0; for (; (j < __cuda_local_var_61165_7_non_const_n); j++) {  _ZNSt6vectorIfSaIfEE10value_typeE __T24;
  _ZNSt6vectorIfSaIfEE10value_typeE __T25;
-# 56 "main.cu"
-_ZNSt6vectorIfSaIfEE9push_backERKf((&__cuda_local_var_61181_22_non_const_matA), ((((*(_ZNSt6vectorIfSaIfEE10value_typeE *)&__T24)) = (((float)(rand())) / (53687092.0F))) , (&__T24)));
-_ZNSt6vectorIfSaIfEE9push_backERKf((&__cuda_local_var_61181_28_non_const_matBT), ((((*(_ZNSt6vectorIfSaIfEE10value_typeE *)&__T25)) = (((float)(rand())) / (53687092.0F))) , (&__T25)));
-
+# 35 "main.cu"
+_ZNSt6vectorIfSaIfEE9push_backERKf((&__cuda_local_var_61164_22_non_const_matA), ((((*(_ZNSt6vectorIfSaIfEE10value_typeE *)&__T24)) = (((float)(rand())) / (53687092.0F))) , (&__T24)));
+_ZNSt6vectorIfSaIfEE9push_backERKf((&__cuda_local_var_61164_28_non_const_matBT), ((((*(_ZNSt6vectorIfSaIfEE10value_typeE *)&__T25)) = (((float)(rand())) / (53687092.0F))) , (&__T25)));
 } } } }
-
-
-_ZNSt6vectorIfSaIfEEC1EmRKfRKS0_((&__cuda_local_var_61205_22_non_const_matC), ((_ZNSt6vectorIfSaIfEE9size_typeE)(__cuda_local_var_61179_7_non_const_matArow * __cuda_local_var_61180_16_non_const_matBcol)), ((((*(_ZNSt6vectorIfSaIfEE10value_typeE *)&__T22)) = (0.0F)) , (&__T22)), ((_ZNSaIfEC1Ev((&__T23))) , (((const _ZNSt6vectorIfSaIfEE14allocator_typeE *)&__T23)))); _ZNSaIfED1Ev((&__T23));
-cudaMalloc(((void **)(&__cuda_local_var_61177_10_non_const_dA)), __cuda_local_var_61178_10_non_const_A_sz);
-cudaMalloc(((void **)(&__cuda_local_var_61177_15_non_const_dB)), __cuda_local_var_61178_16_non_const_B_sz);
-cudaMalloc(((void **)(&__cuda_local_var_61177_20_non_const_dC)), __cuda_local_var_61178_22_non_const_C_sz);
-
-
-cudaMemcpy(((void *)__cuda_local_var_61177_10_non_const_dA), ((const void *)(_ZNSt6vectorIfSaIfEE5frontEv((&__cuda_local_var_61181_22_non_const_matA)))), __cuda_local_var_61178_10_non_const_A_sz, cudaMemcpyHostToDevice);
-cudaMemcpy(((void *)__cuda_local_var_61177_15_non_const_dB), ((const void *)(_ZNSt6vectorIfSaIfEE5frontEv((&__cuda_local_var_61181_28_non_const_matBT)))), __cuda_local_var_61178_16_non_const_B_sz, cudaMemcpyHostToDevice);
-
-
-
-_Z12regtileSgemmcciiifPKfiS0_ifPfi(((char)78), ((char)84), __cuda_local_var_61179_7_non_const_matArow, __cuda_local_var_61180_16_non_const_matBcol, __cuda_local_var_61179_16_non_const_matAcol, (1.0F), ((const float *)__cuda_local_var_61177_10_non_const_dA), __cuda_local_var_61179_7_non_const_matArow, ((const float *)__cuda_local_var_61177_15_non_const_dB), __cuda_local_var_61180_16_non_const_matBcol, (0.0F), __cuda_local_var_61177_20_non_const_dC, __cuda_local_var_61179_7_non_const_matArow);
-
-
-cudaMemcpy(((void *)(_ZNSt6vectorIfSaIfEE5frontEv((&__cuda_local_var_61205_22_non_const_matC)))), ((const void *)__cuda_local_var_61177_20_non_const_dC), __cuda_local_var_61178_22_non_const_C_sz, cudaMemcpyDeviceToHost); {
-
+_ZNSt6vectorIfSaIfEEC1EmRKfRKS0_((&__cuda_local_var_61184_22_non_const_matC), ((_ZNSt6vectorIfSaIfEE9size_typeE)(__cuda_local_var_61162_7_non_const_matArow * __cuda_local_var_61163_16_non_const_matBcol)), ((((*(_ZNSt6vectorIfSaIfEE10value_typeE *)&__T22)) = (0.0F)) , (&__T22)), ((_ZNSaIfEC1Ev((&__T23))) , (((const _ZNSt6vectorIfSaIfEE14allocator_typeE *)&__T23)))); _ZNSaIfED1Ev((&__T23));
+cudaMalloc(((void **)(&__cuda_local_var_61160_10_non_const_dA)), __cuda_local_var_61161_10_non_const_A_sz);
+cudaMalloc(((void **)(&__cuda_local_var_61160_15_non_const_dB)), __cuda_local_var_61161_16_non_const_B_sz);
+cudaMalloc(((void **)(&__cuda_local_var_61160_20_non_const_dC)), __cuda_local_var_61161_22_non_const_C_sz);
+cudaMemcpy(((void *)__cuda_local_var_61160_10_non_const_dA), ((const void *)(_ZNSt6vectorIfSaIfEE5frontEv((&__cuda_local_var_61164_22_non_const_matA)))), __cuda_local_var_61161_10_non_const_A_sz, cudaMemcpyHostToDevice);
+cudaMemcpy(((void *)__cuda_local_var_61160_15_non_const_dB), ((const void *)(_ZNSt6vectorIfSaIfEE5frontEv((&__cuda_local_var_61164_28_non_const_matBT)))), __cuda_local_var_61161_16_non_const_B_sz, cudaMemcpyHostToDevice);
+_Z12regtileSgemmcciiifPKfiS0_ifPfi(((char)78), ((char)84), __cuda_local_var_61162_7_non_const_matArow, __cuda_local_var_61163_16_non_const_matBcol, __cuda_local_var_61162_16_non_const_matAcol, (1.0F), ((const float *)__cuda_local_var_61160_10_non_const_dA), __cuda_local_var_61162_7_non_const_matArow, ((const float *)__cuda_local_var_61160_15_non_const_dB), __cuda_local_var_61163_16_non_const_matBcol, (0.0F), __cuda_local_var_61160_20_non_const_dC, __cuda_local_var_61162_7_non_const_matArow);
+cudaMemcpy(((void *)(_ZNSt6vectorIfSaIfEE5frontEv((&__cuda_local_var_61184_22_non_const_matC)))), ((const void *)__cuda_local_var_61160_20_non_const_dC), __cuda_local_var_61161_22_non_const_C_sz, cudaMemcpyDeviceToHost); {
  int i;
-# 78 "main.cu"
+# 46 "main.cu"
 i = 100; for (; (i < 103); i++) { {
  int j;
-# 79 "main.cu"
+# 47 "main.cu"
 j = 100; for (; (j < 103); j++) {
-printf(((const char *)"%d "), ((double)(*(_ZNSt6vectorIfSaIfEE2atEm((&__cuda_local_var_61205_22_non_const_matC), ((_ZNSt6vectorIfSaIfEE9size_typeE)((i * __cuda_local_var_61182_7_non_const_n) + j))))))); } }
-printf(((const char *)"\n"));
-} }
-
-
-
-cudaFree(((void *)__cuda_local_var_61177_10_non_const_dA));
-cudaFree(((void *)__cuda_local_var_61177_15_non_const_dB));
-cudaFree(((void *)__cuda_local_var_61177_20_non_const_dC)); {
-_ZNSt6vectorIfSaIfEED1Ev((&__cuda_local_var_61205_22_non_const_matC)); _ZNSt6vectorIfSaIfEED1Ev((&__cuda_local_var_61181_28_non_const_matBT)); _ZNSt6vectorIfSaIfEED1Ev((&__cuda_local_var_61181_22_non_const_matA)); return 0; }
+printf(((const char *)"%d "), ((double)(*(_ZNSt6vectorIfSaIfEE2atEm((&__cuda_local_var_61184_22_non_const_matC), ((_ZNSt6vectorIfSaIfEE9size_typeE)((i * __cuda_local_var_61165_7_non_const_n) + j))))))); } }
+printf(((const char *)"\n")); } }
+cudaFree(((void *)__cuda_local_var_61160_10_non_const_dA));
+cudaFree(((void *)__cuda_local_var_61160_15_non_const_dB));
+cudaFree(((void *)__cuda_local_var_61160_20_non_const_dC)); {
+_ZNSt6vectorIfSaIfEED1Ev((&__cuda_local_var_61184_22_non_const_matC)); _ZNSt6vectorIfSaIfEED1Ev((&__cuda_local_var_61164_28_non_const_matBT)); _ZNSt6vectorIfSaIfEED1Ev((&__cuda_local_var_61164_22_non_const_matA)); return 0; }
 }
 __asm__(".align 2");
 # 865 "/usr/include/c++/4.8.2/bits/locale_facets.h" 3
@@ -1081,7 +1042,7 @@ if ((((this->__b_St12_Vector_baseIfSaIfEE)._M_impl)._M_finish) != (((this->__b_S
  _ZNSt6vectorIfSaIfEE7pointerE __T231;
  _ZNSt12_Vector_baseIfSaIfEE7pointerE __T232;
 # 329 "/usr/include/c++/4.8.2/bits/vector.tcc" 3
- float __cuda_local_var_46766_8_non_const___x_copy;
+ float __cuda_local_var_46769_8_non_const___x_copy;
 # 324 "/usr/include/c++/4.8.2/bits/vector.tcc" 3
 { __T225 = (((this->__b_St12_Vector_baseIfSaIfEE)._M_impl)._M_finish); __T226 = ((const _ZNSt6vectorIfSaIfEE10value_typeE *)((((this->__b_St12_Vector_baseIfSaIfEE)._M_impl)._M_finish) - 1));
 # 216 "/usr/include/c++/4.8.2/ext/alloc_traits.h" 3
@@ -1096,7 +1057,7 @@ if ((((this->__b_St12_Vector_baseIfSaIfEE)._M_impl)._M_finish) != (((this->__b_S
 
 ++(((this->__b_St12_Vector_baseIfSaIfEE)._M_impl)._M_finish);
 
-__cuda_local_var_46766_8_non_const___x_copy = (*__x);
+__cuda_local_var_46769_8_non_const___x_copy = (*__x);
 
 { __T230 = (*(&(((*(const struct _ZN9__gnu_cxx17__normal_iteratorIPfSt6vectorIfSaIfEEEE *)&__position))._M_current))); __T231 = ((((this->__b_St12_Vector_baseIfSaIfEE)._M_impl)._M_finish) - 2); __T232 = ((((this->__b_St12_Vector_baseIfSaIfEE)._M_impl)._M_finish) - 1);
 # 620 "/usr/include/c++/4.8.2/bits/stl_algobase.h" 3
@@ -1113,7 +1074,7 @@ __cuda_local_var_46766_8_non_const___x_copy = (*__x);
 
 
 
-(*(((*(const struct _ZN9__gnu_cxx17__normal_iteratorIPfSt6vectorIfSaIfEEEE *)&__position))._M_current)) = __cuda_local_var_46766_8_non_const___x_copy;
+(*(((*(const struct _ZN9__gnu_cxx17__normal_iteratorIPfSt6vectorIfSaIfEEEE *)&__position))._M_current)) = __cuda_local_var_46769_8_non_const___x_copy;
 
 
 
@@ -1140,17 +1101,17 @@ else  { static struct __C5 __T233[1] = {{((const struct __type_info *)0LL),((uns
  _ZNSt12_Vector_baseIfSaIfEE7pointerE __T251;
  _ZSt6size_t __T252;
 # 342 "/usr/include/c++/4.8.2/bits/vector.tcc" 3
- _ZNSt6vectorIfSaIfEE9size_typeE __cuda_local_var_46779_20_non_const___len;
+ _ZNSt6vectorIfSaIfEE9size_typeE __cuda_local_var_46782_20_non_const___len;
 
- _ZNSt6vectorIfSaIfEE9size_typeE __cuda_local_var_46781_20_non_const___elems_before;
- _ZNSt6vectorIfSaIfEE7pointerE __cuda_local_var_46782_12_non_const___new_start;
- _ZNSt6vectorIfSaIfEE7pointerE __cuda_local_var_46783_12_non_const___new_finish;
+ _ZNSt6vectorIfSaIfEE9size_typeE __cuda_local_var_46784_20_non_const___elems_before;
+ _ZNSt6vectorIfSaIfEE7pointerE __cuda_local_var_46785_12_non_const___new_start;
+ _ZNSt6vectorIfSaIfEE7pointerE __cuda_local_var_46786_12_non_const___new_finish;
 # 342 "/usr/include/c++/4.8.2/bits/vector.tcc" 3
-__cuda_local_var_46779_20_non_const___len = (((__T234 = 1UL) , (void)(__T235 = ((const char *)"vector::_M_insert_aux"))) , ((((((((const struct _ZN9__gnu_cxx13new_allocatorIfEE *)0LL) , 4611686018427387903UL) - ((_ZNSt6vectorIfSaIfEE9size_typeE)((((((const struct _ZSt6vectorIfSaIfEE *)this)->__b_St12_Vector_baseIfSaIfEE)._M_impl)._M_finish) - (((((const struct _ZSt6vectorIfSaIfEE *)this)->__b_St12_Vector_baseIfSaIfEE)._M_impl)._M_start)))) < __T234) ? (_ZSt20__throw_length_errorPKc(__T235)) : ((void)0)) , (void)(__T237 = (((_ZNSt6vectorIfSaIfEE9size_typeE)((((((const struct _ZSt6vectorIfSaIfEE *)this)->__b_St12_Vector_baseIfSaIfEE)._M_impl)._M_finish) - (((((const struct _ZSt6vectorIfSaIfEE *)this)->__b_St12_Vector_baseIfSaIfEE)._M_impl)._M_start))) + (*(_ZSt3maxImERKT_S2_S2_(((((*(_ZNSt6vectorIfSaIfEE9size_typeE *)&__T236)) = ((_ZNSt6vectorIfSaIfEE9size_typeE)((((((const struct _ZSt6vectorIfSaIfEE *)this)->__b_St12_Vector_baseIfSaIfEE)._M_impl)._M_finish) - (((((const struct _ZSt6vectorIfSaIfEE *)this)->__b_St12_Vector_baseIfSaIfEE)._M_impl)._M_start)))) , (&__T236)), (((const _ZNSt6vectorIfSaIfEE9size_typeE *)&__T234)))))))) , (((__T237 < ((_ZNSt6vectorIfSaIfEE9size_typeE)((((((const struct _ZSt6vectorIfSaIfEE *)this)->__b_St12_Vector_baseIfSaIfEE)._M_impl)._M_finish) - (((((const struct _ZSt6vectorIfSaIfEE *)this)->__b_St12_Vector_baseIfSaIfEE)._M_impl)._M_start)))) || (__T237 > (((const struct _ZN9__gnu_cxx13new_allocatorIfEE *)0LL) , 4611686018427387903UL))) ? (((const struct _ZN9__gnu_cxx13new_allocatorIfEE *)0LL) , 4611686018427387903UL) : __T237)));
+__cuda_local_var_46782_20_non_const___len = (((__T234 = 1UL) , (void)(__T235 = ((const char *)"vector::_M_insert_aux"))) , ((((((((const struct _ZN9__gnu_cxx13new_allocatorIfEE *)0LL) , 4611686018427387903UL) - ((_ZNSt6vectorIfSaIfEE9size_typeE)((((((const struct _ZSt6vectorIfSaIfEE *)this)->__b_St12_Vector_baseIfSaIfEE)._M_impl)._M_finish) - (((((const struct _ZSt6vectorIfSaIfEE *)this)->__b_St12_Vector_baseIfSaIfEE)._M_impl)._M_start)))) < __T234) ? (_ZSt20__throw_length_errorPKc(__T235)) : ((void)0)) , (void)(__T237 = (((_ZNSt6vectorIfSaIfEE9size_typeE)((((((const struct _ZSt6vectorIfSaIfEE *)this)->__b_St12_Vector_baseIfSaIfEE)._M_impl)._M_finish) - (((((const struct _ZSt6vectorIfSaIfEE *)this)->__b_St12_Vector_baseIfSaIfEE)._M_impl)._M_start))) + (*(_ZSt3maxImERKT_S2_S2_(((((*(_ZNSt6vectorIfSaIfEE9size_typeE *)&__T236)) = ((_ZNSt6vectorIfSaIfEE9size_typeE)((((((const struct _ZSt6vectorIfSaIfEE *)this)->__b_St12_Vector_baseIfSaIfEE)._M_impl)._M_finish) - (((((const struct _ZSt6vectorIfSaIfEE *)this)->__b_St12_Vector_baseIfSaIfEE)._M_impl)._M_start)))) , (&__T236)), (((const _ZNSt6vectorIfSaIfEE9size_typeE *)&__T234)))))))) , (((__T237 < ((_ZNSt6vectorIfSaIfEE9size_typeE)((((((const struct _ZSt6vectorIfSaIfEE *)this)->__b_St12_Vector_baseIfSaIfEE)._M_impl)._M_finish) - (((((const struct _ZSt6vectorIfSaIfEE *)this)->__b_St12_Vector_baseIfSaIfEE)._M_impl)._M_start)))) || (__T237 > (((const struct _ZN9__gnu_cxx13new_allocatorIfEE *)0LL) , 4611686018427387903UL))) ? (((const struct _ZN9__gnu_cxx13new_allocatorIfEE *)0LL) , 4611686018427387903UL) : __T237)));
 
-__cuda_local_var_46781_20_non_const___elems_before = ((_ZNSt6vectorIfSaIfEE9size_typeE)((__T240 = ((const struct _ZN9__gnu_cxx17__normal_iteratorIPfSt6vectorIfSaIfEEEE *)((__T238 = (((void)((__T239._M_current) = (*(((const _ZNSt6vectorIfSaIfEE7pointerE *)&(((this->__b_St12_Vector_baseIfSaIfEE)._M_impl)._M_start)))))) , __T239)) , (&__T238)))) , ((*(&(((*(const struct _ZN9__gnu_cxx17__normal_iteratorIPfSt6vectorIfSaIfEEEE *)&__position))._M_current))) - (*(&(__T240->_M_current))))));
-__cuda_local_var_46782_12_non_const___new_start = ((__cuda_local_var_46779_20_non_const___len != 0UL) ? (((__cuda_local_var_46779_20_non_const___len > 4611686018427387903UL) ? (_ZSt17__throw_bad_allocv()) : ((void)0)) , ((float *)(_Znwm((__cuda_local_var_46779_20_non_const___len * 4UL))))) : ((_ZN9__gnu_cxx13new_allocatorIfE7pointerE)0LL));
-__cuda_local_var_46783_12_non_const___new_finish = __cuda_local_var_46782_12_non_const___new_start; { (__T241.next) = __curr_eh_stack_entry; __curr_eh_stack_entry = (&__T241); (__T241.kind) = ((unsigned char)5U); (((__T241.variant).try_block).catch_entries) = (__T233); (((__T241.variant).try_block).rtinfo) = ((void *)0LL); (((__T241.variant).try_block).region_number) = __eh_curr_region;
+__cuda_local_var_46784_20_non_const___elems_before = ((_ZNSt6vectorIfSaIfEE9size_typeE)((__T240 = ((const struct _ZN9__gnu_cxx17__normal_iteratorIPfSt6vectorIfSaIfEEEE *)((__T238 = (((void)((__T239._M_current) = (*(((const _ZNSt6vectorIfSaIfEE7pointerE *)&(((this->__b_St12_Vector_baseIfSaIfEE)._M_impl)._M_start)))))) , __T239)) , (&__T238)))) , ((*(&(((*(const struct _ZN9__gnu_cxx17__normal_iteratorIPfSt6vectorIfSaIfEEEE *)&__position))._M_current))) - (*(&(__T240->_M_current))))));
+__cuda_local_var_46785_12_non_const___new_start = ((__cuda_local_var_46782_20_non_const___len != 0UL) ? (((__cuda_local_var_46782_20_non_const___len > 4611686018427387903UL) ? (_ZSt17__throw_bad_allocv()) : ((void)0)) , ((float *)(_Znwm((__cuda_local_var_46782_20_non_const___len * 4UL))))) : ((_ZN9__gnu_cxx13new_allocatorIfE7pointerE)0LL));
+__cuda_local_var_46786_12_non_const___new_finish = __cuda_local_var_46785_12_non_const___new_start; { (__T241.next) = __curr_eh_stack_entry; __curr_eh_stack_entry = (&__T241); (__T241.kind) = ((unsigned char)5U); (((__T241.variant).try_block).catch_entries) = (__T233); (((__T241.variant).try_block).rtinfo) = ((void *)0LL); (((__T241.variant).try_block).region_number) = __eh_curr_region;
 if ((setjmp(((((__T241.variant).try_block).setjmp_buffer)))) == 0)
 { __T253:;
 
@@ -1159,51 +1120,51 @@ if ((setjmp(((((__T241.variant).try_block).setjmp_buffer)))) == 0)
 
 {
 # 130 "/usr/include/c++/4.8.2/ext/new_allocator.h" 3
-(float *)((__T244 = ((float *)((__T243 = (__T242 = ((void *)(__cuda_local_var_46782_12_non_const___new_start + __cuda_local_var_46781_20_non_const___elems_before)))) , __T243))) ? (((*__T244) = (*__x)) , __T244) : ((float *)0LL));
+(float *)((__T244 = ((float *)((__T243 = (__T242 = ((void *)(__cuda_local_var_46785_12_non_const___new_start + __cuda_local_var_46784_20_non_const___elems_before)))) , __T243))) ? (((*__T244) = (*__x)) , __T244) : ((float *)0LL));
 # 353 "/usr/include/c++/4.8.2/bits/vector.tcc" 3
 }
 # 360 "/usr/include/c++/4.8.2/bits/vector.tcc" 3
-__cuda_local_var_46783_12_non_const___new_finish = ((_ZNSt6vectorIfSaIfEE7pointerE)0LL);
+__cuda_local_var_46786_12_non_const___new_finish = ((_ZNSt6vectorIfSaIfEE7pointerE)0LL);
 
-__cuda_local_var_46783_12_non_const___new_finish = (((__T245 = (((this->__b_St12_Vector_baseIfSaIfEE)._M_impl)._M_start)) , (void)(__T246 = (*(&(((*(const struct _ZN9__gnu_cxx17__normal_iteratorIPfSt6vectorIfSaIfEEEE *)&__position))._M_current))))) , (_ZSt18uninitialized_copyIPfS0_ET0_T_S2_S1_(__T245, __T246, __cuda_local_var_46782_12_non_const___new_start)));
-
-
+__cuda_local_var_46786_12_non_const___new_finish = (((__T245 = (((this->__b_St12_Vector_baseIfSaIfEE)._M_impl)._M_start)) , (void)(__T246 = (*(&(((*(const struct _ZN9__gnu_cxx17__normal_iteratorIPfSt6vectorIfSaIfEEEE *)&__position))._M_current))))) , (_ZSt18uninitialized_copyIPfS0_ET0_T_S2_S1_(__T245, __T246, __cuda_local_var_46785_12_non_const___new_start)));
 
 
-++__cuda_local_var_46783_12_non_const___new_finish;
 
-__cuda_local_var_46783_12_non_const___new_finish = (((__T247 = (*(&(((*(const struct _ZN9__gnu_cxx17__normal_iteratorIPfSt6vectorIfSaIfEEEE *)&__position))._M_current)))) , (void)(__T248 = (((this->__b_St12_Vector_baseIfSaIfEE)._M_impl)._M_finish))) , (_ZSt18uninitialized_copyIPfS0_ET0_T_S2_S1_(__T247, __T248, __cuda_local_var_46783_12_non_const___new_finish)));
+
+++__cuda_local_var_46786_12_non_const___new_finish;
+
+__cuda_local_var_46786_12_non_const___new_finish = (((__T247 = (*(&(((*(const struct _ZN9__gnu_cxx17__normal_iteratorIPfSt6vectorIfSaIfEEEE *)&__position))._M_current)))) , (void)(__T248 = (((this->__b_St12_Vector_baseIfSaIfEE)._M_impl)._M_finish))) , (_ZSt18uninitialized_copyIPfS0_ET0_T_S2_S1_(__T247, __T248, __cuda_local_var_46786_12_non_const___new_finish)));
 
 
 
 }
 else  if (__catch_clause_number == 1)
 { __exception_caught();
-if (!(__cuda_local_var_46783_12_non_const___new_finish)) {
+if (!(__cuda_local_var_46786_12_non_const___new_finish)) {
 {
 # 133 "/usr/include/c++/4.8.2/ext/new_allocator.h" 3
-(void)(__cuda_local_var_46782_12_non_const___new_start + __cuda_local_var_46781_20_non_const___elems_before);
+(void)(__cuda_local_var_46785_12_non_const___new_start + __cuda_local_var_46784_20_non_const___elems_before);
 # 377 "/usr/include/c++/4.8.2/bits/vector.tcc" 3
 } } else  {
 
 
 {
 # 151 "/usr/include/c++/4.8.2/bits/stl_construct.h" 3
-_ZSt8_DestroyIPfEvT_S1_(__cuda_local_var_46782_12_non_const___new_start, __cuda_local_var_46783_12_non_const___new_finish);
+_ZSt8_DestroyIPfEvT_S1_(__cuda_local_var_46785_12_non_const___new_start, __cuda_local_var_46786_12_non_const___new_finish);
 # 380 "/usr/include/c++/4.8.2/bits/vector.tcc" 3
 } }
 {
 # 173 "/usr/include/c++/4.8.2/bits/stl_vector.h" 3
-if (__cuda_local_var_46782_12_non_const___new_start) {
+if (__cuda_local_var_46785_12_non_const___new_start) {
 {
 # 110 "/usr/include/c++/4.8.2/ext/new_allocator.h" 3
-_ZdlPv(((void *)__cuda_local_var_46782_12_non_const___new_start));
+_ZdlPv(((void *)__cuda_local_var_46785_12_non_const___new_start));
 # 174 "/usr/include/c++/4.8.2/bits/stl_vector.h" 3
 } }
 # 381 "/usr/include/c++/4.8.2/bits/vector.tcc" 3
 }
 __rethrow();
-} else  { __suppress_optim_on_vars_in_try((&__cuda_local_var_46783_12_non_const___new_finish)); goto __T253; } __curr_eh_stack_entry = (__T241.next); }
+} else  { __suppress_optim_on_vars_in_try((&__cuda_local_var_46786_12_non_const___new_finish)); goto __T253; } __curr_eh_stack_entry = (__T241.next); }
 { __T249 = (((this->__b_St12_Vector_baseIfSaIfEE)._M_impl)._M_start); __T250 = (((this->__b_St12_Vector_baseIfSaIfEE)._M_impl)._M_finish);
 # 150 "/usr/include/c++/4.8.2/bits/stl_construct.h" 3
 {
@@ -1226,9 +1187,9 @@ _ZdlPv(((void *)__T251));
 }
 
 
-(((this->__b_St12_Vector_baseIfSaIfEE)._M_impl)._M_start) = __cuda_local_var_46782_12_non_const___new_start;
-(((this->__b_St12_Vector_baseIfSaIfEE)._M_impl)._M_finish) = __cuda_local_var_46783_12_non_const___new_finish;
-(((this->__b_St12_Vector_baseIfSaIfEE)._M_impl)._M_end_of_storage) = (__cuda_local_var_46782_12_non_const___new_start + __cuda_local_var_46779_20_non_const___len);
+(((this->__b_St12_Vector_baseIfSaIfEE)._M_impl)._M_start) = __cuda_local_var_46785_12_non_const___new_start;
+(((this->__b_St12_Vector_baseIfSaIfEE)._M_impl)._M_finish) = __cuda_local_var_46786_12_non_const___new_finish;
+(((this->__b_St12_Vector_baseIfSaIfEE)._M_impl)._M_end_of_storage) = (__cuda_local_var_46785_12_non_const___new_start + __cuda_local_var_46782_20_non_const___len);
 } 
 }
 __asm__(".align 2");
@@ -1283,14 +1244,14 @@ return __out;
 # 746 "/usr/include/c++/4.8.2/bits/stl_algobase.h" 3
  __attribute__((__weak__)) /* COMDAT group: _ZSt10__fill_n_aIPfmfEN9__gnu_cxx11__enable_ifIXsr3std11__is_scalarIT1_EE7__valueET_E6__typeES4_T0_RKS3_ */ __inline__ _ZN9__gnu_cxx11__enable_ifILb1EPfE6__typeE _ZSt10__fill_n_aIPfmfEN9__gnu_cxx11__enable_ifIXsr3std11__is_scalarIT1_EE7__valueET_E6__typeES4_T0_RKS3_( _ZNSt10_Iter_baseIPfLb0EE13iterator_typeE __first,  _ZNSt6vectorIfSaIfEE9size_typeE __n,  const _ZNSt6vectorIfSaIfEE10value_typeE *__value)
 {
- _ZNSt6vectorIfSaIfEE10value_typeE __cuda_local_var_43864_17_non_const___tmp;
+ _ZNSt6vectorIfSaIfEE10value_typeE __cuda_local_var_43867_17_non_const___tmp;
 # 748 "/usr/include/c++/4.8.2/bits/stl_algobase.h" 3
-__cuda_local_var_43864_17_non_const___tmp = (*__value); {
+__cuda_local_var_43867_17_non_const___tmp = (*__value); {
  unsigned long __niter;
 # 749 "/usr/include/c++/4.8.2/bits/stl_algobase.h" 3
 __niter = __n; for (; (__niter > 0UL); (--__niter) , (void)(++__first)) {
 
-(*__first) = __cuda_local_var_43864_17_non_const___tmp; } }
+(*__first) = __cuda_local_var_43867_17_non_const___tmp; } }
 return __first;
 }
 # 122 "/usr/include/c++/4.8.2/bits/stl_construct.h" 3
@@ -1307,9 +1268,9 @@ return __first;
 
 
 
- char __cuda_local_var_43766_18_const___simple;
+ char __cuda_local_var_43769_18_const___simple;
 # 579 "/usr/include/c++/4.8.2/bits/stl_algobase.h" 3
-__cuda_local_var_43766_18_const___simple = ((char)1);
+__cuda_local_var_43769_18_const___simple = ((char)1);
 
 
 
@@ -1344,9 +1305,9 @@ return (_ZNSt6vectorIfSaIfEE7pointerE)(_ZSt13__copy_move_aILb0EPfS0_ET1_T0_S2_S1
 
 
 
- char __cuda_local_var_43656_18_const___simple;
+ char __cuda_local_var_43659_18_const___simple;
 # 384 "/usr/include/c++/4.8.2/bits/stl_algobase.h" 3
-__cuda_local_var_43656_18_const___simple = ((char)1);
+__cuda_local_var_43659_18_const___simple = ((char)1);
 
 
 
