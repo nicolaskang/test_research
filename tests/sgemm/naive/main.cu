@@ -44,7 +44,6 @@ int main (int argc, char *argv[]) {
 
   cudaMemcpy(dA, &matA.front(), A_sz, cudaMemcpyHostToDevice); 
   cudaMemcpy(dB, &matBT.front(), B_sz, cudaMemcpyHostToDevice); 
-
   regtileSgemm('N', 'T', matArow, matBcol, matAcol, 1.0f, dA, matArow, dB, matBcol, 0.0f, dC, matArow);
     cudaMemcpy(&matC.front(), dC, C_sz, cudaMemcpyDeviceToHost);
 	for(int i = 100; i < 103; i++){
