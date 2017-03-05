@@ -1,10 +1,3 @@
-#define CHECK_ERROR(errorMessage) {
-  cudaError_t err = cudaGetLastError();
-  if( cudaSuccess != err) {
-    fprintf(stderr, "Cuda error: %s in file '%s' in line %i : %s.\n",errorMessage, __FILE__, __LINE__, cudaGetErrorString( err) );\
-    exit(EXIT_FAILURE);
-  }
-}
 #define TILE_N 16 
 #define TILE_TB_HEIGHT 8
 #define TILE_M (TILE_N*TILE_TB_HEIGHT)
@@ -45,6 +38,5 @@ void regtileSgemm( char transa, char transb, int m, int n, int k, float alpha, c
     std::cerr << "unsupported size of matrix. m should be multiple of " << TILE_M<< "; n should be multiple of " << TILE_N << std::endl;}
   dim3 grid( m/TILE_M, n/TILE_N ), threads( TILE_N, TILE_TB_HEIGHT );
   mysgemmNT<<<grid, threads>>>( A, lda, B, ldb, C, ldc, k, alpha, beta);
-  CHECK_ERROR("mySgemm");
 }
 
