@@ -1,9 +1,10 @@
-#define CHECK_ERROR(errorMessage) { \
- cudaError_t err = cudaGetLastError(); \
- if( cudaSuccess != err) { \
- fprintf(stderr, "Cuda error: %s in file '%s' in line %i : %s.\n", \ errorMessage, __FILE__, __LINE__, cudaGetErrorString( err) );\
- exit(EXIT_FAILURE); \
- } \
+#define CHECK_ERROR(errorMessage) {                                    
+cudaError_t err = cudaGetLastError();                                    
+if( cudaSuccess != err) {                                                
+fprintf(stderr, "Cuda error: %s in file '%s' in line %i : %s.\n",errorMessage, __FILE__, __LINE__, cudaGetErrorString( err) );
+exit(EXIT_FAILURE);                                                  
+}                                                                        
+}
 }
 #define TILE_N 16 
 #define TILE_TB_HEIGHT 8
