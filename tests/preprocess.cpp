@@ -43,9 +43,12 @@ int main(int argc,char* argv[]){
 		bool in_comment_area = false;
 		while(getline(kernel_in,LineFromFile)){
 			//cout<<LineFromFile<<endl;
+			trimString(LineFromFile);
 			size_t pos_comment = LineFromFile.find("/*");
 			size_t pos_comment1 = LineFromFile.find("*/");
-			//cout<<pos_comment1<<endl;
+			size_t pos_slash = LineFromFile.find("\\");
+			cout<<"size "<<LineFromFile.size()<<endl; 
+			cout<<pos_slash<<endl;
 			if(in_comment_area==false&&pos_comment!=string::npos){
 				//cout<<"1"<<endl;
 				in_comment_area = true;
@@ -60,9 +63,11 @@ int main(int argc,char* argv[]){
 				}
 				continue;
 			}
-
-			//cout<<LineFromFile.size()<<endl;
-			//cout<<LineFromFile<<endl;
+			if(pos_slash != string::npos && pos_slash == LineFromFile.size()-1){
+				trimString(LineFromFile);
+				mainName_out<<LineFromFile.substr(0,pos_slash);
+				continue;
+			}
 			if(LineFromFile.find("//")!=string::npos){
 				size_t posOfdoubleSlash = LineFromFile.find("//");
 				string substrOfinputLine = LineFromFile.substr(0,posOfdoubleSlash);
