@@ -1,2 +1,2 @@
-./sgemm/naive/sgemm_kernel.cu ./new_sgemm/sgemm_kernel.cu
-./sgemm/naive/main.cu ./new_sgemm/main.cu
+./sgemm/naive/sgemm_kernel.cu ./new_sgemm1/sgemm_kernel.cu
+./sgemm/naive/main.cu ./new_sgemm1/main.cu

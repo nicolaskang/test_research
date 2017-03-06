@@ -31,6 +31,7 @@ int main(int argc,char* argv[]){
 	}
 	ifstream config(argv[1],ifstream::in);
 	string name;
+	
 	while(getline(config,name)){
 		string concat="";
 		string LineFromFile="";
@@ -39,9 +40,29 @@ int main(int argc,char* argv[]){
 		string name2 = name.substr(pos+1);
 		ifstream kernel_in (name1,ios::in);
 		ofstream mainName_out(name2,ios::out);
+		bool in_comment_area = false;
 		while(getline(kernel_in,LineFromFile)){
-			cout<<LineFromFile.size()<<endl;
-			cout<<LineFromFile<<endl;
+			//cout<<LineFromFile<<endl;
+			size_t pos_comment = LineFromFile.find("/*");
+			size_t pos_comment1 = LineFromFile.find("*/");
+			//cout<<pos_comment1<<endl;
+			if(in_comment_area==false&&pos_comment!=string::npos){
+				//cout<<"1"<<endl;
+				in_comment_area = true;
+				mainName_out<<LineFromFile.substr(0,pos_comment);
+			}
+			if(in_comment_area==true){
+				//cout<<"2"<<endl;
+				if(in_comment_area==true&&pos_comment1!=string::npos){
+					//cout<<"3"<<endl;
+					in_comment_area = false;
+					mainName_out<<LineFromFile.substr(pos_comment1+2);
+				}
+				continue;
+			}
+
+			//cout<<LineFromFile.size()<<endl;
+			//cout<<LineFromFile<<endl;
 			if(LineFromFile.find("//")!=string::npos){
 				size_t posOfdoubleSlash = LineFromFile.find("//");
 				string substrOfinputLine = LineFromFile.substr(0,posOfdoubleSlash);

@@ -1,3 +1,15 @@
+/***************************************************************************
+ *cr
+ *cr            (C) Copyright 2010 The Board of Trustees of the
+ *cr                        University of Illinois
+ *cr                         All Rights Reserved
+ *cr
+ ***************************************************************************/
+
+/* 
+ * Main entry of dense matrix-matrix multiplication kernel
+ */
+
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
@@ -7,11 +19,18 @@
 #include <vector>
 #include <iostream>
 #include "sgemm_kernel.cu"
+
+// I/O routines
 extern bool readColMajorMatrixFile(const char *fn, int &nr_row, int &nr_col, std::vector<float>&v);
 extern bool writeColMajorMatrixFile(const char *fn, int, int, std::vector<float>&);
+
 extern "C"
 void computeGold(float *, const float*, const float*, unsigned int, unsigned int, unsigned int);
-int main (int argc, char *argv[]) {
+
+int
+main (int argc, char *argv[]) {
+
+
   float *dA, *dB, *dC;
   size_t A_sz, B_sz, C_sz;
   int matArow, matAcol;
@@ -36,21 +55,34 @@ int main (int argc, char *argv[]) {
     for(int j = 0; j < n; j++){
 	  matA.push_back(static_cast <float> (rand()) / (static_cast <float> (RAND_MAX/40)));  
 	  matBT.push_back(static_cast <float> (rand()) / (static_cast <float> (RAND_MAX/40)));
+
   }
+ 
+  // CUDA memory allocation
   std::vector<float> matC(matArow*matBcol);
   cudaMalloc((void**)&dA, A_sz);
   cudaMalloc((void**)&dB, B_sz);
   cudaMalloc((void**)&dC, C_sz);
 
+  // Copy A and B^T into device memory
   cudaMemcpy(dA, &matA.front(), A_sz, cudaMemcpyHostToDevice); 
   cudaMemcpy(dB, &matBT.front(), B_sz, cudaMemcpyHostToDevice); 
-  regtileSgemm('N', 'T', matArow, matBcol, matAcol, 1.0f, dA, matArow, dB, matBcol, 0.0f, dC, matArow);
+
+
+  // Use standard sgemm interface
+  regtileSgemm('N', 'T', matArow, matBcol, matAcol, 1.0f, 
+      dA, matArow, dB, matBcol, 0.0f, dC, matArow);
+
     cudaMemcpy(&matC.front(), dC, C_sz, cudaMemcpyDeviceToHost);
+
 	for(int i = 100; i < 103; i++){
     for(int j = 100; j < 103; j++)
 	  printf("%d ", matC.at(i * n + j));
 	printf("\n");
   }
+
+
+ 
   cudaFree(dA);
   cudaFree(dB);
   cudaFree(dC);
