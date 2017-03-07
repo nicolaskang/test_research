@@ -70,6 +70,39 @@ int main(int argc,char* argv[]){
 				mainName_out<<LineFromFile.substr(0,pos_slash);
 				continue;
 			}
+
+			// size_t find_asterisk = LineFromFile.find("*");
+			// string tmp;
+			// if(find_asterisk!=string::npos){
+			// 	while(find_asterisk!=string::npos){
+			// 		// cout<<LineFromFile<<endl;
+			// 		if(LineFromFile[find_asterisk-1]==' '&&LineFromFile[find_asterisk+1]==' '){
+			// 			LineFromFile.erase(LineFromFile.begin()+find_asterisk-1);
+			// 		}
+			// 		find_asterisk = LineFromFile.find("*");
+			// 		tmp = LineFromFile.substr(find_asterisk+1);
+			// 		cout<<tmp<<endl;
+			// 		size_t pos = tmp.find("*");
+			// 		if(pos!=string::npos){
+			// 			find_asterisk = find_asterisk + tmp.find("*")+1;
+			// 		}
+			// 		else{
+			// 			mainName_out<<LineFromFile<<endl;
+			// 			break;
+			// 		}
+			// 	}
+			// 	continue;
+			// }
+			std::vector<string::iterator> v;
+			for(std::string::iterator it=LineFromFile.begin(); it!=LineFromFile.end(); ++it){
+				if((*it)=='*'&&*(it-1)==' '&&*(it+1)==' '){
+					v.push_back(it-1);
+				}
+			}
+			for(std::vector<string::iterator>::iterator it = v.begin();it!=v.end();it++){
+				LineFromFile.erase(*it);
+			}
+
 			if(LineFromFile.find("//")!=string::npos){
 				size_t posOfdoubleSlash = LineFromFile.find("//");
 				string substrOfinputLine = LineFromFile.substr(0,posOfdoubleSlash);

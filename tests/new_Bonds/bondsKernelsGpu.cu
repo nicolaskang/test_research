@@ -1,5 +1,5 @@
-#include "bondsKernelsGpu.cuh"
-__device__ int monthLengthKernelGpu(int month, bool leapYear) 
+ #include "bondsKernelsGpu1.cuh"
+ __device__ int monthLengthKernelGpu(int month, bool leapYear) 
 {
 int MonthLength[12];
 MonthLength[0]=31;
@@ -14,7 +14,7 @@ MonthLength[8]=30;
 MonthLength[9]=31;
 MonthLength[10]=30;
 MonthLength[11]=31;
-int MonthLeapLength[12];
+ int MonthLeapLength[12];
 MonthLeapLength[0]=31;
 MonthLeapLength[1]=29;
 MonthLeapLength[2]=31;
@@ -27,9 +27,9 @@ MonthLeapLength[8]=30;
 MonthLeapLength[9]=31;
 MonthLeapLength[10]=30;
 MonthLeapLength[11]=31;
-return (leapYear? MonthLeapLength[month-1] : MonthLength[month-1]);
+ return (leapYear? MonthLeapLength[month-1] : MonthLength[month-1]);
 }
-__device__ int monthOffsetKernelGpu(int m, bool leapYear) 
+ __device__ int monthOffsetKernelGpu(int m, bool leapYear) 
 {
 int MonthOffset[13];
 MonthOffset[0]=0;
@@ -45,7 +45,7 @@ MonthOffset[9]=273;
 MonthOffset[10]=304;
 MonthOffset[11]=334;
 MonthOffset[12]=365;
-int MonthLeapOffset[13];
+ int MonthLeapOffset[13];
 MonthLeapOffset[0]=0;
 MonthLeapOffset[1]=31;
 MonthLeapOffset[2]=60;
@@ -59,11 +59,11 @@ MonthLeapOffset[9]=274;
 MonthLeapOffset[10]=305;
 MonthLeapOffset[11]=335;
 MonthLeapOffset[12]=366;
-return (leapYear? MonthLeapOffset[m-1] : MonthOffset[m-1]);
+ return (leapYear? MonthLeapOffset[m-1] : MonthOffset[m-1]);
 }
-__device__ int yearOffsetKernelGpu(int y)
+ __device__ int yearOffsetKernelGpu(int y)
 {
-int YearOffset[121];
+ int YearOffset[121];
 YearOffset[0] = 0;;
 YearOffset[1] = 366;;
 YearOffset[2] = 731;
@@ -86,7 +86,7 @@ YearOffset[18] = 6575;
 YearOffset[19] = 6940;
 YearOffset[20] = 7305;
 YearOffset[21] = 7671;
-YearOffset[22] = 8036;
+ YearOffset[22] = 8036;
 YearOffset[23] = 8401;
 YearOffset[24] = 8766;
 YearOffset[25] = 9132;
@@ -98,7 +98,7 @@ YearOffset[30] = 10958;
 YearOffset[31] = 11323;
 YearOffset[32] = 11688;
 YearOffset[33] = 12054;
-YearOffset[34] = 12419;
+ YearOffset[34] = 12419;
 YearOffset[35] = 12784;
 YearOffset[36] = 13149;
 YearOffset[37] = 13515;
@@ -110,7 +110,7 @@ YearOffset[42] = 15341;
 YearOffset[43] = 15706;
 YearOffset[44] = 16071;
 YearOffset[45] = 16437;
-YearOffset[46] = 16802;
+ YearOffset[46] = 16802;
 YearOffset[47] = 17167;
 YearOffset[48] = 17532;
 YearOffset[49] = 17898;
@@ -134,7 +134,7 @@ YearOffset[66] = 24107;
 YearOffset[67] = 24472;
 YearOffset[68] = 24837;
 YearOffset[69] = 25203;
-YearOffset[70] = 25568;
+ YearOffset[70] = 25568;
 YearOffset[71] = 25933;
 YearOffset[72] = 26298;
 YearOffset[73] = 26664;
@@ -158,7 +158,7 @@ YearOffset[90] = 32873;
 YearOffset[91] = 33238;
 YearOffset[92] = 33603;
 YearOffset[93] = 33969;
-YearOffset[94] = 34334;
+ YearOffset[94] = 34334;
 YearOffset[95] = 34699;
 YearOffset[96] = 35064;
 YearOffset[97] = 35430;
@@ -170,7 +170,7 @@ YearOffset[102] = 37256;
 YearOffset[103] = 37621;
 YearOffset[104] = 37986;
 YearOffset[105] = 38352;
-YearOffset[106] = 38717;
+ YearOffset[106] = 38717;
 YearOffset[107] = 39082;
 YearOffset[108] = 39447;
 YearOffset[109] = 39813;
@@ -187,10 +187,10 @@ YearOffset[119] = 42735;
 YearOffset[120] = 43830;
  return YearOffset[y-1900];
 }
-__device__ bool isLeapKernelGpu(int y) 
+ __device__ bool isLeapKernelGpu(int y) 
 {
  bool YearIsLeap[121];
-YearIsLeap[0] = 1;;
+ YearIsLeap[0] = 1;;
 YearIsLeap[1] = 0;;
 YearIsLeap[2] = 0;
 YearIsLeap[3] = 0;
@@ -212,7 +212,7 @@ YearIsLeap[18] = 0;
 YearIsLeap[19] = 0;
 YearIsLeap[20] = 1;
 YearIsLeap[21] = 0;
-YearIsLeap[22] = 0;
+ YearIsLeap[22] = 0;
 YearIsLeap[23] = 0;
 YearIsLeap[24] = 1;
 YearIsLeap[25] = 0;
@@ -224,7 +224,7 @@ YearIsLeap[30] = 0;
 YearIsLeap[31] = 0;
 YearIsLeap[32] = 1;
 YearIsLeap[33] = 0;
-YearIsLeap[34] = 0;
+ YearIsLeap[34] = 0;
 YearIsLeap[35] = 0;
 YearIsLeap[36] = 1;
 YearIsLeap[37] = 0;
@@ -236,7 +236,7 @@ YearIsLeap[42] = 0;
 YearIsLeap[43] = 0;
 YearIsLeap[44] = 1;
 YearIsLeap[45] = 0;
-YearIsLeap[46] = 0;
+ YearIsLeap[46] = 0;
 YearIsLeap[47] = 0;
 YearIsLeap[48] = 1;
 YearIsLeap[49] = 0;
@@ -260,7 +260,7 @@ YearIsLeap[66] = 0;
 YearIsLeap[67] = 0;
 YearIsLeap[68] = 1;
 YearIsLeap[69] = 0;
-YearIsLeap[70] = 0;
+ YearIsLeap[70] = 0;
 YearIsLeap[71] = 0;
 YearIsLeap[72] = 1;
 YearIsLeap[73] = 0;
@@ -284,7 +284,7 @@ YearIsLeap[90] = 0;
 YearIsLeap[91] = 0;
 YearIsLeap[92] = 1;
 YearIsLeap[93] = 0;
-YearIsLeap[94] = 0;
+ YearIsLeap[94] = 0;
 YearIsLeap[95] = 0;
 YearIsLeap[96] = 1;
 YearIsLeap[97] = 0;
@@ -296,7 +296,7 @@ YearIsLeap[102] =0;
 YearIsLeap[103] =0;
 YearIsLeap[104] =1;
 YearIsLeap[105] =0;
-YearIsLeap[106] = 0;
+ YearIsLeap[106] = 0;
 YearIsLeap[107] = 0;
 YearIsLeap[108] = 1;
 YearIsLeap[109] = 0;
@@ -311,135 +311,135 @@ YearIsLeap[117] = 0;
 YearIsLeap[118] = 0;
 YearIsLeap[119] = 0;
 YearIsLeap[120] = 1;
-return YearIsLeap[y-1900];
+ return YearIsLeap[y-1900];
 }
-__device__ bondsDateStruct intializeDateKernelGpu(int d, int m, int y) 
+ __device__ bondsDateStruct intializeDateKernelGpu(int d, int m, int y) 
 {
 bondsDateStruct currDate;
-currDate.day = d;
+ currDate.day = d;
 currDate.month = m;
 currDate.year = y;
-bool leap = isLeapKernelGpu(y);
+ bool leap = isLeapKernelGpu(y);
 int offset = monthOffsetKernelGpu(m,leap);
-currDate.dateSerialNum = d + offset + yearOffsetKernelGpu(y);
-return currDate;
+ currDate.dateSerialNum = d + offset + yearOffsetKernelGpu(y);
+ return currDate;
 }
-__device__ dataType yearFractionGpu(bondsDateStruct d1,bondsDateStruct d2, int dayCounter)
+ __device__ dataType yearFractionGpu(bondsDateStruct d1, bondsDateStruct d2, int dayCounter)
 {
 return dayCountGpu(d1, d2, dayCounter) / 360.0; 
 }
-__device__ int dayCountGpu(bondsDateStruct d1, bondsDateStruct d2, int dayCounter) 
+ __device__ int dayCountGpu(bondsDateStruct d1, bondsDateStruct d2, int dayCounter) 
 {
 if (dayCounter == USE_EXACT_DAY)
 {
 int dd1 = d1.day, dd2 = d2.day;
 int mm1 = d1.month, mm2 = d2.month;
 int yy1 = d1.year, yy2 = d2.year;
-if (dd2 == 31 && dd1 < 30) 
+ if (dd2 == 31 && dd1 < 30) 
 { 
 dd2 = 1; mm2++; 
 }
  return 360*(yy2-yy1) + 30*(mm2-mm1-1) + MAX(0, 30-dd1) + MIN(30, dd2);
 }
-else
+ else
 {
 return (d2.dateSerialNum - d1.dateSerialNum);
 }
 }
-__device__ dataType couponNotionalGpu()
+ __device__ dataType couponNotionalGpu()
 {
 return 100.0;
 }
-__device__ dataType bondNotionalGpu()
+ __device__ dataType bondNotionalGpu()
 {
 return 100.0;
 }
-__device__ dataType fixedRateCouponNominalGpu()
+ __device__ dataType fixedRateCouponNominalGpu()
 {
 return 100.0;
 }
-__device__ bool eventHasOccurredGpu(bondsDateStruct currDate, bondsDateStruct eventDate)
+ __device__ bool eventHasOccurredGpu(bondsDateStruct currDate, bondsDateStruct eventDate)
 {
  return eventDate.dateSerialNum > currDate.dateSerialNum;
 }
-__device__ bool cashFlowHasOccurredGpu(bondsDateStruct refDate, bondsDateStruct eventDate)
+ __device__ bool cashFlowHasOccurredGpu(bondsDateStruct refDate, bondsDateStruct eventDate)
 {
  return eventHasOccurredGpu(refDate, eventDate);
 }
-__device__ bondsDateStruct advanceDateGpu(bondsDateStruct date, int numMonthsAdvance) 
+ __device__ bondsDateStruct advanceDateGpu(bondsDateStruct date, int numMonthsAdvance) 
 {
 int d = date.day;
 int m = date.month+numMonthsAdvance;
 int y = date.year;
-while (m > 12) 
+ while (m > 12) 
 {
 m -= 12;
 y += 1;
 }
-while (m < 1) 
+ while (m < 1) 
 {
 m += 12;
 y -= 1;
 }
-int length = monthLengthKernelGpu(m, isLeapKernelGpu(y));
+ int length = monthLengthKernelGpu(m, isLeapKernelGpu(y));
 if (d > length)
 d = length;
-bondsDateStruct newDate = intializeDateKernelGpu(d, m, y);
-return newDate;
+ bondsDateStruct newDate = intializeDateKernelGpu(d, m, y);
+ return newDate;
 }
-__device__ int getNumCashFlowsGpu(inArgsStruct inArgs, int bondNum)
+ __device__ int getNumCashFlowsGpu(inArgsStruct inArgs, int bondNum)
 {
 int numCashFlows = 0;
-bondsDateStruct currCashflowDate = inArgs.bond[bondNum].maturityDate;
-while (currCashflowDate.dateSerialNum > inArgs.bond[bondNum].startDate.dateSerialNum)
+ bondsDateStruct currCashflowDate = inArgs.bond[bondNum].maturityDate;
+ while (currCashflowDate.dateSerialNum > inArgs.bond[bondNum].startDate.dateSerialNum)
 {
 numCashFlows++;
 currCashflowDate = advanceDateGpu(currCashflowDate, -6); 
 }
-return numCashFlows+1;
+ return numCashFlows+1;
 }
-__device__ dataType getDirtyPriceGpu(inArgsStruct inArgs, int bondNum, cashFlowsStruct cashFlows, int numLegs)
+ __device__ dataType getDirtyPriceGpu(inArgsStruct inArgs, int bondNum, cashFlowsStruct cashFlows, int numLegs)
 {
 dataType currentNotional = bondNotionalGpu();
-return discountingBondEngineCalculateSettlementValueGpu(inArgs, bondNum, cashFlows, numLegs) * 100.0 / currentNotional;
+return discountingBondEngineCalculateSettlementValueGpu(inArgs, bondNum, cashFlows, numLegs)* 100.0 / currentNotional;
 }
-__device__ dataType getAccruedAmountGpu(inArgsStruct inArgs, bondsDateStruct date, int bondNum, cashFlowsStruct cashFlows, int numLegs)
+ __device__ dataType getAccruedAmountGpu(inArgsStruct inArgs, bondsDateStruct date, int bondNum, cashFlowsStruct cashFlows, int numLegs)
 {
 return bondAccruedAmountGpu(inArgs, date, bondNum, cashFlows, numLegs);
 }
-__device__ dataType discountingBondEngineCalculateSettlementValueGpu(inArgsStruct inArgs, int bondNum, cashFlowsStruct cashFlows, int numLegs) 
+ __device__ dataType discountingBondEngineCalculateSettlementValueGpu(inArgsStruct inArgs, int bondNum, cashFlowsStruct cashFlows, int numLegs) 
 {
-bondsDateStruct currDate = inArgs.currDate[bondNum];
-if (currDate.dateSerialNum < inArgs.bond[bondNum].startDate.dateSerialNum)
+ bondsDateStruct currDate = inArgs.currDate[bondNum];
+ if (currDate.dateSerialNum < inArgs.bond[bondNum].startDate.dateSerialNum)
 {
 currDate = inArgs.bond[bondNum].startDate;
 }
-return cashFlowsNpvGpu(cashFlows, inArgs.discountCurve[bondNum], false, currDate, currDate, numLegs);
+ return cashFlowsNpvGpu(cashFlows, inArgs.discountCurve[bondNum], false, currDate, currDate, numLegs);
 }
-__device__ dataType bondAccruedAmountGpu(inArgsStruct inArgs, bondsDateStruct date, int bondNum, cashFlowsStruct cashFlows, int numLegs)
+ __device__ dataType bondAccruedAmountGpu(inArgsStruct inArgs, bondsDateStruct date, int bondNum, cashFlowsStruct cashFlows, int numLegs)
 {
 dataType currentNotional = bondNotionalGpu();
 if (currentNotional == 0.0)
 return 0.0;
-return bondFunctionsAccruedAmountGpu(inArgs, date, bondNum, cashFlows, numLegs);
+ return bondFunctionsAccruedAmountGpu(inArgs, date, bondNum, cashFlows, numLegs);
 }
-__device__ dataType bondFunctionsAccruedAmountGpu(inArgsStruct inArgs, bondsDateStruct date, int bondNum, cashFlowsStruct cashFlows, int numLegs) 
+ __device__ dataType bondFunctionsAccruedAmountGpu(inArgsStruct inArgs, bondsDateStruct date, int bondNum, cashFlowsStruct cashFlows, int numLegs) 
 {
  return cashFlowsAccruedAmountGpu(cashFlows, false, date, numLegs, inArgs, bondNum) *
  100.0 / bondNotionalGpu();
 }
-__device__ dataType cashFlowsAccruedAmountGpu(cashFlowsStruct cashFlows, bool includecurrDateFlows, bondsDateStruct currDate, int numLegs, inArgsStruct inArgs, int bondNum) 
+ __device__ dataType cashFlowsAccruedAmountGpu(cashFlowsStruct cashFlows, bool includecurrDateFlows, bondsDateStruct currDate, int numLegs, inArgsStruct inArgs, int bondNum) 
 {
 int legComputeNum = cashFlowsNextCashFlowNumGpu(cashFlows, currDate, numLegs); 
  dataType result = 0.0;
-int i;
+ int i;
  for (i = legComputeNum; i < (numLegs); ++i)
 {
  result += fixedRateCouponAccruedAmountGpu(cashFlows, i, currDate, inArgs, bondNum);
  }
  return result;
 }
-__device__ dataType fixedRateCouponAccruedAmountGpu(cashFlowsStruct cashFlows, int numLeg, bondsDateStruct d, inArgsStruct inArgs, int bondNum) 
+ __device__ dataType fixedRateCouponAccruedAmountGpu(cashFlowsStruct cashFlows, int numLeg, bondsDateStruct d, inArgsStruct inArgs, int bondNum) 
 {
 if (d.dateSerialNum <= cashFlows.legs[numLeg].accrualStartDate.dateSerialNum || d.dateSerialNum > inArgs.maturityDate[bondNum].dateSerialNum) 
 {
@@ -452,39 +452,39 @@ if (d.dateSerialNum < cashFlows.legs[numLeg].accrualEndDate.dateSerialNum)
 {
 endDate = d;
 }
-return fixedRateCouponNominalGpu()*(interestRateCompoundFactorGpu(cashFlows.intRate, cashFlows.legs[numLeg].accrualStartDate, endDate, cashFlows.dayCounter) - 1.0);
+ return fixedRateCouponNominalGpu()*(interestRateCompoundFactorGpu(cashFlows.intRate, cashFlows.legs[numLeg].accrualStartDate, endDate, cashFlows.dayCounter) - 1.0);
 }
 }
-__device__ dataType cashFlowsNpvGpu(cashFlowsStruct cashFlows, bondsYieldTermStruct discountCurve, bool includecurrDateFlows, bondsDateStruct currDate, bondsDateStruct npvDate,int numLegs) 
+ __device__ dataType cashFlowsNpvGpu(cashFlowsStruct cashFlows, bondsYieldTermStruct discountCurve, bool includecurrDateFlows, bondsDateStruct currDate, bondsDateStruct npvDate, int numLegs) 
 {
  npvDate = currDate;
  dataType totalNPV = 0.0;
-int i;
+ int i;
  for (i=0; i<numLegs; ++i) {
  if (!(cashFlowHasOccurredGpu(cashFlows.legs[i].paymentDate, currDate)))
  totalNPV += fixedRateCouponAmountGpu(cashFlows, i) *
  bondsYieldTermStructureDiscountGpu(discountCurve, cashFlows.legs[i].paymentDate);
  }
-return totalNPV/bondsYieldTermStructureDiscountGpu(discountCurve, npvDate);
+ return totalNPV/bondsYieldTermStructureDiscountGpu(discountCurve, npvDate);
 }
-__device__ dataType bondsYieldTermStructureDiscountGpu(bondsYieldTermStruct ytStruct, bondsDateStruct t)
+ __device__ dataType bondsYieldTermStructureDiscountGpu(bondsYieldTermStruct ytStruct, bondsDateStruct t)
 {
 ytStruct.intRate.rate = ytStruct.forward;
 ytStruct.intRate.freq = ytStruct.frequency;
 ytStruct.intRate.comp = ytStruct.compounding;
 return flatForwardDiscountImplGpu(ytStruct.intRate, yearFractionGpu(ytStruct.refDate, t, ytStruct.dayCounter));
 }
-__device__ dataType flatForwardDiscountImplGpu(intRateStruct intRate, dataType t) 
+ __device__ dataType flatForwardDiscountImplGpu(intRateStruct intRate, dataType t) 
 {
 return interestRateDiscountFactorGpu(intRate, t);
 }
-__device__ dataType interestRateDiscountFactorGpu(intRateStruct intRate, dataType t) 
+ __device__ dataType interestRateDiscountFactorGpu(intRateStruct intRate, dataType t) 
 {
 return 1.0/interestRateCompoundFactorGpuTwoArgs(intRate, t);
 }
-__device__ dataType interestRateCompoundFactorGpuTwoArgs(intRateStruct intRate, dataType t) 
+ __device__ dataType interestRateCompoundFactorGpuTwoArgs(intRateStruct intRate, dataType t) 
 {
-{
+ {
  if (intRate.comp == SIMPLE_INTEREST)
  return 1.0 + intRate.rate*t;
  else if (intRate.comp == COMPOUNDED_INTEREST)
@@ -492,9 +492,9 @@ __device__ dataType interestRateCompoundFactorGpuTwoArgs(intRateStruct intRate, 
  else if (intRate.comp == CONTINUOUS_INTEREST)
  return exp(intRate.rate*t);
 }
-return 0.0f;
+ return 0.0f;
 }
-__device__ dataType fixedRateCouponAmountGpu(cashFlowsStruct cashFlows, int numLeg) 
+ __device__ dataType fixedRateCouponAmountGpu(cashFlowsStruct cashFlows, int numLeg) 
 {
 if (cashFlows.legs[numLeg].amount == COMPUTE_AMOUNT)
 {
@@ -506,12 +506,12 @@ else
 return cashFlows.legs[numLeg].amount;
 }
 }
-__device__ dataType interestRateCompoundFactorGpu(intRateStruct intRate, bondsDateStruct d1, bondsDateStruct d2, int dayCounter)
+ __device__ dataType interestRateCompoundFactorGpu(intRateStruct intRate, bondsDateStruct d1, bondsDateStruct d2, int dayCounter)
 {
 dataType t = yearFractionGpu(d1, d2, dayCounter);
 return interestRateCompoundFactorGpuTwoArgs(intRate, t);
 }
-__device__ dataType interestRateImpliedRateGpu(dataType compound, int comp, dataType freq, dataType t) 
+ __device__ dataType interestRateImpliedRateGpu(dataType compound, int comp, dataType freq, dataType t) 
 {
  dataType r = 0.0f;
  if (compound==1.0) 
@@ -529,12 +529,12 @@ else {
  }
  return r;
 }
-__device__ dataType getMarketRepoRateGpu(bondsDateStruct d, int comp, dataType freq, bondsDateStruct referenceDate, inArgsStruct inArgs, int bondNum)
+ __device__ dataType getMarketRepoRateGpu(bondsDateStruct d, int comp, dataType freq, bondsDateStruct referenceDate, inArgsStruct inArgs, int bondNum)
 {
 dataType compound = 1.0/bondsYieldTermStructureDiscountGpu(inArgs.repoCurve[bondNum], d);
  return interestRateImpliedRateGpu(compound, comp, freq, yearFractionGpu(referenceDate, d, inArgs.repoCurve[bondNum].dayCounter));
 }
-__device__ couponStruct cashFlowsNextCashFlowGpu(cashFlowsStruct cashFlows, bondsDateStruct currDate,int numLegs) 
+ __device__ couponStruct cashFlowsNextCashFlowGpu(cashFlowsStruct cashFlows, bondsDateStruct currDate, int numLegs) 
 {
 int i;
  for (i = 0; i < numLegs; ++i) 
@@ -544,7 +544,7 @@ int i;
  }
  return cashFlows.legs[numLegs-1];
 }
-__device__ int cashFlowsNextCashFlowNumGpu(cashFlowsStruct cashFlows, bondsDateStruct currDate,int numLegs) 
+ __device__ int cashFlowsNextCashFlowNumGpu(cashFlowsStruct cashFlows, bondsDateStruct currDate, int numLegs) 
 {
 int i;
  for (i = 0; i < numLegs; ++i) 
@@ -554,61 +554,59 @@ int i;
  }
  return (numLegs-1);
 }
-__device__ dataType getBondYieldGpu(dataType cleanPrice, int dc, int comp, dataType freq, bondsDateStruct settlement, dataType accuracy, int maxEvaluations, inArgsStruct currInArgs, int bondNum, cashFlowsStruct cashFlows, int numLegs)
+ __device__ dataType getBondYieldGpu(dataType cleanPrice, int dc, int comp, dataType freq, bondsDateStruct settlement, dataType accuracy, int maxEvaluations, inArgsStruct currInArgs, int bondNum, cashFlowsStruct cashFlows, int numLegs)
 {
 dataType currentNotional = bondNotionalGpu();
-if (currentNotional == 0.0)
+ if (currentNotional == 0.0)
 return 0.0;
-if (currInArgs.bond[bondNum].startDate.dateSerialNum > settlement.dateSerialNum)
+ if (currInArgs.bond[bondNum].startDate.dateSerialNum > settlement.dateSerialNum)
 {
 settlement = currInArgs.bond[bondNum].startDate;
 }
-return getBondFunctionsYieldGpu(cleanPrice, dc, comp, freq,settlement, accuracy, maxEvaluations,currInArgs, bondNum, cashFlows, numLegs);
+ return getBondFunctionsYieldGpu(cleanPrice, dc, comp, freq, settlement, accuracy, maxEvaluations, currInArgs, bondNum, cashFlows, numLegs);
 }
-__device__ dataType getBondFunctionsYieldGpu(dataType cleanPrice, int dc, int comp, dataType freq, bondsDateStruct settlement, dataType accuracy, int maxEvaluations, inArgsStruct currInArgs, int bondNum, cashFlowsStruct cashFlows, int numLegs)
+ __device__ dataType getBondFunctionsYieldGpu(dataType cleanPrice, int dc, int comp, dataType freq, bondsDateStruct settlement, dataType accuracy, int maxEvaluations, inArgsStruct currInArgs, int bondNum, cashFlowsStruct cashFlows, int numLegs)
 {
  dataType dirtyPrice = cleanPrice + bondFunctionsAccruedAmountGpu(currInArgs, settlement, bondNum, cashFlows, numLegs); 
  dirtyPrice /= 100.0 / bondNotionalGpu();
  return getCashFlowsYieldGpu(cashFlows, dirtyPrice, dc, comp, freq, false, settlement, settlement, numLegs, accuracy, maxEvaluations, 0.05f);
 }
-__device__ dataType getCashFlowsYieldGpu(cashFlowsStruct leg, dataType npv, int dayCounter, int compounding, dataType frequency, bool includecurrDateFlows, bondsDateStruct currDate, bondsDateStruct npvDate, int numLegs, dataType accuracy, int maxIterations, dataType guess)
+ __device__ dataType getCashFlowsYieldGpu(cashFlowsStruct leg, dataType npv, int dayCounter, int compounding, dataType frequency, bool includecurrDateFlows, bondsDateStruct currDate, bondsDateStruct npvDate, int numLegs, dataType accuracy, int maxIterations, dataType guess)
 {
-solverStruct solver;
+ solverStruct solver;
 solver.maxEvaluations_ = maxIterations;
 irrFinderStruct objFunction;
-objFunction.npv = npv;
+ objFunction.npv = npv;
 objFunction.dayCounter = dayCounter;
 objFunction.comp = compounding;
 objFunction.freq = frequency;
 objFunction.includecurrDateFlows = includecurrDateFlows;
 objFunction.currDate = currDate;
 objFunction.npvDate = npvDate;
-return solverSolveGpu(solver, objFunction, accuracy, guess, guess/10.0, leg, numLegs);
+ return solverSolveGpu(solver, objFunction, accuracy, guess, guess/10.0, leg, numLegs);
 }
-__device__ dataType solverSolveGpu(solverStruct solver,irrFinderStruct f,dataType accuracy,dataType guess,dataType step,cashFlowsStruct cashFlows,int numLegs)
+ __device__ dataType solverSolveGpu(solverStruct solver, irrFinderStruct f, dataType accuracy, dataType guess, dataType step, cashFlowsStruct cashFlows, int numLegs)
 {
-accuracy = MAX(accuracy, QL_EPSILON_GPU);
-dataType growthFactor = 1.6;
+ accuracy = MAX(accuracy, QL_EPSILON_GPU);
+ dataType growthFactor = 1.6;
 int flipflop = -1;
-solver.root_ = guess;
+ solver.root_ = guess;
 solver.fxMax_ = fOpGpu(f, solver.root_, cashFlows, numLegs);
-if (closeGpu(solver.fxMax_,0.0))
+ if (closeGpu(solver.fxMax_,0.0))
 {
 return solver.root_;
 }
 else if (closeGpu(solver.fxMax_, 0.0)) 
 {
-solver.xMin_ = /*enforceBounds*/(solver.root_ - step);
-solver.fxMin_ = fOpGpu(f, solver.xMin_, cashFlows, numLegs);
+solver.xMin_ = (solver.root_ - step);solver.fxMin_ = fOpGpu(f, solver.xMin_, cashFlows, numLegs);
 solver.xMax_ = solver.root_;
 } 
 else {
 solver.xMin_ = solver.root_;
 solver.fxMin_ = solver.fxMax_;
-solver.xMax_ = /*enforceBounds*/(solver.root_+step);
-solver.fxMax_ = fOpGpu(f, solver.xMax_, cashFlows, numLegs);
+solver.xMax_ = (solver.root_+step);solver.fxMax_ = fOpGpu(f, solver.xMax_, cashFlows, numLegs);
 }
-solver.evaluationNumber_ = 2;
+ solver.evaluationNumber_ = 2;
 while (solver.evaluationNumber_ <= solver.maxEvaluations_) 
 {
 if (solver.fxMin_*solver.fxMax_ <= 0.0) 
@@ -622,38 +620,34 @@ return solveImplGpu(solver, f, accuracy, cashFlows, numLegs);
 }
 if (fabs(solver.fxMin_) < fabs(solver.fxMax_)) 
 {
-solver.xMin_ = /*enforceBounds*/(solver.xMin_+growthFactor*(solver.xMin_ - solver.xMax_));
-solver.fxMin_= fOpGpu(f, solver.xMin_, cashFlows, numLegs);
+solver.xMin_ = (solver.xMin_+growthFactor*(solver.xMin_ - solver.xMax_));solver.fxMin_= fOpGpu(f, solver.xMin_, cashFlows, numLegs);
 } 
 else if (fabs(solver.fxMin_) > fabs(solver.fxMax_)) 
 {
-solver.xMax_ = /*enforceBounds*/(solver.xMax_+growthFactor*(solver.xMax_ - solver.xMin_));
-solver.fxMax_= fOpGpu(f, solver.xMax_, cashFlows, numLegs);
+solver.xMax_ = (solver.xMax_+growthFactor*(solver.xMax_ - solver.xMin_));solver.fxMax_= fOpGpu(f, solver.xMax_, cashFlows, numLegs);
 } 
 else if (flipflop == -1) 
 {
-solver.xMin_ = /*enforceBounds*/(solver.xMin_+growthFactor*(solver.xMin_ - solver.xMax_));
-solver.fxMin_= fOpGpu(f, solver.xMin_, cashFlows, numLegs);
+solver.xMin_ = (solver.xMin_+growthFactor*(solver.xMin_ - solver.xMax_));solver.fxMin_= fOpGpu(f, solver.xMin_, cashFlows, numLegs);
 solver.evaluationNumber_++;
 flipflop = 1;
 } 
 else if (flipflop == 1) 
 {
-solver.xMax_ = /*enforceBounds*/(solver.xMax_+growthFactor*(solver.xMax_ - solver.xMin_));
-solver.fxMax_= fOpGpu(f, solver.xMax_, cashFlows, numLegs);
+solver.xMax_ = (solver.xMax_+growthFactor*(solver.xMax_ - solver.xMin_));solver.fxMax_= fOpGpu(f, solver.xMax_, cashFlows, numLegs);
 flipflop = -1;
 }
 solver.evaluationNumber_++;
 }
-return 0.0f;
+ return 0.0f;
 }
-__device__ dataType cashFlowsNpvYieldGpu(cashFlowsStruct cashFlows, intRateStruct y, bool includecurrDateFlows, bondsDateStruct currDate, bondsDateStruct npvDate,int numLegs) 
+ __device__ dataType cashFlowsNpvYieldGpu(cashFlowsStruct cashFlows, intRateStruct y, bool includecurrDateFlows, bondsDateStruct currDate, bondsDateStruct npvDate, int numLegs) 
 {
  dataType npv = 0.0;
  dataType discount = 1.0;
  bondsDateStruct lastDate;
 bool first = true;
-int i;
+ int i;
  for (i=0; i<numLegs; ++i) 
 {
  if (cashFlowHasOccurredGpu(cashFlows.legs[i].paymentDate, currDate))
@@ -674,21 +668,21 @@ else {
  discount *= interestRateDiscountFactorGpu(y, yearFractionGpu(lastDate, couponDate, y.dayCounter));
  }
  lastDate = couponDate;
- npv += amount * discount;
+ npv += amount* discount;
  }
  return npv;
 }
-__device__ dataType fOpGpu(irrFinderStruct f, dataType y, cashFlowsStruct cashFlows, int numLegs)
+ __device__ dataType fOpGpu(irrFinderStruct f, dataType y, cashFlowsStruct cashFlows, int numLegs)
 {
 intRateStruct yield;
-yield.rate = y;
+ yield.rate = y;
 yield.comp = f.comp;
 yield.freq = f.freq;
 yield.dayCounter = f.dayCounter;
-dataType NPV = cashFlowsNpvYieldGpu(cashFlows, yield, false, f.currDate, f.npvDate, numLegs);
+ dataType NPV = cashFlowsNpvYieldGpu(cashFlows, yield, false, f.currDate, f.npvDate, numLegs);
  return (f.npv - NPV);
 }
-__device__ dataType fDerivativeGpu(irrFinderStruct f, dataType y, cashFlowsStruct cashFlows, int numLegs)
+ __device__ dataType fDerivativeGpu(irrFinderStruct f, dataType y, cashFlowsStruct cashFlows, int numLegs)
 {
 intRateStruct yield;
 yield.rate = y;
@@ -697,30 +691,26 @@ yield.comp = f.comp;
 yield.freq = f.freq;
  return modifiedDurationGpu(cashFlows, yield, f.includecurrDateFlows, f.currDate, f.npvDate, numLegs);
 }
-__device__ bool closeGpu(dataType x, dataType y)
+ __device__ bool closeGpu(dataType x, dataType y)
 {
 return closeGpuThreeArgs(x,y,42);
 }
-__device__ bool closeGpuThreeArgs(dataType x, dataType y, int n)
+ __device__ bool closeGpuThreeArgs(dataType x, dataType y, int n)
 {
 dataType diff = fabs(x-y);
 dataType tolerance = n*QL_EPSILON_GPU;
-return diff <= tolerance*fabs(x) &&
+ return diff <= tolerance*fabs(x) &&
  diff <= tolerance*fabs(y);
 }
-__device__ dataType enforceBoundsGpu(dataType x)
+ __device__ dataType enforceBoundsGpu(dataType x)
 {
-/*if Gpu(lowerBoundEnforced_ && x < lowerBound_)
-return lowerBound_;
-if (upperBoundEnforced_ && x > upperBound_)
-return upperBound_;*/
 return x;
 }
-__device__ dataType solveImplGpu(solverStruct solver, irrFinderStruct f,dataType xAccuracy, cashFlowsStruct cashFlows, int numLegs)
+ __device__ dataType solveImplGpu(solverStruct solver, irrFinderStruct f, dataType xAccuracy, cashFlowsStruct cashFlows, int numLegs)
 {
 dataType froot, dfroot, dx, dxold;
 dataType xh, xl;
-if (solver.fxMin_ < 0.0) 
+ if (solver.fxMin_ < 0.0) 
 {
 xl = solver.xMin_;
 xh = solver.xMax_;
@@ -729,14 +719,14 @@ else {
 xh = solver.xMin_;
 xl = solver.xMax_;
 }
-dxold = solver.xMax_ - solver.xMin_;
-dx = dxold;
-froot = fOpGpu(f, solver.root_, cashFlows, numLegs);
+ dxold = solver.xMax_ - solver.xMin_;
+ dx = dxold;
+ froot = fOpGpu(f, solver.root_, cashFlows, numLegs);
 dfroot = fDerivativeGpu(f, solver.root_, cashFlows, numLegs);
-++solver.evaluationNumber_;
-while (solver.evaluationNumber_<=solver.maxEvaluations_) 
+ ++solver.evaluationNumber_;
+ while (solver.evaluationNumber_<=solver.maxEvaluations_) 
 {
-if ((((solver.root_-xh)*dfroot-froot)*
+ if ((((solver.root_-xh)*dfroot-froot)*
 ((solver.root_-xl)*dfroot-froot) > 0.0)
 || (fabs(2.0*froot) > fabs(dxold*dfroot))) 
 {
@@ -749,7 +739,7 @@ dxold = dx;
 dx = froot/dfroot;
 solver.root_ -= dx;
 }
-if (fabs(dx) < xAccuracy)
+ if (fabs(dx) < xAccuracy)
 return solver.root_;
 froot = fOpGpu(f, solver.root_, cashFlows, numLegs);
 dfroot = fDerivativeGpu(f, solver.root_, cashFlows, numLegs);
@@ -759,87 +749,87 @@ xl=solver.root_;
 else
 xh=solver.root_;
 }
-return solver.root_;
+ return solver.root_;
 }
-__device__ dataType modifiedDurationGpu(cashFlowsStruct cashFlows,intRateStruct y,bool includecurrDateFlows,bondsDateStruct currDate,bondsDateStruct npvDate,int numLegs)
+ __device__ dataType modifiedDurationGpu(cashFlowsStruct cashFlows, intRateStruct y, bool includecurrDateFlows, bondsDateStruct currDate, bondsDateStruct npvDate, int numLegs)
 {
 dataType P = 0.0;
 dataType dPdy = 0.0;
 dataType r = y.rate;
 dataType N = y.freq;
 int dc = y.dayCounter;
-int i;
+ int i;
 for (i=0; i<numLegs; ++i) 
 {
-if (!cashFlowHasOccurredGpu(cashFlows.legs[i].paymentDate, currDate)) 
+ if (!cashFlowHasOccurredGpu(cashFlows.legs[i].paymentDate, currDate)) 
 {
-dataType t = yearFractionGpu(npvDate,cashFlows.legs[i].paymentDate, dc);
+dataType t = yearFractionGpu(npvDate, cashFlows.legs[i].paymentDate, dc);
 dataType c = fixedRateCouponAmountGpu(cashFlows, i); 
 dataType B = interestRateDiscountFactorGpu(y, t); 
-P += c * B;
-{
+ P += c* B;
+ {
 if (y.comp == SIMPLE_INTEREST)
-dPdy -= c * B*B * t;
+dPdy -= c* B*B t;
 if (y.comp == COMPOUNDED_INTEREST)
-dPdy -= c * t * B/(1+r/N);
+dPdy -= c* t B/(1+r/N);
 if (y.comp == CONTINUOUS_INTEREST)
-dPdy -= c * B * t;
+dPdy -= c* B t;
 if (y.comp == SIMPLE_THEN_COMPOUNDED_INTEREST)
 {
 if (t<=1.0/N)
-dPdy -= c * B*B * t;
+dPdy -= c* B*B t;
 else
-dPdy -= c * t * B/(1+r/N);
+dPdy -= c* t B/(1+r/N);
 }
 }
 }
 }
-if (P == 0.0) 
+ if (P == 0.0) 
 {
 return 0.0;
 }
 return (-1*dPdy)/P; 
 }
-__global__ void getBondsResultsGpu(inArgsStruct inArgs,resultsStruct results,int n)
+ __global__ void getBondsResultsGpu(inArgsStruct inArgs, resultsStruct results, int n)
 {
 int bondNum = blockIdx.x*blockDim.x + threadIdx.x;
 if (bondNum < n)
 {
 int numLegs;
-int numCashFlows = 0;
-bondsDateStruct currCashflowDate = inArgs.bond[bondNum].maturityDate;
-while (currCashflowDate.dateSerialNum > inArgs.bond[bondNum].startDate.dateSerialNum)
+ int numCashFlows = 0;
+ bondsDateStruct currCashflowDate = inArgs.bond[bondNum].maturityDate;
+ while (currCashflowDate.dateSerialNum > inArgs.bond[bondNum].startDate.dateSerialNum)
 {
 numCashFlows++;
 currCashflowDate = advanceDateGpu(currCashflowDate, -6); 
 }
-numLegs = numCashFlows+1;
+ numLegs = numCashFlows+1;
  cashFlowsStruct cashFlows; 
 couponStruct cashLegs[9];
 cashFlows.legs = cashLegs;
-cashFlows.intRate.dayCounter = USE_EXACT_DAY;
+ cashFlows.intRate.dayCounter = USE_EXACT_DAY;
 cashFlows.intRate.rate = inArgs.bond[bondNum].rate;
 cashFlows.intRate.freq = ANNUAL_FREQ;
 cashFlows.intRate.comp = SIMPLE_INTEREST;
 cashFlows.dayCounter = USE_EXACT_DAY;
 cashFlows.nominal = 100.0;
-bondsDateStruct currStartDate = advanceDateGpu(inArgs.bond[bondNum].maturityDate, (numLegs - 1)*-6);;
+ bondsDateStruct currStartDate = advanceDateGpu(inArgs.bond[bondNum].maturityDate, (numLegs - 1)*-6);;
 bondsDateStruct currEndDate = advanceDateGpu(currStartDate, 6); 
-int cashFlowNum;
+ int cashFlowNum;
 for (cashFlowNum = 0; cashFlowNum < numLegs-1; cashFlowNum++)
 {
 cashFlows.legs[cashFlowNum].paymentDate = currEndDate;
-cashFlows.legs[cashFlowNum].accrualStartDate = currStartDate;
+ cashFlows.legs[cashFlowNum].accrualStartDate = currStartDate;
 cashFlows.legs[cashFlowNum].accrualEndDate = currEndDate;
-cashFlows.legs[cashFlowNum].amount = COMPUTE_AMOUNT;
-currStartDate = currEndDate;
+ cashFlows.legs[cashFlowNum].amount = COMPUTE_AMOUNT;
+ currStartDate = currEndDate;
 currEndDate = advanceDateGpu(currEndDate, 6); 
 }
-cashFlows.legs[numLegs-1].paymentDate = inArgs.bond[bondNum].maturityDate;
+ cashFlows.legs[numLegs-1].paymentDate = inArgs.bond[bondNum].maturityDate;
 cashFlows.legs[numLegs-1].accrualStartDate = inArgs.currDate[bondNum];
 cashFlows.legs[numLegs-1].accrualEndDate = inArgs.currDate[bondNum];
 cashFlows.legs[numLegs-1].amount = 100.0;
-results.bondForwardVal[bondNum] = getBondYieldGpu(inArgs.bondCleanPrice[bondNum], USE_EXACT_DAY, COMPOUNDED_INTEREST, 2.0, inArgs.currDate[bondNum], ACCURACY, 100, inArgs, bondNum, cashFlows, numLegs);
+ results.bondForwardVal[bondNum] = getBondYieldGpu(inArgs.bondCleanPrice[bondNum], USE_EXACT_DAY, COMPOUNDED_INTEREST, 2.0, inArgs.currDate[bondNum], ACCURACY, 100, inArgs, bondNum, cashFlows, numLegs);
 inArgs.discountCurve[bondNum].forward = results.bondForwardVal[bondNum];
 results.dirtyPrice[bondNum] = getDirtyPriceGpu(inArgs, bondNum, cashFlows, numLegs);
 results.accruedAmountCurrDate[bondNum] = getAccruedAmountGpu(inArgs, inArgs.currDate[bondNum], bondNum, cashFlows, numLegs);

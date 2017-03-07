@@ -1,2 +1,3 @@
-./sgemm/naive/sgemm_kernel.cu ./new_sgemm1/sgemm_kernel.cu
-./sgemm/naive/main.cu ./new_sgemm1/main.cu
+./Bonds/naive/bondsEngine.cu ./new_Bonds/bondsEngine.cu
+./Bonds/naive/bondsKernelsGpu.cu ./new_Bonds/bondsKernelsGpu.cu
+./Bonds/naive/bondsKernelsGpu.cuh ./new_Bonds/bondsKernelsGpu.cuh
