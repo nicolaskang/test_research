@@ -1,4 +1,4 @@
- #include "bondsStructs.cuh"
+#include "bondsStructs.cuh"
 #include "bondsKernelsGpu.cu"
 #include "bondsKernelsCpu.cu"
 #include <stdio.h>

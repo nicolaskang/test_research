@@ -1,5 +1,5 @@
- #include "bondsKernelsGpu1.cuh"
- __device__ int monthLengthKernelGpu(int month, bool leapYear) 
+#include "bondsKernelsGpu.cuh"
+__device__ int monthLengthKernelGpu(int month, bool leapYear) 
 {
 int MonthLength[12];
 MonthLength[0]=31;
@@ -769,17 +769,17 @@ dataType B = interestRateDiscountFactorGpu(y, t);
  P += c* B;
  {
 if (y.comp == SIMPLE_INTEREST)
-dPdy -= c* B*B t;
+dPdy -= c* B*B *t;
 if (y.comp == COMPOUNDED_INTEREST)
-dPdy -= c* t B/(1+r/N);
+dPdy -= c* t* B/(1+r/N);
 if (y.comp == CONTINUOUS_INTEREST)
-dPdy -= c* B t;
+dPdy -= c* B* t;
 if (y.comp == SIMPLE_THEN_COMPOUNDED_INTEREST)
 {
 if (t<=1.0/N)
-dPdy -= c* B*B t;
+dPdy -= c* B*B* t;
 else
-dPdy -= c* t B/(1+r/N);
+dPdy -= c* t* B/(1+r/N);
 }
 }
 }

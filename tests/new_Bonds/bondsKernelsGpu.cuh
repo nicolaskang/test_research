@@ -1,6 +1,6 @@
- #ifndef BONDS_KERNELS_GPU
+#ifndef BONDS_KERNELS_GPU
 #define BONDS_KERNELS_GPU
- #include "bondsStructs.cuh"
+#include "bondsStructs.cuh"
 #include <stdbool.h>
  __device__ int monthLengthKernelGpu(int month, bool leapYear);
  __device__ int monthOffsetKernelGpu(int m, bool leapYear);
@@ -48,4 +48,5 @@
  __device__ dataType enforceBoundsGpu(dataType x);
  __device__ dataType solveImplGpu(solverStruct solver, irrFinderStruct f, dataType xAccuracy, cashFlowsStruct cashFlows, int numLegs);
  __device__ dataType modifiedDurationGpu(cashFlowsStruct cashFlows, intRateStruct y, bool includeSettlementDateFlows, bondsDateStruct settlementDate, bondsDateStruct npvDate, int numLegs);
- dataType accuracy, int maxIterations, dataType guess); __device__ dataType getCashFlowsYieldGpu(cashFlowsStruct cashFlows, dataType npv, int dayCounter, int compounding, dataType frequency, bool includeSettlementDateFlows, bondsDateStruct settlementDate, bondsDateStruct npvDate, int numLegs, #endif 
+ __device__ dataType getCashFlowsYieldGpu(cashFlowsStruct cashFlows, dataType npv, int dayCounter, int compounding, dataType frequency, bool includeSettlementDateFlows, bondsDateStruct settlementDate, bondsDateStruct npvDate, int numLegs, dataType accuracy, int maxIterations, dataType guess);
+#endif 
